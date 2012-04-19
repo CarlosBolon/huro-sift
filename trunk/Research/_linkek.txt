@@ -1,0 +1,3 @@
+http://www.vlfeat.org/overview/sift.html
+http://en.wikipedia.org/wiki/Scale-invariant_feature_transform
+http://www.scholarpedia.org/article/Scale_Invariant_Feature_Transform
