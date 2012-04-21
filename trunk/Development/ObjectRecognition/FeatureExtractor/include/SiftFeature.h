@@ -31,8 +31,10 @@ public:
 	*/
 	virtual void* Run();
 
+	cv::Mat frame_;
+
 private:
 	int id_;
-	cv::Mat frame_;
+	//pthread_mutex_t updateMutex;
 };
 
