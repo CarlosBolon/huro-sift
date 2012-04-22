@@ -19,15 +19,27 @@
     <Filter Include="GlobalFeatures\Source Files">
       <UniqueIdentifier>{44c038d7-ad0f-451b-91a3-f322fb9bb985}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2cf4643c-a147-4f9c-a439-c6140f1ab85d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8682ced4-333d-41eb-ae34-828c11bdd407}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\SiftFeature.cpp">
       <Filter>GlobalFeatures\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Feature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\SiftFeature.h">
       <Filter>GlobalFeatures\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Feature.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

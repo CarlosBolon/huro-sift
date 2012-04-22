@@ -1,37 +1,29 @@
 #include "SiftFeature.h"
 
-#include <windows.h>
+//#include <windows.h>
 #include <iostream>
 
 using namespace std;
 using namespace cv;
 
-SiftFeature::SiftFeature(int id, cv::Mat& frame)
-:	id_(id)//,
-	//updateMutex(PTHREAD_MUTEX_INITIALIZER)
+SiftFeature::SiftFeature(int id)
+:	Feature(id)
 {
-	frame_ = frame.clone();
-	//pthread_mutex_init(&updateMutex, NULL);
 }
 
 SiftFeature::~SiftFeature(void)
 {
-	//pthread_mutex_destroy(&updateMutex);
 }
 
-void* SiftFeature::Run() 
+void SiftFeature::LoadSettingsFromFileStorage(const FileStorage& fileStorage)
 {
-	cout << "Thread " << id_ << " is running!" << endl;
+}
+
+void SiftFeature::Process(void)
+{
 	cout << frame_.cols << ", " << frame_.rows << endl;
-
-	//pthread_mutex_lock(&updateMutex);
+	//string str = "Thread1111 " + id_;
 	circle(frame_, Point(100, 100), 10, Scalar(255, 0, 0), -1);
-	imshow("Thread" + id_, frame_);
-	waitKey(0);
-	//pthread_mutex_unlock(&updateMutex);
-
-
-	Sleep(1);
-
-	return reinterpret_cast<void*>(id_);
+	//imshow(str, frame_);
+	//waitKey(0);
 }
