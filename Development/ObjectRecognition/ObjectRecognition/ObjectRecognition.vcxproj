@@ -12,6 +12,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\ObjRecAlgorithm.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ObjRecAlgorithm.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0BEE55A4-0190-4664-9C7E-9002D65DD0DE}</ProjectGuid>

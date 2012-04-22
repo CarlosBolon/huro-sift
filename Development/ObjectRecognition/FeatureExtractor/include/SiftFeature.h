@@ -4,15 +4,13 @@
 	\defgroup FeatureExtractor FeatureExtractor module.
 */
 
-#include "Thread.h"
-
-#include "opencv2/opencv.hpp"
+#include "Feature.h"
 
 //! Class for extracting SIFT features.
 /*!
 	\ingroup FeatureExtractor
 */
-extern "C++" class __declspec(dllexport) SiftFeature : public Thread
+extern "C++" class __declspec(dllexport) SiftFeature : public Feature
 {
 public:
 	//! Constructor.
@@ -20,21 +18,22 @@ public:
 		\param id
 		\param frame
 	*/
-	SiftFeature(int id, cv::Mat& frame);
+	SiftFeature(int id);
 
 	//! Destructor.
 	~SiftFeature(void);
 
-	//! Implemented thread main.
+	//! Implemented virtual method for loading algorithm specific settings from the given storage.
 	/*!
-		\sa Thread::Run()
+		\sa Feature::LoadSettingsFromFileStorage()
 	*/
-	virtual void* Run();
-
-	cv::Mat frame_;
+	void LoadSettingsFromFileStorage(const cv::FileStorage& fileStorage);
 
 private:
-	int id_;
-	//pthread_mutex_t updateMutex;
+	//! Implemented virtual method for the algorithm.
+	/*!
+		\sa Feature::Process()
+	*/
+	void Process(void);
 };
 

@@ -80,9 +80,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Feature.h" />
     <ClInclude Include="include\SiftFeature.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Feature.cpp" />
     <ClCompile Include="src\SiftFeature.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
