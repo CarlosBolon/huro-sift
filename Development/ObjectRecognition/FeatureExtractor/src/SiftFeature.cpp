@@ -26,8 +26,8 @@ void* SiftFeature::Run()
 
 	//pthread_mutex_lock(&updateMutex);
 	circle(frame_, Point(100, 100), 10, Scalar(255, 0, 0), -1);
-	//imshow("Thread" + id_, frame_);
-	//waitKey(1);
+	imshow("Thread" + id_, frame_);
+	waitKey(0);
 	//pthread_mutex_unlock(&updateMutex);
 
 
