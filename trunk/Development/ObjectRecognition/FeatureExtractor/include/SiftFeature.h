@@ -36,6 +36,6 @@ private:
 	//! Implemented virtual method for feature point detection.
 	void detectImpl(void);
 
-	cv::SIFT sift;	//!< Wrapped OpenCV SIFT object.
+	cv::SIFT* sift;	//!< Wrapped OpenCV SIFT object.
 };
 

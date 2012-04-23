@@ -1,10 +1,16 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$_thread_8h.html" title="Core/include/Thread.h" alt="" coords="211,80,359,107"/>
-<area shape="rect" id="node17" href="$_runnable_8cpp.html" title="Core/src/Runnable.cpp" alt="" coords="384,80,539,107"/>
-<area shape="rect" id="node5" href="$_thread_8cpp.html" title="Core/src/Thread.cpp" alt="" coords="113,155,252,181"/>
-<area shape="rect" id="node7" href="$_feature_8h.html" title="FeatureExtractor/include/Feature.h" alt="" coords="277,155,499,181"/>
-<area shape="rect" id="node9" href="$_sift_feature_8h.html" title="FeatureExtractor/include/SiftFeature.h" alt="" coords="140,229,383,256"/>
-<area shape="rect" id="node15" href="$_feature_8cpp.html" title="FeatureExtractor/src/Feature.cpp" alt="" coords="407,229,621,256"/>
-<area shape="rect" id="node11" href="$_sift_feature_8cpp.html" title="FeatureExtractor/src/SiftFeature.cpp" alt="" coords="5,304,237,331"/>
-<area shape="rect" id="node13" href="$_obj_rec_algorithm_8cpp.html" title="ObjectRecognition/src/ObjRecAlgorithm.cpp" alt="" coords="263,304,540,331"/>
+<area shape="rect" id="node3" href="$_thread_8h.html" title="Core/include/Thread.h" alt="" coords="619,80,767,107"/>
+<area shape="rect" id="node32" href="$_runnable_8cpp.html" title="Core/src/Runnable.cpp" alt="" coords="792,80,947,107"/>
+<area shape="rect" id="node5" href="$_thread_8cpp.html" title="Core/src/Thread.cpp" alt="" coords="521,155,660,181"/>
+<area shape="rect" id="node7" href="$_feature_8h.html" title="FeatureExtractor/include/Feature.h" alt="" coords="685,155,907,181"/>
+<area shape="rect" id="node9" href="$_orb_feature_8h.html" title="FeatureExtractor/include/OrbFeature.h" alt="" coords="137,229,380,256"/>
+<area shape="rect" id="node15" href="$_sift_feature_8h.html" title="FeatureExtractor/include/SiftFeature.h" alt="" coords="405,229,648,256"/>
+<area shape="rect" id="node20" href="$_star_feature_8h.html" title="FeatureExtractor/include/StarFeature.h" alt="" coords="673,229,919,256"/>
+<area shape="rect" id="node25" href="$_surf_feature_8h.html" title="FeatureExtractor/include/SurfFeature.h" alt="" coords="943,229,1189,256"/>
+<area shape="rect" id="node30" href="$_feature_8cpp.html" title="FeatureExtractor/src/Feature.cpp" alt="" coords="1214,229,1428,256"/>
+<area shape="rect" id="node11" href="$_orb_feature_8cpp.html" title="FeatureExtractor/src/OrbFeature.cpp" alt="" coords="5,304,240,331"/>
+<area shape="rect" id="node13" href="$_obj_rec_algorithm_8cpp.html" title="ObjectRecognition/src/ObjRecAlgorithm.cpp" alt="" coords="523,304,800,331"/>
+<area shape="rect" id="node17" href="$_sift_feature_8cpp.html" title="FeatureExtractor/src/SiftFeature.cpp" alt="" coords="265,304,497,331"/>
+<area shape="rect" id="node22" href="$_star_feature_8cpp.html" title="FeatureExtractor/src/StarFeature.cpp" alt="" coords="825,304,1063,331"/>
+<area shape="rect" id="node27" href="$_surf_feature_8cpp.html" title="FeatureExtractor/src/SurfFeature.cpp" alt="" coords="1088,304,1325,331"/>
 </map>

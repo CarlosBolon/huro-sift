@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="SiftFeature">
+    <Position X="0.5" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAABAEAAAABAAgAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>include\SiftFeature.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurfFeature">
+    <Position X="7" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EQAAAAAAAAAAAQAAAgAAAAAAAAQAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>include\SurfFeature.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrbFeature">
+    <Position X="10.25" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAgAAAAAAwAAAAAAACAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>include\OrbFeature.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarFeature">
+    <Position X="3.75" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAgAAAAACAAAAgAAAAAAAACAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>include\StarFeature.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feature">
+    <Position X="5.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAACAQAAAAAAAgAAAAAAAAAAAAAAAAAACYQAIAI=</HashCode>
+      <FileName>include\Feature.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

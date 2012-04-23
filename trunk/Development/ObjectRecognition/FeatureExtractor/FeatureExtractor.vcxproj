@@ -81,11 +81,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\Feature.h" />
+    <ClInclude Include="include\OrbFeature.h" />
     <ClInclude Include="include\SiftFeature.h" />
+    <ClInclude Include="include\StarFeature.h" />
+    <ClInclude Include="include\SurfFeature.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Feature.cpp" />
+    <ClCompile Include="src\OrbFeature.cpp" />
     <ClCompile Include="src\SiftFeature.cpp" />
+    <ClCompile Include="src\StarFeature.cpp" />
+    <ClCompile Include="src\SurfFeature.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FeatureExtractor.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

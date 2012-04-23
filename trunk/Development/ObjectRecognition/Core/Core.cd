@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="ImageFrame">
+    <Position X="3.75" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAgAAAAAQAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>include\ImageFrame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Runnable">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>include\Runnable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Thread">
+    <Position X="6.25" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAACAASAgAAgAAAAAAAARAAIAAAAAwAIAAAAAAAI=</HashCode>
+      <FileName>include\Thread.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mutex">
+    <Position X="0.5" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIQA=</HashCode>
+      <FileName>include\Mutex.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocalSettings">
+    <Position X="6.25" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAIAAAAAAAAABCAIAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>include\LocalSettings.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExceptionDescriptor">
+    <Position X="0.5" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAEAEAAQBAAAAAAAAEAIAAAAIAA=</HashCode>
+      <FileName>include\ExceptionDescriptor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

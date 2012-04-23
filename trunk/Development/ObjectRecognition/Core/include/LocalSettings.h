@@ -35,6 +35,6 @@ private:
 	//! Destructor.
 	~LocalSettings();
 
-	std::string	dataDirectory_;			//<! Data directory root.
-	std::string	processXmlFileName_;	//<! The configuration file.
+	std::string	dataDirectory_;			//!< Data directory root.
+	std::string	processXmlFileName_;	//!< The configuration file.
 };

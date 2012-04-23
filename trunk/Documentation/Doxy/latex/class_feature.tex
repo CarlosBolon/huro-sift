@@ -17,13 +17,12 @@ Inheritance diagram for Feature\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=144pt]{class_feature__inherit__graph}
+\includegraphics[width=350pt]{class_feature__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Feature\-:
-\nopagebreak
+Collaboration diagram for Feature\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -45,7 +44,7 @@ void \hyperlink{class_feature_a72f15196406066e9758c8c1b8be9318d}{Set\-Frame} (cv
 \begin{DoxyCompactItemize}
 \item 
 std\-::vector$<$ cv\-::\-Key\-Point $>$ \hyperlink{class_feature_a7e1fc96f926cad9da3db0397a99c0079}{keypoints}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -57,11 +56,11 @@ virtual void \hyperlink{class_feature_aa9b4e7ae8880145fd0eb02b4646a0a74}{detect\
 \begin{DoxyCompactItemize}
 \item 
 std\-::string \hyperlink{class_feature_a46e9fc1f327aaafb10de2c0425d311aa}{name\-\_\-}
-\item 
+\begin{DoxyCompactList}\small\item\em Name of the current feature extraction procedure. \end{DoxyCompactList}\item 
 cv\-::\-Mat \hyperlink{class_feature_aa805e6fee8eeec2061feabe29430f0df}{frame\-\_\-}
-\item 
+\begin{DoxyCompactList}\small\item\em The current frame. \end{DoxyCompactList}\item 
 \hyperlink{class_mutex}{Mutex} \hyperlink{class_feature_a08499ba9b2c77ef9a29f97d6a8f66006}{mutex\-\_\-}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Synchronization object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -138,7 +137,7 @@ Virtual method for loading algorithm specific settings from the given storage.
 \end{DoxyParams}
 
 
-Reimplemented in \hyperlink{class_sift_feature_a74d56f4ecdf91b8009da045b70ff0c9f}{Sift\-Feature}.
+Reimplemented in \hyperlink{class_star_feature_a90c12959197b8cb431706143aa583fdb}{Star\-Feature}, \hyperlink{class_orb_feature_a88c921b7fc731c43f77024641e4f1b84}{Orb\-Feature}, \hyperlink{class_sift_feature_a74d56f4ecdf91b8009da045b70ff0c9f}{Sift\-Feature}, and \hyperlink{class_surf_feature_a02e3bcb6fd91edce400ee7839a6193a8}{Surf\-Feature}.
 
 \hypertarget{class_feature_ad9e3aebe506fc936c6ad18f9fc9543db}{\index{Feature@{Feature}!Process@{Process}}
 \index{Process@{Process}!Feature@{Feature}}
@@ -177,8 +176,7 @@ Connects a frame to the feature extractor.
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:
-\nopagebreak
+Here is the call graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -193,15 +191,31 @@ Here is the call graph for this function\-:
 \hypertarget{class_feature_aa805e6fee8eeec2061feabe29430f0df}{\index{Feature@{Feature}!frame\-\_\-@{frame\-\_\-}}
 \index{frame\-\_\-@{frame\-\_\-}!Feature@{Feature}}
 \subsubsection[{frame\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat {\bf Feature\-::frame\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_feature_aa805e6fee8eeec2061feabe29430f0df}
+
+
+The current frame. 
+
 \hypertarget{class_feature_a7e1fc96f926cad9da3db0397a99c0079}{\index{Feature@{Feature}!keypoints@{keypoints}}
 \index{keypoints@{keypoints}!Feature@{Feature}}
 \subsubsection[{keypoints}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$cv\-::\-Key\-Point$>$ {\bf Feature\-::keypoints}}}\label{class_feature_a7e1fc96f926cad9da3db0397a99c0079}
+
+
+Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. 
+
 \hypertarget{class_feature_a08499ba9b2c77ef9a29f97d6a8f66006}{\index{Feature@{Feature}!mutex\-\_\-@{mutex\-\_\-}}
 \index{mutex\-\_\-@{mutex\-\_\-}!Feature@{Feature}}
 \subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mutex} {\bf Feature\-::mutex\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_feature_a08499ba9b2c77ef9a29f97d6a8f66006}
+
+
+Synchronization object. 
+
 \hypertarget{class_feature_a46e9fc1f327aaafb10de2c0425d311aa}{\index{Feature@{Feature}!name\-\_\-@{name\-\_\-}}
 \index{name\-\_\-@{name\-\_\-}!Feature@{Feature}}
 \subsubsection[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf Feature\-::name\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_feature_a46e9fc1f327aaafb10de2c0425d311aa}
+
+
+Name of the current feature extraction procedure. 
+
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
