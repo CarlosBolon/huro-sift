@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_mutex.html#a1726d7244983f7be74fcfa9cfb63745f" title="Blocks the current thread." alt="" coords="190,5,285,32"/>
+<area shape="rect" id="node5" href="$class_mutex.html#a03150e8fa423f7e042661d350d238b84" title="Unblocks the current thread." alt="" coords="184,56,291,83"/>
+</map>

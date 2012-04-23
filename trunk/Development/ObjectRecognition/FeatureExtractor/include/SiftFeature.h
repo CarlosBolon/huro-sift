@@ -1,24 +1,21 @@
 #pragma once
 
-/*!
-	\defgroup FeatureExtractor FeatureExtractor module.
-*/
-
 #include "Feature.h"
 
 //! Class for extracting SIFT features.
 /*!
 	\ingroup FeatureExtractor
+
+	The class implements SIFT algorithm by D. Lowe.
 */
 extern "C++" class __declspec(dllexport) SiftFeature : public Feature
 {
 public:
 	//! Constructor.
 	/*!
-		\param id
-		\param frame
+		\param name Name of the current feature extraction procedure.
 	*/
-	SiftFeature(int id);
+	SiftFeature(const std::string& name);
 
 	//! Destructor.
 	~SiftFeature(void);
@@ -35,5 +32,10 @@ private:
 		\sa Feature::Process()
 	*/
 	void Process(void);
+
+	//! Implemented virtual method for feature point detection.
+	void detectImpl(void);
+
+	cv::SIFT sift;	//!< Wrapped OpenCV SIFT object.
 };
 

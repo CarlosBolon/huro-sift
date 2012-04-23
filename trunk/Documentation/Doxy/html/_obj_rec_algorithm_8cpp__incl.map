@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_obj_rec_algorithm_8h.html" title="ObjRecAlgorithm.h" alt="" coords="5,80,136,107"/>
+<area shape="rect" id="node9" href="$_sift_feature_8h.html" title="SiftFeature.h" alt="" coords="377,80,473,107"/>
+<area shape="rect" id="node27" href="$_exception_descriptor_8h.html" title="ExceptionDescriptor.h" alt="" coords="498,80,648,107"/>
+<area shape="rect" id="node32" href="$_local_settings_8h.html" title="LocalSettings.h" alt="" coords="693,155,805,181"/>
+<area shape="rect" id="node35" href="$_image_frame_8h.html" title="ImageFrame.h" alt="" coords="307,155,412,181"/>
+<area shape="rect" id="node11" href="$_feature_8h.html" title="Feature.h" alt="" coords="437,155,515,181"/>
+<area shape="rect" id="node16" href="$_thread_8h.html" title="Thread.h" alt="" coords="401,229,473,256"/>
+<area shape="rect" id="node24" href="$_mutex_8h.html" title="Mutex.h" alt="" coords="497,229,567,256"/>
+<area shape="rect" id="node22" href="$_runnable_8h.html" title="Runnable.h" alt="" coords="389,304,475,331"/>
+</map>

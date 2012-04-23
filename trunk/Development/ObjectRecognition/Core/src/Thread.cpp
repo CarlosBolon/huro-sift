@@ -1,9 +1,5 @@
 #include "Thread.h"
 
-#include <iostream>
-#include <cassert>
-#include <error.h>
-
 #include "ExceptionDescriptor.h"
 
 using namespace std;
@@ -31,8 +27,6 @@ void* Thread::StartThreadRunnable(void* pVoid)
 	// thread start function when a Runnable is involved
 	Thread* runnableThread = static_cast<Thread*>(pVoid);
 
-	assert(runnableThread);
-
 	runnableThread->result_ = runnableThread->runnable_->Run();
 	runnableThread->SetCompleted();
 
@@ -43,8 +37,6 @@ void* Thread::StartThread(void* pVoid)
 {
 	// thread start function when no Runnable is involved
 	Thread* aThread = static_cast<Thread*>(pVoid);
-
-	assert(aThread);
 
 	aThread->result_ = aThread->Run();
 	aThread->SetCompleted();

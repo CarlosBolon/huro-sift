@@ -1,0 +1,172 @@
+\hypertarget{class_exception_descriptor}{\section{Exception\-Descriptor Class Reference}
+\label{class_exception_descriptor}\index{Exception\-Descriptor@{Exception\-Descriptor}}
+}
+
+
+Exception class.  
+
+
+
+
+{\ttfamily \#include $<$Exception\-Descriptor.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_exception_descriptor_abd7c2af705e7d6d9f2310fa676e1a74c}{Exception\-Descriptor} (const std\-::string \&error, const std\-::string \&file\-Name, const std\-::string \&func\-Name, int line, bool is\-Error=true)  throw ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_exception_descriptor_a0d0840e46e4874851fcb4cb74767eeb3}{Exception\-Descriptor} (const \hyperlink{class_exception_descriptor}{Exception\-Descriptor} \&e)  throw ()
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_exception_descriptor_ace2f9de889e98240700223988a62cf31}{$\sim$\-Exception\-Descriptor} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_exception_descriptor_a161d74022eac7d6b7b8f72c80e55a53f}{what} () const   throw ()
+\begin{DoxyCompactList}\small\item\em std\-::exception\-::what() \end{DoxyCompactList}\item 
+void \hyperlink{class_exception_descriptor_a6e2646a61d8b16d9789d09f1b39a21a7}{Trace\-Error} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Write the exception description to stderr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Exception class. 
+
+Exception class whose instances store an error message, source file, function and line number. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_exception_descriptor_abd7c2af705e7d6d9f2310fa676e1a74c}{\index{Exception\-Descriptor@{Exception\-Descriptor}!Exception\-Descriptor@{Exception\-Descriptor}}
+\index{Exception\-Descriptor@{Exception\-Descriptor}!ExceptionDescriptor@{Exception\-Descriptor}}
+\subsubsection[{Exception\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exception\-Descriptor\-::\-Exception\-Descriptor} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{error, }
+\item[{const std\-::string \&}]{file\-Name, }
+\item[{const std\-::string \&}]{func\-Name, }
+\item[{int}]{line, }
+\item[{bool}]{is\-Error = {\ttfamily true}}
+\end{DoxyParamCaption}
+)  throw ()}}\label{class_exception_descriptor_abd7c2af705e7d6d9f2310fa676e1a74c}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & Error message. \\
+\hline
+{\em file\-Name} & Name of the file in which the exception was raised. \\
+\hline
+{\em func\-Name} & Name of the function in which the exception was raised. \\
+\hline
+{\em line} & Number of line on which the exception was raised. \\
+\hline
+{\em is\-Error} & Error or abnormal operation.\\
+\hline
+\end{DoxyParams}
+Should be used through the macro New\-Error(message) or New\-Warning(message). \hypertarget{class_exception_descriptor_a0d0840e46e4874851fcb4cb74767eeb3}{\index{Exception\-Descriptor@{Exception\-Descriptor}!Exception\-Descriptor@{Exception\-Descriptor}}
+\index{Exception\-Descriptor@{Exception\-Descriptor}!ExceptionDescriptor@{Exception\-Descriptor}}
+\subsubsection[{Exception\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exception\-Descriptor\-::\-Exception\-Descriptor} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Exception\-Descriptor} \&}]{e}
+\end{DoxyParamCaption}
+)  throw ()}}\label{class_exception_descriptor_a0d0840e46e4874851fcb4cb74767eeb3}
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Another \hyperlink{class_exception_descriptor}{Exception\-Descriptor}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+        : error_   (e.error_),
+        fileName_(e.fileName_),
+        funcName_(e.funcName_),
+        line_    (e.line_),
+        isError_ (e.isError_)
+{
+}
+\end{DoxyCode}
+\hypertarget{class_exception_descriptor_ace2f9de889e98240700223988a62cf31}{\index{Exception\-Descriptor@{Exception\-Descriptor}!$\sim$\-Exception\-Descriptor@{$\sim$\-Exception\-Descriptor}}
+\index{$\sim$\-Exception\-Descriptor@{$\sim$\-Exception\-Descriptor}!ExceptionDescriptor@{Exception\-Descriptor}}
+\subsubsection[{$\sim$\-Exception\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exception\-Descriptor\-::$\sim$\-Exception\-Descriptor} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()}}\label{class_exception_descriptor_ace2f9de889e98240700223988a62cf31}
+
+
+Destructor. 
+
+
+\begin{DoxyCode}
+{
+}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_exception_descriptor_a6e2646a61d8b16d9789d09f1b39a21a7}{\index{Exception\-Descriptor@{Exception\-Descriptor}!Trace\-Error@{Trace\-Error}}
+\index{Trace\-Error@{Trace\-Error}!ExceptionDescriptor@{Exception\-Descriptor}}
+\subsubsection[{Trace\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Exception\-Descriptor\-::\-Trace\-Error} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()}}\label{class_exception_descriptor_a6e2646a61d8b16d9789d09f1b39a21a7}
+
+
+Write the exception description to stderr. 
+
+
+\begin{DoxyCode}
+{
+        if (isError_)
+        {
+                cerr << "An error occurred!" << endl;
+                cerr << "  Error location  : " << fileName_  << endl; 
+                cerr << "  Function name   : " << funcName_  << endl; 
+                cerr << "  Line number     : " << line_      << endl;  
+                cerr << "  Error Message   : " << error_     << endl; 
+        } else
+        {
+                cerr << "An abnormal operation occurred!" << endl;
+                cerr << "  Warning location: " << fileName_  << endl; 
+                cerr << "  Function name   : " << funcName_  << endl; 
+                cerr << "  Line number     : " << line_      << endl; 
+                cerr << "  Warning Message : " << error_     << endl; 
+        }
+}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_exception_descriptor_a6e2646a61d8b16d9789d09f1b39a21a7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_exception_descriptor_a161d74022eac7d6b7b8f72c80e55a53f}{\index{Exception\-Descriptor@{Exception\-Descriptor}!what@{what}}
+\index{what@{what}!ExceptionDescriptor@{Exception\-Descriptor}}
+\subsubsection[{what}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ {\bf Exception\-Descriptor\-::what} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const  throw ()}}\label{class_exception_descriptor_a161d74022eac7d6b7b8f72c80e55a53f}
+
+
+std\-::exception\-::what() 
+
+
+\begin{DoxyCode}
+{
+        return "ExceptionDescriptor";
+}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Core/include/\hyperlink{_exception_descriptor_8h}{Exception\-Descriptor.\-h}\item 
+Core/src/\hyperlink{_exception_descriptor_8cpp}{Exception\-Descriptor.\-cpp}\end{DoxyCompactItemize}
