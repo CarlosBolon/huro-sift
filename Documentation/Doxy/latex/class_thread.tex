@@ -1,0 +1,196 @@
+\hypertarget{class_thread}{\section{Thread Class Reference}
+\label{class_thread}\index{Thread@{Thread}}
+}
+
+
+Abstract class for handling threads.  
+
+
+
+
+{\ttfamily \#include $<$Thread.\-h$>$}
+
+
+
+Inheritance diagram for Thread\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_thread__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_thread_a027b9eb38e4d59c076501b305b42f575}{Thread} (std\-::auto\-\_\-ptr$<$ \hyperlink{class_runnable}{Runnable} $>$ run, bool is\-Detached=false)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_thread_a403714feecd93ac10c101a47b7649204}{Thread} (bool is\-Detached=false)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_thread_af1e25588ebe47a2a6d79ef8c686a992b}{$\sim$\-Thread} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_a2b42f82341afd2747ea093b6ac8b91cb}{Start} (void)
+\begin{DoxyCompactList}\small\item\em Starts the thread. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_thread_a8f33f7750321d5df9188033e7e3e300d}{Join} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class for handling threads. 
+
+\hyperlink{class_runnable}{Runnable} classes can be derived from this class.
+
+Threads can be started and stopped with the \hyperlink{class_thread_a2b42f82341afd2747ea093b6ac8b91cb}{Start()} and \hyperlink{class_thread_a8f33f7750321d5df9188033e7e3e300d}{Join()} methods respectively. The new thread will enter the implemented Run() method. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_thread_a027b9eb38e4d59c076501b305b42f575}{\index{Thread@{Thread}!Thread@{Thread}}
+\index{Thread@{Thread}!Thread@{Thread}}
+\subsubsection[{Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thread\-::\-Thread} (
+\begin{DoxyParamCaption}
+\item[{std\-::auto\-\_\-ptr$<$ {\bf Runnable} $>$}]{run, }
+\item[{bool}]{is\-Detached = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_thread_a027b9eb38e4d59c076501b305b42f575}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em run} & \\
+\hline
+{\em is\-Detached} & Whether or not the thread is to be created in a detached state. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_a403714feecd93ac10c101a47b7649204}{\index{Thread@{Thread}!Thread@{Thread}}
+\index{Thread@{Thread}!Thread@{Thread}}
+\subsubsection[{Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thread\-::\-Thread} (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\-Detached = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_thread_a403714feecd93ac10c101a47b7649204}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\-Detached} & Whether or not the thread is to be created in a detached state. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+:       runnable_(NULL), 
+        detached_(isDetached) 
+{
+}
+\end{DoxyCode}
+\hypertarget{class_thread_af1e25588ebe47a2a6d79ef8c686a992b}{\index{Thread@{Thread}!$\sim$\-Thread@{$\sim$\-Thread}}
+\index{$\sim$\-Thread@{$\sim$\-Thread}!Thread@{Thread}}
+\subsubsection[{$\sim$\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thread\-::$\sim$\-Thread} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_thread_af1e25588ebe47a2a6d79ef8c686a992b}
+
+
+Destructor. 
+
+
+\begin{DoxyCode}
+{
+}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_thread_a8f33f7750321d5df9188033e7e3e300d}{\index{Thread@{Thread}!Join@{Join}}
+\index{Join@{Join}!Thread@{Thread}}
+\subsubsection[{Join}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ {\bf Thread\-::\-Join} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_thread_a8f33f7750321d5df9188033e7e3e300d}
+
+\begin{DoxyCode}
+{
+        // result was already saved by thread start function
+        if(pthread_join(threadID_, NULL))
+                throw ExceptionError("pthread_join failed at");
+
+        return result_;
+}
+\end{DoxyCode}
+\hypertarget{class_thread_a2b42f82341afd2747ea093b6ac8b91cb}{\index{Thread@{Thread}!Start@{Start}}
+\index{Start@{Start}!Thread@{Thread}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Thread\-::\-Start} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_thread_a2b42f82341afd2747ea093b6ac8b91cb}
+
+
+Starts the thread. 
+
+
+\begin{DoxyCode}
+{
+        // initialize attribute object
+        if(pthread_attr_init(&threadAttribute_))
+                throw ExceptionError("pthread_attr_init failed at");
+
+        // set the scheduling scope attribute
+        if(pthread_attr_setscope(&threadAttribute_, PTHREAD_SCOPE_SYSTEM))
+                throw ExceptionError("pthread_attr_setscope failed at");
+
+        if(!detached_) 
+        {
+                if(!runnable_.get()) 
+                {       
+                        if(pthread_create(&threadID_, &threadAttribute_, 
+      Thread::StartThread, (void*)this))
+                                throw ExceptionError("pthread_create failed at"
+      );
+                }
+                else 
+                {       
+                        if(pthread_create(&threadID_, &threadAttribute_, 
+      Thread::StartThreadRunnable, (void*)this))
+                                throw ExceptionError("pthread_create failed at"
+      );
+                }
+        }
+        else 
+        {
+                // set the detachstate attribute to detached    
+                if(pthread_attr_setdetachstate(&threadAttribute_, 
+      PTHREAD_CREATE_DETACHED))
+                        throw ExceptionError("pthread_attr_setdetachstate
+       failed at");
+
+                if(!runnable_.get()) 
+                {       
+                        if(pthread_create(&threadID_, &threadAttribute_, 
+      Thread::StartThread, (void*)this))
+                                throw ExceptionError("pthread_create failed at"
+      );
+                }
+                else 
+                {       
+                        if(pthread_create(&threadID_, &threadAttribute_, 
+      Thread::StartThreadRunnable, (void*)this))
+                                throw ExceptionError("pthread_create failed at"
+      );
+                }
+        }
+
+        if(pthread_attr_destroy(&threadAttribute_)) 
+                throw ExceptionError("pthread_attr_destroy failed at");
+}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Core/include/\hyperlink{_thread_8h}{Thread.\-h}\item 
+Core/src/\hyperlink{_thread_8cpp}{Thread.\-cpp}\end{DoxyCompactItemize}

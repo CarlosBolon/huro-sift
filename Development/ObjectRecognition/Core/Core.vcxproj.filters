@@ -51,6 +51,12 @@
     <ClInclude Include="include\ExceptionDescriptor.h">
       <Filter>ExceptionDescriptor\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Mutex.h">
+      <Filter>Module\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ImageFrame.h">
+      <Filter>ImageFrame\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\LocalSettings.cpp">
@@ -64,6 +70,12 @@
     </ClCompile>
     <ClCompile Include="src\ExceptionDescriptor.cpp">
       <Filter>ExceptionDescriptor\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mutex.cpp">
+      <Filter>Module\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImageFrame.cpp">
+      <Filter>ImageFrame\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

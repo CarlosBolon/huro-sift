@@ -1,5 +1,7 @@
 #include "ExceptionDescriptor.h"
 
+#include <iostream>
+
 using namespace std;
 
 ExceptionDescriptor::ExceptionDescriptor(

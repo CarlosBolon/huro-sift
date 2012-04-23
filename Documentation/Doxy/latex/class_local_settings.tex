@@ -1,0 +1,77 @@
+\hypertarget{class_local_settings}{\section{Local\-Settings Class Reference}
+\label{class_local_settings}\index{Local\-Settings@{Local\-Settings}}
+}
+
+
+Singleton settings manager class.  
+
+
+
+
+{\ttfamily \#include $<$Local\-Settings.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{class_local_settings_a33686edcb0615e224872688bd3a3eca4}{Get\-Data\-Directory} () const 
+\begin{DoxyCompactList}\small\item\em Data directory getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_local_settings}{Local\-Settings} $\ast$ \hyperlink{class_local_settings_a926579d7f8f57a7189cafba6b2bfc08a}{Get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Instance getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Singleton settings manager class. 
+
+Contains the paths of X\-M\-Ls and video files. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_local_settings_a33686edcb0615e224872688bd3a3eca4}{\index{Local\-Settings@{Local\-Settings}!Get\-Data\-Directory@{Get\-Data\-Directory}}
+\index{Get\-Data\-Directory@{Get\-Data\-Directory}!LocalSettings@{Local\-Settings}}
+\subsubsection[{Get\-Data\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf Local\-Settings\-::\-Get\-Data\-Directory} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_local_settings_a33686edcb0615e224872688bd3a3eca4}
+
+
+Data directory getter. 
+
+\begin{DoxyReturn}{Returns}
+Data directory root. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+{
+        return dataDirectory_;
+}
+\end{DoxyCode}
+\hypertarget{class_local_settings_a926579d7f8f57a7189cafba6b2bfc08a}{\index{Local\-Settings@{Local\-Settings}!Get\-Instance@{Get\-Instance}}
+\index{Get\-Instance@{Get\-Instance}!LocalSettings@{Local\-Settings}}
+\subsubsection[{Get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Local\-Settings} $\ast$ {\bf Local\-Settings\-::\-Get\-Instance} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_local_settings_a926579d7f8f57a7189cafba6b2bfc08a}
+
+
+Instance getter. 
+
+\begin{DoxyReturn}{Returns}
+The instance. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+{
+        static LocalSettings* localSettings = new LocalSettings();
+        return localSettings;
+}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Core/include/\hyperlink{_local_settings_8h}{Local\-Settings.\-h}\item 
+Core/src/\hyperlink{_local_settings_8cpp}{Local\-Settings.\-cpp}\end{DoxyCompactItemize}

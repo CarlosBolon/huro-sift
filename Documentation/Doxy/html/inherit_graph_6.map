@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$class_thread.html" title="Abstract class for handling threads." alt="" coords="5,5,67,32"/>
+<area shape="rect" id="node3" href="$class_feature.html" title="Abstract class for feature detection." alt="" coords="115,5,181,32"/>
+<area shape="rect" id="node5" href="$class_sift_feature.html" title="Class for extracting SIFT features." alt="" coords="229,5,315,32"/>
+</map>

@@ -2,7 +2,6 @@
 #pragma warning( disable: 4251 ) // Disable needs to have dll-interface warning.
 
 #include <exception>
-#include <iostream>
 #include <string>
 
 //! Exception class.

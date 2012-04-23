@@ -1,0 +1,210 @@
+\hypertarget{class_feature}{\section{Feature Class Reference}
+\label{class_feature}\index{Feature@{Feature}}
+}
+
+
+Abstract class for feature detection.  
+
+
+
+
+{\ttfamily \#include $<$Feature.\-h$>$}
+
+
+
+Inheritance diagram for Feature\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_feature__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Feature\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_feature__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_feature_a020e991990bb6ca904015ffa7902d55f}{Feature} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_feature_ab6dfcfe22cc71c7b45a61d991b4ff775}{$\sim$\-Feature} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_feature_a2ce73a191961cbd5f8fe8bc47f4e08c1}{Load\-Settings\-From\-File\-Storage} (const cv\-::\-File\-Storage \&file\-Storage)
+\begin{DoxyCompactList}\small\item\em Virtual method for loading algorithm specific settings from the given storage. \end{DoxyCompactList}\item 
+void \hyperlink{class_feature_a72f15196406066e9758c8c1b8be9318d}{Set\-Frame} (cv\-::\-Mat \&frame)
+\begin{DoxyCompactList}\small\item\em Connects a frame to the feature extractor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ cv\-::\-Key\-Point $>$ \hyperlink{class_feature_a7e1fc96f926cad9da3db0397a99c0079}{keypoints}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_feature_ad9e3aebe506fc936c6ad18f9fc9543db}{Process} (void)
+\begin{DoxyCompactList}\small\item\em Virtual method for each feature extraction algorithm. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_feature_aa9b4e7ae8880145fd0eb02b4646a0a74}{detect\-Impl} (void)
+\begin{DoxyCompactList}\small\item\em Virtual method for feature point detection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{class_feature_a46e9fc1f327aaafb10de2c0425d311aa}{name\-\_\-}
+\item 
+cv\-::\-Mat \hyperlink{class_feature_aa805e6fee8eeec2061feabe29430f0df}{frame\-\_\-}
+\item 
+\hyperlink{class_mutex}{Mutex} \hyperlink{class_feature_a08499ba9b2c77ef9a29f97d6a8f66006}{mutex\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class for feature detection. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_feature_a020e991990bb6ca904015ffa7902d55f}{\index{Feature@{Feature}!Feature@{Feature}}
+\index{Feature@{Feature}!Feature@{Feature}}
+\subsubsection[{Feature}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Feature\-::\-Feature} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_feature_a020e991990bb6ca904015ffa7902d55f}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the current feature extraction procedure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+        : name_(name)
+{
+}
+\end{DoxyCode}
+\hypertarget{class_feature_ab6dfcfe22cc71c7b45a61d991b4ff775}{\index{Feature@{Feature}!$\sim$\-Feature@{$\sim$\-Feature}}
+\index{$\sim$\-Feature@{$\sim$\-Feature}!Feature@{Feature}}
+\subsubsection[{$\sim$\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Feature\-::$\sim$\-Feature} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_feature_ab6dfcfe22cc71c7b45a61d991b4ff775}
+
+
+Destructor. 
+
+
+\begin{DoxyCode}
+{
+}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_feature_aa9b4e7ae8880145fd0eb02b4646a0a74}{\index{Feature@{Feature}!detect\-Impl@{detect\-Impl}}
+\index{detect\-Impl@{detect\-Impl}!Feature@{Feature}}
+\subsubsection[{detect\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf Feature\-::detect\-Impl} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_feature_aa9b4e7ae8880145fd0eb02b4646a0a74}
+
+
+Virtual method for feature point detection. 
+
+\hypertarget{class_feature_a2ce73a191961cbd5f8fe8bc47f4e08c1}{\index{Feature@{Feature}!Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}}
+\index{Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}!Feature@{Feature}}
+\subsubsection[{Load\-Settings\-From\-File\-Storage}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf Feature\-::\-Load\-Settings\-From\-File\-Storage} (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-File\-Storage \&}]{file\-Storage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_feature_a2ce73a191961cbd5f8fe8bc47f4e08c1}
+
+
+Virtual method for loading algorithm specific settings from the given storage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Storage} & An already open storage from which anything specific can be read. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_sift_feature_a74d56f4ecdf91b8009da045b70ff0c9f}{Sift\-Feature}.
+
+\hypertarget{class_feature_ad9e3aebe506fc936c6ad18f9fc9543db}{\index{Feature@{Feature}!Process@{Process}}
+\index{Process@{Process}!Feature@{Feature}}
+\subsubsection[{Process}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf Feature\-::\-Process} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_feature_ad9e3aebe506fc936c6ad18f9fc9543db}
+
+
+Virtual method for each feature extraction algorithm. 
+
+\hypertarget{class_feature_a72f15196406066e9758c8c1b8be9318d}{\index{Feature@{Feature}!Set\-Frame@{Set\-Frame}}
+\index{Set\-Frame@{Set\-Frame}!Feature@{Feature}}
+\subsubsection[{Set\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Feature\-::\-Set\-Frame} (
+\begin{DoxyParamCaption}
+\item[{cv\-::\-Mat \&}]{frame}
+\end{DoxyParamCaption}
+)}}\label{class_feature_a72f15196406066e9758c8c1b8be9318d}
+
+
+Connects a frame to the feature extractor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Output parameter for the current frame. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+{
+        mutex_.Lock();
+        frame_ = frame.clone();
+        mutex_.Unlock();
+}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_feature_a72f15196406066e9758c8c1b8be9318d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_feature_aa805e6fee8eeec2061feabe29430f0df}{\index{Feature@{Feature}!frame\-\_\-@{frame\-\_\-}}
+\index{frame\-\_\-@{frame\-\_\-}!Feature@{Feature}}
+\subsubsection[{frame\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat {\bf Feature\-::frame\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_feature_aa805e6fee8eeec2061feabe29430f0df}
+\hypertarget{class_feature_a7e1fc96f926cad9da3db0397a99c0079}{\index{Feature@{Feature}!keypoints@{keypoints}}
+\index{keypoints@{keypoints}!Feature@{Feature}}
+\subsubsection[{keypoints}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$cv\-::\-Key\-Point$>$ {\bf Feature\-::keypoints}}}\label{class_feature_a7e1fc96f926cad9da3db0397a99c0079}
+\hypertarget{class_feature_a08499ba9b2c77ef9a29f97d6a8f66006}{\index{Feature@{Feature}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!Feature@{Feature}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mutex} {\bf Feature\-::mutex\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_feature_a08499ba9b2c77ef9a29f97d6a8f66006}
+\hypertarget{class_feature_a46e9fc1f327aaafb10de2c0425d311aa}{\index{Feature@{Feature}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!Feature@{Feature}}
+\subsubsection[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf Feature\-::name\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_feature_a46e9fc1f327aaafb10de2c0425d311aa}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Feature\-Extractor/include/\hyperlink{_feature_8h}{Feature.\-h}\item 
+Feature\-Extractor/src/\hyperlink{_feature_8cpp}{Feature.\-cpp}\end{DoxyCompactItemize}

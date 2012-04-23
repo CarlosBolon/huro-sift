@@ -43,9 +43,6 @@ public:
 	void* Join(void);
 
 private:
-	//! Copy operator.
-	const Thread& operator=(const Thread&);
-
 	// Called when run() completes
 	void SetCompleted(void);
 

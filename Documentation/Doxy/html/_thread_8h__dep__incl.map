@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_thread_8cpp.html" title="Core/src/Thread.cpp" alt="" coords="113,80,252,107"/>
+<area shape="rect" id="node5" href="$_feature_8h.html" title="FeatureExtractor/include/Feature.h" alt="" coords="277,80,499,107"/>
+<area shape="rect" id="node7" href="$_sift_feature_8h.html" title="FeatureExtractor/include/SiftFeature.h" alt="" coords="140,155,383,181"/>
+<area shape="rect" id="node13" href="$_feature_8cpp.html" title="FeatureExtractor/src/Feature.cpp" alt="" coords="407,155,621,181"/>
+<area shape="rect" id="node9" href="$_sift_feature_8cpp.html" title="FeatureExtractor/src/SiftFeature.cpp" alt="" coords="5,229,237,256"/>
+<area shape="rect" id="node11" href="$_obj_rec_algorithm_8cpp.html" title="ObjectRecognition/src/ObjRecAlgorithm.cpp" alt="" coords="263,229,540,256"/>
+</map>

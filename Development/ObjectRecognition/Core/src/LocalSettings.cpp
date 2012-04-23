@@ -1,11 +1,7 @@
 #include "LocalSettings.h"
 
 #include <fstream>
-#include <sstream>
-#include <string>
-
 #include "opencv2/opencv.hpp"
-
 #include "ExceptionDescriptor.h"
 
 using namespace std;

@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_feature.html" title="Abstract class for feature detection." alt="" coords="15,80,81,107"/>
+<area shape="rect" id="node5" href="$class_sift_feature.html" title="Class for extracting SIFT features." alt="" coords="5,155,91,181"/>
+</map>
