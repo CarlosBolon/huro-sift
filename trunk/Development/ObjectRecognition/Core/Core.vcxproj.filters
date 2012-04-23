@@ -78,4 +78,7 @@
       <Filter>ImageFrame\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Core.cd" />
+  </ItemGroup>
 </Project>
