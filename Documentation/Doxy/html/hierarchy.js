@@ -8,7 +8,10 @@ var hierarchy =
     [ "Runnable", "class_runnable.html", null ],
     [ "Thread", "class_thread.html", [
       [ "Feature", "class_feature.html", [
-        [ "SiftFeature", "class_sift_feature.html", null ]
+        [ "OrbFeature", "class_orb_feature.html", null ],
+        [ "SiftFeature", "class_sift_feature.html", null ],
+        [ "StarFeature", "class_star_feature.html", null ],
+        [ "SurfFeature", "class_surf_feature.html", null ]
       ] ]
     ] ]
 ];

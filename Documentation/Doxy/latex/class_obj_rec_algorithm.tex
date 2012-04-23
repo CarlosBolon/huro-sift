@@ -41,7 +41,12 @@ Constructor.
 
 \begin{DoxyCode}
 {
+        // TODO: MSER, FAST classes.
         siftFeature_ = new SiftFeature("SIFT");
+        surfFeature_ = new SurfFeature("SURF");
+        orbFeature_  = new OrbFeature("ORB");
+        starFeature_  = new StarFeature("STAR");
+
         imageFrame_ = new ImageFrame();
 }
 \end{DoxyCode}
@@ -60,6 +65,10 @@ Destructor.
 \begin{DoxyCode}
 {
         delete siftFeature_;
+        delete surfFeature_;
+        delete orbFeature_;
+        delete starFeature_;
+
         delete imageFrame_;
 }
 \end{DoxyCode}
@@ -80,21 +89,18 @@ Main algorithm.
 
 \begin{DoxyCode}
 {
-        Mat frame;
+        SetFrames();
+        StartFeatureExtractors();
 
-        imageFrame_->GetFrame(frame);
-
-        siftFeature_->SetFrame(frame);
-
-        siftFeature_->Start();
-
-        int result1 = reinterpret_cast<int>(siftFeature_->Join());
+        int resultSift = reinterpret_cast<int>(siftFeature_->Join());
+        int resultSurf = reinterpret_cast<int>(surfFeature_->Join());
+        int resultOrb = reinterpret_cast<int>(orbFeature_->Join());
+        int resultStar = reinterpret_cast<int>(starFeature_->Join());
 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
+Here is the caller graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

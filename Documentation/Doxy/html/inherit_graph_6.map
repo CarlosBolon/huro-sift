@@ -1,5 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class_thread.html" title="Abstract class for handling threads." alt="" coords="5,5,67,32"/>
-<area shape="rect" id="node3" href="$class_feature.html" title="Abstract class for feature detection." alt="" coords="115,5,181,32"/>
-<area shape="rect" id="node5" href="$class_sift_feature.html" title="Class for extracting SIFT features." alt="" coords="229,5,315,32"/>
+<area shape="rect" id="node1" href="$class_thread.html" title="Abstract class for handling threads." alt="" coords="5,81,67,108"/>
+<area shape="rect" id="node3" href="$class_feature.html" title="Abstract class for feature detection." alt="" coords="115,81,181,108"/>
+<area shape="rect" id="node5" href="$class_orb_feature.html" title="Class for extracting ORB features." alt="" coords="231,5,318,32"/>
+<area shape="rect" id="node7" href="$class_sift_feature.html" title="Class for extracting SIFT features." alt="" coords="232,56,317,83"/>
+<area shape="rect" id="node9" href="$class_star_feature.html" title="Class for extracting STAR features." alt="" coords="229,107,320,133"/>
+<area shape="rect" id="node11" href="$class_surf_feature.html" title="Class for extracting SURF features." alt="" coords="230,157,319,184"/>
 </map>

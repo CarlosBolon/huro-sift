@@ -33,6 +33,15 @@
     <ClCompile Include="src\Feature.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\SurfFeature.cpp">
+      <Filter>GlobalFeatures\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OrbFeature.cpp">
+      <Filter>GlobalFeatures\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StarFeature.cpp">
+      <Filter>GlobalFeatures\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\SiftFeature.h">
@@ -41,5 +50,17 @@
     <ClInclude Include="include\Feature.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SurfFeature.h">
+      <Filter>GlobalFeatures\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OrbFeature.h">
+      <Filter>GlobalFeatures\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\StarFeature.h">
+      <Filter>GlobalFeatures\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FeatureExtractor.cd" />
   </ItemGroup>
 </Project>
