@@ -7,6 +7,8 @@
 
 #include <string>
 
+#define LocalSettingsPtr LocalSettings::GetInstance()
+
 //! Singleton settings manager class.
 /*!
 	\ingroup Core
@@ -28,6 +30,12 @@ public:
 	*/
 	std::string GetDataDirectory() const;
 
+    //! Settings directory getter.
+	/*!
+		\return Settings directory root.
+	*/
+	std::string GetSettingsDirectory() const;
+
 private:
 	//! Constructor.
 	LocalSettings();
@@ -36,5 +44,6 @@ private:
 	~LocalSettings();
 
 	std::string	dataDirectory_;			//!< Data directory root.
+    std::string	settingsDirectory_;	    //!< Settings directory root.
 	std::string	processXmlFileName_;	//!< The configuration file.
 };

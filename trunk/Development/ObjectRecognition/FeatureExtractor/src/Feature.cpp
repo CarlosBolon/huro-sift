@@ -11,11 +11,9 @@ Feature::~Feature(void)
 {
 }
 
-void Feature::SetFrame(Mat& frame)
+void Feature::SetFrame(const Mat& frame)
 {
-	mutex_.Lock();
 	frame_ = frame.clone();
-	mutex_.Unlock();
 }
 
 void* Feature::Run(void)

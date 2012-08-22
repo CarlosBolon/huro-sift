@@ -18,16 +18,16 @@
     <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ObjRecAlgorithm.cpp">
+    <ClCompile Include="src\Algorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\ObjRecAlgorithm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <None Include="ObjectRecognition.cd" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ObjectRecognition.cd" />
+    <ClInclude Include="include\Algorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
