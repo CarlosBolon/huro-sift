@@ -86,6 +86,7 @@
     <ClInclude Include="include\Mutex.h" />
     <ClInclude Include="include\ImageFrame.h" />
     <ClInclude Include="include\ExceptionDescriptor.h" />
+    <ClInclude Include="include\Visualizer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Thread.cpp" />
@@ -94,6 +95,7 @@
     <ClCompile Include="src\Mutex.cpp" />
     <ClCompile Include="src\ImageFrame.cpp" />
     <ClCompile Include="src\ExceptionDescriptor.cpp" />
+    <ClCompile Include="src\Visualizer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Core.cd" />

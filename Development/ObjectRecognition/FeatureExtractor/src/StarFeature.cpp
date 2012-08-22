@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "LocalSettings.h"
+#include "Visualizer.h"
 
 using namespace std;
 using namespace cv;
@@ -27,9 +28,11 @@ void StarFeature::LoadSettingsFromFileStorage(void)
 
 void StarFeature::Process(void)
 {
-	cout << "Thread(" << name_ << "): " << frame_.cols << "x" << frame_.rows << endl;
+	// TODO: implement.
+}
 
-	circle(frame_, Point(100, 100), 10, Scalar(255, 0, 0), -1);
-	imshow(name_, frame_);
-	waitKey(0);
+void StarFeature::Visualize(void)
+{
+	circle(frame_, Point(frame_.cols / 2, frame_.rows / 2), 10, Scalar(255, 0, 0), -1);
+	VisualizerPtr->ShowImage(name_, frame_);
 }

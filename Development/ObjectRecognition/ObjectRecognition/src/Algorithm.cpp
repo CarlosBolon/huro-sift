@@ -20,8 +20,8 @@ Algorithm::Algorithm(void)
 
     featurePool_["SIFT"] = new SiftFeature("SIFT");
     featurePool_["SURF"] = new SurfFeature("SURF");
-    featurePool_["ORB"] = new OrbFeature("ORB");
-    featurePool_["STAR"] = new StarFeature("STAR");
+    //featurePool_["ORB"] = new OrbFeature("ORB");
+    //featurePool_["STAR"] = new StarFeature("STAR");
 
 	imageFrame_ = new ImageFrame(0);
 }
@@ -51,4 +51,6 @@ void Algorithm::Process(void)
 
     for(FeaturePool::iterator fpElem = featurePool_.begin(); fpElem != featurePool_.end(); fpElem++)
         int result = reinterpret_cast<int>(fpElem->second->Join());
+
+	waitKey(0);
 }

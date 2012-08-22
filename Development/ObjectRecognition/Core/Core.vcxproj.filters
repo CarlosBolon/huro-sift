@@ -37,6 +37,15 @@
     <Filter Include="ExceptionDescriptor\Source Files">
       <UniqueIdentifier>{c05eaacf-3535-41a4-90d3-837445321131}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Visualizer">
+      <UniqueIdentifier>{30cca684-3a31-431e-9d99-3c350f899fe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Visualizer\Header Files">
+      <UniqueIdentifier>{764d108a-8371-4bc0-bb26-045ec10cfcf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Visualizer\Source Files">
+      <UniqueIdentifier>{96565bb5-71cf-4205-b363-ba8d7ea0ce10}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\LocalSettings.h">
@@ -57,6 +66,9 @@
     <ClInclude Include="include\ImageFrame.h">
       <Filter>ImageFrame\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Visualizer.h">
+      <Filter>Visualizer\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\LocalSettings.cpp">
@@ -76,6 +88,9 @@
     </ClCompile>
     <ClCompile Include="src\ImageFrame.cpp">
       <Filter>ImageFrame\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Visualizer.cpp">
+      <Filter>Visualizer\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

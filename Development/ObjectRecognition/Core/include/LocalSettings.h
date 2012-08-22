@@ -22,19 +22,19 @@ public:
 	/*!
 		\return The instance.
 	*/
-	static LocalSettings* GetInstance();
+	static LocalSettings* GetInstance(void);
 
 	//! Data directory getter.
 	/*!
 		\return Data directory root.
 	*/
-	std::string GetDataDirectory() const;
+	std::string GetDataDirectory(void) const;
 
     //! Settings directory getter.
 	/*!
 		\return Settings directory root.
 	*/
-	std::string GetSettingsDirectory() const;
+	std::string GetSettingsDirectory(void) const;
 
 private:
 	//! Constructor.
