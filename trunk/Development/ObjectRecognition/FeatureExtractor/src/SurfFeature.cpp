@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "LocalSettings.h"
+#include "Visualizer.h"
 
 using namespace std;
 using namespace cv;
@@ -41,9 +42,20 @@ void SurfFeature::Process(void)
 
     // Calculate descriptors (feature vectors)
     extractor.compute(frame_, keyPoints, descriptors);
+}
 
-    drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT); 
+void SurfFeature::Visualize(void)
+{
+	char buffer[500];
 
-	imshow(name_, frame_);
-	waitKey(0);
+	drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT); 
+	sprintf_s(buffer, 500, "Processing time of %s: %.2lf ms.", name_.c_str(), procTime_ / (cvGetTickFrequency() * 1000.0));
+	putText(frame_, buffer, Point(10, 20), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(0, 0, 0), 2);
+	putText(frame_, buffer, Point(10, 20), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(255, 255, 255));
+
+	sprintf_s(buffer, 500, "Number of detected keypoints: %d.", keyPoints.size());
+	putText(frame_, buffer, Point(10, 40), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(0, 0, 0), 2);
+	putText(frame_, buffer, Point(10, 40), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(255, 255, 255));
+
+	VisualizerPtr->ShowImage(name_, frame_);
 }

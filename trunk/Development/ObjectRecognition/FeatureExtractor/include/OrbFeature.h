@@ -33,6 +33,12 @@ private:
 	*/
 	void Process(void);
 
+	//! Implemented virtual method for displaying the output.
+	/*!
+		\sa Feature::Visualize()
+	*/
+	void Visualize(void);
+
 	cv::ORB* orb;	//!< Wrapped OpenCV SURF object.
 };
 

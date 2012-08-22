@@ -7,7 +7,7 @@
 using namespace std;
 using namespace cv;
 
-LocalSettings::LocalSettings()
+LocalSettings::LocalSettings(void)
 {
 	string localSettings("../LocalSettings.txt");
 	ifstream fileStream(localSettings.c_str());
@@ -23,22 +23,22 @@ LocalSettings::LocalSettings()
 	fileStream.close();
 }
 
-LocalSettings::~LocalSettings()
+LocalSettings::~LocalSettings(void)
 {
 }
 
-LocalSettings* LocalSettings::GetInstance()
+LocalSettings* LocalSettings::GetInstance(void)
 {
 	static LocalSettings* localSettings = new LocalSettings();
 	return localSettings;
 }
 
-string LocalSettings::GetDataDirectory() const
+string LocalSettings::GetDataDirectory(void) const
 {
 	return dataDirectory_;
 }
 
-string LocalSettings::GetSettingsDirectory() const
+string LocalSettings::GetSettingsDirectory(void) const
 {
 	return settingsDirectory_;
 }
