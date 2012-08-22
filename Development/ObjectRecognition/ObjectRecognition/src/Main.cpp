@@ -1,6 +1,6 @@
 #include <iostream>
 #include "ExceptionDescriptor.h"
-#include "ObjRecAlgorithm.h"
+#include "Algorithm.h"
 
 using namespace std;
 
@@ -8,7 +8,7 @@ int main(int argc, char** argv)
 {
 	try
 	{
-		ObjRecAlgorithm algorithm;
+		Algorithm algorithm;
 		algorithm.Process();
 
 		system("pause");

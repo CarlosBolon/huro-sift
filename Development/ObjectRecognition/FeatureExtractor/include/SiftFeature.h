@@ -24,7 +24,7 @@ public:
 	/*!
 		\sa Feature::LoadSettingsFromFileStorage()
 	*/
-	void LoadSettingsFromFileStorage(const cv::FileStorage& fileStorage);
+	void LoadSettingsFromFileStorage(void);
 
 private:
 	//! Implemented virtual method for the algorithm.
@@ -33,9 +33,10 @@ private:
 	*/
 	void Process(void);
 
-	//! Implemented virtual method for feature point detection.
-	void detectImpl(void);
+	cv::SiftFeatureDetector* siftDetector_;	//!< Wrapped OpenCV SIFT object.
 
-	cv::SIFT* sift;	//!< Wrapped OpenCV SIFT object.
+    cv::SIFT::DetectorParams    siftDetectorParams_;
+    cv::SIFT::CommonParams      siftCommonParams_;
+    cv::SIFT::DescriptorParams  siftDescriptorParams_;
 };
 

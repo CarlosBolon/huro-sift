@@ -4,9 +4,9 @@
 
 using namespace cv;
 
-ImageFrame::ImageFrame(void)
+ImageFrame::ImageFrame(int cameraId = 0)
 {
-	cap_.open(1);
+	cap_.open(cameraId);
 
 	if(!cap_.isOpened())
 		throw ExceptionError("Capture is not opened!");
@@ -17,10 +17,12 @@ ImageFrame::~ImageFrame(void)
 
 }
 
-void ImageFrame::GetFrame(Mat& frame)
+const Mat& ImageFrame::GetFrame(void)
 {
-	cap_ >> frame;
+	cap_ >> frame_;
 
-	if(frame.empty())
+	if(frame_.empty())
 		throw ExceptionError("Frame is empty!");
+
+    return frame_;
 }

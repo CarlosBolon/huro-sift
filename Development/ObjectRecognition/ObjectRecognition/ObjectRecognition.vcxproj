@@ -12,10 +12,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\ObjRecAlgorithm.cpp" />
+    <ClCompile Include="src\Algorithm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\ObjRecAlgorithm.h" />
+    <ClInclude Include="include\Algorithm.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ObjectRecognition.cd" />

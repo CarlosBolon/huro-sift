@@ -24,7 +24,7 @@ public:
 	/*!
 		\sa Feature::LoadSettingsFromFileStorage()
 	*/
-	void LoadSettingsFromFileStorage(const cv::FileStorage& fileStorage);
+	void LoadSettingsFromFileStorage(void);
 
 private:
 	//! Implemented virtual method for the algorithm.
@@ -33,9 +33,11 @@ private:
 	*/
 	void Process(void);
 
-	//! Implemented virtual method for feature point detection.
-	void detectImpl(void);
+	cv::SurfFeatureDetector* surfDetector_;	//!< Wrapped OpenCV SURF object.
 
-	cv::SURF* surf;	//!< Wrapped OpenCV SURF object.
+    double  hessianThreshold_;
+    int     octaves_;
+    int     octaveLayers_;
+    bool    upright_;
 };
 

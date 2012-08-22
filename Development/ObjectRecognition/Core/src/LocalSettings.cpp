@@ -15,26 +15,10 @@ LocalSettings::LocalSettings()
 	if (!fileStream.is_open()) 
 		throw ExceptionError("Local settings file '" + localSettings + "' does not exist!");
 
-	string dataDirectory;
-	string processXmlFileName;
+	getline(fileStream, dataDirectory_);
 
-	getline(fileStream, dataDirectory);
-	getline(fileStream, processXmlFileName);
-
-	if (processXmlFileName.empty())
-	{
-		ExceptionDescriptor e = ExceptionWarning("No processXmlFileName was given in the local settings file.");
-		e.TraceError();
-
-		processXmlFileName = dataDirectory + "XML/Process.default.xml";
-	} 
-	else
-	{
-		processXmlFileName = dataDirectory + "XML/" + processXmlFileName;
-	}
-
-	dataDirectory_            = dataDirectory;
-	processXmlFileName_       = processXmlFileName;
+	processXmlFileName_ = dataDirectory_ + "xml/Process.default.xml";
+    settingsDirectory_  = dataDirectory_ + "xml/DetectorSettings/";
 
 	fileStream.close();
 }
@@ -52,4 +36,9 @@ LocalSettings* LocalSettings::GetInstance()
 string LocalSettings::GetDataDirectory() const
 {
 	return dataDirectory_;
+}
+
+string LocalSettings::GetSettingsDirectory() const
+{
+	return settingsDirectory_;
 }
