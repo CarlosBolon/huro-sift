@@ -4,13 +4,1970 @@
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_feature}{Feature}
-\begin{DoxyCompactList}\small\item\em Abstract class for feature detection. \end{DoxyCompactList}\item 
-class \hyperlink{class_orb_feature}{Orb\-Feature}
-\begin{DoxyCompactList}\small\item\em Class for extracting O\-R\-B features. \end{DoxyCompactList}\item 
-class \hyperlink{class_sift_feature}{Sift\-Feature}
-\begin{DoxyCompactList}\small\item\em Class for extracting S\-I\-F\-T features. \end{DoxyCompactList}\item 
-class \hyperlink{class_star_feature}{Star\-Feature}
-\begin{DoxyCompactList}\small\item\em Class for extracting S\-T\-A\-R features. \end{DoxyCompactList}\item 
-class \hyperlink{class_surf_feature}{Surf\-Feature}
-\begin{DoxyCompactList}\small\item\em Class for extracting S\-U\-R\-F features. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \hyperlink{group___feature_extractor_class_feature}{Feature}
+\begin{DoxyCompactList}\small\item\em Abstract class for feature extraction.  \hyperlink{group___feature_extractor_class_feature}{More...}\end{DoxyCompactList}\item 
+class \hyperlink{group___feature_extractor_class_mser_feature}{Mser\-Feature}
+\begin{DoxyCompactList}\small\item\em Class for extracting M\-S\-E\-R features.  \hyperlink{group___feature_extractor_class_mser_feature}{More...}\end{DoxyCompactList}\item 
+class \hyperlink{group___feature_extractor_class_orb_feature}{Orb\-Feature}
+\begin{DoxyCompactList}\small\item\em Class for extracting O\-R\-B features.  \hyperlink{group___feature_extractor_class_orb_feature}{More...}\end{DoxyCompactList}\item 
+class \hyperlink{group___feature_extractor_class_sift_feature}{Sift\-Feature}
+\begin{DoxyCompactList}\small\item\em Class for extracting S\-I\-F\-T features.  \hyperlink{group___feature_extractor_class_sift_feature}{More...}\end{DoxyCompactList}\item 
+class \hyperlink{group___feature_extractor_class_star_feature}{Star\-Feature}
+\begin{DoxyCompactList}\small\item\em Class for extracting S\-T\-A\-R features.  \hyperlink{group___feature_extractor_class_star_feature}{More...}\end{DoxyCompactList}\item 
+class \hyperlink{group___feature_extractor_class_surf_feature}{Surf\-Feature}
+\begin{DoxyCompactList}\small\item\em Class for extracting S\-U\-R\-F features.  \hyperlink{group___feature_extractor_class_surf_feature}{More...}\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Class Documentation}
+\index{Feature@{Feature}}\label{class_feature}
+\hypertarget{group___feature_extractor_class_feature}{}
+\subsubsection{class Feature}
+Abstract class for feature extraction. 
+
+Inheritance diagram for Feature\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_feature__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Feature\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_feature__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___feature_extractor_a020e991990bb6ca904015ffa7902d55f}{Feature} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{group___feature_extractor_ab6dfcfe22cc71c7b45a61d991b4ff775}{$\sim$\-Feature} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group___core_a8f33f7750321d5df9188033e7e3e300d}{Join} (void)
+\item 
+void \hyperlink{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}{Set\-Frame} (const cv\-::\-Mat \&frame)
+\begin{DoxyCompactList}\small\item\em Connects a frame to the feature extractor. \end{DoxyCompactList}\item 
+void \hyperlink{group___core_a2b42f82341afd2747ea093b6ac8b91cb}{Start} (void)
+\begin{DoxyCompactList}\small\item\em Starts the thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \hyperlink{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}{descriptors}
+\begin{DoxyCompactList}\small\item\em The output matrix of descriptors. \end{DoxyCompactList}\item 
+std\-::vector$<$ cv\-::\-Key\-Point $>$ \hyperlink{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}{key\-Points}
+\begin{DoxyCompactList}\small\item\em Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}{Draw\-Features} (void)
+\begin{DoxyCompactList}\small\item\em Virtual method for drawing the extracted features. \end{DoxyCompactList}\item 
+virtual void \hyperlink{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}{Load\-Settings\-From\-File\-Storage} (void)
+\begin{DoxyCompactList}\small\item\em Virtual method for loading algorithm specific settings from the given storage. \end{DoxyCompactList}\item 
+virtual void \hyperlink{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}{Process} (void)
+\begin{DoxyCompactList}\small\item\em Virtual method for each feature extraction algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \hyperlink{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}{frame\-\_\-}
+\begin{DoxyCompactList}\small\item\em The current frame. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}{name\-\_\-}
+\begin{DoxyCompactList}\small\item\em Name of the current feature extraction procedure. \end{DoxyCompactList}\item 
+double \hyperlink{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}{proc\-Time\-\_\-}
+\begin{DoxyCompactList}\small\item\em Processing time of the current feature extraction method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{group___feature_extractor_a6cc5fc9cbbd8ec566a72fe98fe0d0f86}{Run} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for the algorithm. \end{DoxyCompactList}\item 
+void \hyperlink{group___feature_extractor_a6efeb0289e7a1e11e09a3cbd86a6ae31}{Visualize} (void)
+\begin{DoxyCompactList}\small\item\em Visualizing the output of feature extractor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\paragraph{Constructor \& Destructor Documentation}
+\hypertarget{group___feature_extractor_a020e991990bb6ca904015ffa7902d55f}{\index{Feature@{Feature}!Feature@{Feature}}
+\index{Feature@{Feature}!Feature@{Feature}}
+\subparagraph[{Feature}]{\setlength{\rightskip}{0pt plus 5cm}Feature\-::\-Feature (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_a020e991990bb6ca904015ffa7902d55f}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the current feature extraction procedure. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___feature_extractor_ab6dfcfe22cc71c7b45a61d991b4ff775}{\index{Feature@{Feature}!$\sim$\-Feature@{$\sim$\-Feature}}
+\index{$\sim$\-Feature@{$\sim$\-Feature}!Feature@{Feature}}
+\subparagraph[{$\sim$\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}Feature\-::$\sim$\-Feature (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_ab6dfcfe22cc71c7b45a61d991b4ff775}
+
+
+Destructor. 
+
+
+
+\paragraph{Member Function Documentation}
+\hypertarget{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}{\index{Feature@{Feature}!Draw\-Features@{Draw\-Features}}
+\index{Draw\-Features@{Draw\-Features}!Feature@{Feature}}
+\subparagraph[{Draw\-Features}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Feature\-::\-Draw\-Features (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}
+
+
+Virtual method for drawing the extracted features. 
+
+
+
+Reimplemented in \hyperlink{group___feature_extractor_a907fdd9790d0295f129f1ecdc4382031}{Orb\-Feature}, \hyperlink{group___feature_extractor_ae82e144ac3fed861dc0770cefaa828a6}{Sift\-Feature}, \hyperlink{group___feature_extractor_a2f036e794ebd63cd024dbf547765442f}{Surf\-Feature}, \hyperlink{group___feature_extractor_abed40317b412e0046df5772367d4f3dc}{Mser\-Feature}, and \hyperlink{group___feature_extractor_a6bb4f1e6808f0043707eb3c0bff1e33d}{Star\-Feature}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___core_a8f33f7750321d5df9188033e7e3e300d}{\index{Feature@{Feature}!Join@{Join}}
+\index{Join@{Join}!Feature@{Feature}}
+\subparagraph[{Join}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Thread\-::\-Join (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___core_a8f33f7750321d5df9188033e7e3e300d}
+\hypertarget{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}{\index{Feature@{Feature}!Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}}
+\index{Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}!Feature@{Feature}}
+\subparagraph[{Load\-Settings\-From\-File\-Storage}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Feature\-::\-Load\-Settings\-From\-File\-Storage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}
+
+
+Virtual method for loading algorithm specific settings from the given storage. 
+
+
+
+Reimplemented in \hyperlink{group___feature_extractor_aa13ad1fbc5869dcabb55611e5c206ebd}{Orb\-Feature}, \hyperlink{group___feature_extractor_af19316d789598f612ee150deb2ee5137}{Sift\-Feature}, \hyperlink{group___feature_extractor_a3717dc5d5cffd77f4f31c5ac81cd391a}{Surf\-Feature}, \hyperlink{group___feature_extractor_ae6c9bca2395a33ecac78a46e9c331979}{Mser\-Feature}, and \hyperlink{group___feature_extractor_a0a46cb80a6a4d45e324757b4ef679e81}{Star\-Feature}.
+
+\hypertarget{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}{\index{Feature@{Feature}!Process@{Process}}
+\index{Process@{Process}!Feature@{Feature}}
+\subparagraph[{Process}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Feature\-::\-Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}
+
+
+Virtual method for each feature extraction algorithm. 
+
+
+
+Reimplemented in \hyperlink{group___feature_extractor_af814e3440b61e6bf13b44ef8886ad2d0}{Orb\-Feature}, \hyperlink{group___feature_extractor_a73513198ca8ff4e56be059521cfb60f5}{Sift\-Feature}, \hyperlink{group___feature_extractor_a965b300a64e776f48c1fe1564f4c4269}{Surf\-Feature}, \hyperlink{group___feature_extractor_ad96a1235b0c0df21e68c5a2742debacb}{Mser\-Feature}, and \hyperlink{group___feature_extractor_adb169936e9f60620b81894b48764a801}{Star\-Feature}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_a6cc5fc9cbbd8ec566a72fe98fe0d0f86}{\index{Feature@{Feature}!Run@{Run}}
+\index{Run@{Run}!Feature@{Feature}}
+\subparagraph[{Run}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Feature\-::\-Run (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_a6cc5fc9cbbd8ec566a72fe98fe0d0f86}
+
+
+Implemented virtual method for the algorithm. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___core_ae46cda1b57e998b239a8b9710b0712e2}{Thread\-::\-Run()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{group___core_ae46cda1b57e998b239a8b9710b0712e2}{Thread}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{group___feature_extractor_a6cc5fc9cbbd8ec566a72fe98fe0d0f86_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}{\index{Feature@{Feature}!Set\-Frame@{Set\-Frame}}
+\index{Set\-Frame@{Set\-Frame}!Feature@{Feature}}
+\subparagraph[{Set\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-::\-Set\-Frame (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat \&}]{frame}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}
+
+
+Connects a frame to the feature extractor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Output parameter for the current frame. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___core_a2b42f82341afd2747ea093b6ac8b91cb}{\index{Feature@{Feature}!Start@{Start}}
+\index{Start@{Start}!Feature@{Feature}}
+\subparagraph[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-::\-Start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___core_a2b42f82341afd2747ea093b6ac8b91cb}
+
+
+Starts the thread. 
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___core_a2b42f82341afd2747ea093b6ac8b91cb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_a6efeb0289e7a1e11e09a3cbd86a6ae31}{\index{Feature@{Feature}!Visualize@{Visualize}}
+\index{Visualize@{Visualize}!Feature@{Feature}}
+\subparagraph[{Visualize}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-::\-Visualize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a6efeb0289e7a1e11e09a3cbd86a6ae31}
+
+
+Visualizing the output of feature extractor. 
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{group___feature_extractor_a6efeb0289e7a1e11e09a3cbd86a6ae31_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\paragraph{Member Data Documentation}
+\hypertarget{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}{\index{Feature@{Feature}!descriptors@{descriptors}}
+\index{descriptors@{descriptors}!Feature@{Feature}}
+\subparagraph[{descriptors}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Feature\-::descriptors}}\label{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}
+
+
+The output matrix of descriptors. 
+
+\hypertarget{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}{\index{Feature@{Feature}!frame\-\_\-@{frame\-\_\-}}
+\index{frame\-\_\-@{frame\-\_\-}!Feature@{Feature}}
+\subparagraph[{frame\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Feature\-::frame\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}
+
+
+The current frame. 
+
+\hypertarget{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}{\index{Feature@{Feature}!key\-Points@{key\-Points}}
+\index{key\-Points@{key\-Points}!Feature@{Feature}}
+\subparagraph[{key\-Points}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$cv\-::\-Key\-Point$>$ Feature\-::key\-Points}}\label{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}
+
+
+Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. 
+
+\hypertarget{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}{\index{Feature@{Feature}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!Feature@{Feature}}
+\subparagraph[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Feature\-::name\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}
+
+
+Name of the current feature extraction procedure. 
+
+\hypertarget{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}{\index{Feature@{Feature}!proc\-Time\-\_\-@{proc\-Time\-\_\-}}
+\index{proc\-Time\-\_\-@{proc\-Time\-\_\-}!Feature@{Feature}}
+\subparagraph[{proc\-Time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Feature\-::proc\-Time\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}
+
+
+Processing time of the current feature extraction method. 
+
+\index{Mser\-Feature@{Mser\-Feature}}\label{class_mser_feature}
+\hypertarget{group___feature_extractor_class_mser_feature}{}
+\subsubsection{class Mser\-Feature}
+Class for extracting M\-S\-E\-R features. 
+
+\begin{DoxyVerb}The class implements Maximally-Stable Extremal Region Extractor algorithm.
+\end{DoxyVerb}
+ The class encapsulates all the parameters of M\-S\-E\-R (see \href{http://en.wikipedia.org/wiki/Maximally_stable_extremal_regions}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Maximally\-\_\-stable\-\_\-extremal\-\_\-regions} ) extraction algorithm. 
+
+Inheritance diagram for Mser\-Feature\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_mser_feature__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mser\-Feature\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_mser_feature__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___feature_extractor_aebc805ab0c031d159521b3fa0ae3a5b2}{Mser\-Feature} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{group___feature_extractor_a4cf98957c8813b3ec26641ded124340d}{$\sim$\-Mser\-Feature} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group___core_a8f33f7750321d5df9188033e7e3e300d}{Join} (void)
+\item 
+void \hyperlink{group___feature_extractor_ae6c9bca2395a33ecac78a46e9c331979}{Load\-Settings\-From\-File\-Storage} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for loading algorithm specific settings from the given storage. \end{DoxyCompactList}\item 
+void \hyperlink{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}{Set\-Frame} (const cv\-::\-Mat \&frame)
+\begin{DoxyCompactList}\small\item\em Connects a frame to the feature extractor. \end{DoxyCompactList}\item 
+void \hyperlink{group___core_a2b42f82341afd2747ea093b6ac8b91cb}{Start} (void)
+\begin{DoxyCompactList}\small\item\em Starts the thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \hyperlink{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}{descriptors}
+\begin{DoxyCompactList}\small\item\em The output matrix of descriptors. \end{DoxyCompactList}\item 
+std\-::vector$<$ cv\-::\-Key\-Point $>$ \hyperlink{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}{key\-Points}
+\begin{DoxyCompactList}\small\item\em Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \hyperlink{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}{frame\-\_\-}
+\begin{DoxyCompactList}\small\item\em The current frame. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}{name\-\_\-}
+\begin{DoxyCompactList}\small\item\em Name of the current feature extraction procedure. \end{DoxyCompactList}\item 
+double \hyperlink{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}{proc\-Time\-\_\-}
+\begin{DoxyCompactList}\small\item\em Processing time of the current feature extraction method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___feature_extractor_abed40317b412e0046df5772367d4f3dc}{Draw\-Features} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for displaying the output. \end{DoxyCompactList}\item 
+void \hyperlink{group___feature_extractor_ad96a1235b0c0df21e68c5a2742debacb}{Process} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for the algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{group___feature_extractor_ade4ed6ec57dbfefd1a263fa29419e54d}{area\-Threshold\-\_\-}
+\begin{DoxyCompactList}\small\item\em The area threshold to cause re-\/initialize. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a55dae2de52e614532d2243ca113fb3fb}{delta\-\_\-}
+\begin{DoxyCompactList}\small\item\em Delta in the code, it compares (size\-\_\-\{i\} -\/ size\-\_\-\{i -\/ delta\}) / size\-\_\-\{i -\/ delta\}. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a1850b5af2915831475ef9d776e8a72ea}{edge\-Blur\-Size\-\_\-}
+\begin{DoxyCompactList}\small\item\em The aperture size for edge blur. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a74d77b8596474323f1c4581ddf1d7fa2}{max\-Area\-\_\-}
+\begin{DoxyCompactList}\small\item\em Prune the area which bigger than max\-Area. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a135d54a9a46522e800ef26ecfb8f18be}{max\-Evolution\-\_\-}
+\begin{DoxyCompactList}\small\item\em For color image, the evolution steps. \end{DoxyCompactList}\item 
+double \hyperlink{group___feature_extractor_a9353f0657019b0177c8ce65c00d826f4}{max\-Variation\-\_\-}
+\begin{DoxyCompactList}\small\item\em Prune the area have simliar size to its children. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a556156bf90c6cff20f7451134dc5c9f3}{min\-Area\-\_\-}
+\begin{DoxyCompactList}\small\item\em Prune the area which smaller than min\-Area. \end{DoxyCompactList}\item 
+double \hyperlink{group___feature_extractor_a7f7fe51c62b96bcc83f51e73e0d59a94}{min\-Diversity\-\_\-}
+\begin{DoxyCompactList}\small\item\em Trace back to cut off mser with diversity $<$ min\-\_\-diversity. \end{DoxyCompactList}\item 
+double \hyperlink{group___feature_extractor_a6bc22c26631b87ff8787244da9d1eca2}{min\-Margin\-\_\-}
+\begin{DoxyCompactList}\small\item\em Ignore too small margin. \end{DoxyCompactList}\item 
+cv\-::\-Mser\-Feature\-Detector $\ast$ \hyperlink{group___feature_extractor_a4e7332139a72f3591cbc2e02e7f67748}{mser\-Detector\-\_\-}
+\begin{DoxyCompactList}\small\item\em Wrapped Open\-C\-V M\-S\-E\-R object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\paragraph{Constructor \& Destructor Documentation}
+\hypertarget{group___feature_extractor_aebc805ab0c031d159521b3fa0ae3a5b2}{\index{Mser\-Feature@{Mser\-Feature}!Mser\-Feature@{Mser\-Feature}}
+\index{Mser\-Feature@{Mser\-Feature}!MserFeature@{Mser\-Feature}}
+\subparagraph[{Mser\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}Mser\-Feature\-::\-Mser\-Feature (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_aebc805ab0c031d159521b3fa0ae3a5b2}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the current feature extraction procedure. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___feature_extractor_aebc805ab0c031d159521b3fa0ae3a5b2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_a4cf98957c8813b3ec26641ded124340d}{\index{Mser\-Feature@{Mser\-Feature}!$\sim$\-Mser\-Feature@{$\sim$\-Mser\-Feature}}
+\index{$\sim$\-Mser\-Feature@{$\sim$\-Mser\-Feature}!MserFeature@{Mser\-Feature}}
+\subparagraph[{$\sim$\-Mser\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}Mser\-Feature\-::$\sim$\-Mser\-Feature (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_a4cf98957c8813b3ec26641ded124340d}
+
+
+Destructor. 
+
+
+
+\paragraph{Member Function Documentation}
+\hypertarget{group___feature_extractor_abed40317b412e0046df5772367d4f3dc}{\index{Mser\-Feature@{Mser\-Feature}!Draw\-Features@{Draw\-Features}}
+\index{Draw\-Features@{Draw\-Features}!MserFeature@{Mser\-Feature}}
+\subparagraph[{Draw\-Features}]{\setlength{\rightskip}{0pt plus 5cm}void Mser\-Feature\-::\-Draw\-Features (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_abed40317b412e0046df5772367d4f3dc}
+
+
+Implemented virtual method for displaying the output. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}{Feature\-::\-Draw\-Features()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}{Feature}.
+
+\hypertarget{group___core_a8f33f7750321d5df9188033e7e3e300d}{\index{Mser\-Feature@{Mser\-Feature}!Join@{Join}}
+\index{Join@{Join}!MserFeature@{Mser\-Feature}}
+\subparagraph[{Join}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Thread\-::\-Join (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___core_a8f33f7750321d5df9188033e7e3e300d}
+\hypertarget{group___feature_extractor_ae6c9bca2395a33ecac78a46e9c331979}{\index{Mser\-Feature@{Mser\-Feature}!Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}}
+\index{Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}!MserFeature@{Mser\-Feature}}
+\subparagraph[{Load\-Settings\-From\-File\-Storage}]{\setlength{\rightskip}{0pt plus 5cm}void Mser\-Feature\-::\-Load\-Settings\-From\-File\-Storage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{group___feature_extractor_ae6c9bca2395a33ecac78a46e9c331979}
+
+
+Implemented virtual method for loading algorithm specific settings from the given storage. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}{Feature\-::\-Load\-Settings\-From\-File\-Storage()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}{Feature}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___feature_extractor_ae6c9bca2395a33ecac78a46e9c331979_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_ad96a1235b0c0df21e68c5a2742debacb}{\index{Mser\-Feature@{Mser\-Feature}!Process@{Process}}
+\index{Process@{Process}!MserFeature@{Mser\-Feature}}
+\subparagraph[{Process}]{\setlength{\rightskip}{0pt plus 5cm}void Mser\-Feature\-::\-Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_ad96a1235b0c0df21e68c5a2742debacb}
+
+
+Implemented virtual method for the algorithm. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}{Feature\-::\-Process()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}{Feature}.
+
+\hypertarget{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}{\index{Mser\-Feature@{Mser\-Feature}!Set\-Frame@{Set\-Frame}}
+\index{Set\-Frame@{Set\-Frame}!MserFeature@{Mser\-Feature}}
+\subparagraph[{Set\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-::\-Set\-Frame (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}
+
+
+Connects a frame to the feature extractor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Output parameter for the current frame. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___core_a2b42f82341afd2747ea093b6ac8b91cb}{\index{Mser\-Feature@{Mser\-Feature}!Start@{Start}}
+\index{Start@{Start}!MserFeature@{Mser\-Feature}}
+\subparagraph[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-::\-Start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___core_a2b42f82341afd2747ea093b6ac8b91cb}
+
+
+Starts the thread. 
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___core_a2b42f82341afd2747ea093b6ac8b91cb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\paragraph{Member Data Documentation}
+\hypertarget{group___feature_extractor_ade4ed6ec57dbfefd1a263fa29419e54d}{\index{Mser\-Feature@{Mser\-Feature}!area\-Threshold\-\_\-@{area\-Threshold\-\_\-}}
+\index{area\-Threshold\-\_\-@{area\-Threshold\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{area\-Threshold\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Mser\-Feature\-::area\-Threshold\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_ade4ed6ec57dbfefd1a263fa29419e54d}
+
+
+The area threshold to cause re-\/initialize. 
+
+\hypertarget{group___feature_extractor_a55dae2de52e614532d2243ca113fb3fb}{\index{Mser\-Feature@{Mser\-Feature}!delta\-\_\-@{delta\-\_\-}}
+\index{delta\-\_\-@{delta\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{delta\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Mser\-Feature\-::delta\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a55dae2de52e614532d2243ca113fb3fb}
+
+
+Delta in the code, it compares (size\-\_\-\{i\} -\/ size\-\_\-\{i -\/ delta\}) / size\-\_\-\{i -\/ delta\}. 
+
+\hypertarget{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}{\index{Mser\-Feature@{Mser\-Feature}!descriptors@{descriptors}}
+\index{descriptors@{descriptors}!MserFeature@{Mser\-Feature}}
+\subparagraph[{descriptors}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Feature\-::descriptors\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}
+
+
+The output matrix of descriptors. 
+
+\hypertarget{group___feature_extractor_a1850b5af2915831475ef9d776e8a72ea}{\index{Mser\-Feature@{Mser\-Feature}!edge\-Blur\-Size\-\_\-@{edge\-Blur\-Size\-\_\-}}
+\index{edge\-Blur\-Size\-\_\-@{edge\-Blur\-Size\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{edge\-Blur\-Size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Mser\-Feature\-::edge\-Blur\-Size\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a1850b5af2915831475ef9d776e8a72ea}
+
+
+The aperture size for edge blur. 
+
+\hypertarget{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}{\index{Mser\-Feature@{Mser\-Feature}!frame\-\_\-@{frame\-\_\-}}
+\index{frame\-\_\-@{frame\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{frame\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Feature\-::frame\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}
+
+
+The current frame. 
+
+\hypertarget{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}{\index{Mser\-Feature@{Mser\-Feature}!key\-Points@{key\-Points}}
+\index{key\-Points@{key\-Points}!MserFeature@{Mser\-Feature}}
+\subparagraph[{key\-Points}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$cv\-::\-Key\-Point$>$ Feature\-::key\-Points\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}
+
+
+Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. 
+
+\hypertarget{group___feature_extractor_a74d77b8596474323f1c4581ddf1d7fa2}{\index{Mser\-Feature@{Mser\-Feature}!max\-Area\-\_\-@{max\-Area\-\_\-}}
+\index{max\-Area\-\_\-@{max\-Area\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{max\-Area\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Mser\-Feature\-::max\-Area\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a74d77b8596474323f1c4581ddf1d7fa2}
+
+
+Prune the area which bigger than max\-Area. 
+
+\hypertarget{group___feature_extractor_a135d54a9a46522e800ef26ecfb8f18be}{\index{Mser\-Feature@{Mser\-Feature}!max\-Evolution\-\_\-@{max\-Evolution\-\_\-}}
+\index{max\-Evolution\-\_\-@{max\-Evolution\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{max\-Evolution\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Mser\-Feature\-::max\-Evolution\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a135d54a9a46522e800ef26ecfb8f18be}
+
+
+For color image, the evolution steps. 
+
+\hypertarget{group___feature_extractor_a9353f0657019b0177c8ce65c00d826f4}{\index{Mser\-Feature@{Mser\-Feature}!max\-Variation\-\_\-@{max\-Variation\-\_\-}}
+\index{max\-Variation\-\_\-@{max\-Variation\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{max\-Variation\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Mser\-Feature\-::max\-Variation\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a9353f0657019b0177c8ce65c00d826f4}
+
+
+Prune the area have simliar size to its children. 
+
+\hypertarget{group___feature_extractor_a556156bf90c6cff20f7451134dc5c9f3}{\index{Mser\-Feature@{Mser\-Feature}!min\-Area\-\_\-@{min\-Area\-\_\-}}
+\index{min\-Area\-\_\-@{min\-Area\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{min\-Area\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Mser\-Feature\-::min\-Area\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a556156bf90c6cff20f7451134dc5c9f3}
+
+
+Prune the area which smaller than min\-Area. 
+
+\hypertarget{group___feature_extractor_a7f7fe51c62b96bcc83f51e73e0d59a94}{\index{Mser\-Feature@{Mser\-Feature}!min\-Diversity\-\_\-@{min\-Diversity\-\_\-}}
+\index{min\-Diversity\-\_\-@{min\-Diversity\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{min\-Diversity\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Mser\-Feature\-::min\-Diversity\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a7f7fe51c62b96bcc83f51e73e0d59a94}
+
+
+Trace back to cut off mser with diversity $<$ min\-\_\-diversity. 
+
+\hypertarget{group___feature_extractor_a6bc22c26631b87ff8787244da9d1eca2}{\index{Mser\-Feature@{Mser\-Feature}!min\-Margin\-\_\-@{min\-Margin\-\_\-}}
+\index{min\-Margin\-\_\-@{min\-Margin\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{min\-Margin\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Mser\-Feature\-::min\-Margin\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a6bc22c26631b87ff8787244da9d1eca2}
+
+
+Ignore too small margin. 
+
+\hypertarget{group___feature_extractor_a4e7332139a72f3591cbc2e02e7f67748}{\index{Mser\-Feature@{Mser\-Feature}!mser\-Detector\-\_\-@{mser\-Detector\-\_\-}}
+\index{mser\-Detector\-\_\-@{mser\-Detector\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{mser\-Detector\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mser\-Feature\-Detector$\ast$ Mser\-Feature\-::mser\-Detector\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a4e7332139a72f3591cbc2e02e7f67748}
+
+
+Wrapped Open\-C\-V M\-S\-E\-R object. 
+
+\hypertarget{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}{\index{Mser\-Feature@{Mser\-Feature}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Feature\-::name\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}
+
+
+Name of the current feature extraction procedure. 
+
+\hypertarget{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}{\index{Mser\-Feature@{Mser\-Feature}!proc\-Time\-\_\-@{proc\-Time\-\_\-}}
+\index{proc\-Time\-\_\-@{proc\-Time\-\_\-}!MserFeature@{Mser\-Feature}}
+\subparagraph[{proc\-Time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Feature\-::proc\-Time\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}
+
+
+Processing time of the current feature extraction method. 
+
+\index{Orb\-Feature@{Orb\-Feature}}\label{class_orb_feature}
+\hypertarget{group___feature_extractor_class_orb_feature}{}
+\subsubsection{class Orb\-Feature}
+Class for extracting O\-R\-B features. 
+
+Class implementing the O\-R\-B (oriented B\-R\-I\-E\-F) keypoint detector and descriptor extractor. The algorithm uses F\-A\-S\-T in pyramids to detect stable keypoints, selects the strongest features using F\-A\-S\-T or Harris response, finds their orientation using first-\/order moments and computes the descriptors using B\-R\-I\-E\-F (where the coordinates of random point pairs (or k-\/tuples) are rotated according to the measured orientation).
+
+See paper\-: Ethan Rublee, Vincent Rabaud, Kurt Konolige, Gary R. Bradski\-: O\-R\-B\-: An efficient alternative to S\-I\-F\-T or S\-U\-R\-F. I\-C\-C\-V 2011\-: 2564-\/2571. 
+
+Inheritance diagram for Orb\-Feature\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_orb_feature__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Orb\-Feature\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_orb_feature__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___feature_extractor_a27e8b7a9c9ad36abd4119d1feb98f874}{Orb\-Feature} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{group___feature_extractor_aed4e5d5b4410041d3c8374dbd929f2ef}{$\sim$\-Orb\-Feature} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group___core_a8f33f7750321d5df9188033e7e3e300d}{Join} (void)
+\item 
+void \hyperlink{group___feature_extractor_aa13ad1fbc5869dcabb55611e5c206ebd}{Load\-Settings\-From\-File\-Storage} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for loading algorithm specific settings from the given storage. \end{DoxyCompactList}\item 
+void \hyperlink{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}{Set\-Frame} (const cv\-::\-Mat \&frame)
+\begin{DoxyCompactList}\small\item\em Connects a frame to the feature extractor. \end{DoxyCompactList}\item 
+void \hyperlink{group___core_a2b42f82341afd2747ea093b6ac8b91cb}{Start} (void)
+\begin{DoxyCompactList}\small\item\em Starts the thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \hyperlink{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}{descriptors}
+\begin{DoxyCompactList}\small\item\em The output matrix of descriptors. \end{DoxyCompactList}\item 
+std\-::vector$<$ cv\-::\-Key\-Point $>$ \hyperlink{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}{key\-Points}
+\begin{DoxyCompactList}\small\item\em Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \hyperlink{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}{frame\-\_\-}
+\begin{DoxyCompactList}\small\item\em The current frame. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}{name\-\_\-}
+\begin{DoxyCompactList}\small\item\em Name of the current feature extraction procedure. \end{DoxyCompactList}\item 
+double \hyperlink{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}{proc\-Time\-\_\-}
+\begin{DoxyCompactList}\small\item\em Processing time of the current feature extraction method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___feature_extractor_a907fdd9790d0295f129f1ecdc4382031}{Draw\-Features} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for displaying the output. \end{DoxyCompactList}\item 
+void \hyperlink{group___feature_extractor_af814e3440b61e6bf13b44ef8886ad2d0}{Process} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for the algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group___feature_extractor_af74609fa7b56d5dea19c9460f42b25ab}{edge\-Threshold\-\_\-}
+\begin{DoxyCompactList}\small\item\em This is size of the border where the features are not detected. It should roughly match the patch\-Size parameter. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a1c1e186a9f2bc54c38f54f3c1e8f7d0f}{first\-Level\-\_\-}
+\begin{DoxyCompactList}\small\item\em It should be 0 in the current implementation. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a8fb8ef05ff3dff5ffee90c6f41e83cb2}{n\-Features\-\_\-}
+\begin{DoxyCompactList}\small\item\em The maximum number of features to retain. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_abfb07330bd1a63270f935e1317111300}{nlevels\-\_\-}
+\begin{DoxyCompactList}\small\item\em The number of pyramid levels. The smallest level will have linear size equal to input\-\_\-image\-\_\-linear\-\_\-size/pow(scale\-Factor, nlevels). \end{DoxyCompactList}\item 
+cv\-::\-Orb\-Feature\-Detector $\ast$ \hyperlink{group___feature_extractor_afbddce112b372099591a6ec049aff0f5}{orb\-Detector\-\_\-}
+\begin{DoxyCompactList}\small\item\em Wrapped Open\-C\-V O\-R\-B object. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_ae7f8a68d8b86f650348bc213c43f593a}{patch\-Size\-\_\-}
+\begin{DoxyCompactList}\small\item\em Size of the patch used by the oriented B\-R\-I\-E\-F descriptor. Of course, on smaller pyramid layers the perceived image area covered by a feature will be larger. \end{DoxyCompactList}\item 
+float \hyperlink{group___feature_extractor_a8cbd44d79e8952dd7b51be32d1eaddee}{scale\-Factor\-\_\-}
+\begin{DoxyCompactList}\small\item\em Pyramid decimation ratio, greater than 1. scale\-Factor==2 means the classical pyramid, where each next level has 4x less pixels than the previous, but such a big scale factor will degrade feature matching scores dramatically. On the other hand, too close to 1 scale factor will mean that to cover certain scale range you will need more pyramid levels and so the speed will suffer. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a9a4454ef09254b94d88d0b599ad84218}{score\-Type\-\_\-}
+\begin{DoxyCompactList}\small\item\em he default H\-A\-R\-R\-I\-S\-\_\-\-S\-C\-O\-R\-E means that Harris algorithm is used to rank features (the score is written to Key\-Point\-::score and is used to retain best nfeatures features); F\-A\-S\-T\-\_\-\-S\-C\-O\-R\-E is alternative value of the parameter that produces slightly less stable keypoints, but it is a little faster to compute. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a05cc269e6833e1f25c7f7c31928a5ef6}{wta\-K\-\_\-}
+\begin{DoxyCompactList}\small\item\em The number of points that produce each element of the oriented B\-R\-I\-E\-F descriptor. The default value 2 means the B\-R\-I\-E\-F where we take a random point pair and compare their brightnesses, so we get 0/1 response. Other possible values are 3 and 4. For example, 3 means that we take 3 random points (of course, those point coordinates are random, but they are generated from the pre-\/defined seed, so each element of B\-R\-I\-E\-F descriptor is computed deterministically from the pixel rectangle), find point of maximum brightness and output index of the winner (0, 1 or 2). Such output will occupy 2 bits, and therefore it will need a special variant of Hamming distance, denoted as N\-O\-R\-M\-\_\-\-H\-A\-M\-M\-I\-N\-G2 (2 bits per bin). When W\-T\-A\-\_\-\-K=4, we take 4 random points to compute each bin (that will also occupy 2 bits with possible values 0, 1, 2 or 3). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\paragraph{Constructor \& Destructor Documentation}
+\hypertarget{group___feature_extractor_a27e8b7a9c9ad36abd4119d1feb98f874}{\index{Orb\-Feature@{Orb\-Feature}!Orb\-Feature@{Orb\-Feature}}
+\index{Orb\-Feature@{Orb\-Feature}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{Orb\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}Orb\-Feature\-::\-Orb\-Feature (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_a27e8b7a9c9ad36abd4119d1feb98f874}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the current feature extraction procedure. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___feature_extractor_a27e8b7a9c9ad36abd4119d1feb98f874_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_aed4e5d5b4410041d3c8374dbd929f2ef}{\index{Orb\-Feature@{Orb\-Feature}!$\sim$\-Orb\-Feature@{$\sim$\-Orb\-Feature}}
+\index{$\sim$\-Orb\-Feature@{$\sim$\-Orb\-Feature}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{$\sim$\-Orb\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}Orb\-Feature\-::$\sim$\-Orb\-Feature (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_aed4e5d5b4410041d3c8374dbd929f2ef}
+
+
+Destructor. 
+
+
+
+\paragraph{Member Function Documentation}
+\hypertarget{group___feature_extractor_a907fdd9790d0295f129f1ecdc4382031}{\index{Orb\-Feature@{Orb\-Feature}!Draw\-Features@{Draw\-Features}}
+\index{Draw\-Features@{Draw\-Features}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{Draw\-Features}]{\setlength{\rightskip}{0pt plus 5cm}void Orb\-Feature\-::\-Draw\-Features (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_a907fdd9790d0295f129f1ecdc4382031}
+
+
+Implemented virtual method for displaying the output. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}{Feature\-::\-Draw\-Features()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}{Feature}.
+
+\hypertarget{group___core_a8f33f7750321d5df9188033e7e3e300d}{\index{Orb\-Feature@{Orb\-Feature}!Join@{Join}}
+\index{Join@{Join}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{Join}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Thread\-::\-Join (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___core_a8f33f7750321d5df9188033e7e3e300d}
+\hypertarget{group___feature_extractor_aa13ad1fbc5869dcabb55611e5c206ebd}{\index{Orb\-Feature@{Orb\-Feature}!Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}}
+\index{Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{Load\-Settings\-From\-File\-Storage}]{\setlength{\rightskip}{0pt plus 5cm}void Orb\-Feature\-::\-Load\-Settings\-From\-File\-Storage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{group___feature_extractor_aa13ad1fbc5869dcabb55611e5c206ebd}
+
+
+Implemented virtual method for loading algorithm specific settings from the given storage. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}{Feature\-::\-Load\-Settings\-From\-File\-Storage()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}{Feature}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___feature_extractor_aa13ad1fbc5869dcabb55611e5c206ebd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_af814e3440b61e6bf13b44ef8886ad2d0}{\index{Orb\-Feature@{Orb\-Feature}!Process@{Process}}
+\index{Process@{Process}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{Process}]{\setlength{\rightskip}{0pt plus 5cm}void Orb\-Feature\-::\-Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_af814e3440b61e6bf13b44ef8886ad2d0}
+
+
+Implemented virtual method for the algorithm. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}{Feature\-::\-Process()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}{Feature}.
+
+\hypertarget{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}{\index{Orb\-Feature@{Orb\-Feature}!Set\-Frame@{Set\-Frame}}
+\index{Set\-Frame@{Set\-Frame}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{Set\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-::\-Set\-Frame (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}
+
+
+Connects a frame to the feature extractor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Output parameter for the current frame. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___core_a2b42f82341afd2747ea093b6ac8b91cb}{\index{Orb\-Feature@{Orb\-Feature}!Start@{Start}}
+\index{Start@{Start}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-::\-Start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___core_a2b42f82341afd2747ea093b6ac8b91cb}
+
+
+Starts the thread. 
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___core_a2b42f82341afd2747ea093b6ac8b91cb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\paragraph{Member Data Documentation}
+\hypertarget{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}{\index{Orb\-Feature@{Orb\-Feature}!descriptors@{descriptors}}
+\index{descriptors@{descriptors}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{descriptors}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Feature\-::descriptors\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}
+
+
+The output matrix of descriptors. 
+
+\hypertarget{group___feature_extractor_af74609fa7b56d5dea19c9460f42b25ab}{\index{Orb\-Feature@{Orb\-Feature}!edge\-Threshold\-\_\-@{edge\-Threshold\-\_\-}}
+\index{edge\-Threshold\-\_\-@{edge\-Threshold\-\_\-}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{edge\-Threshold\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Orb\-Feature\-::edge\-Threshold\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_af74609fa7b56d5dea19c9460f42b25ab}
+
+
+This is size of the border where the features are not detected. It should roughly match the patch\-Size parameter. 
+
+\hypertarget{group___feature_extractor_a1c1e186a9f2bc54c38f54f3c1e8f7d0f}{\index{Orb\-Feature@{Orb\-Feature}!first\-Level\-\_\-@{first\-Level\-\_\-}}
+\index{first\-Level\-\_\-@{first\-Level\-\_\-}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{first\-Level\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Orb\-Feature\-::first\-Level\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a1c1e186a9f2bc54c38f54f3c1e8f7d0f}
+
+
+It should be 0 in the current implementation. 
+
+\hypertarget{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}{\index{Orb\-Feature@{Orb\-Feature}!frame\-\_\-@{frame\-\_\-}}
+\index{frame\-\_\-@{frame\-\_\-}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{frame\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Feature\-::frame\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}
+
+
+The current frame. 
+
+\hypertarget{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}{\index{Orb\-Feature@{Orb\-Feature}!key\-Points@{key\-Points}}
+\index{key\-Points@{key\-Points}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{key\-Points}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$cv\-::\-Key\-Point$>$ Feature\-::key\-Points\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}
+
+
+Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. 
+
+\hypertarget{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}{\index{Orb\-Feature@{Orb\-Feature}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Feature\-::name\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}
+
+
+Name of the current feature extraction procedure. 
+
+\hypertarget{group___feature_extractor_a8fb8ef05ff3dff5ffee90c6f41e83cb2}{\index{Orb\-Feature@{Orb\-Feature}!n\-Features\-\_\-@{n\-Features\-\_\-}}
+\index{n\-Features\-\_\-@{n\-Features\-\_\-}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{n\-Features\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Orb\-Feature\-::n\-Features\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a8fb8ef05ff3dff5ffee90c6f41e83cb2}
+
+
+The maximum number of features to retain. 
+
+\hypertarget{group___feature_extractor_abfb07330bd1a63270f935e1317111300}{\index{Orb\-Feature@{Orb\-Feature}!nlevels\-\_\-@{nlevels\-\_\-}}
+\index{nlevels\-\_\-@{nlevels\-\_\-}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{nlevels\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Orb\-Feature\-::nlevels\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_abfb07330bd1a63270f935e1317111300}
+
+
+The number of pyramid levels. The smallest level will have linear size equal to input\-\_\-image\-\_\-linear\-\_\-size/pow(scale\-Factor, nlevels). 
+
+\hypertarget{group___feature_extractor_afbddce112b372099591a6ec049aff0f5}{\index{Orb\-Feature@{Orb\-Feature}!orb\-Detector\-\_\-@{orb\-Detector\-\_\-}}
+\index{orb\-Detector\-\_\-@{orb\-Detector\-\_\-}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{orb\-Detector\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Orb\-Feature\-Detector$\ast$ Orb\-Feature\-::orb\-Detector\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_afbddce112b372099591a6ec049aff0f5}
+
+
+Wrapped Open\-C\-V O\-R\-B object. 
+
+\hypertarget{group___feature_extractor_ae7f8a68d8b86f650348bc213c43f593a}{\index{Orb\-Feature@{Orb\-Feature}!patch\-Size\-\_\-@{patch\-Size\-\_\-}}
+\index{patch\-Size\-\_\-@{patch\-Size\-\_\-}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{patch\-Size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Orb\-Feature\-::patch\-Size\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_ae7f8a68d8b86f650348bc213c43f593a}
+
+
+Size of the patch used by the oriented B\-R\-I\-E\-F descriptor. Of course, on smaller pyramid layers the perceived image area covered by a feature will be larger. 
+
+\hypertarget{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}{\index{Orb\-Feature@{Orb\-Feature}!proc\-Time\-\_\-@{proc\-Time\-\_\-}}
+\index{proc\-Time\-\_\-@{proc\-Time\-\_\-}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{proc\-Time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Feature\-::proc\-Time\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}
+
+
+Processing time of the current feature extraction method. 
+
+\hypertarget{group___feature_extractor_a8cbd44d79e8952dd7b51be32d1eaddee}{\index{Orb\-Feature@{Orb\-Feature}!scale\-Factor\-\_\-@{scale\-Factor\-\_\-}}
+\index{scale\-Factor\-\_\-@{scale\-Factor\-\_\-}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{scale\-Factor\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}float Orb\-Feature\-::scale\-Factor\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a8cbd44d79e8952dd7b51be32d1eaddee}
+
+
+Pyramid decimation ratio, greater than 1. scale\-Factor==2 means the classical pyramid, where each next level has 4x less pixels than the previous, but such a big scale factor will degrade feature matching scores dramatically. On the other hand, too close to 1 scale factor will mean that to cover certain scale range you will need more pyramid levels and so the speed will suffer. 
+
+\hypertarget{group___feature_extractor_a9a4454ef09254b94d88d0b599ad84218}{\index{Orb\-Feature@{Orb\-Feature}!score\-Type\-\_\-@{score\-Type\-\_\-}}
+\index{score\-Type\-\_\-@{score\-Type\-\_\-}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{score\-Type\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Orb\-Feature\-::score\-Type\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a9a4454ef09254b94d88d0b599ad84218}
+
+
+he default H\-A\-R\-R\-I\-S\-\_\-\-S\-C\-O\-R\-E means that Harris algorithm is used to rank features (the score is written to Key\-Point\-::score and is used to retain best nfeatures features); F\-A\-S\-T\-\_\-\-S\-C\-O\-R\-E is alternative value of the parameter that produces slightly less stable keypoints, but it is a little faster to compute. 
+
+\hypertarget{group___feature_extractor_a05cc269e6833e1f25c7f7c31928a5ef6}{\index{Orb\-Feature@{Orb\-Feature}!wta\-K\-\_\-@{wta\-K\-\_\-}}
+\index{wta\-K\-\_\-@{wta\-K\-\_\-}!OrbFeature@{Orb\-Feature}}
+\subparagraph[{wta\-K\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Orb\-Feature\-::wta\-K\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a05cc269e6833e1f25c7f7c31928a5ef6}
+
+
+The number of points that produce each element of the oriented B\-R\-I\-E\-F descriptor. The default value 2 means the B\-R\-I\-E\-F where we take a random point pair and compare their brightnesses, so we get 0/1 response. Other possible values are 3 and 4. For example, 3 means that we take 3 random points (of course, those point coordinates are random, but they are generated from the pre-\/defined seed, so each element of B\-R\-I\-E\-F descriptor is computed deterministically from the pixel rectangle), find point of maximum brightness and output index of the winner (0, 1 or 2). Such output will occupy 2 bits, and therefore it will need a special variant of Hamming distance, denoted as N\-O\-R\-M\-\_\-\-H\-A\-M\-M\-I\-N\-G2 (2 bits per bin). When W\-T\-A\-\_\-\-K=4, we take 4 random points to compute each bin (that will also occupy 2 bits with possible values 0, 1, 2 or 3). 
+
+\index{Sift\-Feature@{Sift\-Feature}}\label{class_sift_feature}
+\hypertarget{group___feature_extractor_class_sift_feature}{}
+\subsubsection{class Sift\-Feature}
+Class for extracting S\-I\-F\-T features. 
+
+Class for extracting keypoints and computing descriptors using the Scale Invariant \hyperlink{group___feature_extractor_class_feature}{Feature} Transform (S\-I\-F\-T) algorithm by D. Lowe.
+
+See paper\-: Lowe, D. G., \-Distinctive Image Features from Scale-\/\-Invariant Keypoints, International Journal of Computer Vision, 60, 2, pp. 91-\/110, 2004. 
+
+Inheritance diagram for Sift\-Feature\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_sift_feature__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sift\-Feature\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_sift_feature__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___feature_extractor_a73b7e3c9affef19366a1f3dc50ce5533}{Sift\-Feature} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{group___feature_extractor_af35ea372a4c8aaf8a7486ec688214527}{$\sim$\-Sift\-Feature} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group___core_a8f33f7750321d5df9188033e7e3e300d}{Join} (void)
+\item 
+void \hyperlink{group___feature_extractor_af19316d789598f612ee150deb2ee5137}{Load\-Settings\-From\-File\-Storage} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for loading algorithm specific settings from the given storage. \end{DoxyCompactList}\item 
+void \hyperlink{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}{Set\-Frame} (const cv\-::\-Mat \&frame)
+\begin{DoxyCompactList}\small\item\em Connects a frame to the feature extractor. \end{DoxyCompactList}\item 
+void \hyperlink{group___core_a2b42f82341afd2747ea093b6ac8b91cb}{Start} (void)
+\begin{DoxyCompactList}\small\item\em Starts the thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \hyperlink{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}{descriptors}
+\begin{DoxyCompactList}\small\item\em The output matrix of descriptors. \end{DoxyCompactList}\item 
+std\-::vector$<$ cv\-::\-Key\-Point $>$ \hyperlink{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}{key\-Points}
+\begin{DoxyCompactList}\small\item\em Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \hyperlink{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}{frame\-\_\-}
+\begin{DoxyCompactList}\small\item\em The current frame. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}{name\-\_\-}
+\begin{DoxyCompactList}\small\item\em Name of the current feature extraction procedure. \end{DoxyCompactList}\item 
+double \hyperlink{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}{proc\-Time\-\_\-}
+\begin{DoxyCompactList}\small\item\em Processing time of the current feature extraction method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___feature_extractor_ae82e144ac3fed861dc0770cefaa828a6}{Draw\-Features} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for displaying the output. \end{DoxyCompactList}\item 
+void \hyperlink{group___feature_extractor_a73513198ca8ff4e56be059521cfb60f5}{Process} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for the algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{group___feature_extractor_af2a77eef4388e7b3504142218baee770}{contrast\-Threshold\-\_\-}
+\begin{DoxyCompactList}\small\item\em The contrast threshold used to filter out weak features in semi-\/uniform (low-\/contrast) regions. The larger the threshold, the less features are produced by the detector. \end{DoxyCompactList}\item 
+double \hyperlink{group___feature_extractor_a8fc64eb5826c05c5fe8c0893cc24ff0a}{edge\-Threshold\-\_\-}
+\begin{DoxyCompactList}\small\item\em The threshold used to filter out edge-\/like features. Note that the its meaning is different from the contrast\-Threshold, i.\-e. the larger the edge\-Threshold, the less features are filtered out (more features are retained). \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a7b777845234b488ea905bd38f7ce323c}{nfeatures\-\_\-}
+\begin{DoxyCompactList}\small\item\em The number of best features to retain. The features are ranked by their scores (measured in S\-I\-F\-T algorithm as the local contrast). \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_aaf3149accfb0860cb148ea21cda53c12}{n\-Octave\-Layers\-\_\-}
+\begin{DoxyCompactList}\small\item\em The number of layers in each octave. 3 is the value used in D. Lowe paper. The number of octaves is computed automatically from the image resolution. \end{DoxyCompactList}\item 
+cv\-::\-Sift\-Feature\-Detector $\ast$ \hyperlink{group___feature_extractor_a4e08df2e30da758a11d029eae0352cf5}{sift\-Detector\-\_\-}
+\begin{DoxyCompactList}\small\item\em Wrapped Open\-C\-V S\-I\-F\-T object. \end{DoxyCompactList}\item 
+double \hyperlink{group___feature_extractor_a574fb46dbb906801014beb9a731b980a}{sigma\-\_\-}
+\begin{DoxyCompactList}\small\item\em The sigma of the Gaussian applied to the input image at the octave \#0. If your image is captured with a weak camera with soft lenses, you might want to reduce the number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\paragraph{Constructor \& Destructor Documentation}
+\hypertarget{group___feature_extractor_a73b7e3c9affef19366a1f3dc50ce5533}{\index{Sift\-Feature@{Sift\-Feature}!Sift\-Feature@{Sift\-Feature}}
+\index{Sift\-Feature@{Sift\-Feature}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{Sift\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}Sift\-Feature\-::\-Sift\-Feature (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_a73b7e3c9affef19366a1f3dc50ce5533}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the current feature extraction procedure. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___feature_extractor_a73b7e3c9affef19366a1f3dc50ce5533_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_af35ea372a4c8aaf8a7486ec688214527}{\index{Sift\-Feature@{Sift\-Feature}!$\sim$\-Sift\-Feature@{$\sim$\-Sift\-Feature}}
+\index{$\sim$\-Sift\-Feature@{$\sim$\-Sift\-Feature}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{$\sim$\-Sift\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}Sift\-Feature\-::$\sim$\-Sift\-Feature (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_af35ea372a4c8aaf8a7486ec688214527}
+
+
+Destructor. 
+
+
+
+\paragraph{Member Function Documentation}
+\hypertarget{group___feature_extractor_ae82e144ac3fed861dc0770cefaa828a6}{\index{Sift\-Feature@{Sift\-Feature}!Draw\-Features@{Draw\-Features}}
+\index{Draw\-Features@{Draw\-Features}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{Draw\-Features}]{\setlength{\rightskip}{0pt plus 5cm}void Sift\-Feature\-::\-Draw\-Features (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_ae82e144ac3fed861dc0770cefaa828a6}
+
+
+Implemented virtual method for displaying the output. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}{Feature\-::\-Draw\-Features()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}{Feature}.
+
+\hypertarget{group___core_a8f33f7750321d5df9188033e7e3e300d}{\index{Sift\-Feature@{Sift\-Feature}!Join@{Join}}
+\index{Join@{Join}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{Join}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Thread\-::\-Join (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___core_a8f33f7750321d5df9188033e7e3e300d}
+\hypertarget{group___feature_extractor_af19316d789598f612ee150deb2ee5137}{\index{Sift\-Feature@{Sift\-Feature}!Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}}
+\index{Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{Load\-Settings\-From\-File\-Storage}]{\setlength{\rightskip}{0pt plus 5cm}void Sift\-Feature\-::\-Load\-Settings\-From\-File\-Storage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{group___feature_extractor_af19316d789598f612ee150deb2ee5137}
+
+
+Implemented virtual method for loading algorithm specific settings from the given storage. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}{Feature\-::\-Load\-Settings\-From\-File\-Storage()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}{Feature}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___feature_extractor_af19316d789598f612ee150deb2ee5137_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_a73513198ca8ff4e56be059521cfb60f5}{\index{Sift\-Feature@{Sift\-Feature}!Process@{Process}}
+\index{Process@{Process}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{Process}]{\setlength{\rightskip}{0pt plus 5cm}void Sift\-Feature\-::\-Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_a73513198ca8ff4e56be059521cfb60f5}
+
+
+Implemented virtual method for the algorithm. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}{Feature\-::\-Process()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}{Feature}.
+
+\hypertarget{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}{\index{Sift\-Feature@{Sift\-Feature}!Set\-Frame@{Set\-Frame}}
+\index{Set\-Frame@{Set\-Frame}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{Set\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-::\-Set\-Frame (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}
+
+
+Connects a frame to the feature extractor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Output parameter for the current frame. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___core_a2b42f82341afd2747ea093b6ac8b91cb}{\index{Sift\-Feature@{Sift\-Feature}!Start@{Start}}
+\index{Start@{Start}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-::\-Start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___core_a2b42f82341afd2747ea093b6ac8b91cb}
+
+
+Starts the thread. 
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___core_a2b42f82341afd2747ea093b6ac8b91cb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\paragraph{Member Data Documentation}
+\hypertarget{group___feature_extractor_af2a77eef4388e7b3504142218baee770}{\index{Sift\-Feature@{Sift\-Feature}!contrast\-Threshold\-\_\-@{contrast\-Threshold\-\_\-}}
+\index{contrast\-Threshold\-\_\-@{contrast\-Threshold\-\_\-}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{contrast\-Threshold\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Sift\-Feature\-::contrast\-Threshold\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_af2a77eef4388e7b3504142218baee770}
+
+
+The contrast threshold used to filter out weak features in semi-\/uniform (low-\/contrast) regions. The larger the threshold, the less features are produced by the detector. 
+
+\hypertarget{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}{\index{Sift\-Feature@{Sift\-Feature}!descriptors@{descriptors}}
+\index{descriptors@{descriptors}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{descriptors}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Feature\-::descriptors\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}
+
+
+The output matrix of descriptors. 
+
+\hypertarget{group___feature_extractor_a8fc64eb5826c05c5fe8c0893cc24ff0a}{\index{Sift\-Feature@{Sift\-Feature}!edge\-Threshold\-\_\-@{edge\-Threshold\-\_\-}}
+\index{edge\-Threshold\-\_\-@{edge\-Threshold\-\_\-}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{edge\-Threshold\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Sift\-Feature\-::edge\-Threshold\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a8fc64eb5826c05c5fe8c0893cc24ff0a}
+
+
+The threshold used to filter out edge-\/like features. Note that the its meaning is different from the contrast\-Threshold, i.\-e. the larger the edge\-Threshold, the less features are filtered out (more features are retained). 
+
+\hypertarget{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}{\index{Sift\-Feature@{Sift\-Feature}!frame\-\_\-@{frame\-\_\-}}
+\index{frame\-\_\-@{frame\-\_\-}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{frame\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Feature\-::frame\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}
+
+
+The current frame. 
+
+\hypertarget{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}{\index{Sift\-Feature@{Sift\-Feature}!key\-Points@{key\-Points}}
+\index{key\-Points@{key\-Points}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{key\-Points}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$cv\-::\-Key\-Point$>$ Feature\-::key\-Points\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}
+
+
+Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. 
+
+\hypertarget{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}{\index{Sift\-Feature@{Sift\-Feature}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Feature\-::name\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}
+
+
+Name of the current feature extraction procedure. 
+
+\hypertarget{group___feature_extractor_a7b777845234b488ea905bd38f7ce323c}{\index{Sift\-Feature@{Sift\-Feature}!nfeatures\-\_\-@{nfeatures\-\_\-}}
+\index{nfeatures\-\_\-@{nfeatures\-\_\-}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{nfeatures\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Sift\-Feature\-::nfeatures\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a7b777845234b488ea905bd38f7ce323c}
+
+
+The number of best features to retain. The features are ranked by their scores (measured in S\-I\-F\-T algorithm as the local contrast). 
+
+\hypertarget{group___feature_extractor_aaf3149accfb0860cb148ea21cda53c12}{\index{Sift\-Feature@{Sift\-Feature}!n\-Octave\-Layers\-\_\-@{n\-Octave\-Layers\-\_\-}}
+\index{n\-Octave\-Layers\-\_\-@{n\-Octave\-Layers\-\_\-}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{n\-Octave\-Layers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Sift\-Feature\-::n\-Octave\-Layers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_aaf3149accfb0860cb148ea21cda53c12}
+
+
+The number of layers in each octave. 3 is the value used in D. Lowe paper. The number of octaves is computed automatically from the image resolution. 
+
+\hypertarget{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}{\index{Sift\-Feature@{Sift\-Feature}!proc\-Time\-\_\-@{proc\-Time\-\_\-}}
+\index{proc\-Time\-\_\-@{proc\-Time\-\_\-}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{proc\-Time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Feature\-::proc\-Time\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}
+
+
+Processing time of the current feature extraction method. 
+
+\hypertarget{group___feature_extractor_a4e08df2e30da758a11d029eae0352cf5}{\index{Sift\-Feature@{Sift\-Feature}!sift\-Detector\-\_\-@{sift\-Detector\-\_\-}}
+\index{sift\-Detector\-\_\-@{sift\-Detector\-\_\-}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{sift\-Detector\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Sift\-Feature\-Detector$\ast$ Sift\-Feature\-::sift\-Detector\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a4e08df2e30da758a11d029eae0352cf5}
+
+
+Wrapped Open\-C\-V S\-I\-F\-T object. 
+
+\hypertarget{group___feature_extractor_a574fb46dbb906801014beb9a731b980a}{\index{Sift\-Feature@{Sift\-Feature}!sigma\-\_\-@{sigma\-\_\-}}
+\index{sigma\-\_\-@{sigma\-\_\-}!SiftFeature@{Sift\-Feature}}
+\subparagraph[{sigma\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Sift\-Feature\-::sigma\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a574fb46dbb906801014beb9a731b980a}
+
+
+The sigma of the Gaussian applied to the input image at the octave \#0. If your image is captured with a weak camera with soft lenses, you might want to reduce the number. 
+
+\index{Star\-Feature@{Star\-Feature}}\label{class_star_feature}
+\hypertarget{group___feature_extractor_class_star_feature}{}
+\subsubsection{class Star\-Feature}
+Class for extracting S\-T\-A\-R features. 
+
+Class implementing the Star keypoint detector, a modified version of the Cen\-Sur\-E keypoint detector described in Agrawal, M. and Konolige, K. and Blas, M.\-R. \-Cen\-Sur\-E\-: Center Surround Extremas for Realtime \hyperlink{group___feature_extractor_class_feature}{Feature} Detection and Matching, E\-C\-C\-V08, 2008. 
+
+Inheritance diagram for Star\-Feature\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{class_star_feature__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Star\-Feature\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{class_star_feature__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___feature_extractor_a52548ee009bbc2160f504d5976fe8620}{Star\-Feature} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{group___feature_extractor_a1f06b1c6af33b303a608828db923cb8c}{$\sim$\-Star\-Feature} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group___core_a8f33f7750321d5df9188033e7e3e300d}{Join} (void)
+\item 
+void \hyperlink{group___feature_extractor_a0a46cb80a6a4d45e324757b4ef679e81}{Load\-Settings\-From\-File\-Storage} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for loading algorithm specific settings from the given storage. \end{DoxyCompactList}\item 
+void \hyperlink{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}{Set\-Frame} (const cv\-::\-Mat \&frame)
+\begin{DoxyCompactList}\small\item\em Connects a frame to the feature extractor. \end{DoxyCompactList}\item 
+void \hyperlink{group___core_a2b42f82341afd2747ea093b6ac8b91cb}{Start} (void)
+\begin{DoxyCompactList}\small\item\em Starts the thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \hyperlink{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}{descriptors}
+\begin{DoxyCompactList}\small\item\em The output matrix of descriptors. \end{DoxyCompactList}\item 
+std\-::vector$<$ cv\-::\-Key\-Point $>$ \hyperlink{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}{key\-Points}
+\begin{DoxyCompactList}\small\item\em Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \hyperlink{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}{frame\-\_\-}
+\begin{DoxyCompactList}\small\item\em The current frame. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}{name\-\_\-}
+\begin{DoxyCompactList}\small\item\em Name of the current feature extraction procedure. \end{DoxyCompactList}\item 
+double \hyperlink{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}{proc\-Time\-\_\-}
+\begin{DoxyCompactList}\small\item\em Processing time of the current feature extraction method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___feature_extractor_a6bb4f1e6808f0043707eb3c0bff1e33d}{Draw\-Features} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for displaying the output. \end{DoxyCompactList}\item 
+void \hyperlink{group___feature_extractor_adb169936e9f60620b81894b48764a801}{Process} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for the algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group___feature_extractor_aea296c8f5cdf67ae340aac32f9512906}{line\-Threshold\-Binarized\-\_\-}
+\begin{DoxyCompactList}\small\item\em Another threshold for the feature size to eliminate edges. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_ab01cd66c7c27def6dcf03915c83085ad}{line\-Threshold\-Projected\-\_\-}
+\begin{DoxyCompactList}\small\item\em Another threshold for the laplacian to eliminate edges. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a03553a6b73fb075fa1bc1813b91b2079}{max\-Size\-\_\-}
+\begin{DoxyCompactList}\small\item\em Maximum size of the features. The following values of the parameter are supported\-: 4, 6, 8, 11, 12, 16, 22, 23, 32, 45, 46, 64, 90, 128. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a85a6ef809bb695a64de0bb5d4121e28a}{response\-Threshold\-\_\-}
+\begin{DoxyCompactList}\small\item\em Threshold for the approximated laplacian, used to eliminate weak features. The larger it is, the less features will be retrieved. \end{DoxyCompactList}\item 
+cv\-::\-Star\-Feature\-Detector $\ast$ \hyperlink{group___feature_extractor_ae7fdbb1aee60f2289f5d187025a7d094}{star\-Detector\-\_\-}
+\begin{DoxyCompactList}\small\item\em Wrapped Open\-C\-V S\-T\-A\-R object. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a36265d51f6a800441c974579ab4f6801}{suppress\-Nonmax\-Size\-\_\-}
+\begin{DoxyCompactList}\small\item\em Window size (n-\/by-\/n) to apply the non-\/maximal suppression. Increasing the window size remove feature points that are close to each other. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\paragraph{Constructor \& Destructor Documentation}
+\hypertarget{group___feature_extractor_a52548ee009bbc2160f504d5976fe8620}{\index{Star\-Feature@{Star\-Feature}!Star\-Feature@{Star\-Feature}}
+\index{Star\-Feature@{Star\-Feature}!StarFeature@{Star\-Feature}}
+\subparagraph[{Star\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}Star\-Feature\-::\-Star\-Feature (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_a52548ee009bbc2160f504d5976fe8620}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the current feature extraction procedure. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___feature_extractor_a52548ee009bbc2160f504d5976fe8620_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_a1f06b1c6af33b303a608828db923cb8c}{\index{Star\-Feature@{Star\-Feature}!$\sim$\-Star\-Feature@{$\sim$\-Star\-Feature}}
+\index{$\sim$\-Star\-Feature@{$\sim$\-Star\-Feature}!StarFeature@{Star\-Feature}}
+\subparagraph[{$\sim$\-Star\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}Star\-Feature\-::$\sim$\-Star\-Feature (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_a1f06b1c6af33b303a608828db923cb8c}
+
+
+Destructor. 
+
+
+
+\paragraph{Member Function Documentation}
+\hypertarget{group___feature_extractor_a6bb4f1e6808f0043707eb3c0bff1e33d}{\index{Star\-Feature@{Star\-Feature}!Draw\-Features@{Draw\-Features}}
+\index{Draw\-Features@{Draw\-Features}!StarFeature@{Star\-Feature}}
+\subparagraph[{Draw\-Features}]{\setlength{\rightskip}{0pt plus 5cm}void Star\-Feature\-::\-Draw\-Features (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_a6bb4f1e6808f0043707eb3c0bff1e33d}
+
+
+Implemented virtual method for displaying the output. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}{Feature\-::\-Draw\-Features()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}{Feature}.
+
+\hypertarget{group___core_a8f33f7750321d5df9188033e7e3e300d}{\index{Star\-Feature@{Star\-Feature}!Join@{Join}}
+\index{Join@{Join}!StarFeature@{Star\-Feature}}
+\subparagraph[{Join}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Thread\-::\-Join (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___core_a8f33f7750321d5df9188033e7e3e300d}
+\hypertarget{group___feature_extractor_a0a46cb80a6a4d45e324757b4ef679e81}{\index{Star\-Feature@{Star\-Feature}!Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}}
+\index{Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}!StarFeature@{Star\-Feature}}
+\subparagraph[{Load\-Settings\-From\-File\-Storage}]{\setlength{\rightskip}{0pt plus 5cm}void Star\-Feature\-::\-Load\-Settings\-From\-File\-Storage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{group___feature_extractor_a0a46cb80a6a4d45e324757b4ef679e81}
+
+
+Implemented virtual method for loading algorithm specific settings from the given storage. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}{Feature\-::\-Load\-Settings\-From\-File\-Storage()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}{Feature}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___feature_extractor_a0a46cb80a6a4d45e324757b4ef679e81_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_adb169936e9f60620b81894b48764a801}{\index{Star\-Feature@{Star\-Feature}!Process@{Process}}
+\index{Process@{Process}!StarFeature@{Star\-Feature}}
+\subparagraph[{Process}]{\setlength{\rightskip}{0pt plus 5cm}void Star\-Feature\-::\-Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_adb169936e9f60620b81894b48764a801}
+
+
+Implemented virtual method for the algorithm. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}{Feature\-::\-Process()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}{Feature}.
+
+\hypertarget{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}{\index{Star\-Feature@{Star\-Feature}!Set\-Frame@{Set\-Frame}}
+\index{Set\-Frame@{Set\-Frame}!StarFeature@{Star\-Feature}}
+\subparagraph[{Set\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-::\-Set\-Frame (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}
+
+
+Connects a frame to the feature extractor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Output parameter for the current frame. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___core_a2b42f82341afd2747ea093b6ac8b91cb}{\index{Star\-Feature@{Star\-Feature}!Start@{Start}}
+\index{Start@{Start}!StarFeature@{Star\-Feature}}
+\subparagraph[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-::\-Start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___core_a2b42f82341afd2747ea093b6ac8b91cb}
+
+
+Starts the thread. 
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___core_a2b42f82341afd2747ea093b6ac8b91cb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\paragraph{Member Data Documentation}
+\hypertarget{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}{\index{Star\-Feature@{Star\-Feature}!descriptors@{descriptors}}
+\index{descriptors@{descriptors}!StarFeature@{Star\-Feature}}
+\subparagraph[{descriptors}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Feature\-::descriptors\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}
+
+
+The output matrix of descriptors. 
+
+\hypertarget{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}{\index{Star\-Feature@{Star\-Feature}!frame\-\_\-@{frame\-\_\-}}
+\index{frame\-\_\-@{frame\-\_\-}!StarFeature@{Star\-Feature}}
+\subparagraph[{frame\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Feature\-::frame\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}
+
+
+The current frame. 
+
+\hypertarget{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}{\index{Star\-Feature@{Star\-Feature}!key\-Points@{key\-Points}}
+\index{key\-Points@{key\-Points}!StarFeature@{Star\-Feature}}
+\subparagraph[{key\-Points}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$cv\-::\-Key\-Point$>$ Feature\-::key\-Points\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}
+
+
+Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. 
+
+\hypertarget{group___feature_extractor_aea296c8f5cdf67ae340aac32f9512906}{\index{Star\-Feature@{Star\-Feature}!line\-Threshold\-Binarized\-\_\-@{line\-Threshold\-Binarized\-\_\-}}
+\index{line\-Threshold\-Binarized\-\_\-@{line\-Threshold\-Binarized\-\_\-}!StarFeature@{Star\-Feature}}
+\subparagraph[{line\-Threshold\-Binarized\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Star\-Feature\-::line\-Threshold\-Binarized\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_aea296c8f5cdf67ae340aac32f9512906}
+
+
+Another threshold for the feature size to eliminate edges. 
+
+\hypertarget{group___feature_extractor_ab01cd66c7c27def6dcf03915c83085ad}{\index{Star\-Feature@{Star\-Feature}!line\-Threshold\-Projected\-\_\-@{line\-Threshold\-Projected\-\_\-}}
+\index{line\-Threshold\-Projected\-\_\-@{line\-Threshold\-Projected\-\_\-}!StarFeature@{Star\-Feature}}
+\subparagraph[{line\-Threshold\-Projected\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Star\-Feature\-::line\-Threshold\-Projected\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_ab01cd66c7c27def6dcf03915c83085ad}
+
+
+Another threshold for the laplacian to eliminate edges. 
+
+\hypertarget{group___feature_extractor_a03553a6b73fb075fa1bc1813b91b2079}{\index{Star\-Feature@{Star\-Feature}!max\-Size\-\_\-@{max\-Size\-\_\-}}
+\index{max\-Size\-\_\-@{max\-Size\-\_\-}!StarFeature@{Star\-Feature}}
+\subparagraph[{max\-Size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Star\-Feature\-::max\-Size\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a03553a6b73fb075fa1bc1813b91b2079}
+
+
+Maximum size of the features. The following values of the parameter are supported\-: 4, 6, 8, 11, 12, 16, 22, 23, 32, 45, 46, 64, 90, 128. 
+
+\hypertarget{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}{\index{Star\-Feature@{Star\-Feature}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!StarFeature@{Star\-Feature}}
+\subparagraph[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Feature\-::name\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}
+
+
+Name of the current feature extraction procedure. 
+
+\hypertarget{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}{\index{Star\-Feature@{Star\-Feature}!proc\-Time\-\_\-@{proc\-Time\-\_\-}}
+\index{proc\-Time\-\_\-@{proc\-Time\-\_\-}!StarFeature@{Star\-Feature}}
+\subparagraph[{proc\-Time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Feature\-::proc\-Time\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}
+
+
+Processing time of the current feature extraction method. 
+
+\hypertarget{group___feature_extractor_a85a6ef809bb695a64de0bb5d4121e28a}{\index{Star\-Feature@{Star\-Feature}!response\-Threshold\-\_\-@{response\-Threshold\-\_\-}}
+\index{response\-Threshold\-\_\-@{response\-Threshold\-\_\-}!StarFeature@{Star\-Feature}}
+\subparagraph[{response\-Threshold\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Star\-Feature\-::response\-Threshold\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a85a6ef809bb695a64de0bb5d4121e28a}
+
+
+Threshold for the approximated laplacian, used to eliminate weak features. The larger it is, the less features will be retrieved. 
+
+\hypertarget{group___feature_extractor_ae7fdbb1aee60f2289f5d187025a7d094}{\index{Star\-Feature@{Star\-Feature}!star\-Detector\-\_\-@{star\-Detector\-\_\-}}
+\index{star\-Detector\-\_\-@{star\-Detector\-\_\-}!StarFeature@{Star\-Feature}}
+\subparagraph[{star\-Detector\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Star\-Feature\-Detector$\ast$ Star\-Feature\-::star\-Detector\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_ae7fdbb1aee60f2289f5d187025a7d094}
+
+
+Wrapped Open\-C\-V S\-T\-A\-R object. 
+
+\hypertarget{group___feature_extractor_a36265d51f6a800441c974579ab4f6801}{\index{Star\-Feature@{Star\-Feature}!suppress\-Nonmax\-Size\-\_\-@{suppress\-Nonmax\-Size\-\_\-}}
+\index{suppress\-Nonmax\-Size\-\_\-@{suppress\-Nonmax\-Size\-\_\-}!StarFeature@{Star\-Feature}}
+\subparagraph[{suppress\-Nonmax\-Size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Star\-Feature\-::suppress\-Nonmax\-Size\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a36265d51f6a800441c974579ab4f6801}
+
+
+Window size (n-\/by-\/n) to apply the non-\/maximal suppression. Increasing the window size remove feature points that are close to each other. 
+
+\index{Surf\-Feature@{Surf\-Feature}}\label{class_surf_feature}
+\hypertarget{group___feature_extractor_class_surf_feature}{}
+\subsubsection{class Surf\-Feature}
+Class for extracting S\-U\-R\-F features. 
+
+Class for extracting Speeded Up Robust Features from an image.
+
+See paper\-: Bay, H. and Tuytelaars, T. and Van Gool, L. \-S\-U\-R\-F\-: Speeded Up Robust Features, 9th European Conference on Computer Vision, 2006. 
+
+Inheritance diagram for Surf\-Feature\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_surf_feature__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Surf\-Feature\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_surf_feature__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___feature_extractor_a7871e722b6277c3111f256b89240c192}{Surf\-Feature} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{group___feature_extractor_a9dac0fead0f72630852c04aa0af5213f}{$\sim$\-Surf\-Feature} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group___core_a8f33f7750321d5df9188033e7e3e300d}{Join} (void)
+\item 
+void \hyperlink{group___feature_extractor_a3717dc5d5cffd77f4f31c5ac81cd391a}{Load\-Settings\-From\-File\-Storage} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for loading algorithm specific settings from the given storage. \end{DoxyCompactList}\item 
+void \hyperlink{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}{Set\-Frame} (const cv\-::\-Mat \&frame)
+\begin{DoxyCompactList}\small\item\em Connects a frame to the feature extractor. \end{DoxyCompactList}\item 
+void \hyperlink{group___core_a2b42f82341afd2747ea093b6ac8b91cb}{Start} (void)
+\begin{DoxyCompactList}\small\item\em Starts the thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \hyperlink{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}{descriptors}
+\begin{DoxyCompactList}\small\item\em The output matrix of descriptors. \end{DoxyCompactList}\item 
+std\-::vector$<$ cv\-::\-Key\-Point $>$ \hyperlink{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}{key\-Points}
+\begin{DoxyCompactList}\small\item\em Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \hyperlink{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}{frame\-\_\-}
+\begin{DoxyCompactList}\small\item\em The current frame. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}{name\-\_\-}
+\begin{DoxyCompactList}\small\item\em Name of the current feature extraction procedure. \end{DoxyCompactList}\item 
+double \hyperlink{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}{proc\-Time\-\_\-}
+\begin{DoxyCompactList}\small\item\em Processing time of the current feature extraction method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___feature_extractor_a2f036e794ebd63cd024dbf547765442f}{Draw\-Features} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for displaying the output. \end{DoxyCompactList}\item 
+void \hyperlink{group___feature_extractor_a965b300a64e776f48c1fe1564f4c4269}{Process} (void)
+\begin{DoxyCompactList}\small\item\em Implemented virtual method for the algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{group___feature_extractor_a89c68527db49e286206062375b09c7bd}{extended\-\_\-}
+\begin{DoxyCompactList}\small\item\em False means that the basic descriptors (64 elements each) shall be computed. True means that the extended descriptors (128 elements each) shall be computed. \end{DoxyCompactList}\item 
+double \hyperlink{group___feature_extractor_a32db9f77d27527ff7c25824d954e30bc}{hessian\-Threshold\-\_\-}
+\begin{DoxyCompactList}\small\item\em Threshold for the keypoint detector. Only features, whose hessian is larger than hessian\-Threshold are retained by the detector. Therefore, the larger the value, the less keypoints you will get. A good default value could be from 300 to 500, depending from the image contrast. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a1693fb1e68f90350c607c1e228743130}{octave\-Layers\-\_\-}
+\begin{DoxyCompactList}\small\item\em The number of images within each octave of a gaussian pyramid. It is set to 2 by default. \end{DoxyCompactList}\item 
+int \hyperlink{group___feature_extractor_a87f1c0c6c1c749b0736633da668c977b}{octaves\-\_\-}
+\begin{DoxyCompactList}\small\item\em The number of a gaussian pyramid octaves that the detector uses. It is set to 4 by default. If you want to get very large features, use the larger value. If you want just small features, decrease it. \end{DoxyCompactList}\item 
+cv\-::\-Surf\-Feature\-Detector $\ast$ \hyperlink{group___feature_extractor_a191dd9737bd6dc754e43912bb3aad219}{surf\-Detector\-\_\-}
+\begin{DoxyCompactList}\small\item\em Wrapped Open\-C\-V S\-U\-R\-F object. \end{DoxyCompactList}\item 
+bool \hyperlink{group___feature_extractor_a4900461472b4f6707ce0db3bde65bda2}{upright\-\_\-}
+\begin{DoxyCompactList}\small\item\em False means that detector computes orientation of each feature. True means that the orientation is not computed (which is much, much faster). For example, if you match images from a stereo pair, or do image stitching, the matched features likely have very similar angles, and you can speed up feature extraction by setting upright=true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\paragraph{Constructor \& Destructor Documentation}
+\hypertarget{group___feature_extractor_a7871e722b6277c3111f256b89240c192}{\index{Surf\-Feature@{Surf\-Feature}!Surf\-Feature@{Surf\-Feature}}
+\index{Surf\-Feature@{Surf\-Feature}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{Surf\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}Surf\-Feature\-::\-Surf\-Feature (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_a7871e722b6277c3111f256b89240c192}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the current feature extraction procedure. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___feature_extractor_a7871e722b6277c3111f256b89240c192_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_a9dac0fead0f72630852c04aa0af5213f}{\index{Surf\-Feature@{Surf\-Feature}!$\sim$\-Surf\-Feature@{$\sim$\-Surf\-Feature}}
+\index{$\sim$\-Surf\-Feature@{$\sim$\-Surf\-Feature}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{$\sim$\-Surf\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}Surf\-Feature\-::$\sim$\-Surf\-Feature (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___feature_extractor_a9dac0fead0f72630852c04aa0af5213f}
+
+
+Destructor. 
+
+
+
+\paragraph{Member Function Documentation}
+\hypertarget{group___feature_extractor_a2f036e794ebd63cd024dbf547765442f}{\index{Surf\-Feature@{Surf\-Feature}!Draw\-Features@{Draw\-Features}}
+\index{Draw\-Features@{Draw\-Features}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{Draw\-Features}]{\setlength{\rightskip}{0pt plus 5cm}void Surf\-Feature\-::\-Draw\-Features (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_a2f036e794ebd63cd024dbf547765442f}
+
+
+Implemented virtual method for displaying the output. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}{Feature\-::\-Draw\-Features()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_afcc4cc593c475cd67068c535e5bb4108}{Feature}.
+
+\hypertarget{group___core_a8f33f7750321d5df9188033e7e3e300d}{\index{Surf\-Feature@{Surf\-Feature}!Join@{Join}}
+\index{Join@{Join}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{Join}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Thread\-::\-Join (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___core_a8f33f7750321d5df9188033e7e3e300d}
+\hypertarget{group___feature_extractor_a3717dc5d5cffd77f4f31c5ac81cd391a}{\index{Surf\-Feature@{Surf\-Feature}!Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}}
+\index{Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{Load\-Settings\-From\-File\-Storage}]{\setlength{\rightskip}{0pt plus 5cm}void Surf\-Feature\-::\-Load\-Settings\-From\-File\-Storage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{group___feature_extractor_a3717dc5d5cffd77f4f31c5ac81cd391a}
+
+
+Implemented virtual method for loading algorithm specific settings from the given storage. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}{Feature\-::\-Load\-Settings\-From\-File\-Storage()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_afcf9f70e2258f918ae0f18ab78d77992}{Feature}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___feature_extractor_a3717dc5d5cffd77f4f31c5ac81cd391a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___feature_extractor_a965b300a64e776f48c1fe1564f4c4269}{\index{Surf\-Feature@{Surf\-Feature}!Process@{Process}}
+\index{Process@{Process}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{Process}]{\setlength{\rightskip}{0pt plus 5cm}void Surf\-Feature\-::\-Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{group___feature_extractor_a965b300a64e776f48c1fe1564f4c4269}
+
+
+Implemented virtual method for the algorithm. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}{Feature\-::\-Process()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{group___feature_extractor_ad9e3aebe506fc936c6ad18f9fc9543db}{Feature}.
+
+\hypertarget{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}{\index{Surf\-Feature@{Surf\-Feature}!Set\-Frame@{Set\-Frame}}
+\index{Set\-Frame@{Set\-Frame}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{Set\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Feature\-::\-Set\-Frame (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_af261b9c5cac5ff1fb628317c7009c845}
+
+
+Connects a frame to the feature extractor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Output parameter for the current frame. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___core_a2b42f82341afd2747ea093b6ac8b91cb}{\index{Surf\-Feature@{Surf\-Feature}!Start@{Start}}
+\index{Start@{Start}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-::\-Start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___core_a2b42f82341afd2747ea093b6ac8b91cb}
+
+
+Starts the thread. 
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___core_a2b42f82341afd2747ea093b6ac8b91cb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\paragraph{Member Data Documentation}
+\hypertarget{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}{\index{Surf\-Feature@{Surf\-Feature}!descriptors@{descriptors}}
+\index{descriptors@{descriptors}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{descriptors}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Feature\-::descriptors\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_a857c4955b0325d8b96c863d873bf8db5}
+
+
+The output matrix of descriptors. 
+
+\hypertarget{group___feature_extractor_a89c68527db49e286206062375b09c7bd}{\index{Surf\-Feature@{Surf\-Feature}!extended\-\_\-@{extended\-\_\-}}
+\index{extended\-\_\-@{extended\-\_\-}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{extended\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool Surf\-Feature\-::extended\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a89c68527db49e286206062375b09c7bd}
+
+
+False means that the basic descriptors (64 elements each) shall be computed. True means that the extended descriptors (128 elements each) shall be computed. 
+
+\hypertarget{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}{\index{Surf\-Feature@{Surf\-Feature}!frame\-\_\-@{frame\-\_\-}}
+\index{frame\-\_\-@{frame\-\_\-}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{frame\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Feature\-::frame\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_aa805e6fee8eeec2061feabe29430f0df}
+
+
+The current frame. 
+
+\hypertarget{group___feature_extractor_a32db9f77d27527ff7c25824d954e30bc}{\index{Surf\-Feature@{Surf\-Feature}!hessian\-Threshold\-\_\-@{hessian\-Threshold\-\_\-}}
+\index{hessian\-Threshold\-\_\-@{hessian\-Threshold\-\_\-}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{hessian\-Threshold\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Surf\-Feature\-::hessian\-Threshold\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a32db9f77d27527ff7c25824d954e30bc}
+
+
+Threshold for the keypoint detector. Only features, whose hessian is larger than hessian\-Threshold are retained by the detector. Therefore, the larger the value, the less keypoints you will get. A good default value could be from 300 to 500, depending from the image contrast. 
+
+\hypertarget{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}{\index{Surf\-Feature@{Surf\-Feature}!key\-Points@{key\-Points}}
+\index{key\-Points@{key\-Points}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{key\-Points}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$cv\-::\-Key\-Point$>$ Feature\-::key\-Points\hspace{0.3cm}{\ttfamily [inherited]}}}\label{group___feature_extractor_ac666ae973c3840be1b3b9183dd12b8c1}
+
+
+Stores keypoints, i.\-e. a point feature found by one of many available keypoint detectors. 
+
+\hypertarget{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}{\index{Surf\-Feature@{Surf\-Feature}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Feature\-::name\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_a46e9fc1f327aaafb10de2c0425d311aa}
+
+
+Name of the current feature extraction procedure. 
+
+\hypertarget{group___feature_extractor_a1693fb1e68f90350c607c1e228743130}{\index{Surf\-Feature@{Surf\-Feature}!octave\-Layers\-\_\-@{octave\-Layers\-\_\-}}
+\index{octave\-Layers\-\_\-@{octave\-Layers\-\_\-}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{octave\-Layers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Surf\-Feature\-::octave\-Layers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a1693fb1e68f90350c607c1e228743130}
+
+
+The number of images within each octave of a gaussian pyramid. It is set to 2 by default. 
+
+\hypertarget{group___feature_extractor_a87f1c0c6c1c749b0736633da668c977b}{\index{Surf\-Feature@{Surf\-Feature}!octaves\-\_\-@{octaves\-\_\-}}
+\index{octaves\-\_\-@{octaves\-\_\-}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{octaves\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Surf\-Feature\-::octaves\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a87f1c0c6c1c749b0736633da668c977b}
+
+
+The number of a gaussian pyramid octaves that the detector uses. It is set to 4 by default. If you want to get very large features, use the larger value. If you want just small features, decrease it. 
+
+\hypertarget{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}{\index{Surf\-Feature@{Surf\-Feature}!proc\-Time\-\_\-@{proc\-Time\-\_\-}}
+\index{proc\-Time\-\_\-@{proc\-Time\-\_\-}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{proc\-Time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Feature\-::proc\-Time\-\_\-\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{group___feature_extractor_a1b176bd48aad30b553e0f87f0264c3d0}
+
+
+Processing time of the current feature extraction method. 
+
+\hypertarget{group___feature_extractor_a191dd9737bd6dc754e43912bb3aad219}{\index{Surf\-Feature@{Surf\-Feature}!surf\-Detector\-\_\-@{surf\-Detector\-\_\-}}
+\index{surf\-Detector\-\_\-@{surf\-Detector\-\_\-}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{surf\-Detector\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Surf\-Feature\-Detector$\ast$ Surf\-Feature\-::surf\-Detector\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a191dd9737bd6dc754e43912bb3aad219}
+
+
+Wrapped Open\-C\-V S\-U\-R\-F object. 
+
+\hypertarget{group___feature_extractor_a4900461472b4f6707ce0db3bde65bda2}{\index{Surf\-Feature@{Surf\-Feature}!upright\-\_\-@{upright\-\_\-}}
+\index{upright\-\_\-@{upright\-\_\-}!SurfFeature@{Surf\-Feature}}
+\subparagraph[{upright\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool Surf\-Feature\-::upright\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___feature_extractor_a4900461472b4f6707ce0db3bde65bda2}
+
+
+False means that detector computes orientation of each feature. True means that the orientation is not computed (which is much, much faster). For example, if you match images from a stereo pair, or do image stitching, the matched features likely have very similar angles, and you can speed up feature extraction by setting upright=true. 
+

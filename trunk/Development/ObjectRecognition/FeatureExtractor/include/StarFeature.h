@@ -42,10 +42,10 @@ private:
 
 	cv::StarFeatureDetector* starDetector_;	//!< Wrapped OpenCV STAR object.
 
-    int maxSize_;
-    int responseThreshold_;
-    int lineThresholdProjected_;
-    int lineThresholdBinarized_;
-    int suppressNonmaxSize_;
+	int maxSize_;					//!< Maximum size of the features. The following values of the parameter are supported: 4, 6, 8, 11, 12, 16, 22, 23, 32, 45, 46, 64, 90, 128.
+	int responseThreshold_;			//!< Threshold for the approximated laplacian, used to eliminate weak features. The larger it is, the less features will be retrieved.
+	int lineThresholdProjected_;	//!< Another threshold for the laplacian to eliminate edges.
+	int lineThresholdBinarized_;	//!< Another threshold for the feature size to eliminate edges.
+    int suppressNonmaxSize_;		//!< Window size (n-by-n) to apply the non-maximal suppression. Increasing the window size remove feature points that are close to each other.
 };
 

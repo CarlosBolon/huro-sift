@@ -1,6 +1,6 @@
 #pragma once
 
-//! Abstract interface for runable objects.
+//! Abstract interface for runnable objects.
 /*!
 	\ingroup Core
 */
@@ -8,8 +8,8 @@ extern "C++" class __declspec(dllexport) Runnable
 {
 public:
 	//! Destructor.
-	virtual ~Runnable() = 0;
+	virtual ~Runnable(void) = 0;
 
 	//! Pure virtual thread main.
-	virtual void* Run() = 0;
+	virtual void* Run(void) = 0;
 };

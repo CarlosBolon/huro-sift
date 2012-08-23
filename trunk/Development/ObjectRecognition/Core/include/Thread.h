@@ -20,7 +20,7 @@ extern "C++" class __declspec(dllexport) Thread
 public:
 	//! Constructor.
 	/*!
-		\param run
+		\param run Runnable object.
 		\param isDetached Whether or not the thread is to be created in a detached state.
 	*/
 	Thread(

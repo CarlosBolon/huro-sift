@@ -16,6 +16,9 @@ using namespace std;
 using namespace cv;
 
 HuroAlgorithm::HuroAlgorithm(void)
+:	mediaType_("image"),
+	cameraId_(0),
+	imageName_("")
 {
     LoadSettingsFromFileStorage();
 }
@@ -36,20 +39,22 @@ void HuroAlgorithm::LoadSettingsFromFileStorage(void)
 
     // Loading general settings
     FileNode node = fileStorage["settings"];
-    string mediaType;
-    string imageName;
-    int cameraId;
+	node[0]["mediaType"] >> mediaType_;
 
-    node[0]["mediaType"] >> mediaType;
-    node[0]["imageName"] >> imageName;
-    node[0]["cameraId"] >> cameraId;
-
-    if(mediaType.compare("camera") == 0)
-        imageFrame_ = new ImageFrame(cameraId);
-    else if(mediaType.compare("image") == 0)
-        imageFrame_ = new ImageFrame(imageName);
+    if(mediaType_.compare("camera") == 0)
+	{
+		node[0]["cameraId"] >> cameraId_	;
+        imageFrame_ = new ImageFrame(cameraId_);
+	}
+    else if(mediaType_.compare("image") == 0)
+	{
+		node[0]["imageName"] >> imageName_;
+        imageFrame_ = new ImageFrame(imageName_);
+	}
     else
+	{
         throw ExceptionError("Wrong media type in (" + LocalSettingsPtr->GetProcessXmlFileName() + ")!");
+	}
     
     // Loading feature extractors
     node = fileStorage["featureExtractors"];
@@ -69,6 +74,8 @@ void HuroAlgorithm::LoadSettingsFromFileStorage(void)
             featurePool_[name] = new StarFeature(name);
         else if(name.compare("MSER") == 0)
             featurePool_[name] = new MserFeature(name);
+		// TODO: Local feature extractors here:
+		// else if(...)
         else
             throw ExceptionWarning("Unkonwn feature extractor (" + name + ")!");
     }
@@ -87,6 +94,4 @@ void HuroAlgorithm::Process(void)
     // Start working
     for(FeaturePool::iterator fpElem = featurePool_.begin(); fpElem != featurePool_.end(); fpElem++)
         int result = reinterpret_cast<int>(fpElem->second->Join());
-
-	waitKey(0);
 }

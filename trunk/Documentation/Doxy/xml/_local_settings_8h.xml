@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_local_settings_8h" kind="file">
+    <compoundname>LocalSettings.h</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="_image_frame_8cpp" local="yes">Core/src/ImageFrame.cpp</includedby>
+    <includedby refid="_local_settings_8cpp" local="yes">Core/src/LocalSettings.cpp</includedby>
+    <includedby refid="_mser_feature_8cpp" local="yes">FeatureExtractor/src/MserFeature.cpp</includedby>
+    <includedby refid="_orb_feature_8cpp" local="yes">FeatureExtractor/src/OrbFeature.cpp</includedby>
+    <includedby refid="_sift_feature_8cpp" local="yes">FeatureExtractor/src/SiftFeature.cpp</includedby>
+    <includedby refid="_star_feature_8cpp" local="yes">FeatureExtractor/src/StarFeature.cpp</includedby>
+    <includedby refid="_surf_feature_8cpp" local="yes">FeatureExtractor/src/SurfFeature.cpp</includedby>
+    <includedby refid="_huro_algorithm_8cpp" local="yes">ObjectRecognition/src/HuroAlgorithm.cpp</includedby>
+    <incdepgraph>
+      <node id="330">
+        <label>string</label>
+      </node>
+      <node id="329">
+        <label>Core/include/LocalSettings.h</label>
+        <link refid="LocalSettings.h"/>
+        <childnode refid="330" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="332">
+        <label>Core/src/ImageFrame.cpp</label>
+        <link refid="_image_frame_8cpp"/>
+      </node>
+      <node id="336">
+        <label>FeatureExtractor/src/SiftFeature.cpp</label>
+        <link refid="_sift_feature_8cpp"/>
+      </node>
+      <node id="338">
+        <label>FeatureExtractor/src/SurfFeature.cpp</label>
+        <link refid="_surf_feature_8cpp"/>
+      </node>
+      <node id="339">
+        <label>ObjectRecognition/src/HuroAlgorithm.cpp</label>
+        <link refid="_huro_algorithm_8cpp"/>
+      </node>
+      <node id="333">
+        <label>Core/src/LocalSettings.cpp</label>
+        <link refid="_local_settings_8cpp"/>
+      </node>
+      <node id="331">
+        <label>Core/include/LocalSettings.h</label>
+        <link refid="LocalSettings.h"/>
+        <childnode refid="332" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+        <childnode refid="335" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="337" relation="include">
+        </childnode>
+        <childnode refid="338" relation="include">
+        </childnode>
+        <childnode refid="339" relation="include">
+        </childnode>
+      </node>
+      <node id="337">
+        <label>FeatureExtractor/src/StarFeature.cpp</label>
+        <link refid="_star_feature_8cpp"/>
+      </node>
+      <node id="334">
+        <label>FeatureExtractor/src/MserFeature.cpp</label>
+        <link refid="_mser_feature_8cpp"/>
+      </node>
+      <node id="335">
+        <label>FeatureExtractor/src/OrbFeature.cpp</label>
+        <link refid="_orb_feature_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_local_settings" prot="public">LocalSettings</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_local_settings_8h_1a2229e3307a6b7ebe72c4459cad648ff4" prot="public" static="no">
+        <name>LocalSettingsPtr</name>
+        <initializer><ref refid="class_local_settings_1a80f6e158e8c61b70fd4efec296e28310" kindref="member">LocalSettings::GetInstance</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/LocalSettings.h" line="10" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/LocalSettings.h" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_mser_feature_1ae6c9bca2395a33ecac78a46e9c331979" compoundref="_mser_feature_8cpp" startline="25" endline="42">MserFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_orb_feature_1aa13ad1fbc5869dcabb55611e5c206ebd" compoundref="_orb_feature_8cpp" startline="24" endline="48">OrbFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_sift_feature_1af19316d789598f612ee150deb2ee5137" compoundref="_sift_feature_8cpp" startline="24" endline="37">SiftFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_star_feature_1a0a46cb80a6a4d45e324757b4ef679e81" compoundref="_star_feature_8cpp" startline="25" endline="38">StarFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_surf_feature_1a3717dc5d5cffd77f4f31c5ac81cd391a" compoundref="_surf_feature_8cpp" startline="24" endline="41">SurfFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_huro_algorithm_1a1cfbc787c7380f981407daf1afbbad12" compoundref="_huro_algorithm_8cpp" startline="34" endline="82">HuroAlgorithm::LoadSettingsFromFileStorage</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>warning(<sp/>disable:<sp/>4251<sp/>)<sp/>//<sp/>Disable<sp/>needs<sp/>to<sp/>have<sp/>dll-interface<sp/>warning.</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="_local_settings_8h_1a2229e3307a6b7ebe72c4459cad648ff4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LocalSettingsPtr<sp/>LocalSettings::GetInstance()</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="13"></codeline>
+<codeline lineno="18" refid="class_local_settings" refkind="compound"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C++&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="keyword">__declspec(dllexport)</highlight><highlight class="normal"><sp/><ref refid="class_local_settings" kindref="compound" tooltip="Singleton settings manager class.">LocalSettings</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_local_settings" kindref="compound" tooltip="Singleton settings manager class.">LocalSettings</ref>*<sp/><ref refid="class_local_settings_1a80f6e158e8c61b70fd4efec296e28310" kindref="member" tooltip="Instance getter.">GetInstance</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_local_settings_1aaa62a3ad7984bb9b41d874a432f80eb5" kindref="member" tooltip="Data directory getter.">GetDataDirectory</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_local_settings_1adfd6c887c7c35c76bce216dda592170d" kindref="member" tooltip="Settings directory getter.">GetSettingsDirectory</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_local_settings_1abbaecb0ce832b89c7851af0d7931cf89" kindref="member" tooltip="Image directory getter.">GetImageDirectory</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_local_settings_1a2ab12f5691406aa7ad21140fd3a94f27" kindref="member" tooltip="Process xml filename getter.">GetProcessXmlFileName</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_local_settings_1a70ef22059fb84a1a64120f3122db615e" kindref="member" tooltip="Constructor.">LocalSettings</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_local_settings_1a043074a18b94b6c572e31feb2d283926" kindref="member" tooltip="Destructor.">~LocalSettings</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_local_settings_1a7cddf57927891a603552ca37a8839f22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><sp/><sp/><sp/><sp/><ref refid="class_local_settings_1a7cddf57927891a603552ca37a8839f22" kindref="member" tooltip="Data directory root.">dataDirectory_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="class_local_settings_1af27f60deac73d6236070b4b78ed2fcbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_local_settings_1af27f60deac73d6236070b4b78ed2fcbf" kindref="member" tooltip="Settings directory root.">settingsDirectory_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="class_local_settings_1aef55a56deb4853e3c7c2d17f87a65be7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_local_settings_1aef55a56deb4853e3c7c2d17f87a65be7" kindref="member" tooltip="Image directory root.">imageDirectory_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="class_local_settings_1a19de001426c0ff8e8d4284202b929b08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><sp/><sp/><sp/><sp/><ref refid="class_local_settings_1a19de001426c0ff8e8d4284202b929b08" kindref="member" tooltip="The configuration file.">processXmlFileName_</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/LocalSettings.h"/>
+  </compounddef>
+</doxygen>

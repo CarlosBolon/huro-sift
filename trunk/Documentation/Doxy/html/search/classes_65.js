@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['exceptiondescriptor',['ExceptionDescriptor',['../class_exception_descriptor.html',1,'']]]
+  ['exceptiondescriptor',['ExceptionDescriptor',['../group___core.html#class_exception_descriptor',1,'']]]
 ];

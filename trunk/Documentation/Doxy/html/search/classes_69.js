@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imageframe',['ImageFrame',['../class_image_frame.html',1,'']]]
+  ['imageframe',['ImageFrame',['../group___core.html#class_image_frame',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['feature',['Feature',['../class_feature.html',1,'']]]
+  ['feature',['Feature',['../group___feature_extractor.html#class_feature',1,'']]]
 ];

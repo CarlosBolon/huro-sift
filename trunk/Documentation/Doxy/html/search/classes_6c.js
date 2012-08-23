@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['localsettings',['LocalSettings',['../class_local_settings.html',1,'']]]
+  ['localsettings',['LocalSettings',['../group___core.html#class_local_settings',1,'']]]
 ];

@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_sift_feature_8h" kind="file">
+    <compoundname>SiftFeature.h</compoundname>
+    <includes refid="_feature_8h" local="yes">Feature.h</includes>
+    <includedby refid="_sift_feature_8cpp" local="yes">FeatureExtractor/src/SiftFeature.cpp</includedby>
+    <includedby refid="_huro_algorithm_8cpp" local="yes">ObjectRecognition/src/HuroAlgorithm.cpp</includedby>
+    <incdepgraph>
+      <node id="479">
+        <label>Runnable.h</label>
+        <link refid="_runnable_8h"/>
+      </node>
+      <node id="475">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="474">
+        <label>string</label>
+      </node>
+      <node id="472">
+        <label>FeatureExtractor/include/SiftFeature.h</label>
+        <link refid="SiftFeature.h"/>
+        <childnode refid="473" relation="include">
+        </childnode>
+      </node>
+      <node id="478">
+        <label>pthread.h</label>
+      </node>
+      <node id="473">
+        <label>Feature.h</label>
+        <link refid="_feature_8h"/>
+        <childnode refid="474" relation="include">
+        </childnode>
+        <childnode refid="475" relation="include">
+        </childnode>
+        <childnode refid="476" relation="include">
+        </childnode>
+      </node>
+      <node id="476">
+        <label>Thread.h</label>
+        <link refid="_thread_8h"/>
+        <childnode refid="477" relation="include">
+        </childnode>
+        <childnode refid="478" relation="include">
+        </childnode>
+        <childnode refid="479" relation="include">
+        </childnode>
+      </node>
+      <node id="477">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="481">
+        <label>FeatureExtractor/src/SiftFeature.cpp</label>
+        <link refid="_sift_feature_8cpp"/>
+      </node>
+      <node id="480">
+        <label>FeatureExtractor/include/SiftFeature.h</label>
+        <link refid="SiftFeature.h"/>
+        <childnode refid="481" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+      </node>
+      <node id="482">
+        <label>ObjectRecognition/src/HuroAlgorithm.cpp</label>
+        <link refid="_huro_algorithm_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_sift_feature" prot="public">SiftFeature</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_feature_8h" kindref="compound">Feature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"></codeline>
+<codeline lineno="14" refid="class_sift_feature" refkind="compound"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C++&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="keyword">__declspec(dllexport)</highlight><highlight class="normal"><sp/><ref refid="class_sift_feature" kindref="compound" tooltip="Class for extracting SIFT features.">SiftFeature</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_feature" kindref="compound" tooltip="Abstract class for feature extraction.">Feature</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sift_feature_1a73b7e3c9affef19366a1f3dc50ce5533" kindref="member" tooltip="Constructor.">SiftFeature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sift_feature_1af35ea372a4c8aaf8a7486ec688214527" kindref="member" tooltip="Destructor.">~SiftFeature</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sift_feature_1af19316d789598f612ee150deb2ee5137" kindref="member" tooltip="Implemented virtual method for loading algorithm specific settings from the given storage...">LoadSettingsFromFileStorage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sift_feature_1a73513198ca8ff4e56be059521cfb60f5" kindref="member" tooltip="Implemented virtual method for the algorithm.">Process</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sift_feature_1ae82e144ac3fed861dc0770cefaa828a6" kindref="member" tooltip="Implemented virtual method for displaying the output.">DrawFeatures</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_sift_feature_1a4e08df2e30da758a11d029eae0352cf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::SiftFeatureDetector*<sp/><ref refid="class_sift_feature_1a4e08df2e30da758a11d029eae0352cf5" kindref="member" tooltip="Wrapped OpenCV SIFT object.">siftDetector_</ref>;<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_sift_feature_1a7b777845234b488ea905bd38f7ce323c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sift_feature_1a7b777845234b488ea905bd38f7ce323c" kindref="member" tooltip="The number of best features to retain. The features are ranked by their scores (measured in SIFT algo...">nfeatures_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="class_sift_feature_1aaf3149accfb0860cb148ea21cda53c12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sift_feature_1aaf3149accfb0860cb148ea21cda53c12" kindref="member" tooltip="The number of layers in each octave. 3 is the value used in D. Lowe paper. The number of octaves is c...">nOctaveLayers_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="class_sift_feature_1af2a77eef4388e7b3504142218baee770" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sift_feature_1af2a77eef4388e7b3504142218baee770" kindref="member" tooltip="The contrast threshold used to filter out weak features in semi-uniform (low-contrast) regions...">contrastThreshold_</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="class_sift_feature_1a8fc64eb5826c05c5fe8c0893cc24ff0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sift_feature_1a8fc64eb5826c05c5fe8c0893cc24ff0a" kindref="member" tooltip="The threshold used to filter out edge-like features. Note that the its meaning is different from the ...">edgeThreshold_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="class_sift_feature_1a574fb46dbb906801014beb9a731b980a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sift_feature_1a574fb46dbb906801014beb9a731b980a" kindref="member" tooltip="The sigma of the Gaussian applied to the input image at the octave #0. If your image is captured with...">sigma_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h"/>
+  </compounddef>
+</doxygen>

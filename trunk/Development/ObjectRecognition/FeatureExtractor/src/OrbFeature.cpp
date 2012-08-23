@@ -2,25 +2,18 @@
 
 #include <iostream>
 #include "LocalSettings.h"
+#include "ExceptionDescriptor.h"
 
 using namespace std;
 using namespace cv;
 
 OrbFeature::OrbFeature(const string& name)
-:	Feature(name),
-    nFeatures_(500),
-    scaleFactor_(1.2f),
-    nlevels_(8), 
-    edgeThreshold_(31),
-    firstLevel_(0),
-    wtaK_(2),
-    scoreType_(ORB::HARRIS_SCORE),
-    patchSize_(31)
+:	Feature(name)
 {
+	LoadSettingsFromFileStorage();
+
     orbDetector_ = new OrbFeatureDetector(nFeatures_, scaleFactor_, nlevels_, edgeThreshold_, 
         firstLevel_, wtaK_, scoreType_, patchSize_);
-
-    LoadSettingsFromFileStorage();
 }
 
 OrbFeature::~OrbFeature(void)
@@ -30,10 +23,28 @@ OrbFeature::~OrbFeature(void)
 
 void OrbFeature::LoadSettingsFromFileStorage(void)
 {
-    string fileName = LocalSettingsPtr->GetSettingsDirectory() + "Settings." + name_ + ".xml";
-    FileStorage fileStorage(fileName, FileStorage::READ, "UTF-8");
+	string fileName = LocalSettingsPtr->GetSettingsDirectory() + "Settings." + name_ + ".xml";
+	FileStorage fileStorage(fileName, FileStorage::READ, "UTF-8");
 
-    // TODO: Read settings...
+	if(!fileStorage.isOpened())
+		throw ExceptionError("Setting XML does not exist for " + name_ + "!");
+
+	string fsScoreType;
+	fileStorage["nFeatures"] >> nFeatures_;
+	fileStorage["scaleFactor"] >> scaleFactor_;
+	fileStorage["nlevels"] >> nlevels_;
+	fileStorage["edgeThreshold"] >> edgeThreshold_;
+	fileStorage["firstLevel"] >> firstLevel_;
+	fileStorage["wtaK"] >> wtaK_;
+	fileStorage["scoreType"] >> fsScoreType;
+	fileStorage["patchSize"] >> patchSize_;
+
+	if(fsScoreType.compare("kBytes") == 0)
+		scoreType_ = ORB::kBytes;
+	else if(fsScoreType.compare("HARRIS_SCORE") == 0)
+		scoreType_ = ORB::HARRIS_SCORE;
+	else if(fsScoreType.compare("FAST_SCORE") == 0)
+		scoreType_ = ORB::FAST_SCORE;
 }
 
 void OrbFeature::Process(void)

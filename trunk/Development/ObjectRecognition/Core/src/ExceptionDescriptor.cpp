@@ -27,16 +27,16 @@ ExceptionDescriptor::ExceptionDescriptor(const ExceptionDescriptor& e) throw()
 {
 }
 
-ExceptionDescriptor::~ExceptionDescriptor() throw()
+ExceptionDescriptor::~ExceptionDescriptor(void) throw()
 {
 }
 
-const char* ExceptionDescriptor::what() const throw()
+const char* ExceptionDescriptor::what(void) const throw()
 {
 	return "ExceptionDescriptor";
 }
 
-void ExceptionDescriptor::TraceError() throw()
+void ExceptionDescriptor::TraceError(void) throw()
 {
 	if (isError_)
 	{

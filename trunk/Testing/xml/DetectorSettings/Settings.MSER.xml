@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<opencv_storage>
+	<delta>5</delta>
+	<minArea>60</minArea>
+	<maxArea>14400</maxArea>
+	<maxVariation>0.25</maxVariation>
+	<minDiversity>0.2</minDiversity>
+	<maxEvolution>200</maxEvolution>
+	<areaThreshold>1.01</areaThreshold>
+	<minMargin>0.003</minMargin>
+	<edgeBlurSize>5</edgeBlurSize>
+</opencv_storage>

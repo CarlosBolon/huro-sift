@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="dir_71e7d98deeb349b10065144ad141ad80" kind="dir">
+    <compoundname>FeatureExtractor</compoundname>
+    <innerdir refid="dir_af60ec65295454956fd2d69a7c00a40b">FeatureExtractor/include</innerdir>
+    <innerdir refid="dir_e43ec0a2d396a32af803342a1c0f6f6e">FeatureExtractor/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/"/>
+  </compounddef>
+</doxygen>

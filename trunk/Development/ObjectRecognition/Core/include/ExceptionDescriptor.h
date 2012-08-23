@@ -37,13 +37,13 @@ public:
 	ExceptionDescriptor(const ExceptionDescriptor& e) throw();
 
 	//! Destructor.
-	~ExceptionDescriptor() throw();
+	~ExceptionDescriptor(void) throw();
 
 	//! std::exception::what()
-	const char* what() const throw();
+	const char* what(void) const throw();
 
 	//! Write the exception description to stderr.
-	void TraceError() throw();
+	void TraceError(void) throw();
 
 private:
 	std::string error_;    //!< Error message.

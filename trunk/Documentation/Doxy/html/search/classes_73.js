@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['siftfeature',['SiftFeature',['../class_sift_feature.html',1,'']]],
-  ['starfeature',['StarFeature',['../class_star_feature.html',1,'']]],
-  ['surffeature',['SurfFeature',['../class_surf_feature.html',1,'']]]
+  ['siftfeature',['SiftFeature',['../group___feature_extractor.html#class_sift_feature',1,'']]],
+  ['starfeature',['StarFeature',['../group___feature_extractor.html#class_star_feature',1,'']]],
+  ['surffeature',['SurfFeature',['../group___feature_extractor.html#class_surf_feature',1,'']]]
 ];

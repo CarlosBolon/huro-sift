@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="dir_e43ec0a2d396a32af803342a1c0f6f6e" kind="dir">
+    <compoundname>FeatureExtractor/src</compoundname>
+    <innerfile refid="_feature_8cpp">Feature.cpp</innerfile>
+    <innerfile refid="_mser_feature_8cpp">MserFeature.cpp</innerfile>
+    <innerfile refid="_orb_feature_8cpp">OrbFeature.cpp</innerfile>
+    <innerfile refid="_sift_feature_8cpp">SiftFeature.cpp</innerfile>
+    <innerfile refid="_star_feature_8cpp">StarFeature.cpp</innerfile>
+    <innerfile refid="_surf_feature_8cpp">SurfFeature.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/"/>
+  </compounddef>
+</doxygen>

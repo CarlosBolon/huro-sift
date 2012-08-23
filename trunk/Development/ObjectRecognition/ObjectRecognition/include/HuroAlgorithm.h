@@ -12,11 +12,11 @@ class ImageFrame;
 
 typedef std::map<std::string, Feature*> FeaturePool;
 
-//! Class for Object Recognition.
+//! Class for handling feature extraction.
 /*!
 	\ingroup ObjectRecognition
 
-	Object Recognition from Local and Global Features.
+	Getting Local and Global Features.
 */
 extern "C++" class __declspec(dllexport) HuroAlgorithm
 {
@@ -37,7 +37,10 @@ private:
 	*/
 	void LoadSettingsFromFileStorage(void);
 
-    FeaturePool featurePool_;
+    FeaturePool featurePool_;	//!< Stores all of feature extractor.
 	ImageFrame* imageFrame_;	//!< For handling image frame getting.
-};
 
+	std::string mediaType_;		//!< Type of the incoming media.
+	std::string imageName_;		//!< Name of the image to be analyzed.
+	int cameraId_;				//!< ID of the camera to be analyzed.
+};
