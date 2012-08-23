@@ -35,10 +35,18 @@ private:
 
 	//! Implemented virtual method for displaying the output.
 	/*!
-		\sa Feature::Visualize()
+		\sa Feature::DrawFeatures()
 	*/
-	void Visualize(void);
+	void DrawFeatures(void);
 
-	cv::ORB* orb;	//!< Wrapped OpenCV SURF object.
+	cv::OrbFeatureDetector* orbDetector_;	//!< Wrapped OpenCV ORB object.
+
+    int nFeatures_;
+    float scaleFactor_;
+    int nlevels_; 
+    int edgeThreshold_;
+    int firstLevel_;
+    int wtaK_;
+    int scoreType_;
+    int patchSize_;
 };
-

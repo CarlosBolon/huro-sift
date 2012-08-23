@@ -45,7 +45,7 @@ protected:
 	//! Virtual method for each feature extraction algorithm.
 	virtual void Process(void) = NULL;
 
-	virtual void Visualize(void) = NULL;
+	virtual void DrawFeatures(void) = NULL;
 
 	std::string name_;	//<! Name of the current feature extraction procedure.
 	cv::Mat frame_;		//<! The current frame.
@@ -57,4 +57,6 @@ private:
 		\sa Thread::Run()
 	*/
 	void* Run(void);
+
+    void Visualize(void);
 };

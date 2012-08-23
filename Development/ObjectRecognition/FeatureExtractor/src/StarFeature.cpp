@@ -9,13 +9,22 @@ using namespace std;
 using namespace cv;
 
 StarFeature::StarFeature(const string& name)
-:	Feature(name)
+:	Feature(name),
+    maxSize_(45), 
+    responseThreshold_(30), 
+    lineThresholdProjected_(10),
+    lineThresholdBinarized_(8),
+    suppressNonmaxSize_(5)
 {
+    starDetector_ = new StarFeatureDetector(maxSize_, responseThreshold_, 
+        lineThresholdProjected_, lineThresholdBinarized_, suppressNonmaxSize_);
+       
     LoadSettingsFromFileStorage();
 }
 
 StarFeature::~StarFeature(void)
 {
+    delete starDetector_;
 }
 
 void StarFeature::LoadSettingsFromFileStorage(void)
@@ -28,11 +37,10 @@ void StarFeature::LoadSettingsFromFileStorage(void)
 
 void StarFeature::Process(void)
 {
-	// TODO: implement.
+    starDetector_->detect(frame_, keyPoints);
 }
 
-void StarFeature::Visualize(void)
+void StarFeature::DrawFeatures(void)
 {
-	circle(frame_, Point(frame_.cols / 2, frame_.rows / 2), 10, Scalar(255, 0, 0), -1);
-	VisualizerPtr->ShowImage(name_, frame_);
+    drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT); 
 }

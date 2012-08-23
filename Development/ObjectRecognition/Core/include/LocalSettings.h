@@ -38,10 +38,10 @@ public:
 
 private:
 	//! Constructor.
-	LocalSettings();
+	LocalSettings(void);
 
 	//! Destructor.
-	~LocalSettings();
+	~LocalSettings(void);
 
 	std::string	dataDirectory_;			//!< Data directory root.
     std::string	settingsDirectory_;	    //!< Settings directory root.

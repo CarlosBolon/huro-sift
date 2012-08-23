@@ -9,12 +9,14 @@ using namespace std;
 using namespace cv;
 
 SiftFeature::SiftFeature(const string& name)
-:	Feature(name)//,
-    //siftDetectorParams_(0.006f, 100.0f),
-    //siftCommonParams_(4, 3, -1, 1),
-    //siftDescriptorParams_(3.0f, true, true)
+:	Feature(name),
+    nfeatures_(0),
+    nOctaveLayers_(3),
+    contrastThreshold_(0.04),
+    edgeThreshold_(10.0),
+    sigma_(1.6)
 {
-    siftDetector_ = new SiftFeatureDetector(siftDetectorParams_, siftCommonParams_);
+    siftDetector_ = new SiftFeatureDetector(nfeatures_, nOctaveLayers_, contrastThreshold_, edgeThreshold_, sigma_);
 
     LoadSettingsFromFileStorage();
 }
@@ -34,27 +36,14 @@ void SiftFeature::LoadSettingsFromFileStorage(void)
 
 void SiftFeature::Process(void)
 {
-    SiftDescriptorExtractor siftDescriptor(siftDescriptorParams_, siftCommonParams_);
-
     // Detect the keypoints
     siftDetector_->detect(frame_, keyPoints);
 
     // Calculate descriptors (feature vectors)
-    siftDescriptor.compute(frame_, keyPoints, descriptors);
+    siftDetector_->compute(frame_, keyPoints, descriptors);
 }
 
-void SiftFeature::Visualize(void)
+void SiftFeature::DrawFeatures(void)
 {
-	char buffer[500];
-
 	drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT); 
-	sprintf_s(buffer, 500, "Processing time of %s: %.2lf ms.", name_.c_str(), procTime_ / (cvGetTickFrequency() * 1000.0));
-	putText(frame_, buffer, Point(10, 20), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(0, 0, 0), 2);
-	putText(frame_, buffer, Point(10, 20), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(255, 255, 255));
-
-	sprintf_s(buffer, 500, "Number of detected keypoints: %d.", keyPoints.size());
-	putText(frame_, buffer, Point(10, 40), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(0, 0, 0), 2);
-	putText(frame_, buffer, Point(10, 40), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(255, 255, 255));
-
-	VisualizerPtr->ShowImage(name_, frame_);
 }
