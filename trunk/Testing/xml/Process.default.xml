@@ -1,4 +1,19 @@
 <?xml version="1.0" ?>
 <opencv_storage>
-
+	<settings>
+		<_>
+			<!--mediaType>"camera"</mediaType-->
+			<mediaType>"image"</mediaType>
+			<cameraId>0</cameraId>
+			<imageName>"unideb.01.jpg"</imageName>
+		</_>
+	</settings>
+	
+	<featureExtractors>
+		<_><name>"SIFT"</name></_>
+		<_><name>"SURF"</name></_>
+		<_><name>"ORB"</name></_>
+		<_><name>"STAR"</name></_>
+		<_><name>"MSER"</name></_>
+	</featureExtractors>
 </opencv_storage>

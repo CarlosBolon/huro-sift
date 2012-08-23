@@ -30,7 +30,7 @@ StarFeature::~StarFeature(void)
 void StarFeature::LoadSettingsFromFileStorage(void)
 {
     string fileName = LocalSettingsPtr->GetSettingsDirectory() + name_ + ".xml";
-    FileStorage fileStorage(fileName, FileStorage::READ);
+    FileStorage fileStorage(fileName, FileStorage::READ, "UTF-8");
 
     // TODO: Read settings...
 }

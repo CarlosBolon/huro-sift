@@ -31,7 +31,7 @@ OrbFeature::~OrbFeature(void)
 void OrbFeature::LoadSettingsFromFileStorage(void)
 {
     string fileName = LocalSettingsPtr->GetSettingsDirectory() + "Settings." + name_ + ".xml";
-    FileStorage fileStorage(fileName, FileStorage::READ);
+    FileStorage fileStorage(fileName, FileStorage::READ, "UTF-8");
 
     // TODO: Read settings...
 }
