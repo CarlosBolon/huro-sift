@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_visualizer_8h" kind="file">
+    <compoundname>Visualizer.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="yes">opencv2/opencv.hpp</includes>
+    <includedby refid="_visualizer_8cpp" local="yes">Core/src/Visualizer.cpp</includedby>
+    <includedby refid="_feature_8cpp" local="yes">FeatureExtractor/src/Feature.cpp</includedby>
+    <incdepgraph>
+      <node id="381">
+        <label>Core/include/Visualizer.h</label>
+        <link refid="Visualizer.h"/>
+        <childnode refid="382" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+      </node>
+      <node id="383">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="382">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="384">
+        <label>Core/include/Visualizer.h</label>
+        <link refid="Visualizer.h"/>
+        <childnode refid="385" relation="include">
+        </childnode>
+        <childnode refid="386" relation="include">
+        </childnode>
+      </node>
+      <node id="386">
+        <label>FeatureExtractor/src/Feature.cpp</label>
+        <link refid="_feature_8cpp"/>
+      </node>
+      <node id="385">
+        <label>Core/src/Visualizer.cpp</label>
+        <link refid="_visualizer_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_visualizer" prot="public">Visualizer</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_visualizer_8h_1a1ceb952bd02330e3ec62c186672d8a78" prot="public" static="no">
+        <name>VisualizerPtr</name>
+        <initializer><ref refid="class_visualizer_1a8c905f72fdc7db2ecd53ffe473340bf7" kindref="member">Visualizer::GetInstance</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Visualizer.h" line="8" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Visualizer.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_feature_1a6efeb0289e7a1e11e09a3cbd86a6ae31" compoundref="_feature_8cpp" startline="44" endline="54">Feature::Visualize</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable<sp/>:<sp/>4251)</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;opencv2/opencv.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="_visualizer_8h_1a1ceb952bd02330e3ec62c186672d8a78" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VisualizerPtr<sp/>Visualizer::GetInstance()</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="11"></codeline>
+<codeline lineno="14" refid="class_visualizer" refkind="compound"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C++&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="keyword">__declspec(dllexport)</highlight><highlight class="normal"><sp/><ref refid="class_visualizer" kindref="compound" tooltip="Singleton window and image display manager class.">Visualizer</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_visualizer" kindref="compound" tooltip="Singleton window and image display manager class.">Visualizer</ref>*<sp/><ref refid="class_visualizer_1a8c905f72fdc7db2ecd53ffe473340bf7" kindref="member" tooltip="Instance getter.">GetInstance</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_visualizer_1a910624091174d29faaa5c958215e1fd6" kindref="member" tooltip="Creates a window and show an image within it.">ShowImage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cv::Mat&amp;<sp/>image,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>waitForKey<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_visualizer_1a0287f07ff905b861c4ce10a9af90d9f4" kindref="member" tooltip="Renders the specified text string in the image.">PutText</ref>(cv::Mat&amp;<sp/>image,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>text,<sp/>cv::Point&amp;<sp/>org);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_visualizer_1a51483ef2ff4337305b7ca06728eb3f1f" kindref="member" tooltip="Sets the text&amp;#39;s properties.">SetTextProperties</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fontFace,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fontScale,<sp/>cv::Scalar<sp/>fontColor,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fontThickness);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_visualizer_1a3611c9e093d8d855f72bcad4757ce188" kindref="member" tooltip="Constructor.">Visualizer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_visualizer_1a28c30d39ef9921a98d5b714ef1256186" kindref="member" tooltip="Destructor.">~Visualizer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_visualizer_1a0aa6d2b6b8db04a4242fbfec555c88d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_visualizer_1a0aa6d2b6b8db04a4242fbfec555c88d1" kindref="member" tooltip="Font type.">fontFace_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="class_visualizer_1a9b91ed2be01274b57be07c01545ff802" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_visualizer_1a9b91ed2be01274b57be07c01545ff802" kindref="member" tooltip="Font scale factor that is multiplied by the font-specific base size.">fontScale_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="class_visualizer_1adc3d19a03ae171272bc5737df927027b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>cv::Scalar<sp/><ref refid="class_visualizer_1adc3d19a03ae171272bc5737df927027b" kindref="member" tooltip="Text color.">fontColor_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="class_visualizer_1a5438944d7404d76256e5d0fb4ddecdaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_visualizer_1a5438944d7404d76256e5d0fb4ddecdaf" kindref="member" tooltip="Thickness of the lines used to draw a text.">fontThickness_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Visualizer.h"/>
+  </compounddef>
+</doxygen>

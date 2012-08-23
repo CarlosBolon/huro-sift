@@ -3,22 +3,17 @@
 #include <iostream>
 
 #include "LocalSettings.h"
-#include "Visualizer.h"
+#include "ExceptionDescriptor.h"
 
 using namespace std;
 using namespace cv;
 
 SurfFeature::SurfFeature(const string& name)
-:	Feature(name),
-    hessianThreshold_(400.0),
-    octaves_(3),
-    octaveLayers_(4),
-    extended_(true),
-    upright_(false)
+:	Feature(name)
 {
-    surfDetector_ = new SurfFeatureDetector(hessianThreshold_, octaves_, octaveLayers_, extended_, upright_);
+	LoadSettingsFromFileStorage();
 
-    LoadSettingsFromFileStorage();
+    surfDetector_ = new SurfFeatureDetector(hessianThreshold_, octaves_, octaveLayers_, extended_, upright_);
 }
 
 SurfFeature::~SurfFeature(void)
@@ -28,10 +23,21 @@ SurfFeature::~SurfFeature(void)
 
 void SurfFeature::LoadSettingsFromFileStorage(void)
 {
-    string fileName = LocalSettingsPtr->GetSettingsDirectory() + name_ + ".xml";
-    FileStorage fileStorage(fileName, FileStorage::READ, "UTF-8");
+	string fileName = LocalSettingsPtr->GetSettingsDirectory() + "Settings." + name_ + ".xml";
+	FileStorage fileStorage(fileName, FileStorage::READ, "UTF-8");
 
-    // TODO: Read settings...
+	if(!fileStorage.isOpened())
+		throw ExceptionError("Setting XML does not exist for " + name_ + "!");
+
+	string fsExtended, fsUpright;
+	fileStorage["hessianThreshold"] >> hessianThreshold_;
+	fileStorage["octaves"] >> octaves_;
+	fileStorage["octaveLayers"] >> octaveLayers_;
+	fileStorage["extended"] >> fsExtended;
+	fileStorage["upright"] >> fsUpright;
+
+	extended_= (fsExtended.compare("true") == 0 ? true : false);
+	upright_ = (fsUpright.compare("true") == 0 ? true : false);
 }
 
 void SurfFeature::Process(void)
@@ -45,5 +51,5 @@ void SurfFeature::Process(void)
 
 void SurfFeature::DrawFeatures(void)
 {
-	drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT | DrawMatchesFlags::DRAW_RICH_KEYPOINTS); 
+	drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT /*| DrawMatchesFlags::DRAW_RICH_KEYPOINTS*/); 
 }

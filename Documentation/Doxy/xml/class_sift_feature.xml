@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="class_sift_feature" kind="class" prot="public">
+    <compoundname>SiftFeature</compoundname>
+    <basecompoundref refid="class_feature" prot="public" virt="non-virtual">Feature</basecompoundref>
+    <includes refid="_sift_feature_8h" local="no">SiftFeature.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sift_feature_1af2a77eef4388e7b3504142218baee770" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SiftFeature::contrastThreshold_</definition>
+        <argsstring></argsstring>
+        <name>contrastThreshold_</name>
+        <briefdescription>
+<para>The contrast threshold used to filter out weak features in semi-uniform (low-contrast) regions. The larger the threshold, the less features are produced by the detector. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" line="49" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_sift_feature_1a73b7e3c9affef19366a1f3dc50ce5533" compoundref="_sift_feature_8cpp" startline="11" endline="17">SiftFeature</referencedby>
+        <referencedby refid="class_sift_feature_1af19316d789598f612ee150deb2ee5137" compoundref="_sift_feature_8cpp" startline="24" endline="37">LoadSettingsFromFileStorage</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sift_feature_1a8fc64eb5826c05c5fe8c0893cc24ff0a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SiftFeature::edgeThreshold_</definition>
+        <argsstring></argsstring>
+        <name>edgeThreshold_</name>
+        <briefdescription>
+<para>The threshold used to filter out edge-like features. Note that the its meaning is different from the contrastThreshold, i.e. the larger the edgeThreshold, the less features are filtered out (more features are retained). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" line="50" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_sift_feature_1a73b7e3c9affef19366a1f3dc50ce5533" compoundref="_sift_feature_8cpp" startline="11" endline="17">SiftFeature</referencedby>
+        <referencedby refid="class_sift_feature_1af19316d789598f612ee150deb2ee5137" compoundref="_sift_feature_8cpp" startline="24" endline="37">LoadSettingsFromFileStorage</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sift_feature_1a7b777845234b488ea905bd38f7ce323c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SiftFeature::nfeatures_</definition>
+        <argsstring></argsstring>
+        <name>nfeatures_</name>
+        <briefdescription>
+<para>The number of best features to retain. The features are ranked by their scores (measured in SIFT algorithm as the local contrast). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" line="47" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_sift_feature_1a73b7e3c9affef19366a1f3dc50ce5533" compoundref="_sift_feature_8cpp" startline="11" endline="17">SiftFeature</referencedby>
+        <referencedby refid="class_sift_feature_1af19316d789598f612ee150deb2ee5137" compoundref="_sift_feature_8cpp" startline="24" endline="37">LoadSettingsFromFileStorage</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sift_feature_1aaf3149accfb0860cb148ea21cda53c12" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SiftFeature::nOctaveLayers_</definition>
+        <argsstring></argsstring>
+        <name>nOctaveLayers_</name>
+        <briefdescription>
+<para>The number of layers in each octave. 3 is the value used in D. Lowe paper. The number of octaves is computed automatically from the image resolution. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" line="48" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_sift_feature_1a73b7e3c9affef19366a1f3dc50ce5533" compoundref="_sift_feature_8cpp" startline="11" endline="17">SiftFeature</referencedby>
+        <referencedby refid="class_sift_feature_1af19316d789598f612ee150deb2ee5137" compoundref="_sift_feature_8cpp" startline="24" endline="37">LoadSettingsFromFileStorage</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sift_feature_1a4e08df2e30da758a11d029eae0352cf5" prot="private" static="no" mutable="no">
+        <type>cv::SiftFeatureDetector *</type>
+        <definition>cv::SiftFeatureDetector* SiftFeature::siftDetector_</definition>
+        <argsstring></argsstring>
+        <name>siftDetector_</name>
+        <briefdescription>
+<para>Wrapped OpenCV SIFT object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" line="45" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_sift_feature_1a73b7e3c9affef19366a1f3dc50ce5533" compoundref="_sift_feature_8cpp" startline="11" endline="17">SiftFeature</referencedby>
+        <referencedby refid="class_sift_feature_1af35ea372a4c8aaf8a7486ec688214527" compoundref="_sift_feature_8cpp" startline="19" endline="22">~SiftFeature</referencedby>
+        <referencedby refid="class_sift_feature_1a73513198ca8ff4e56be059521cfb60f5" compoundref="_sift_feature_8cpp" startline="39" endline="46">Process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sift_feature_1a574fb46dbb906801014beb9a731b980a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SiftFeature::sigma_</definition>
+        <argsstring></argsstring>
+        <name>sigma_</name>
+        <briefdescription>
+<para>The sigma of the Gaussian applied to the input image at the octave #0. If your image is captured with a weak camera with soft lenses, you might want to reduce the number. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" line="51" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_sift_feature_1a73b7e3c9affef19366a1f3dc50ce5533" compoundref="_sift_feature_8cpp" startline="11" endline="17">SiftFeature</referencedby>
+        <referencedby refid="class_sift_feature_1af19316d789598f612ee150deb2ee5137" compoundref="_sift_feature_8cpp" startline="24" endline="37">LoadSettingsFromFileStorage</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sift_feature_1a73b7e3c9affef19366a1f3dc50ce5533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SiftFeature::SiftFeature</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>SiftFeature</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the current feature extraction procedure. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" line="21" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/SiftFeature.cpp" bodystart="11" bodyend="17"/>
+        <references refid="class_sift_feature_1af19316d789598f612ee150deb2ee5137" compoundref="_sift_feature_8cpp" startline="24" endline="37">LoadSettingsFromFileStorage</references>
+        <references refid="class_sift_feature_1a4e08df2e30da758a11d029eae0352cf5" compoundref="_sift_feature_8h" startline="45">siftDetector_</references>
+        <references refid="class_sift_feature_1a7b777845234b488ea905bd38f7ce323c" compoundref="_sift_feature_8h" startline="47">nfeatures_</references>
+        <references refid="class_sift_feature_1aaf3149accfb0860cb148ea21cda53c12" compoundref="_sift_feature_8h" startline="48">nOctaveLayers_</references>
+        <references refid="class_sift_feature_1af2a77eef4388e7b3504142218baee770" compoundref="_sift_feature_8h" startline="49">contrastThreshold_</references>
+        <references refid="class_sift_feature_1a8fc64eb5826c05c5fe8c0893cc24ff0a" compoundref="_sift_feature_8h" startline="50">edgeThreshold_</references>
+        <references refid="class_sift_feature_1a574fb46dbb906801014beb9a731b980a" compoundref="_sift_feature_8h" startline="51">sigma_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sift_feature_1af35ea372a4c8aaf8a7486ec688214527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SiftFeature::~SiftFeature</definition>
+        <argsstring>(void)</argsstring>
+        <name>~SiftFeature</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" line="24" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/SiftFeature.cpp" bodystart="19" bodyend="22"/>
+        <references refid="class_sift_feature_1a4e08df2e30da758a11d029eae0352cf5" compoundref="_sift_feature_8h" startline="45">siftDetector_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_thread_1a8f33f7750321d5df9188033e7e3e300d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * Thread::Join</definition>
+        <argsstring>(void)</argsstring>
+        <name>Join</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="43" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="93" bodyend="100"/>
+        <references refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" compoundref="_thread_8h" startline="64">Thread::threadID_</references>
+        <references refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" compoundref="_exception_descriptor_8h" startline="56">ExceptionError</references>
+        <references refid="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" compoundref="_thread_8h" startline="68">Thread::result_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sift_feature_1af19316d789598f612ee150deb2ee5137" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SiftFeature::LoadSettingsFromFileStorage</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoadSettingsFromFileStorage</name>
+        <reimplements refid="class_feature_1afcf9f70e2258f918ae0f18ab78d77992">LoadSettingsFromFileStorage</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Implemented virtual method for loading algorithm specific settings from the given storage. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_feature_1afcf9f70e2258f918ae0f18ab78d77992" kindref="member">Feature::LoadSettingsFromFileStorage()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" line="30" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/SiftFeature.cpp" bodystart="24" bodyend="37"/>
+        <references refid="_local_settings_8h_1a2229e3307a6b7ebe72c4459cad648ff4" compoundref="_local_settings_8h" startline="10">LocalSettingsPtr</references>
+        <references refid="class_feature_1a46e9fc1f327aaafb10de2c0425d311aa" compoundref="_feature_8h" startline="48">Feature::name_</references>
+        <references refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" compoundref="_exception_descriptor_8h" startline="56">ExceptionError</references>
+        <references refid="class_sift_feature_1a7b777845234b488ea905bd38f7ce323c" compoundref="_sift_feature_8h" startline="47">nfeatures_</references>
+        <references refid="class_sift_feature_1aaf3149accfb0860cb148ea21cda53c12" compoundref="_sift_feature_8h" startline="48">nOctaveLayers_</references>
+        <references refid="class_sift_feature_1af2a77eef4388e7b3504142218baee770" compoundref="_sift_feature_8h" startline="49">contrastThreshold_</references>
+        <references refid="class_sift_feature_1a8fc64eb5826c05c5fe8c0893cc24ff0a" compoundref="_sift_feature_8h" startline="50">edgeThreshold_</references>
+        <references refid="class_sift_feature_1a574fb46dbb906801014beb9a731b980a" compoundref="_sift_feature_8h" startline="51">sigma_</references>
+        <referencedby refid="class_sift_feature_1a73b7e3c9affef19366a1f3dc50ce5533" compoundref="_sift_feature_8cpp" startline="11" endline="17">SiftFeature</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_feature_1af261b9c5cac5ff1fb628317c7009c845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Feature::SetFrame</definition>
+        <argsstring>(const cv::Mat &amp;frame)</argsstring>
+        <name>SetFrame</name>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>Connects a frame to the feature extractor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter for the current frame. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/Feature.h" line="33" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/Feature.cpp" bodystart="20" bodyend="27"/>
+        <references refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" compoundref="_feature_8h" startline="49">Feature::frame_</references>
+        <references refid="class_feature_1ac666ae973c3840be1b3b9183dd12b8c1" compoundref="_feature_8h" startline="35">Feature::keyPoints</references>
+        <references refid="class_feature_1a1b176bd48aad30b553e0f87f0264c3d0" compoundref="_feature_8h" startline="50">Feature::procTime_</references>
+        <references refid="class_feature_1a857c4955b0325d8b96c863d873bf8db5" compoundref="_feature_8h" startline="36">Feature::descriptors</references>
+      </memberdef>
+      <memberdef kind="function" id="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Thread::Start</definition>
+        <argsstring>(void)</argsstring>
+        <name>Start</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Starts the thread. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="40" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="47" bodyend="90"/>
+        <references refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" compoundref="_thread_8h" startline="66">Thread::threadAttribute_</references>
+        <references refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" compoundref="_exception_descriptor_8h" startline="56">ExceptionError</references>
+        <references refid="class_thread_1a2b6b46b7eb56cffef7d0722649956c5d" compoundref="_thread_8h" startline="65">Thread::detached_</references>
+        <references refid="class_thread_1a4e2c7c71f666a7c4404f8fc03a57f2d7" compoundref="_thread_8h" startline="67">Thread::runnable_</references>
+        <references refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" compoundref="_thread_8h" startline="64">Thread::threadID_</references>
+        <references refid="class_thread_1a9698abb1d7e2aed626b1963635455840" compoundref="_thread_8cpp" startline="36" endline="45">Thread::StartThread</references>
+        <references refid="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" compoundref="_thread_8cpp" startline="25" endline="34">Thread::StartThreadRunnable</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sift_feature_1ae82e144ac3fed861dc0770cefaa828a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SiftFeature::DrawFeatures</definition>
+        <argsstring>(void)</argsstring>
+        <name>DrawFeatures</name>
+        <reimplements refid="class_feature_1afcc4cc593c475cd67068c535e5bb4108">DrawFeatures</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Implemented virtual method for displaying the output. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_feature_1afcc4cc593c475cd67068c535e5bb4108" kindref="member">Feature::DrawFeatures()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" line="43" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/SiftFeature.cpp" bodystart="48" bodyend="51"/>
+        <references refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" compoundref="_feature_8h" startline="49">Feature::frame_</references>
+        <references refid="class_feature_1ac666ae973c3840be1b3b9183dd12b8c1" compoundref="_feature_8h" startline="35">Feature::keyPoints</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sift_feature_1a73513198ca8ff4e56be059521cfb60f5" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SiftFeature::Process</definition>
+        <argsstring>(void)</argsstring>
+        <name>Process</name>
+        <reimplements refid="class_feature_1ad9e3aebe506fc936c6ad18f9fc9543db">Process</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Implemented virtual method for the algorithm. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_feature_1ad9e3aebe506fc936c6ad18f9fc9543db" kindref="member">Feature::Process()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" line="37" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/SiftFeature.cpp" bodystart="39" bodyend="46"/>
+        <references refid="class_sift_feature_1a4e08df2e30da758a11d029eae0352cf5" compoundref="_sift_feature_8h" startline="45">siftDetector_</references>
+        <references refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" compoundref="_feature_8h" startline="49">Feature::frame_</references>
+        <references refid="class_feature_1ac666ae973c3840be1b3b9183dd12b8c1" compoundref="_feature_8h" startline="35">Feature::keyPoints</references>
+        <references refid="class_feature_1a857c4955b0325d8b96c863d873bf8db5" compoundref="_feature_8h" startline="36">Feature::descriptors</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_feature_1a857c4955b0325d8b96c863d873bf8db5" prot="public" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat Feature::descriptors</definition>
+        <argsstring></argsstring>
+        <name>descriptors</name>
+        <briefdescription>
+<para>The output matrix of descriptors. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/Feature.h" line="36" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/Feature.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_feature_1af261b9c5cac5ff1fb628317c7009c845" compoundref="_feature_8cpp" startline="20" endline="27">Feature::SetFrame</referencedby>
+        <referencedby refid="class_orb_feature_1af814e3440b61e6bf13b44ef8886ad2d0" compoundref="_orb_feature_8cpp" startline="50" endline="57">OrbFeature::Process</referencedby>
+        <referencedby refid="class_sift_feature_1a73513198ca8ff4e56be059521cfb60f5" compoundref="_sift_feature_8cpp" startline="39" endline="46">Process</referencedby>
+        <referencedby refid="class_surf_feature_1a965b300a64e776f48c1fe1564f4c4269" compoundref="_surf_feature_8cpp" startline="43" endline="50">SurfFeature::Process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_feature_1ac666ae973c3840be1b3b9183dd12b8c1" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; cv::KeyPoint &gt;</type>
+        <definition>std::vector&lt;cv::KeyPoint&gt; Feature::keyPoints</definition>
+        <argsstring></argsstring>
+        <name>keyPoints</name>
+        <briefdescription>
+<para>Stores keypoints, i.e. a point feature found by one of many available keypoint detectors. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/Feature.h" line="35" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/Feature.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_feature_1af261b9c5cac5ff1fb628317c7009c845" compoundref="_feature_8cpp" startline="20" endline="27">Feature::SetFrame</referencedby>
+        <referencedby refid="class_feature_1a6efeb0289e7a1e11e09a3cbd86a6ae31" compoundref="_feature_8cpp" startline="44" endline="54">Feature::Visualize</referencedby>
+        <referencedby refid="class_mser_feature_1ad96a1235b0c0df21e68c5a2742debacb" compoundref="_mser_feature_8cpp" startline="44" endline="48">MserFeature::Process</referencedby>
+        <referencedby refid="class_mser_feature_1abed40317b412e0046df5772367d4f3dc" compoundref="_mser_feature_8cpp" startline="50" endline="53">MserFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_orb_feature_1af814e3440b61e6bf13b44ef8886ad2d0" compoundref="_orb_feature_8cpp" startline="50" endline="57">OrbFeature::Process</referencedby>
+        <referencedby refid="class_orb_feature_1a907fdd9790d0295f129f1ecdc4382031" compoundref="_orb_feature_8cpp" startline="59" endline="62">OrbFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_sift_feature_1a73513198ca8ff4e56be059521cfb60f5" compoundref="_sift_feature_8cpp" startline="39" endline="46">Process</referencedby>
+        <referencedby refid="class_sift_feature_1ae82e144ac3fed861dc0770cefaa828a6" compoundref="_sift_feature_8cpp" startline="48" endline="51">DrawFeatures</referencedby>
+        <referencedby refid="class_star_feature_1adb169936e9f60620b81894b48764a801" compoundref="_star_feature_8cpp" startline="40" endline="43">StarFeature::Process</referencedby>
+        <referencedby refid="class_star_feature_1a6bb4f1e6808f0043707eb3c0bff1e33d" compoundref="_star_feature_8cpp" startline="45" endline="48">StarFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_surf_feature_1a965b300a64e776f48c1fe1564f4c4269" compoundref="_surf_feature_8cpp" startline="43" endline="50">SurfFeature::Process</referencedby>
+        <referencedby refid="class_surf_feature_1a2f036e794ebd63cd024dbf547765442f" compoundref="_surf_feature_8cpp" startline="52" endline="55">SurfFeature::DrawFeatures</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_feature_1aa805e6fee8eeec2061feabe29430f0df" prot="protected" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat Feature::frame_</definition>
+        <argsstring></argsstring>
+        <name>frame_</name>
+        <briefdescription>
+<para>The current frame. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/Feature.h" line="49" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/Feature.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_feature_1af261b9c5cac5ff1fb628317c7009c845" compoundref="_feature_8cpp" startline="20" endline="27">Feature::SetFrame</referencedby>
+        <referencedby refid="class_feature_1a6cc5fc9cbbd8ec566a72fe98fe0d0f86" compoundref="_feature_8cpp" startline="29" endline="42">Feature::Run</referencedby>
+        <referencedby refid="class_feature_1a6efeb0289e7a1e11e09a3cbd86a6ae31" compoundref="_feature_8cpp" startline="44" endline="54">Feature::Visualize</referencedby>
+        <referencedby refid="class_mser_feature_1ad96a1235b0c0df21e68c5a2742debacb" compoundref="_mser_feature_8cpp" startline="44" endline="48">MserFeature::Process</referencedby>
+        <referencedby refid="class_mser_feature_1abed40317b412e0046df5772367d4f3dc" compoundref="_mser_feature_8cpp" startline="50" endline="53">MserFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_orb_feature_1af814e3440b61e6bf13b44ef8886ad2d0" compoundref="_orb_feature_8cpp" startline="50" endline="57">OrbFeature::Process</referencedby>
+        <referencedby refid="class_orb_feature_1a907fdd9790d0295f129f1ecdc4382031" compoundref="_orb_feature_8cpp" startline="59" endline="62">OrbFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_sift_feature_1a73513198ca8ff4e56be059521cfb60f5" compoundref="_sift_feature_8cpp" startline="39" endline="46">Process</referencedby>
+        <referencedby refid="class_sift_feature_1ae82e144ac3fed861dc0770cefaa828a6" compoundref="_sift_feature_8cpp" startline="48" endline="51">DrawFeatures</referencedby>
+        <referencedby refid="class_star_feature_1adb169936e9f60620b81894b48764a801" compoundref="_star_feature_8cpp" startline="40" endline="43">StarFeature::Process</referencedby>
+        <referencedby refid="class_star_feature_1a6bb4f1e6808f0043707eb3c0bff1e33d" compoundref="_star_feature_8cpp" startline="45" endline="48">StarFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_surf_feature_1a965b300a64e776f48c1fe1564f4c4269" compoundref="_surf_feature_8cpp" startline="43" endline="50">SurfFeature::Process</referencedby>
+        <referencedby refid="class_surf_feature_1a2f036e794ebd63cd024dbf547765442f" compoundref="_surf_feature_8cpp" startline="52" endline="55">SurfFeature::DrawFeatures</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_feature_1a46e9fc1f327aaafb10de2c0425d311aa" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Feature::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of the current feature extraction procedure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/Feature.h" line="48" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/Feature.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_feature_1a6efeb0289e7a1e11e09a3cbd86a6ae31" compoundref="_feature_8cpp" startline="44" endline="54">Feature::Visualize</referencedby>
+        <referencedby refid="class_mser_feature_1ae6c9bca2395a33ecac78a46e9c331979" compoundref="_mser_feature_8cpp" startline="25" endline="42">MserFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_orb_feature_1aa13ad1fbc5869dcabb55611e5c206ebd" compoundref="_orb_feature_8cpp" startline="24" endline="48">OrbFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_sift_feature_1af19316d789598f612ee150deb2ee5137" compoundref="_sift_feature_8cpp" startline="24" endline="37">LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_star_feature_1a0a46cb80a6a4d45e324757b4ef679e81" compoundref="_star_feature_8cpp" startline="25" endline="38">StarFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_surf_feature_1a3717dc5d5cffd77f4f31c5ac81cd391a" compoundref="_surf_feature_8cpp" startline="24" endline="41">SurfFeature::LoadSettingsFromFileStorage</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_feature_1a1b176bd48aad30b553e0f87f0264c3d0" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Feature::procTime_</definition>
+        <argsstring></argsstring>
+        <name>procTime_</name>
+        <briefdescription>
+<para>Processing time of the current feature extraction method. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/Feature.h" line="50" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/Feature.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_feature_1af261b9c5cac5ff1fb628317c7009c845" compoundref="_feature_8cpp" startline="20" endline="27">Feature::SetFrame</referencedby>
+        <referencedby refid="class_feature_1a6cc5fc9cbbd8ec566a72fe98fe0d0f86" compoundref="_feature_8cpp" startline="29" endline="42">Feature::Run</referencedby>
+        <referencedby refid="class_feature_1a6efeb0289e7a1e11e09a3cbd86a6ae31" compoundref="_feature_8cpp" startline="44" endline="54">Feature::Visualize</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class for extracting SIFT features. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class for extracting keypoints and computing descriptors using the Scale Invariant <ref refid="class_feature" kindref="compound">Feature</ref> Transform (SIFT) algorithm by D. Lowe.</para><para>See paper: Lowe, D. G., Distinctive Image Features from Scale-Invariant Keypoints, International Journal of Computer Vision, 60, 2, pp. 91-110, 2004. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="100">
+        <label>SiftFeature</label>
+        <link refid="class_sift_feature"/>
+        <childnode refid="101" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>Thread</label>
+        <link refid="class_thread"/>
+      </node>
+      <node id="101">
+        <label>Feature</label>
+        <link refid="class_feature"/>
+        <childnode refid="102" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="103">
+        <label>SiftFeature</label>
+        <link refid="class_sift_feature"/>
+        <childnode refid="104" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>Thread</label>
+        <link refid="class_thread"/>
+      </node>
+      <node id="104">
+        <label>Feature</label>
+        <link refid="class_feature"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" line="15" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/SiftFeature.h" bodystart="14" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_sift_feature_1af2a77eef4388e7b3504142218baee770" prot="private" virt="non-virtual"><scope>SiftFeature</scope><name>contrastThreshold_</name></member>
+      <member refid="class_feature_1a857c4955b0325d8b96c863d873bf8db5" prot="public" virt="non-virtual"><scope>SiftFeature</scope><name>descriptors</name></member>
+      <member refid="class_sift_feature_1ae82e144ac3fed861dc0770cefaa828a6" prot="private" virt="virtual"><scope>SiftFeature</scope><name>DrawFeatures</name></member>
+      <member refid="class_sift_feature_1a8fc64eb5826c05c5fe8c0893cc24ff0a" prot="private" virt="non-virtual"><scope>SiftFeature</scope><name>edgeThreshold_</name></member>
+      <member refid="class_feature_1a020e991990bb6ca904015ffa7902d55f" prot="public" virt="non-virtual"><scope>SiftFeature</scope><name>Feature</name></member>
+      <member refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" prot="protected" virt="non-virtual"><scope>SiftFeature</scope><name>frame_</name></member>
+      <member refid="class_thread_1a8f33f7750321d5df9188033e7e3e300d" prot="public" virt="non-virtual"><scope>SiftFeature</scope><name>Join</name></member>
+      <member refid="class_feature_1ac666ae973c3840be1b3b9183dd12b8c1" prot="public" virt="non-virtual"><scope>SiftFeature</scope><name>keyPoints</name></member>
+      <member refid="class_sift_feature_1af19316d789598f612ee150deb2ee5137" prot="public" virt="virtual"><scope>SiftFeature</scope><name>LoadSettingsFromFileStorage</name></member>
+      <member refid="class_feature_1a46e9fc1f327aaafb10de2c0425d311aa" prot="protected" virt="non-virtual"><scope>SiftFeature</scope><name>name_</name></member>
+      <member refid="class_sift_feature_1a7b777845234b488ea905bd38f7ce323c" prot="private" virt="non-virtual"><scope>SiftFeature</scope><name>nfeatures_</name></member>
+      <member refid="class_sift_feature_1aaf3149accfb0860cb148ea21cda53c12" prot="private" virt="non-virtual"><scope>SiftFeature</scope><name>nOctaveLayers_</name></member>
+      <member refid="class_sift_feature_1a73513198ca8ff4e56be059521cfb60f5" prot="private" virt="virtual"><scope>SiftFeature</scope><name>Process</name></member>
+      <member refid="class_feature_1a1b176bd48aad30b553e0f87f0264c3d0" prot="protected" virt="non-virtual"><scope>SiftFeature</scope><name>procTime_</name></member>
+      <member refid="class_feature_1af261b9c5cac5ff1fb628317c7009c845" prot="public" virt="non-virtual"><scope>SiftFeature</scope><name>SetFrame</name></member>
+      <member refid="class_sift_feature_1a4e08df2e30da758a11d029eae0352cf5" prot="private" virt="non-virtual"><scope>SiftFeature</scope><name>siftDetector_</name></member>
+      <member refid="class_sift_feature_1a73b7e3c9affef19366a1f3dc50ce5533" prot="public" virt="non-virtual"><scope>SiftFeature</scope><name>SiftFeature</name></member>
+      <member refid="class_sift_feature_1a574fb46dbb906801014beb9a731b980a" prot="private" virt="non-virtual"><scope>SiftFeature</scope><name>sigma_</name></member>
+      <member refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" prot="public" virt="non-virtual"><scope>SiftFeature</scope><name>Start</name></member>
+      <member refid="class_thread_1a027b9eb38e4d59c076501b305b42f575" prot="public" virt="non-virtual"><scope>SiftFeature</scope><name>Thread</name></member>
+      <member refid="class_thread_1a403714feecd93ac10c101a47b7649204" prot="public" virt="non-virtual"><scope>SiftFeature</scope><name>Thread</name></member>
+      <member refid="class_feature_1ab6dfcfe22cc71c7b45a61d991b4ff775" prot="public" virt="non-virtual"><scope>SiftFeature</scope><name>~Feature</name></member>
+      <member refid="class_sift_feature_1af35ea372a4c8aaf8a7486ec688214527" prot="public" virt="non-virtual"><scope>SiftFeature</scope><name>~SiftFeature</name></member>
+      <member refid="class_thread_1af1e25588ebe47a2a6d79ef8c686a992b" prot="public" virt="virtual"><scope>SiftFeature</scope><name>~Thread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

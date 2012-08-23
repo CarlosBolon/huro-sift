@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_thread_8cpp" kind="file">
+    <compoundname>Thread.cpp</compoundname>
+    <includes refid="_thread_8h" local="yes">Thread.h</includes>
+    <includes refid="_exception_descriptor_8h" local="yes">ExceptionDescriptor.h</includes>
+    <incdepgraph>
+      <node id="420">
+        <label>Runnable.h</label>
+        <link refid="_runnable_8h"/>
+      </node>
+      <node id="423">
+        <label>string</label>
+      </node>
+      <node id="422">
+        <label>exception</label>
+      </node>
+      <node id="419">
+        <label>pthread.h</label>
+      </node>
+      <node id="421">
+        <label>ExceptionDescriptor.h</label>
+        <link refid="_exception_descriptor_8h"/>
+        <childnode refid="422" relation="include">
+        </childnode>
+        <childnode refid="423" relation="include">
+        </childnode>
+      </node>
+      <node id="417">
+        <label>Thread.h</label>
+        <link refid="_thread_8h"/>
+        <childnode refid="418" relation="include">
+        </childnode>
+        <childnode refid="419" relation="include">
+        </childnode>
+        <childnode refid="420" relation="include">
+        </childnode>
+      </node>
+      <node id="416">
+        <label>Core/src/Thread.cpp</label>
+        <link refid="Thread.cpp"/>
+        <childnode refid="417" relation="include">
+        </childnode>
+        <childnode refid="421" relation="include">
+        </childnode>
+      </node>
+      <node id="418">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_thread_8h" kindref="compound">Thread.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_exception_descriptor_8h" kindref="compound">ExceptionDescriptor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="class_thread_1a027b9eb38e4d59c076501b305b42f575" kindref="member" tooltip="Constructor.">Thread::Thread</ref>(auto_ptr&lt;Runnable&gt;<sp/>r,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isDetached)<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>runnable_(r),<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>detached_(isDetached)<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!runnable_.get())</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;Runnable<sp/>is<sp/>NULL!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_thread_1a403714feecd93ac10c101a47b7649204" refkind="member"><highlight class="normal"><ref refid="class_thread_1a027b9eb38e4d59c076501b305b42f575" kindref="member" tooltip="Constructor.">Thread::Thread</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isDetached)<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>runnable_(NULL),<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>detached_(isDetached)<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_thread_1af1e25588ebe47a2a6d79ef8c686a992b" refkind="member"><highlight class="normal"><ref refid="class_thread_1af1e25588ebe47a2a6d79ef8c686a992b" kindref="member" tooltip="Destructor.">Thread::~Thread</ref>()<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" kindref="member" tooltip="Thread start function when a Runnable is involved.">Thread::StartThreadRunnable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pVoid)<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>thread<sp/>start<sp/>function<sp/>when<sp/>a<sp/>Runnable<sp/>is<sp/>involved</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_thread" kindref="compound" tooltip="Abstract class for handling threads.">Thread</ref>*<sp/>runnableThread<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="class_thread" kindref="compound" tooltip="Abstract class for handling threads.">Thread</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(pVoid);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runnableThread-&gt;<ref refid="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" kindref="member">result_</ref><sp/>=<sp/>runnableThread-&gt;<ref refid="class_thread_1a4e2c7c71f666a7c4404f8fc03a57f2d7" kindref="member">runnable_</ref>-&gt;Run();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runnableThread-&gt;<ref refid="class_thread_1ac32823199dc71dd77daba9bc9cb72c3e" kindref="member">SetCompleted</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>runnableThread-&gt;<ref refid="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" kindref="member">result_</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_thread_1a9698abb1d7e2aed626b1963635455840" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="class_thread_1a9698abb1d7e2aed626b1963635455840" kindref="member" tooltip="Thread start function when no Runnable is involved.">Thread::StartThread</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pVoid)<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>thread<sp/>start<sp/>function<sp/>when<sp/>no<sp/>Runnable<sp/>is<sp/>involved</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_thread" kindref="compound" tooltip="Abstract class for handling threads.">Thread</ref>*<sp/>aThread<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="class_thread" kindref="compound" tooltip="Abstract class for handling threads.">Thread</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(pVoid);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aThread-&gt;<ref refid="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" kindref="member">result_</ref><sp/>=<sp/>aThread-&gt;<ref refid="class_thread_1ae46cda1b57e998b239a8b9710b0712e2" kindref="member" tooltip="Pure virtual thread main.">Run</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aThread-&gt;<ref refid="class_thread_1ac32823199dc71dd77daba9bc9cb72c3e" kindref="member">SetCompleted</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>aThread-&gt;<ref refid="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" kindref="member">result_</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" kindref="member" tooltip="Starts the thread.">Thread::Start</ref>()<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialize<sp/>attribute<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pthread_attr_init(&amp;<ref refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" kindref="member">threadAttribute_</ref>))</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;pthread_attr_init<sp/>failed<sp/>at&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>scheduling<sp/>scope<sp/>attribute</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pthread_attr_setscope(&amp;<ref refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" kindref="member">threadAttribute_</ref>,<sp/>PTHREAD_SCOPE_SYSTEM))</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;pthread_attr_setscope<sp/>failed<sp/>at&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="class_thread_1a2b6b46b7eb56cffef7d0722649956c5d" kindref="member">detached_</ref>)<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="class_thread_1a4e2c7c71f666a7c4404f8fc03a57f2d7" kindref="member">runnable_</ref>.get())<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pthread_create(&amp;<ref refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" kindref="member">threadID_</ref>,<sp/>&amp;<ref refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" kindref="member">threadAttribute_</ref>,<sp/><ref refid="class_thread_1a9698abb1d7e2aed626b1963635455840" kindref="member" tooltip="Thread start function when no Runnable is involved.">Thread::StartThread</ref>,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)</highlight><highlight class="keyword">this</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;pthread_create<sp/>failed<sp/>at&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pthread_create(&amp;<ref refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" kindref="member">threadID_</ref>,<sp/>&amp;<ref refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" kindref="member">threadAttribute_</ref>,<sp/><ref refid="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" kindref="member" tooltip="Thread start function when a Runnable is involved.">Thread::StartThreadRunnable</ref>,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)</highlight><highlight class="keyword">this</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;pthread_create<sp/>failed<sp/>at&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>detachstate<sp/>attribute<sp/>to<sp/>detached<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pthread_attr_setdetachstate(&amp;<ref refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" kindref="member">threadAttribute_</ref>,<sp/>PTHREAD_CREATE_DETACHED))</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;pthread_attr_setdetachstate<sp/>failed<sp/>at&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="class_thread_1a4e2c7c71f666a7c4404f8fc03a57f2d7" kindref="member">runnable_</ref>.get())<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pthread_create(&amp;<ref refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" kindref="member">threadID_</ref>,<sp/>&amp;<ref refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" kindref="member">threadAttribute_</ref>,<sp/><ref refid="class_thread_1a9698abb1d7e2aed626b1963635455840" kindref="member" tooltip="Thread start function when no Runnable is involved.">Thread::StartThread</ref>,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)</highlight><highlight class="keyword">this</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;pthread_create<sp/>failed<sp/>at&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pthread_create(&amp;<ref refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" kindref="member">threadID_</ref>,<sp/>&amp;<ref refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" kindref="member">threadAttribute_</ref>,<sp/><ref refid="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" kindref="member" tooltip="Thread start function when a Runnable is involved.">Thread::StartThreadRunnable</ref>,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)</highlight><highlight class="keyword">this</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;pthread_create<sp/>failed<sp/>at&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pthread_attr_destroy(&amp;<ref refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" kindref="member">threadAttribute_</ref>))<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;pthread_attr_destroy<sp/>failed<sp/>at&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_thread_1a8f33f7750321d5df9188033e7e3e300d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="class_thread_1a8f33f7750321d5df9188033e7e3e300d" kindref="member">Thread::Join</ref>()<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>result<sp/>was<sp/>already<sp/>saved<sp/>by<sp/>thread<sp/>start<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pthread_join(<ref refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" kindref="member">threadID_</ref>,<sp/>NULL))</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;pthread_join<sp/>failed<sp/>at&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" kindref="member">result_</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_thread_1ac32823199dc71dd77daba9bc9cb72c3e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_thread_1ac32823199dc71dd77daba9bc9cb72c3e" kindref="member">Thread::SetCompleted</ref>()<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>completion<sp/>handled<sp/>by<sp/>pthread_join()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp"/>
+  </compounddef>
+</doxygen>

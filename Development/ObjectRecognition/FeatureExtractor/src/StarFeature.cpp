@@ -3,23 +3,18 @@
 #include <iostream>
 
 #include "LocalSettings.h"
-#include "Visualizer.h"
+#include "ExceptionDescriptor.h"
 
 using namespace std;
 using namespace cv;
 
 StarFeature::StarFeature(const string& name)
-:	Feature(name),
-    maxSize_(45), 
-    responseThreshold_(30), 
-    lineThresholdProjected_(10),
-    lineThresholdBinarized_(8),
-    suppressNonmaxSize_(5)
+:	Feature(name)
 {
+	LoadSettingsFromFileStorage();
+
     starDetector_ = new StarFeatureDetector(maxSize_, responseThreshold_, 
         lineThresholdProjected_, lineThresholdBinarized_, suppressNonmaxSize_);
-       
-    LoadSettingsFromFileStorage();
 }
 
 StarFeature::~StarFeature(void)
@@ -29,10 +24,17 @@ StarFeature::~StarFeature(void)
 
 void StarFeature::LoadSettingsFromFileStorage(void)
 {
-    string fileName = LocalSettingsPtr->GetSettingsDirectory() + name_ + ".xml";
-    FileStorage fileStorage(fileName, FileStorage::READ, "UTF-8");
+	string fileName = LocalSettingsPtr->GetSettingsDirectory() + "Settings." + name_ + ".xml";
+	FileStorage fileStorage(fileName, FileStorage::READ, "UTF-8");
 
-    // TODO: Read settings...
+	if(!fileStorage.isOpened())
+		throw ExceptionError("Setting XML does not exist for " + name_ + "!");
+
+	fileStorage["maxSize"] >> maxSize_;
+	fileStorage["responseThreshold"] >> responseThreshold_;
+	fileStorage["lineThresholdProjected"] >> lineThresholdProjected_;
+	fileStorage["lineThresholdBinarized"] >> lineThresholdBinarized_;
+	fileStorage["suppressNonmaxSize"] >> suppressNonmaxSize_;
 }
 
 void StarFeature::Process(void)

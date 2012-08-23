@@ -3,7 +3,7 @@
 }
 {\ttfamily \#include $<$iostream$>$}\\*
 {\ttfamily \#include \char`\"{}Exception\-Descriptor.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}Obj\-Rec\-Algorithm.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Huro\-Algorithm.\-h\char`\"{}}\\*
 Include dependency graph for Main.\-cpp\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -21,38 +21,12 @@ int \hyperlink{_main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, ch
 \subsection{Function Documentation}
 \hypertarget{_main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{\index{Main.\-cpp@{Main.\-cpp}!main@{main}}
 \index{main@{main}!Main.cpp@{Main.\-cpp}}
-\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
 \begin{DoxyParamCaption}
 \item[{int}]{argc, }
 \item[{char $\ast$$\ast$}]{argv}
 \end{DoxyParamCaption}
 )}}\label{_main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
-
-\begin{DoxyCode}
-{
-        try
-        {
-                ObjRecAlgorithm algorithm;
-                algorithm.Process();
-
-                system("pause");
-        } 
-        catch(ExceptionDescriptor &e)
-        {
-                e.TraceError();
-                system("pause");
-                exit(-1);
-        } 
-        catch(...)
-        {
-                cerr << "Unknown exception!" << endl;
-                system("pause");
-                exit(-1);
-        }
-
-        return 0;
-}
-\end{DoxyCode}
 
 
 Here is the call graph for this function\-:\nopagebreak

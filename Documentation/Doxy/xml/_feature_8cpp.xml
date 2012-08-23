@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_feature_8cpp" kind="file">
+    <compoundname>Feature.cpp</compoundname>
+    <includes refid="_feature_8h" local="yes">Feature.h</includes>
+    <includes refid="_visualizer_8h" local="yes">Visualizer.h</includes>
+    <incdepgraph>
+      <node id="512">
+        <label>Runnable.h</label>
+        <link refid="_runnable_8h"/>
+      </node>
+      <node id="513">
+        <label>Visualizer.h</label>
+        <link refid="_visualizer_8h"/>
+        <childnode refid="507" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+      </node>
+      <node id="505">
+        <label>FeatureExtractor/src/Feature.cpp</label>
+        <link refid="Feature.cpp"/>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+      <node id="508">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="507">
+        <label>string</label>
+      </node>
+      <node id="511">
+        <label>pthread.h</label>
+      </node>
+      <node id="506">
+        <label>Feature.h</label>
+        <link refid="_feature_8h"/>
+        <childnode refid="507" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="509" relation="include">
+        </childnode>
+      </node>
+      <node id="509">
+        <label>Thread.h</label>
+        <link refid="_thread_8h"/>
+        <childnode refid="510" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+        <childnode refid="512" relation="include">
+        </childnode>
+      </node>
+      <node id="510">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_feature_8cpp_1a7d6ac1435556a7c3621b9eb7777a1636" prot="public" static="no">
+        <name>GETTICKCOUNT</name>
+        <initializer>(double)cvGetTickCount()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/Feature.cpp" line="4" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/Feature.cpp" bodystart="4" bodyend="-1"/>
+        <referencedby refid="class_feature_1a6cc5fc9cbbd8ec566a72fe98fe0d0f86" compoundref="_feature_8cpp" startline="29" endline="42">Feature::Run</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_feature_8cpp_1a641a18d5ceebc2bdcb2cb45a701bd9e4" prot="public" static="no">
+        <name>GETTICKFREQUENCY</name>
+        <initializer>cvGetTickFrequency()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/Feature.cpp" line="5" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/Feature.cpp" bodystart="5" bodyend="-1"/>
+        <referencedby refid="class_feature_1a6efeb0289e7a1e11e09a3cbd86a6ae31" compoundref="_feature_8cpp" startline="44" endline="54">Feature::Visualize</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_feature_8h" kindref="compound">Feature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_visualizer_8h" kindref="compound">Visualizer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="_feature_8cpp_1a7d6ac1435556a7c3621b9eb7777a1636" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GETTICKCOUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(double)cvGetTickCount()</highlight></codeline>
+<codeline lineno="5" refid="_feature_8cpp_1a641a18d5ceebc2bdcb2cb45a701bd9e4" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>GETTICKFREQUENCY<sp/><sp/><sp/><sp/>cvGetTickFrequency()</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">cv;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_feature_1a020e991990bb6ca904015ffa7902d55f" refkind="member"><highlight class="normal"><ref refid="class_feature_1a020e991990bb6ca904015ffa7902d55f" kindref="member" tooltip="Constructor.">Feature::Feature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>name)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>name_(name),</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>procTime_(0.0)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_feature_1ab6dfcfe22cc71c7b45a61d991b4ff775" refkind="member"><highlight class="normal"><ref refid="class_feature_1ab6dfcfe22cc71c7b45a61d991b4ff775" kindref="member" tooltip="Destructor.">Feature::~Feature</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_feature_1af261b9c5cac5ff1fb628317c7009c845" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_feature_1af261b9c5cac5ff1fb628317c7009c845" kindref="member" tooltip="Connects a frame to the feature extractor.">Feature::SetFrame</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mat&amp;<sp/>frame)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" kindref="member" tooltip="The current frame.">frame_</ref><sp/>=<sp/>frame.clone();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_feature_1ac666ae973c3840be1b3b9183dd12b8c1" kindref="member" tooltip="Stores keypoints, i.e. a point feature found by one of many available keypoint detectors.">keyPoints</ref>.clear();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_feature_1a1b176bd48aad30b553e0f87f0264c3d0" kindref="member" tooltip="Processing time of the current feature extraction method.">procTime_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_feature_1a857c4955b0325d8b96c863d873bf8db5" kindref="member" tooltip="The output matrix of descriptors.">descriptors</ref><sp/>=<sp/>Mat();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_feature_1a6cc5fc9cbbd8ec566a72fe98fe0d0f86" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="class_feature_1a6cc5fc9cbbd8ec566a72fe98fe0d0f86" kindref="member" tooltip="Implemented virtual method for the algorithm.">Feature::Run</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" kindref="member" tooltip="The current frame.">frame_</ref>.empty())</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_feature_1a1b176bd48aad30b553e0f87f0264c3d0" kindref="member" tooltip="Processing time of the current feature extraction method.">procTime_</ref><sp/>=<sp/><ref refid="_feature_8cpp_1a7d6ac1435556a7c3621b9eb7777a1636" kindref="member">GETTICKCOUNT</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_feature_1ad9e3aebe506fc936c6ad18f9fc9543db" kindref="member" tooltip="Virtual method for each feature extraction algorithm.">Process</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_feature_1a1b176bd48aad30b553e0f87f0264c3d0" kindref="member" tooltip="Processing time of the current feature extraction method.">procTime_</ref><sp/>=<sp/><ref refid="_feature_8cpp_1a7d6ac1435556a7c3621b9eb7777a1636" kindref="member">GETTICKCOUNT</ref><sp/>-<sp/><ref refid="class_feature_1a1b176bd48aad30b553e0f87f0264c3d0" kindref="member" tooltip="Processing time of the current feature extraction method.">procTime_</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_feature_1afcc4cc593c475cd67068c535e5bb4108" kindref="member" tooltip="Virtual method for drawing the extracted features.">DrawFeatures</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_feature_1a6efeb0289e7a1e11e09a3cbd86a6ae31" kindref="member" tooltip="Visualizing the output of feature extractor.">Visualize</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(0);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_feature_1a6efeb0289e7a1e11e09a3cbd86a6ae31" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_feature_1a6efeb0289e7a1e11e09a3cbd86a6ae31" kindref="member" tooltip="Visualizing the output of feature extractor.">Feature::Visualize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[500];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf_s(buffer,<sp/>500,<sp/></highlight><highlight class="stringliteral">&quot;Processing<sp/>time<sp/>of<sp/>%s:<sp/>%.2lf<sp/>ms.&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_feature_1a46e9fc1f327aaafb10de2c0425d311aa" kindref="member" tooltip="Name of the current feature extraction procedure.">name_</ref>.c_str(),<sp/><ref refid="class_feature_1a1b176bd48aad30b553e0f87f0264c3d0" kindref="member" tooltip="Processing time of the current feature extraction method.">procTime_</ref><sp/>/<sp/>(<ref refid="_feature_8cpp_1a641a18d5ceebc2bdcb2cb45a701bd9e4" kindref="member">GETTICKFREQUENCY</ref><sp/>*<sp/>1000.0));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_visualizer_8h_1a1ceb952bd02330e3ec62c186672d8a78" kindref="member">VisualizerPtr</ref>-&gt;PutText(<ref refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" kindref="member" tooltip="The current frame.">frame_</ref>,<sp/>buffer,<sp/>Point(10,<sp/>20));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf_s(buffer,<sp/>500,<sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>detected<sp/>keypoints:<sp/>%d.&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_feature_1ac666ae973c3840be1b3b9183dd12b8c1" kindref="member" tooltip="Stores keypoints, i.e. a point feature found by one of many available keypoint detectors.">keyPoints</ref>.size());</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_visualizer_8h_1a1ceb952bd02330e3ec62c186672d8a78" kindref="member">VisualizerPtr</ref>-&gt;PutText(<ref refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" kindref="member" tooltip="The current frame.">frame_</ref>,<sp/>buffer,<sp/>Point(10,<sp/>40));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_visualizer_8h_1a1ceb952bd02330e3ec62c186672d8a78" kindref="member">VisualizerPtr</ref>-&gt;ShowImage(<ref refid="class_feature_1a46e9fc1f327aaafb10de2c0425d311aa" kindref="member" tooltip="Name of the current feature extraction procedure.">name_</ref>,<sp/><ref refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" kindref="member" tooltip="The current frame.">frame_</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/Feature.cpp"/>
+  </compounddef>
+</doxygen>

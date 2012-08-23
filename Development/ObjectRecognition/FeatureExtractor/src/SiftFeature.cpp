@@ -3,22 +3,17 @@
 #include <iostream>
 
 #include "LocalSettings.h"
-#include "Visualizer.h"
+#include "ExceptionDescriptor.h"
 
 using namespace std;
 using namespace cv;
 
 SiftFeature::SiftFeature(const string& name)
-:	Feature(name),
-    nfeatures_(0),
-    nOctaveLayers_(3),
-    contrastThreshold_(0.04),
-    edgeThreshold_(10.0),
-    sigma_(1.6)
+:	Feature(name)
 {
-    siftDetector_ = new SiftFeatureDetector(nfeatures_, nOctaveLayers_, contrastThreshold_, edgeThreshold_, sigma_);
+	LoadSettingsFromFileStorage();
 
-    LoadSettingsFromFileStorage();
+    siftDetector_ = new SiftFeatureDetector(nfeatures_, nOctaveLayers_, contrastThreshold_, edgeThreshold_, sigma_);
 }
 
 SiftFeature::~SiftFeature(void)
@@ -28,10 +23,17 @@ SiftFeature::~SiftFeature(void)
 
 void SiftFeature::LoadSettingsFromFileStorage(void)
 {
-    string fileName = LocalSettingsPtr->GetSettingsDirectory() + name_ + ".xml";
+    string fileName = LocalSettingsPtr->GetSettingsDirectory() + "Settings." + name_ + ".xml";
     FileStorage fileStorage(fileName, FileStorage::READ, "UTF-8");
 
-    // TODO: Read settings...
+	if(!fileStorage.isOpened())
+		throw ExceptionError("Setting XML does not exist for " + name_ + "!");
+
+	fileStorage["nfeatures"] >> nfeatures_;
+	fileStorage["nOctaveLayers"] >> nOctaveLayers_;
+	fileStorage["contrastThreshold"] >> contrastThreshold_;
+	fileStorage["edgeThreshold"] >> edgeThreshold_;
+	fileStorage["sigma"] >> sigma_;
 }
 
 void SiftFeature::Process(void)

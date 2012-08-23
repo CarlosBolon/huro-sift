@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="class_mutex" kind="class" prot="public">
+    <compoundname>Mutex</compoundname>
+    <includes refid="_mutex_8h" local="no">Mutex.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mutex_1a0f845aa1acc03f39fd84612c91050f27" prot="private" static="no" mutable="no">
+        <type>pthread_mutex_t</type>
+        <definition>pthread_mutex_t Mutex::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+<para>Inner mutex object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Mutex.h" line="27" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Mutex.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_mutex_1a00b2ff557451955a905ecdca2855389b" compoundref="_mutex_8cpp" startline="3" endline="6">Mutex</referencedby>
+        <referencedby refid="class_mutex_1a115e8bae072b7d0767f75bc3369d521d" compoundref="_mutex_8cpp" startline="8" endline="11">~Mutex</referencedby>
+        <referencedby refid="class_mutex_1a1726d7244983f7be74fcfa9cfb63745f" compoundref="_mutex_8cpp" startline="13" endline="16">Lock</referencedby>
+        <referencedby refid="class_mutex_1a03150e8fa423f7e042661d350d238b84" compoundref="_mutex_8cpp" startline="18" endline="21">Unlock</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mutex_1a00b2ff557451955a905ecdca2855389b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Mutex::Mutex</definition>
+        <argsstring>(void)</argsstring>
+        <name>Mutex</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Mutex.h" line="15" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Mutex.cpp" bodystart="3" bodyend="6"/>
+        <references refid="class_mutex_1a0f845aa1acc03f39fd84612c91050f27" compoundref="_mutex_8h" startline="27">mutex_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mutex_1a115e8bae072b7d0767f75bc3369d521d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Mutex::~Mutex</definition>
+        <argsstring>(void)</argsstring>
+        <name>~Mutex</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Mutex.h" line="18" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Mutex.cpp" bodystart="8" bodyend="11"/>
+        <references refid="class_mutex_1a0f845aa1acc03f39fd84612c91050f27" compoundref="_mutex_8h" startline="27">mutex_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mutex_1a1726d7244983f7be74fcfa9cfb63745f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mutex::Lock</definition>
+        <argsstring>(void)</argsstring>
+        <name>Lock</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Blocks the current thread. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Mutex.h" line="21" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Mutex.cpp" bodystart="13" bodyend="16"/>
+        <references refid="class_mutex_1a0f845aa1acc03f39fd84612c91050f27" compoundref="_mutex_8h" startline="27">mutex_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mutex_1a03150e8fa423f7e042661d350d238b84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mutex::Unlock</definition>
+        <argsstring>(void)</argsstring>
+        <name>Unlock</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Unblocks the current thread. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Mutex.h" line="24" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Mutex.cpp" bodystart="18" bodyend="21"/>
+        <references refid="class_mutex_1a0f845aa1acc03f39fd84612c91050f27" compoundref="_mutex_8h" startline="27">mutex_</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A synchronization primitive that can also be used for interprocess synchronization. </para>    </briefdescription>
+    <detaileddescription>
+<para>When two or more threads need to access a shared resource at the same time, the system needs a synchronization mechanism to ensure that only one thread at a time uses the resource. <ref refid="class_mutex" kindref="compound">Mutex</ref> is a synchronization primitive that grants exclusive access to the shared resource to only one thread. </para>    </detaileddescription>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Mutex.h" line="12" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Mutex.h" bodystart="11" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_mutex_1a1726d7244983f7be74fcfa9cfb63745f" prot="public" virt="non-virtual"><scope>Mutex</scope><name>Lock</name></member>
+      <member refid="class_mutex_1a00b2ff557451955a905ecdca2855389b" prot="public" virt="non-virtual"><scope>Mutex</scope><name>Mutex</name></member>
+      <member refid="class_mutex_1a0f845aa1acc03f39fd84612c91050f27" prot="private" virt="non-virtual"><scope>Mutex</scope><name>mutex_</name></member>
+      <member refid="class_mutex_1a03150e8fa423f7e042661d350d238b84" prot="public" virt="non-virtual"><scope>Mutex</scope><name>Unlock</name></member>
+      <member refid="class_mutex_1a115e8bae072b7d0767f75bc3369d521d" prot="public" virt="non-virtual"><scope>Mutex</scope><name>~Mutex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

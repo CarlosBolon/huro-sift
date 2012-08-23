@@ -3,27 +3,18 @@
 #include <iostream>
 
 #include "LocalSettings.h"
-#include "Visualizer.h"
+#include "ExceptionDescriptor.h"
 
 using namespace std;
 using namespace cv;
 
 MserFeature::MserFeature(const string& name)
-:	Feature(name),
-    delta_(5),
-    minArea_(60),
-    maxArea_(14400),
-    maxVariation_(0.25),
-    minDiversity_(0.2),
-    maxEvolution_(200),
-    areaThreshold_(1.01),
-    minMargin_(0.003),
-    edgeBlurSize_(5)
+:	Feature(name)
 {
+	LoadSettingsFromFileStorage();
+
     mserDetector_ = new MserFeatureDetector(delta_, minArea_, maxArea_, maxVariation_, minDiversity_, 
         maxEvolution_, areaThreshold_, minMargin_, edgeBlurSize_);
-
-    LoadSettingsFromFileStorage();
 }
 
 MserFeature::~MserFeature(void)
@@ -33,10 +24,21 @@ MserFeature::~MserFeature(void)
 
 void MserFeature::LoadSettingsFromFileStorage(void)
 {
-    string fileName = LocalSettingsPtr->GetSettingsDirectory() + name_ + ".xml";
-    FileStorage fileStorage(fileName, FileStorage::READ, "UTF-8");
+	string fileName = LocalSettingsPtr->GetSettingsDirectory() + "Settings." + name_ + ".xml";
+	FileStorage fileStorage(fileName, FileStorage::READ, "UTF-8");
 
-    // TODO: Read settings...
+	if(!fileStorage.isOpened())
+		throw ExceptionError("Setting XML does not exist for " + name_ + "!");
+
+	fileStorage["delta"] >> delta_;
+	fileStorage["minArea"] >> minArea_;
+	fileStorage["maxArea"] >> maxArea_;
+	fileStorage["maxVariation"] >> maxVariation_;
+	fileStorage["minDiversity"] >> minDiversity_;
+	fileStorage["maxEvolution"] >> maxEvolution_;
+	fileStorage["areaThreshold"] >> areaThreshold_;
+	fileStorage["minMargin"] >> minMargin_;
+	fileStorage["edgeBlurSize"] >> edgeBlurSize_;
 }
 
 void MserFeature::Process(void)

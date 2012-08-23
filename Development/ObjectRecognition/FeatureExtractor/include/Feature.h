@@ -10,7 +10,7 @@
 
 #include "Thread.h"
 
-//! Abstract class for feature detection.
+//! Abstract class for feature extraction.
 /*!
 	\ingroup FeatureExtractor
 */
@@ -32,24 +32,22 @@ public:
 	*/
 	void SetFrame(const cv::Mat& frame);
 
-	std::vector<cv::KeyPoint> keyPoints;	//<! Stores keypoints, i.e. a point feature found by one of many available keypoint detectors.
-    cv::Mat descriptors;
+	std::vector<cv::KeyPoint> keyPoints;	//!< Stores keypoints, i.e. a point feature found by one of many available keypoint detectors.
+    cv::Mat descriptors;					//!< The output matrix of descriptors.
 
 protected:
     //! Virtual method for loading algorithm specific settings from the given storage.
-	/*!
-		\param fileStorage An already open storage from which anything specific can be read.
-	*/
 	virtual void LoadSettingsFromFileStorage(void) = NULL;
 
 	//! Virtual method for each feature extraction algorithm.
 	virtual void Process(void) = NULL;
 
+	//! Virtual method for drawing the extracted features.
 	virtual void DrawFeatures(void) = NULL;
 
-	std::string name_;	//<! Name of the current feature extraction procedure.
-	cv::Mat frame_;		//<! The current frame.
-	double procTime_;
+	std::string name_;	//!< Name of the current feature extraction procedure.
+	cv::Mat frame_;		//!< The current frame.
+	double procTime_;	//!< Processing time of the current feature extraction method.
 
 private:
 	//! Implemented virtual method for the algorithm.
@@ -58,5 +56,6 @@ private:
 	*/
 	void* Run(void);
 
+	//! Visualizing the output of feature extractor.
     void Visualize(void);
 };

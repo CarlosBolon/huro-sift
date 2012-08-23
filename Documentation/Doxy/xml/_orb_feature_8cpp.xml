@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_orb_feature_8cpp" kind="file">
+    <compoundname>OrbFeature.cpp</compoundname>
+    <includes refid="_orb_feature_8h" local="yes">OrbFeature.h</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="_local_settings_8h" local="yes">LocalSettings.h</includes>
+    <includes refid="_exception_descriptor_8h" local="yes">ExceptionDescriptor.h</includes>
+    <incdepgraph>
+      <node id="537">
+        <label>Runnable.h</label>
+        <link refid="_runnable_8h"/>
+      </node>
+      <node id="533">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="532">
+        <label>string</label>
+      </node>
+      <node id="541">
+        <label>exception</label>
+      </node>
+      <node id="536">
+        <label>pthread.h</label>
+      </node>
+      <node id="540">
+        <label>ExceptionDescriptor.h</label>
+        <link refid="_exception_descriptor_8h"/>
+        <childnode refid="541" relation="include">
+        </childnode>
+        <childnode refid="532" relation="include">
+        </childnode>
+      </node>
+      <node id="531">
+        <label>Feature.h</label>
+        <link refid="_feature_8h"/>
+        <childnode refid="532" relation="include">
+        </childnode>
+        <childnode refid="533" relation="include">
+        </childnode>
+        <childnode refid="534" relation="include">
+        </childnode>
+      </node>
+      <node id="534">
+        <label>Thread.h</label>
+        <link refid="_thread_8h"/>
+        <childnode refid="535" relation="include">
+        </childnode>
+        <childnode refid="536" relation="include">
+        </childnode>
+        <childnode refid="537" relation="include">
+        </childnode>
+      </node>
+      <node id="538">
+        <label>iostream</label>
+      </node>
+      <node id="539">
+        <label>LocalSettings.h</label>
+        <link refid="_local_settings_8h"/>
+        <childnode refid="532" relation="include">
+        </childnode>
+      </node>
+      <node id="530">
+        <label>OrbFeature.h</label>
+        <link refid="_orb_feature_8h"/>
+        <childnode refid="531" relation="include">
+        </childnode>
+      </node>
+      <node id="535">
+        <label>memory</label>
+      </node>
+      <node id="529">
+        <label>FeatureExtractor/src/OrbFeature.cpp</label>
+        <link refid="OrbFeature.cpp"/>
+        <childnode refid="530" relation="include">
+        </childnode>
+        <childnode refid="538" relation="include">
+        </childnode>
+        <childnode refid="539" relation="include">
+        </childnode>
+        <childnode refid="540" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_orb_feature_8h" kindref="compound">OrbFeature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_local_settings_8h" kindref="compound">LocalSettings.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_exception_descriptor_8h" kindref="compound">ExceptionDescriptor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">cv;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_orb_feature_1a27e8b7a9c9ad36abd4119d1feb98f874" refkind="member"><highlight class="normal"><ref refid="class_orb_feature_1a27e8b7a9c9ad36abd4119d1feb98f874" kindref="member" tooltip="Constructor.">OrbFeature::OrbFeature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>name)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_feature" kindref="compound" tooltip="Abstract class for feature extraction.">Feature</ref>(name)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_orb_feature_1aa13ad1fbc5869dcabb55611e5c206ebd" kindref="member" tooltip="Implemented virtual method for loading algorithm specific settings from the given storage...">LoadSettingsFromFileStorage</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_orb_feature_1afbddce112b372099591a6ec049aff0f5" kindref="member" tooltip="Wrapped OpenCV ORB object.">orbDetector_</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>OrbFeatureDetector(<ref refid="class_orb_feature_1a8fb8ef05ff3dff5ffee90c6f41e83cb2" kindref="member" tooltip="The maximum number of features to retain.">nFeatures_</ref>,<sp/><ref refid="class_orb_feature_1a8cbd44d79e8952dd7b51be32d1eaddee" kindref="member" tooltip="Pyramid decimation ratio, greater than 1. scaleFactor==2 means the classical pyramid, where each next level has 4x less pixels than the previous, but such a big scale factor will degrade feature matching scores dramatically. On the other hand, too close to 1 scale factor will mean that to cover certain scale range you will need more pyramid levels and so the speed will suffer.">scaleFactor_</ref>,<sp/><ref refid="class_orb_feature_1abfb07330bd1a63270f935e1317111300" kindref="member" tooltip="The number of pyramid levels. The smallest level will have linear size equal to input_image_linear_si...">nlevels_</ref>,<sp/><ref refid="class_orb_feature_1af74609fa7b56d5dea19c9460f42b25ab" kindref="member" tooltip="This is size of the border where the features are not detected. It should roughly match the patchSize...">edgeThreshold_</ref>,<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_orb_feature_1a1c1e186a9f2bc54c38f54f3c1e8f7d0f" kindref="member" tooltip="It should be 0 in the current implementation.">firstLevel_</ref>,<sp/><ref refid="class_orb_feature_1a05cc269e6833e1f25c7f7c31928a5ef6" kindref="member" tooltip="The number of points that produce each element of the oriented BRIEF descriptor. The default value 2 ...">wtaK_</ref>,<sp/><ref refid="class_orb_feature_1a9a4454ef09254b94d88d0b599ad84218" kindref="member" tooltip="he default HARRIS_SCORE means that Harris algorithm is used to rank features (the score is written to...">scoreType_</ref>,<sp/><ref refid="class_orb_feature_1ae7f8a68d8b86f650348bc213c43f593a" kindref="member" tooltip="Size of the patch used by the oriented BRIEF descriptor. Of course, on smaller pyramid layers the per...">patchSize_</ref>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_orb_feature_1aed4e5d5b4410041d3c8374dbd929f2ef" refkind="member"><highlight class="normal"><ref refid="class_orb_feature_1aed4e5d5b4410041d3c8374dbd929f2ef" kindref="member" tooltip="Destructor.">OrbFeature::~OrbFeature</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_orb_feature_1afbddce112b372099591a6ec049aff0f5" kindref="member" tooltip="Wrapped OpenCV ORB object.">orbDetector_</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_orb_feature_1aa13ad1fbc5869dcabb55611e5c206ebd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_orb_feature_1aa13ad1fbc5869dcabb55611e5c206ebd" kindref="member" tooltip="Implemented virtual method for loading algorithm specific settings from the given storage...">OrbFeature::LoadSettingsFromFileStorage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fileName<sp/>=<sp/><ref refid="_local_settings_8h_1a2229e3307a6b7ebe72c4459cad648ff4" kindref="member">LocalSettingsPtr</ref>-&gt;GetSettingsDirectory()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;Settings.&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_feature_1a46e9fc1f327aaafb10de2c0425d311aa" kindref="member" tooltip="Name of the current feature extraction procedure.">name_</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.xml&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FileStorage<sp/>fileStorage(fileName,<sp/>FileStorage::READ,<sp/></highlight><highlight class="stringliteral">&quot;UTF-8&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!fileStorage.isOpened())</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;Setting<sp/>XML<sp/>does<sp/>not<sp/>exist<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_feature_1a46e9fc1f327aaafb10de2c0425d311aa" kindref="member" tooltip="Name of the current feature extraction procedure.">name_</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fsScoreType;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;nFeatures&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_orb_feature_1a8fb8ef05ff3dff5ffee90c6f41e83cb2" kindref="member" tooltip="The maximum number of features to retain.">nFeatures_</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;scaleFactor&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_orb_feature_1a8cbd44d79e8952dd7b51be32d1eaddee" kindref="member" tooltip="Pyramid decimation ratio, greater than 1. scaleFactor==2 means the classical pyramid, where each next level has 4x less pixels than the previous, but such a big scale factor will degrade feature matching scores dramatically. On the other hand, too close to 1 scale factor will mean that to cover certain scale range you will need more pyramid levels and so the speed will suffer.">scaleFactor_</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;nlevels&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_orb_feature_1abfb07330bd1a63270f935e1317111300" kindref="member" tooltip="The number of pyramid levels. The smallest level will have linear size equal to input_image_linear_si...">nlevels_</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;edgeThreshold&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_orb_feature_1af74609fa7b56d5dea19c9460f42b25ab" kindref="member" tooltip="This is size of the border where the features are not detected. It should roughly match the patchSize...">edgeThreshold_</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;firstLevel&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_orb_feature_1a1c1e186a9f2bc54c38f54f3c1e8f7d0f" kindref="member" tooltip="It should be 0 in the current implementation.">firstLevel_</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;wtaK&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_orb_feature_1a05cc269e6833e1f25c7f7c31928a5ef6" kindref="member" tooltip="The number of points that produce each element of the oriented BRIEF descriptor. The default value 2 ...">wtaK_</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;scoreType&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/>fsScoreType;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;patchSize&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_orb_feature_1ae7f8a68d8b86f650348bc213c43f593a" kindref="member" tooltip="Size of the patch used by the oriented BRIEF descriptor. Of course, on smaller pyramid layers the per...">patchSize_</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fsScoreType.compare(</highlight><highlight class="stringliteral">&quot;kBytes&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_orb_feature_1a9a4454ef09254b94d88d0b599ad84218" kindref="member" tooltip="he default HARRIS_SCORE means that Harris algorithm is used to rank features (the score is written to...">scoreType_</ref><sp/>=<sp/>ORB::kBytes;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fsScoreType.compare(</highlight><highlight class="stringliteral">&quot;HARRIS_SCORE&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_orb_feature_1a9a4454ef09254b94d88d0b599ad84218" kindref="member" tooltip="he default HARRIS_SCORE means that Harris algorithm is used to rank features (the score is written to...">scoreType_</ref><sp/>=<sp/>ORB::HARRIS_SCORE;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fsScoreType.compare(</highlight><highlight class="stringliteral">&quot;FAST_SCORE&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_orb_feature_1a9a4454ef09254b94d88d0b599ad84218" kindref="member" tooltip="he default HARRIS_SCORE means that Harris algorithm is used to rank features (the score is written to...">scoreType_</ref><sp/>=<sp/>ORB::FAST_SCORE;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_orb_feature_1af814e3440b61e6bf13b44ef8886ad2d0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_orb_feature_1af814e3440b61e6bf13b44ef8886ad2d0" kindref="member" tooltip="Implemented virtual method for the algorithm.">OrbFeature::Process</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Detect<sp/>the<sp/>keypoints</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_orb_feature_1afbddce112b372099591a6ec049aff0f5" kindref="member" tooltip="Wrapped OpenCV ORB object.">orbDetector_</ref>-&gt;detect(<ref refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" kindref="member" tooltip="The current frame.">frame_</ref>,<sp/><ref refid="class_feature_1ac666ae973c3840be1b3b9183dd12b8c1" kindref="member" tooltip="Stores keypoints, i.e. a point feature found by one of many available keypoint detectors.">keyPoints</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>descriptors<sp/>(feature<sp/>vectors)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_orb_feature_1afbddce112b372099591a6ec049aff0f5" kindref="member" tooltip="Wrapped OpenCV ORB object.">orbDetector_</ref>-&gt;compute(<ref refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" kindref="member" tooltip="The current frame.">frame_</ref>,<sp/><ref refid="class_feature_1ac666ae973c3840be1b3b9183dd12b8c1" kindref="member" tooltip="Stores keypoints, i.e. a point feature found by one of many available keypoint detectors.">keyPoints</ref>,<sp/><ref refid="class_feature_1a857c4955b0325d8b96c863d873bf8db5" kindref="member" tooltip="The output matrix of descriptors.">descriptors</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_orb_feature_1a907fdd9790d0295f129f1ecdc4382031" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_orb_feature_1a907fdd9790d0295f129f1ecdc4382031" kindref="member" tooltip="Implemented virtual method for displaying the output.">OrbFeature::DrawFeatures</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>drawKeypoints(<ref refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" kindref="member" tooltip="The current frame.">frame_</ref>,<sp/><ref refid="class_feature_1ac666ae973c3840be1b3b9183dd12b8c1" kindref="member" tooltip="Stores keypoints, i.e. a point feature found by one of many available keypoint detectors.">keyPoints</ref>,<sp/><ref refid="class_feature_1aa805e6fee8eeec2061feabe29430f0df" kindref="member" tooltip="The current frame.">frame_</ref>,<sp/>Scalar::all(-1),<sp/>DrawMatchesFlags::DEFAULT);<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/OrbFeature.cpp"/>
+  </compounddef>
+</doxygen>

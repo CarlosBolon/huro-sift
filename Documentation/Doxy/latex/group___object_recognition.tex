@@ -4,5 +4,194 @@
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_obj_rec_algorithm}{Obj\-Rec\-Algorithm}
-\begin{DoxyCompactList}\small\item\em Class for Object Recognition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \hyperlink{group___object_recognition_class_huro_algorithm}{Huro\-Algorithm}
+\begin{DoxyCompactList}\small\item\em Class for handling feature extraction.  \hyperlink{group___object_recognition_class_huro_algorithm}{More...}\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Class Documentation}
+\index{Huro\-Algorithm@{Huro\-Algorithm}}\label{class_huro_algorithm}
+\hypertarget{group___object_recognition_class_huro_algorithm}{}
+\subsubsection{class Huro\-Algorithm}
+Class for handling feature extraction. 
+
+Getting Local and Global Features. 
+
+Collaboration diagram for Huro\-Algorithm\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{class_huro_algorithm__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___object_recognition_a5213ab22da2dba36f16262c1a84ec261}{Huro\-Algorithm} (void)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{group___object_recognition_a0c00c5a74d3415f926f599c2ea9cedce}{$\sim$\-Huro\-Algorithm} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{group___object_recognition_ac2e91407459c4ebac0b33f7e7570022d}{Process} (void)
+\begin{DoxyCompactList}\small\item\em Main algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___object_recognition_a1cfbc787c7380f981407daf1afbbad12}{Load\-Settings\-From\-File\-Storage} (void)
+\begin{DoxyCompactList}\small\item\em Method for loading algorithm specific settings from the given storage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group___object_recognition_ab1c035063117de9d0b865066d877e11a}{camera\-Id\-\_\-}
+\begin{DoxyCompactList}\small\item\em I\-D of the camera to be analyzed. \end{DoxyCompactList}\item 
+\hyperlink{_huro_algorithm_8h_a757340ff85aefe40aa12b1426ec25987}{Feature\-Pool} \hyperlink{group___object_recognition_a5408d8b09ff99592e7e0d196357e0f05}{feature\-Pool\-\_\-}
+\begin{DoxyCompactList}\small\item\em Stores all of feature extractor. \end{DoxyCompactList}\item 
+\hyperlink{group___core_class_image_frame}{Image\-Frame} $\ast$ \hyperlink{group___object_recognition_ae03bda7ba79c469b7f36566fe354f93a}{image\-Frame\-\_\-}
+\begin{DoxyCompactList}\small\item\em For handling image frame getting. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{group___object_recognition_a2a752aeadf9fd6552473b42c2c3e6851}{image\-Name\-\_\-}
+\begin{DoxyCompactList}\small\item\em Name of the image to be analyzed. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{group___object_recognition_a433b1ef87e917a1cdedc519dcc494837}{media\-Type\-\_\-}
+\begin{DoxyCompactList}\small\item\em Type of the incoming media. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\paragraph{Constructor \& Destructor Documentation}
+\hypertarget{group___object_recognition_a5213ab22da2dba36f16262c1a84ec261}{\index{Huro\-Algorithm@{Huro\-Algorithm}!Huro\-Algorithm@{Huro\-Algorithm}}
+\index{Huro\-Algorithm@{Huro\-Algorithm}!HuroAlgorithm@{Huro\-Algorithm}}
+\subparagraph[{Huro\-Algorithm}]{\setlength{\rightskip}{0pt plus 5cm}Huro\-Algorithm\-::\-Huro\-Algorithm (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___object_recognition_a5213ab22da2dba36f16262c1a84ec261}
+
+
+Constructor. 
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___object_recognition_a5213ab22da2dba36f16262c1a84ec261_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___object_recognition_a0c00c5a74d3415f926f599c2ea9cedce}{\index{Huro\-Algorithm@{Huro\-Algorithm}!$\sim$\-Huro\-Algorithm@{$\sim$\-Huro\-Algorithm}}
+\index{$\sim$\-Huro\-Algorithm@{$\sim$\-Huro\-Algorithm}!HuroAlgorithm@{Huro\-Algorithm}}
+\subparagraph[{$\sim$\-Huro\-Algorithm}]{\setlength{\rightskip}{0pt plus 5cm}Huro\-Algorithm\-::$\sim$\-Huro\-Algorithm (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___object_recognition_a0c00c5a74d3415f926f599c2ea9cedce}
+
+
+Destructor. 
+
+
+
+\paragraph{Member Function Documentation}
+\hypertarget{group___object_recognition_a1cfbc787c7380f981407daf1afbbad12}{\index{Huro\-Algorithm@{Huro\-Algorithm}!Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}}
+\index{Load\-Settings\-From\-File\-Storage@{Load\-Settings\-From\-File\-Storage}!HuroAlgorithm@{Huro\-Algorithm}}
+\subparagraph[{Load\-Settings\-From\-File\-Storage}]{\setlength{\rightskip}{0pt plus 5cm}void Huro\-Algorithm\-::\-Load\-Settings\-From\-File\-Storage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{group___object_recognition_a1cfbc787c7380f981407daf1afbbad12}
+
+
+Method for loading algorithm specific settings from the given storage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Storage} & An already open storage from which anything specific can be read. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___object_recognition_a1cfbc787c7380f981407daf1afbbad12_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group___object_recognition_ac2e91407459c4ebac0b33f7e7570022d}{\index{Huro\-Algorithm@{Huro\-Algorithm}!Process@{Process}}
+\index{Process@{Process}!HuroAlgorithm@{Huro\-Algorithm}}
+\subparagraph[{Process}]{\setlength{\rightskip}{0pt plus 5cm}void Huro\-Algorithm\-::\-Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___object_recognition_ac2e91407459c4ebac0b33f7e7570022d}
+
+
+Main algorithm. 
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___object_recognition_ac2e91407459c4ebac0b33f7e7570022d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{group___object_recognition_ac2e91407459c4ebac0b33f7e7570022d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\paragraph{Member Data Documentation}
+\hypertarget{group___object_recognition_ab1c035063117de9d0b865066d877e11a}{\index{Huro\-Algorithm@{Huro\-Algorithm}!camera\-Id\-\_\-@{camera\-Id\-\_\-}}
+\index{camera\-Id\-\_\-@{camera\-Id\-\_\-}!HuroAlgorithm@{Huro\-Algorithm}}
+\subparagraph[{camera\-Id\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Huro\-Algorithm\-::camera\-Id\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___object_recognition_ab1c035063117de9d0b865066d877e11a}
+
+
+I\-D of the camera to be analyzed. 
+
+\hypertarget{group___object_recognition_a5408d8b09ff99592e7e0d196357e0f05}{\index{Huro\-Algorithm@{Huro\-Algorithm}!feature\-Pool\-\_\-@{feature\-Pool\-\_\-}}
+\index{feature\-Pool\-\_\-@{feature\-Pool\-\_\-}!HuroAlgorithm@{Huro\-Algorithm}}
+\subparagraph[{feature\-Pool\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Feature\-Pool} Huro\-Algorithm\-::feature\-Pool\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___object_recognition_a5408d8b09ff99592e7e0d196357e0f05}
+
+
+Stores all of feature extractor. 
+
+\hypertarget{group___object_recognition_ae03bda7ba79c469b7f36566fe354f93a}{\index{Huro\-Algorithm@{Huro\-Algorithm}!image\-Frame\-\_\-@{image\-Frame\-\_\-}}
+\index{image\-Frame\-\_\-@{image\-Frame\-\_\-}!HuroAlgorithm@{Huro\-Algorithm}}
+\subparagraph[{image\-Frame\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Image\-Frame}$\ast$ Huro\-Algorithm\-::image\-Frame\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___object_recognition_ae03bda7ba79c469b7f36566fe354f93a}
+
+
+For handling image frame getting. 
+
+\hypertarget{group___object_recognition_a2a752aeadf9fd6552473b42c2c3e6851}{\index{Huro\-Algorithm@{Huro\-Algorithm}!image\-Name\-\_\-@{image\-Name\-\_\-}}
+\index{image\-Name\-\_\-@{image\-Name\-\_\-}!HuroAlgorithm@{Huro\-Algorithm}}
+\subparagraph[{image\-Name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Huro\-Algorithm\-::image\-Name\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___object_recognition_a2a752aeadf9fd6552473b42c2c3e6851}
+
+
+Name of the image to be analyzed. 
+
+\hypertarget{group___object_recognition_a433b1ef87e917a1cdedc519dcc494837}{\index{Huro\-Algorithm@{Huro\-Algorithm}!media\-Type\-\_\-@{media\-Type\-\_\-}}
+\index{media\-Type\-\_\-@{media\-Type\-\_\-}!HuroAlgorithm@{Huro\-Algorithm}}
+\subparagraph[{media\-Type\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Huro\-Algorithm\-::media\-Type\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{group___object_recognition_a433b1ef87e917a1cdedc519dcc494837}
+
+
+Type of the incoming media. 
+

@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="class_thread" kind="class" prot="public" abstract="yes">
+    <compoundname>Thread</compoundname>
+    <derivedcompoundref refid="class_feature" prot="public" virt="non-virtual">Feature</derivedcompoundref>
+    <includes refid="_thread_8h" local="no">Thread.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_thread_1a2b6b46b7eb56cffef7d0722649956c5d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Thread::detached_</definition>
+        <argsstring></argsstring>
+        <name>detached_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="65" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" compoundref="_thread_8cpp" startline="47" endline="90">Start</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* Thread::result_</definition>
+        <argsstring></argsstring>
+        <name>result_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="68" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" compoundref="_thread_8cpp" startline="25" endline="34">StartThreadRunnable</referencedby>
+        <referencedby refid="class_thread_1a9698abb1d7e2aed626b1963635455840" compoundref="_thread_8cpp" startline="36" endline="45">StartThread</referencedby>
+        <referencedby refid="class_thread_1a8f33f7750321d5df9188033e7e3e300d" compoundref="_thread_8cpp" startline="93" endline="100">Join</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_thread_1a4e2c7c71f666a7c4404f8fc03a57f2d7" prot="private" static="no" mutable="no">
+        <type>std::auto_ptr&lt; <ref refid="class_runnable" kindref="compound">Runnable</ref> &gt;</type>
+        <definition>std::auto_ptr&lt;Runnable&gt; Thread::runnable_</definition>
+        <argsstring></argsstring>
+        <name>runnable_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="67" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" compoundref="_thread_8cpp" startline="25" endline="34">StartThreadRunnable</referencedby>
+        <referencedby refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" compoundref="_thread_8cpp" startline="47" endline="90">Start</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" prot="private" static="no" mutable="no">
+        <type>pthread_attr_t</type>
+        <definition>pthread_attr_t Thread::threadAttribute_</definition>
+        <argsstring></argsstring>
+        <name>threadAttribute_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="66" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" compoundref="_thread_8cpp" startline="47" endline="90">Start</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_thread_1a8a7056f4641e224b016506ec0fc1078b" prot="private" static="no" mutable="no">
+        <type>pthread_t</type>
+        <definition>pthread_t Thread::threadID_</definition>
+        <argsstring></argsstring>
+        <name>threadID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="64" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" compoundref="_thread_8cpp" startline="47" endline="90">Start</referencedby>
+        <referencedby refid="class_thread_1a8f33f7750321d5df9188033e7e3e300d" compoundref="_thread_8cpp" startline="93" endline="100">Join</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_thread_1a027b9eb38e4d59c076501b305b42f575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Thread::Thread</definition>
+        <argsstring>(std::auto_ptr&lt; Runnable &gt; run, bool isDetached=false)</argsstring>
+        <name>Thread</name>
+        <param>
+          <type>std::auto_ptr&lt; <ref refid="class_runnable" kindref="compound">Runnable</ref> &gt;</type>
+          <declname>run</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isDetached</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>run</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_runnable" kindref="compound">Runnable</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isDetached</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether or not the thread is to be created in a detached state. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_thread_1a403714feecd93ac10c101a47b7649204" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Thread::Thread</definition>
+        <argsstring>(bool isDetached=false)</argsstring>
+        <name>Thread</name>
+        <param>
+          <type>bool</type>
+          <declname>isDetached</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isDetached</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether or not the thread is to be created in a detached state. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="34" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_thread_1af1e25588ebe47a2a6d79ef8c686a992b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Thread::~Thread</definition>
+        <argsstring>(void)</argsstring>
+        <name>~Thread</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="37" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_thread_1a8f33f7750321d5df9188033e7e3e300d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * Thread::Join</definition>
+        <argsstring>(void)</argsstring>
+        <name>Join</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="43" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="93" bodyend="100"/>
+        <references refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" compoundref="_thread_8h" startline="64">threadID_</references>
+        <references refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" compoundref="_exception_descriptor_8h" startline="56">ExceptionError</references>
+        <references refid="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" compoundref="_thread_8h" startline="68">result_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Thread::Start</definition>
+        <argsstring>(void)</argsstring>
+        <name>Start</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Starts the thread. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="40" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="47" bodyend="90"/>
+        <references refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" compoundref="_thread_8h" startline="66">threadAttribute_</references>
+        <references refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" compoundref="_exception_descriptor_8h" startline="56">ExceptionError</references>
+        <references refid="class_thread_1a2b6b46b7eb56cffef7d0722649956c5d" compoundref="_thread_8h" startline="65">detached_</references>
+        <references refid="class_thread_1a4e2c7c71f666a7c4404f8fc03a57f2d7" compoundref="_thread_8h" startline="67">runnable_</references>
+        <references refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" compoundref="_thread_8h" startline="64">threadID_</references>
+        <references refid="class_thread_1a9698abb1d7e2aed626b1963635455840" compoundref="_thread_8cpp" startline="36" endline="45">StartThread</references>
+        <references refid="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" compoundref="_thread_8cpp" startline="25" endline="34">StartThreadRunnable</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_thread_1ae46cda1b57e998b239a8b9710b0712e2" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void *</type>
+        <definition>virtual void* Thread::Run</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>Run</name>
+        <reimplementedby refid="class_feature_1a6cc5fc9cbbd8ec566a72fe98fe0d0f86">Run</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Pure virtual thread main. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="50"/>
+        <referencedby refid="class_thread_1a9698abb1d7e2aed626b1963635455840" compoundref="_thread_8cpp" startline="36" endline="45">StartThread</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_thread_1ac32823199dc71dd77daba9bc9cb72c3e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Thread::SetCompleted</definition>
+        <argsstring>(void)</argsstring>
+        <name>SetCompleted</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="47" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="102" bodyend="105"/>
+        <referencedby refid="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" compoundref="_thread_8cpp" startline="25" endline="34">StartThreadRunnable</referencedby>
+        <referencedby refid="class_thread_1a9698abb1d7e2aed626b1963635455840" compoundref="_thread_8cpp" startline="36" endline="45">StartThread</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_thread_1a9698abb1d7e2aed626b1963635455840" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * Thread::StartThread</definition>
+        <argsstring>(void *pVoid)</argsstring>
+        <name>StartThread</name>
+        <param>
+          <type>void *</type>
+          <declname>pVoid</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_thread" kindref="compound">Thread</ref> start function when no <ref refid="class_runnable" kindref="compound">Runnable</ref> is involved. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pVoid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="62" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="36" bodyend="45"/>
+        <references refid="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" compoundref="_thread_8h" startline="68">result_</references>
+        <references refid="class_thread_1ae46cda1b57e998b239a8b9710b0712e2">Run</references>
+        <references refid="class_thread_1ac32823199dc71dd77daba9bc9cb72c3e" compoundref="_thread_8cpp" startline="102" endline="105">SetCompleted</references>
+        <referencedby refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" compoundref="_thread_8cpp" startline="47" endline="90">Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * Thread::StartThreadRunnable</definition>
+        <argsstring>(void *pVoid)</argsstring>
+        <name>StartThreadRunnable</name>
+        <param>
+          <type>void *</type>
+          <declname>pVoid</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_thread" kindref="compound">Thread</ref> start function when a <ref refid="class_runnable" kindref="compound">Runnable</ref> is involved. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pVoid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="56" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="25" bodyend="34"/>
+        <references refid="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" compoundref="_thread_8h" startline="68">result_</references>
+        <references refid="class_thread_1a4e2c7c71f666a7c4404f8fc03a57f2d7" compoundref="_thread_8h" startline="67">runnable_</references>
+        <references refid="class_thread_1ac32823199dc71dd77daba9bc9cb72c3e" compoundref="_thread_8cpp" startline="102" endline="105">SetCompleted</references>
+        <referencedby refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" compoundref="_thread_8cpp" startline="47" endline="90">Start</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract class for handling threads. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_runnable" kindref="compound">Runnable</ref> classes can be derived from this class.</para><para>Threads can be started and stopped with the <ref refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" kindref="member">Start()</ref> and <ref refid="class_thread_1a8f33f7750321d5df9188033e7e3e300d" kindref="member">Join()</ref> methods respectively. The new thread will enter the implemented <ref refid="class_thread_1ae46cda1b57e998b239a8b9710b0712e2" kindref="member">Run()</ref> method. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="123">
+        <label>StarFeature</label>
+        <link refid="class_star_feature"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>SurfFeature</label>
+        <link refid="class_surf_feature"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="122">
+        <label>SiftFeature</label>
+        <link refid="class_sift_feature"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="121">
+        <label>OrbFeature</label>
+        <link refid="class_orb_feature"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>MserFeature</label>
+        <link refid="class_mser_feature"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="118">
+        <label>Thread</label>
+        <link refid="class_thread"/>
+      </node>
+      <node id="119">
+        <label>Feature</label>
+        <link refid="class_feature"/>
+        <childnode refid="118" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="19" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" bodystart="18" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_thread_1a2b6b46b7eb56cffef7d0722649956c5d" prot="private" virt="non-virtual"><scope>Thread</scope><name>detached_</name></member>
+      <member refid="class_thread_1a8f33f7750321d5df9188033e7e3e300d" prot="public" virt="non-virtual"><scope>Thread</scope><name>Join</name></member>
+      <member refid="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" prot="private" virt="non-virtual"><scope>Thread</scope><name>result_</name></member>
+      <member refid="class_thread_1ae46cda1b57e998b239a8b9710b0712e2" prot="private" virt="pure-virtual"><scope>Thread</scope><name>Run</name></member>
+      <member refid="class_thread_1a4e2c7c71f666a7c4404f8fc03a57f2d7" prot="private" virt="non-virtual"><scope>Thread</scope><name>runnable_</name></member>
+      <member refid="class_thread_1ac32823199dc71dd77daba9bc9cb72c3e" prot="private" virt="non-virtual"><scope>Thread</scope><name>SetCompleted</name></member>
+      <member refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" prot="public" virt="non-virtual"><scope>Thread</scope><name>Start</name></member>
+      <member refid="class_thread_1a9698abb1d7e2aed626b1963635455840" prot="private" virt="non-virtual"><scope>Thread</scope><name>StartThread</name></member>
+      <member refid="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" prot="private" virt="non-virtual"><scope>Thread</scope><name>StartThreadRunnable</name></member>
+      <member refid="class_thread_1a027b9eb38e4d59c076501b305b42f575" prot="public" virt="non-virtual"><scope>Thread</scope><name>Thread</name></member>
+      <member refid="class_thread_1a403714feecd93ac10c101a47b7649204" prot="public" virt="non-virtual"><scope>Thread</scope><name>Thread</name></member>
+      <member refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" prot="private" virt="non-virtual"><scope>Thread</scope><name>threadAttribute_</name></member>
+      <member refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" prot="private" virt="non-virtual"><scope>Thread</scope><name>threadID_</name></member>
+      <member refid="class_thread_1af1e25588ebe47a2a6d79ef8c686a992b" prot="public" virt="virtual"><scope>Thread</scope><name>~Thread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

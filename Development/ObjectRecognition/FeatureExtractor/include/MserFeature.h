@@ -42,14 +42,15 @@ private:
 
 	cv::MserFeatureDetector* mserDetector_;	//!< Wrapped OpenCV MSER object.
 
-    int delta_;
-    int minArea_;
-    int maxArea_;
-    double maxVariation_;
-    double minDiversity_;
-    int maxEvolution_;
-    double areaThreshold_;
-    double minMargin_;
-    int edgeBlurSize_;
-};
+    int		delta_;			//!< Delta in the code, it compares (size_{i} - size_{i - delta}) / size_{i - delta}.
+    int		minArea_;		//!< Prune the area which smaller than minArea.
+    int		maxArea_;		//!< Prune the area which bigger than maxArea.
+    double	maxVariation_;	//!< Prune the area have simliar size to its children.
+    double	minDiversity_;	//!< Trace back to cut off mser with diversity < min_diversity.
 
+	// The next few params for MSER of color image:
+    int		maxEvolution_;	//!< For color image, the evolution steps.
+    double	areaThreshold_;	//!< The area threshold to cause re-initialize.
+    double	minMargin_;		//!< Ignore too small margin.
+    int		edgeBlurSize_;	//!< The aperture size for edge blur.
+};

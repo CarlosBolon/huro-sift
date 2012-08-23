@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_mutex_8h" kind="file">
+    <compoundname>Mutex.h</compoundname>
+    <includes local="no">pthread.h</includes>
+    <includedby refid="_mutex_8cpp" local="yes">Core/src/Mutex.cpp</includedby>
+    <incdepgraph>
+      <node id="340">
+        <label>Core/include/Mutex.h</label>
+        <link refid="Mutex.h"/>
+        <childnode refid="341" relation="include">
+        </childnode>
+      </node>
+      <node id="341">
+        <label>pthread.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="342">
+        <label>Core/include/Mutex.h</label>
+        <link refid="Mutex.h"/>
+        <childnode refid="343" relation="include">
+        </childnode>
+      </node>
+      <node id="343">
+        <label>Core/src/Mutex.cpp</label>
+        <link refid="_mutex_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_mutex" prot="public">Mutex</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"></codeline>
+<codeline lineno="11" refid="class_mutex" refkind="compound"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C++&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="keyword">__declspec(dllexport)</highlight><highlight class="normal"><sp/><ref refid="class_mutex" kindref="compound" tooltip="A synchronization primitive that can also be used for interprocess synchronization.">Mutex</ref><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mutex_1a00b2ff557451955a905ecdca2855389b" kindref="member" tooltip="Constructor.">Mutex</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mutex_1a115e8bae072b7d0767f75bc3369d521d" kindref="member" tooltip="Destructor.">~Mutex</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mutex_1a1726d7244983f7be74fcfa9cfb63745f" kindref="member" tooltip="Blocks the current thread.">Lock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mutex_1a03150e8fa423f7e042661d350d238b84" kindref="member" tooltip="Unblocks the current thread.">Unlock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27" refid="class_mutex_1a0f845aa1acc03f39fd84612c91050f27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pthread_mutex_t<sp/><ref refid="class_mutex_1a0f845aa1acc03f39fd84612c91050f27" kindref="member" tooltip="Inner mutex object.">mutex_</ref>;<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Mutex.h"/>
+  </compounddef>
+</doxygen>
