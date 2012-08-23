@@ -1,5 +1,6 @@
 #include "ImageFrame.h"
 
+#include "LocalSettings.h"
 #include "ExceptionDescriptor.h"
 
 using namespace cv;
@@ -10,6 +11,14 @@ ImageFrame::ImageFrame(int cameraId = 0)
 
 	if(!cap_.isOpened())
 		throw ExceptionError("Capture is not opened!");
+}
+
+ImageFrame::ImageFrame(const string& imageName)
+{
+    cap_.open(LocalSettingsPtr->GetImageDirectory() + imageName);
+
+    if(!cap_.isOpened())
+        throw ExceptionError("Capture is not opened!");
 }
 
 ImageFrame::~ImageFrame(void)

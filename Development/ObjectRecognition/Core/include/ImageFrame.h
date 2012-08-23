@@ -12,8 +12,11 @@
 extern "C++" class __declspec(dllexport) ImageFrame 
 {
 public:
-	//! Constructor.
-	ImageFrame(int cameraId);
+    //! Constructor.
+    ImageFrame(int cameraId);
+
+    //! Constructor.
+    ImageFrame(const std::string& imageName);
 
 	//! Destructor.
 	~ImageFrame(void);

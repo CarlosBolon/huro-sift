@@ -36,6 +36,18 @@ public:
 	*/
 	std::string GetSettingsDirectory(void) const;
 
+    //! Image directory getter.
+	/*!
+		\return Settings directory root.
+	*/
+	std::string GetImageDirectory(void) const;
+
+    //! Process xml filename getter.
+	/*!
+		\return Settings directory root.
+	*/
+	std::string GetProcessXmlFileName(void) const;
+
 private:
 	//! Constructor.
 	LocalSettings(void);
@@ -45,5 +57,6 @@ private:
 
 	std::string	dataDirectory_;			//!< Data directory root.
     std::string	settingsDirectory_;	    //!< Settings directory root.
+    std::string	imageDirectory_;	    //!< Image directory root.
 	std::string	processXmlFileName_;	//!< The configuration file.
 };

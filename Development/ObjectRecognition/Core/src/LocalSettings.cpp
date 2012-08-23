@@ -19,6 +19,7 @@ LocalSettings::LocalSettings(void)
 
 	processXmlFileName_ = dataDirectory_ + "xml/Process.default.xml";
     settingsDirectory_  = dataDirectory_ + "xml/DetectorSettings/";
+    imageDirectory_  = dataDirectory_ + "image/";
 
 	fileStream.close();
 }
@@ -40,5 +41,15 @@ string LocalSettings::GetDataDirectory(void) const
 
 string LocalSettings::GetSettingsDirectory(void) const
 {
-	return settingsDirectory_;
+    return settingsDirectory_;
+}
+
+string LocalSettings::GetImageDirectory(void) const
+{
+    return imageDirectory_;
+}
+
+string LocalSettings::GetProcessXmlFileName(void) const
+{
+    return processXmlFileName_;
 }
