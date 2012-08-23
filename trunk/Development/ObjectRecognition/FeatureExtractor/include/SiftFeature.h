@@ -35,14 +35,20 @@ private:
 
 	//! Implemented virtual method for displaying the output.
 	/*!
-		\sa Feature::Visualize()
+		\sa Feature::DrawFeatures()
 	*/
-	void Visualize(void);
+	void DrawFeatures(void);
 
 	cv::SiftFeatureDetector* siftDetector_;	//!< Wrapped OpenCV SIFT object.
 
-    cv::SIFT::DetectorParams    siftDetectorParams_;
-    cv::SIFT::CommonParams      siftCommonParams_;
-    cv::SIFT::DescriptorParams  siftDescriptorParams_;
+    int nfeatures_;
+    int nOctaveLayers_;
+    double contrastThreshold_;
+    double edgeThreshold_;
+    double sigma_;
+
+    //cv::SIFT::DetectorParams    siftDetectorParams_;
+    //cv::SIFT::CommonParams      siftCommonParams_;
+    //cv::SIFT::DescriptorParams  siftDescriptorParams_;
 };
 

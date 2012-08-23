@@ -12,10 +12,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\Algorithm.cpp" />
+    <ClCompile Include="src\HuroAlgorithm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Algorithm.h" />
+    <ClInclude Include="include\HuroAlgorithm.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ObjectRecognition.cd" />
@@ -60,13 +60,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)\Core\include;$(SolutionDir)\FeatureExtractor\include;$(SolutionDir)\resources\openCV 2.3.1\include;$(SolutionDir)\resources\pthreads-win32\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)\Core\include;$(SolutionDir)\FeatureExtractor\include;$(SolutionDir)\resources\opencv.2.4.2\include;$(SolutionDir)\resources\pthreads-win32\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opencv_core231d.lib;opencv_highgui231d.lib;opencv_imgproc231d.lib;pthreadVC2.lib;Core.lib;FeatureExtractor.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)\resources\openCV 2.3.1\bin\x86\lib\debug;$(SolutionDir)\resources\pthreads-win32\lib;$(SolutionDir)$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core242d.lib;opencv_highgui242d.lib;opencv_imgproc242d.lib;pthreadVC2.lib;Core.lib;FeatureExtractor.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\resources\opencv.2.4.2\bin\x86\lib\debug;$(SolutionDir)\resources\pthreads-win32\lib;$(SolutionDir)$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>"..\resources\batch\Post_Build_Debug.bat"</Command>
@@ -81,15 +81,15 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)\Core\include;$(SolutionDir)\FeatureExtractor\include;$(SolutionDir)\resources\openCV 2.3.1\include;$(SolutionDir)\resources\pthreads-win32\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)\Core\include;$(SolutionDir)\FeatureExtractor\include;$(SolutionDir)\resources\opencv.2.4.2\include;$(SolutionDir)\resources\pthreads-win32\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(SolutionDir)\resources\openCV 2.3.1\bin\x86\lib\release;$(SolutionDir)\resources\pthreads-win32\lib;$(SolutionDir)$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_core231.lib;opencv_highgui231.lib;opencv_imgproc231.lib;pthreadVC2.lib;Core.lib;FeatureExtractor.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\resources\opencv.2.4.2\bin\x86\lib\release;$(SolutionDir)\resources\pthreads-win32\lib;$(SolutionDir)$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core242.lib;opencv_highgui242.lib;opencv_imgproc242.lib;pthreadVC2.lib;Core.lib;FeatureExtractor.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>"..\resources\batch\Post_Build_Release.bat"</Command>

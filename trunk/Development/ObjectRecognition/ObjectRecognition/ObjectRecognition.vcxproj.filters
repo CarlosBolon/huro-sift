@@ -18,7 +18,7 @@
     <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Algorithm.cpp">
+    <ClCompile Include="src\HuroAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -26,7 +26,7 @@
     <None Include="ObjectRecognition.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Algorithm.h">
+    <ClInclude Include="include\HuroAlgorithm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

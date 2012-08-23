@@ -1,30 +1,40 @@
 #include <iostream>
 #include "ExceptionDescriptor.h"
-#include "Algorithm.h"
+#include "HuroAlgorithm.h"
 
+using namespace cv;
 using namespace std;
 
 int main(int argc, char** argv)
 {
+    int result = 0;
+
+	/* The function can be used to dynamically turn on and off optimized code (code that uses SSE2, AVX, and other
+	   instructions on the platforms that support it). It sets a global flag that is further checked by OpenCV functions. */
+	if(useOptimized() == false)
+		setUseOptimized(true);
+
+	/* The function sets the number of threads used by OpenCV in parallel OpenMP regions. */
+	if(getNumThreads() < 100)
+		setNumThreads(100);
+
 	try
 	{
-		Algorithm algorithm;
+		HuroAlgorithm algorithm;
 		algorithm.Process();
-
-		system("pause");
 	} 
 	catch(ExceptionDescriptor &e)
 	{
 		e.TraceError();
-		system("pause");
-		exit(-1);
+		result = -1;
 	} 
 	catch(...)
 	{
 		cerr << "Unknown exception!" << endl;
-		system("pause");
-		exit(-1);
+		result = -1;
 	}
 
-	return 0;
+    system("pause");
+	
+    return result;
 }

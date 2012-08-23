@@ -36,10 +36,16 @@ private:
 
 	//! Implemented virtual method for displaying the output.
 	/*!
-		\sa Feature::Visualize()
+		\sa Feature::DrawFeatures()
 	*/
-	void Visualize(void);
+	void DrawFeatures(void);
 
-	cv::StarDetector* star;	//!< Wrapped OpenCV STAR object.
+	cv::StarFeatureDetector* starDetector_;	//!< Wrapped OpenCV STAR object.
+
+    int maxSize_;
+    int responseThreshold_;
+    int lineThresholdProjected_;
+    int lineThresholdBinarized_;
+    int suppressNonmaxSize_;
 };
 
