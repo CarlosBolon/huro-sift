@@ -8,8 +8,8 @@
 using namespace std;
 using namespace cv;
 
-StarFeature::StarFeature(const string& name)
-:	Feature(name)
+StarFeature::StarFeature(const string& name, const string& type)
+:	GlobalFeature(name, type)
 {
 	LoadSettingsFromFileStorage();
 

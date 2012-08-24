@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Feature.h"
+#include "GlobalFeature.h"
 
 //! Class for extracting ORB features.
 /*!
@@ -11,34 +11,35 @@
 	See paper:
 	Ethan Rublee, Vincent Rabaud, Kurt Konolige, Gary R. Bradski: ORB: An efficient alternative to SIFT or SURF. ICCV 2011: 2564-2571.
 */
-extern "C++" class __declspec(dllexport) OrbFeature : public Feature
+extern "C++" class __declspec(dllexport) OrbFeature : public GlobalFeature
 {
 public:
 	//! Constructor.
 	/*!
 		\param name Name of the current feature extraction procedure.
+        \param type Type of the current feature extraction procedure (global or local).
 	*/
-	OrbFeature(const std::string& name);
+	OrbFeature(const std::string& name, const std::string& type);
 
 	//! Destructor.
 	~OrbFeature(void);
 
 	//! Implemented virtual method for loading algorithm specific settings from the given storage.
 	/*!
-		\sa Feature::LoadSettingsFromFileStorage()
+		\sa GlobalFeature::LoadSettingsFromFileStorage()
 	*/
 	void LoadSettingsFromFileStorage(void);
 
 private:
 	//! Implemented virtual method for the algorithm.
 	/*!
-		\sa Feature::Process()
+		\sa GlobalFeature::Process()
 	*/
 	void Process(void);
 
 	//! Implemented virtual method for displaying the output.
 	/*!
-		\sa Feature::DrawFeatures()
+		\sa GlobalFeature::DrawFeatures()
 	*/
 	void DrawFeatures(void);
 

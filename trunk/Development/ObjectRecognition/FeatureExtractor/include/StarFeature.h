@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Feature.h"
+#include "GlobalFeature.h"
 
 //! Class for extracting STAR features.
 /*!
@@ -9,34 +9,35 @@
 	Class implementing the Star keypoint detector, a modified version of the CenSurE keypoint detector described in
 	Agrawal, M. and Konolige, K. and Blas, M.R. “CenSurE: Center Surround Extremas for Realtime Feature Detection and Matching”, ECCV08, 2008.
 */
-extern "C++" class __declspec(dllexport) StarFeature : public Feature
+extern "C++" class __declspec(dllexport) StarFeature : public GlobalFeature
 {
 public:
 	//! Constructor.
 	/*!
 		\param name Name of the current feature extraction procedure.
+        \param type Type of the current feature extraction procedure (global or local).
 	*/
-	StarFeature(const std::string& name);
+	StarFeature(const std::string& name, const std::string& type);
 
 	//! Destructor.
 	~StarFeature(void);
 
 	//! Implemented virtual method for loading algorithm specific settings from the given storage.
 	/*!
-		\sa Feature::LoadSettingsFromFileStorage()
+		\sa GlobalFeature::LoadSettingsFromFileStorage()
 	*/
 	void LoadSettingsFromFileStorage(void);
 
 private:
 	//! Implemented virtual method for the algorithm.
 	/*!
-		\sa Feature::Process()
+		\sa GlobalFeature::Process()
 	*/
 	void Process(void);
 
 	//! Implemented virtual method for displaying the output.
 	/*!
-		\sa Feature::DrawFeatures()
+		\sa GlobalFeature::DrawFeatures()
 	*/
 	void DrawFeatures(void);
 

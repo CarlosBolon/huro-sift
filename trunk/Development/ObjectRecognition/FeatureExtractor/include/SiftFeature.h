@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Feature.h"
+#include "GlobalFeature.h"
 
 //! Class for extracting SIFT features.
 /*!
@@ -11,34 +11,35 @@
 	See paper:
 	Lowe, D. G., “Distinctive Image Features from Scale-Invariant Keypoints”, International Journal of Computer Vision, 60, 2, pp. 91-110, 2004.
 */
-extern "C++" class __declspec(dllexport) SiftFeature : public Feature
+extern "C++" class __declspec(dllexport) SiftFeature : public GlobalFeature
 {
 public:
 	//! Constructor.
 	/*!
 		\param name Name of the current feature extraction procedure.
+        \param type Type of the current feature extraction procedure (global or local).
 	*/
-	SiftFeature(const std::string& name);
+	SiftFeature(const std::string& name, const std::string& type);
 
 	//! Destructor.
 	~SiftFeature(void);
 
 	//! Implemented virtual method for loading algorithm specific settings from the given storage.
 	/*!
-		\sa Feature::LoadSettingsFromFileStorage()
+		\sa GlobalFeature::LoadSettingsFromFileStorage()
 	*/
 	void LoadSettingsFromFileStorage(void);
 
 private:
 	//! Implemented virtual method for the algorithm.
 	/*!
-		\sa Feature::Process()
+		\sa GlobalFeature::Process()
 	*/
 	void Process(void);
 
 	//! Implemented virtual method for displaying the output.
 	/*!
-		\sa Feature::DrawFeatures()
+		\sa GlobalFeature::DrawFeatures()
 	*/
 	void DrawFeatures(void);
 

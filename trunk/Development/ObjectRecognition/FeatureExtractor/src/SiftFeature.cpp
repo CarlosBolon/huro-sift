@@ -8,8 +8,8 @@
 using namespace std;
 using namespace cv;
 
-SiftFeature::SiftFeature(const string& name)
-:	Feature(name)
+SiftFeature::SiftFeature(const string& name, const string& type)
+:	GlobalFeature(name, type)
 {
 	LoadSettingsFromFileStorage();
 
@@ -40,9 +40,6 @@ void SiftFeature::Process(void)
 {
     // Detect the keypoints
     siftDetector_->detect(frame_, keyPoints);
-
-    // Calculate descriptors (feature vectors)
-    siftDetector_->compute(frame_, keyPoints, descriptors);
 }
 
 void SiftFeature::DrawFeatures(void)
