@@ -1,4 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$class_thread.html" title="Abstract class for handling threads." alt="" coords="5,5,67,32"/>
-<area shape="rect" id="node4" href="$class_mutex.html" title="A synchronization primitive that can also be used for interprocess synchronization." alt="" coords="91,5,149,32"/>
-</map>

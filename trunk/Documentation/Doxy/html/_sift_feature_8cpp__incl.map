@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$_sift_feature_8h.html" title="SiftFeature.h" alt="" coords="169,80,265,107"/>
-<area shape="rect" id="node5" href="$_feature_8h.html" title="Feature.h" alt="" coords="179,155,256,181"/>
-<area shape="rect" id="node11" href="$_thread_8h.html" title="Thread.h" alt="" coords="247,229,319,256"/>
-<area shape="rect" id="node19" href="$_mutex_8h.html" title="Mutex.h" alt="" coords="345,229,415,256"/>
-<area shape="rect" id="node17" href="$_runnable_8h.html" title="Runnable.h" alt="" coords="237,304,323,331"/>
-</map>
