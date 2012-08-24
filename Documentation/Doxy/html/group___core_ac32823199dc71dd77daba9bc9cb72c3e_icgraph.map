@@ -1,5 +1,0 @@
-<map id="Thread::SetCompleted" name="Thread::SetCompleted">
-<area shape="rect" id="node3" href="$group___core.html#a215c9e3a0965e061e7d36aa5adfe4791" title="Thread start function when a Runnable is involved." alt="" coords="206,5,397,32"/>
-<area shape="rect" id="node7" href="$group___core.html#a9698abb1d7e2aed626b1963635455840" title="Thread start function when no Runnable is involved." alt="" coords="233,56,369,83"/>
-<area shape="rect" id="node5" href="$group___core.html#a2b42f82341afd2747ea093b6ac8b91cb" title="Starts the thread." alt="" coords="446,31,543,57"/>
-</map>

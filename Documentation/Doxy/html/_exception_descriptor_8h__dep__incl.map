@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$_exception_descriptor_8cpp.html" title="Core/src/ExceptionDescriptor.cpp" alt="" coords="5,80,221,107"/>
-<area shape="rect" id="node5" href="$_image_frame_8cpp.html" title="Core/src/ImageFrame.cpp" alt="" coords="246,80,417,107"/>
-<area shape="rect" id="node7" href="$_local_settings_8cpp.html" title="Core/src/LocalSettings.cpp" alt="" coords="443,80,621,107"/>
-<area shape="rect" id="node9" href="$_thread_8cpp.html" title="Core/src/Thread.cpp" alt="" coords="645,80,784,107"/>
-<area shape="rect" id="node11" href="$_main_8cpp.html" title="ObjectRecognition/src/Main.cpp" alt="" coords="809,80,1015,107"/>
-<area shape="rect" id="node13" href="$_obj_rec_algorithm_8cpp.html" title="ObjectRecognition/src/ObjRecAlgorithm.cpp" alt="" coords="1040,80,1317,107"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="Thread::Start" name="Thread::Start">
-<area shape="rect" id="node3" href="$group___core.html#a9698abb1d7e2aed626b1963635455840" title="Thread start function when no Runnable is involved." alt="" coords="180,5,316,32"/>
-<area shape="rect" id="node9" href="$group___core.html#a215c9e3a0965e061e7d36aa5adfe4791" title="Thread start function when a Runnable is involved." alt="" coords="153,56,343,83"/>
-<area shape="rect" id="node5" href="$group___core.html#ae46cda1b57e998b239a8b9710b0712e2" title="Pure virtual thread main." alt="" coords="422,5,514,32"/>
-<area shape="rect" id="node7" href="$group___core.html#ac32823199dc71dd77daba9bc9cb72c3e" title="Thread::SetCompleted" alt="" coords="393,56,543,83"/>
-</map>
