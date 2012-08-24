@@ -7,6 +7,9 @@
 #include "OrbFeature.h"
 #include "StarFeature.h"
 #include "MserFeature.h"
+#include "FastFeature.h"
+
+#include "LbpFeature.h"
 
 #include "ImageFrame.h"
 #include "LocalSettings.h"
@@ -25,7 +28,10 @@ HuroAlgorithm::HuroAlgorithm(void)
 
 HuroAlgorithm::~HuroAlgorithm(void)
 {
-    for(FeaturePool::iterator fpElem = featurePool_.begin(); fpElem != featurePool_.end(); fpElem++)
+    for(GlobalFeaturePool::iterator fpElem = globalFeaturePool_.begin(); fpElem != globalFeaturePool_.end(); fpElem++)
+        delete fpElem->second;
+
+    for(LocalFeaturePool::iterator fpElem = localFeaturePool_.begin(); fpElem != localFeaturePool_.end(); fpElem++)
         delete fpElem->second;
 
 	delete imageFrame_;
@@ -60,20 +66,25 @@ void HuroAlgorithm::LoadSettingsFromFileStorage(void)
     node = fileStorage["featureExtractors"];
     for(size_t i = 0; i < node.size(); ++i)
     {
-        string name;
+        string name, type;
         node[i]["name"] >> name;
+        node[i]["type"] >> type;
 
         // Global feature extractors
         if(name.compare("SIFT") == 0)
-            featurePool_[name] = new SiftFeature(name);
+            globalFeaturePool_[name] = new SiftFeature(name, type);
         else if(name.compare("SURF") == 0)
-            featurePool_[name] = new SurfFeature(name);
+            globalFeaturePool_[name] = new SurfFeature(name, type);
         else if(name.compare("ORB") == 0)
-            featurePool_[name] = new OrbFeature(name);
+            globalFeaturePool_[name] = new OrbFeature(name, type);
         else if(name.compare("STAR") == 0)
-            featurePool_[name] = new StarFeature(name);
+            globalFeaturePool_[name] = new StarFeature(name, type);
         else if(name.compare("MSER") == 0)
-            featurePool_[name] = new MserFeature(name);
+            globalFeaturePool_[name] = new MserFeature(name, type);
+        else if(name.compare("FAST") == 0)
+            globalFeaturePool_[name] = new FastFeature(name, type);
+        else if(name.compare("LBP") == 0)
+            localFeaturePool_[name] = new LbpFeature(name, type);
 		// TODO: Local feature extractors here:
 		// else if(...)
         else
@@ -83,15 +94,26 @@ void HuroAlgorithm::LoadSettingsFromFileStorage(void)
 
 void HuroAlgorithm::Process(void)
 {
-    // Initializing the processes
+    // Initializing the global feature extractors
     Mat frame = imageFrame_->GetFrame();
-    for(FeaturePool::iterator fpElem = featurePool_.begin(); fpElem != featurePool_.end(); fpElem++)
+    for(GlobalFeaturePool::iterator fpElem = globalFeaturePool_.begin(); fpElem != globalFeaturePool_.end(); fpElem++)
     {
         fpElem->second->SetFrame(frame);
         fpElem->second->Start();
     }
 
-    // Start working
-    for(FeaturePool::iterator fpElem = featurePool_.begin(); fpElem != featurePool_.end(); fpElem++)
+    // Initializing the local feature extractors
+    for(LocalFeaturePool::iterator fpElem = localFeaturePool_.begin(); fpElem != localFeaturePool_.end(); fpElem++)
+    {
+        fpElem->second->SetFrame(frame);
+        fpElem->second->Start();
+    }
+
+    // Starting global feature extractors
+    for(GlobalFeaturePool::iterator fpElem = globalFeaturePool_.begin(); fpElem != globalFeaturePool_.end(); fpElem++)
+        int result = reinterpret_cast<int>(fpElem->second->Join());
+
+    // Starting local feature extractors
+    for(LocalFeaturePool::iterator fpElem = localFeaturePool_.begin(); fpElem != localFeaturePool_.end(); fpElem++)
         int result = reinterpret_cast<int>(fpElem->second->Join());
 }

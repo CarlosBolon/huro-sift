@@ -8,8 +8,8 @@
 using namespace std;
 using namespace cv;
 
-SurfFeature::SurfFeature(const string& name)
-:	Feature(name)
+SurfFeature::SurfFeature(const string& name, const string& type)
+:	GlobalFeature(name, type)
 {
 	LoadSettingsFromFileStorage();
 
@@ -44,9 +44,6 @@ void SurfFeature::Process(void)
 {
     // Detect the keypoints
     surfDetector_->detect(frame_, keyPoints);
-
-    // Calculate descriptors (feature vectors)
-    surfDetector_->compute(frame_, keyPoints, descriptors);
 }
 
 void SurfFeature::DrawFeatures(void)

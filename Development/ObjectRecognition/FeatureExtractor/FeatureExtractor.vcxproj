@@ -80,7 +80,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\Feature.h" />
+    <ClInclude Include="include\FastFeature.h" />
+    <ClInclude Include="include\GlobalFeature.h" />
+    <ClInclude Include="include\LbpFeature.h" />
+    <ClInclude Include="include\LocalFeature.h" />
     <ClInclude Include="include\MserFeature.h" />
     <ClInclude Include="include\OrbFeature.h" />
     <ClInclude Include="include\SiftFeature.h" />
@@ -88,7 +91,10 @@
     <ClInclude Include="include\SurfFeature.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Feature.cpp" />
+    <ClCompile Include="src\FastFeature.cpp" />
+    <ClCompile Include="src\GlobalFeature.cpp" />
+    <ClCompile Include="src\LbpFeature.cpp" />
+    <ClCompile Include="src\LocalFeature.cpp" />
     <ClCompile Include="src\MserFeature.cpp" />
     <ClCompile Include="src\OrbFeature.cpp" />
     <ClCompile Include="src\SiftFeature.cpp" />

@@ -7,8 +7,8 @@
 using namespace std;
 using namespace cv;
 
-OrbFeature::OrbFeature(const string& name)
-:	Feature(name)
+OrbFeature::OrbFeature(const string& name, const string& type)
+:	GlobalFeature(name, type)
 {
 	LoadSettingsFromFileStorage();
 
@@ -51,9 +51,6 @@ void OrbFeature::Process(void)
 {
     // Detect the keypoints
     orbDetector_->detect(frame_, keyPoints);
-
-    // Calculate descriptors (feature vectors)
-    orbDetector_->compute(frame_, keyPoints, descriptors);
 }
 
 void OrbFeature::DrawFeatures(void)

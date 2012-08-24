@@ -7,10 +7,12 @@
 	\defgroup ObjectRecognition Object Recognition module.
 */
 
-class Feature;
+class GlobalFeature;
+class LocalFeature;
 class ImageFrame;
 
-typedef std::map<std::string, Feature*> FeaturePool;
+typedef std::map<std::string, GlobalFeature*> GlobalFeaturePool;
+typedef std::map<std::string, LocalFeature*> LocalFeaturePool;
 
 //! Class for handling feature extraction.
 /*!
@@ -37,8 +39,9 @@ private:
 	*/
 	void LoadSettingsFromFileStorage(void);
 
-    FeaturePool featurePool_;	//!< Stores all of feature extractor.
-	ImageFrame* imageFrame_;	//!< For handling image frame getting.
+    GlobalFeaturePool   globalFeaturePool_;	    //!< Stores all global feature extractor.   
+    LocalFeaturePool    localFeaturePool_;      //!< Stores all local feature extractor.
+	ImageFrame*         imageFrame_;	        //!< For handling image frame getting.
 
 	std::string mediaType_;		//!< Type of the incoming media.
 	std::string imageName_;		//!< Name of the image to be analyzed.
