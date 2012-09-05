@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['lbpfeature',['LbpFeature',['../group___feature_extractor.html#a52b160f5fa16bc1ea0c489a744ed554f',1,'LbpFeature']]],
+  ['loadsettingsfromfilestorage',['LoadSettingsFromFileStorage',['../group___feature_extractor.html#a341ffc5bd43e0ee09fda3fe6f825acba',1,'FastFeature::LoadSettingsFromFileStorage()'],['../group___feature_extractor.html#aa48133762d9f52a5c2ae5042f6ebbe71',1,'GlobalFeature::LoadSettingsFromFileStorage()'],['../group___feature_extractor.html#a39ac99c8b8537ac9d104ae4368177071',1,'LbpFeature::LoadSettingsFromFileStorage()'],['../group___feature_extractor.html#a9280742c803d38c984121a33cdd67723',1,'LocalFeature::LoadSettingsFromFileStorage()'],['../group___feature_extractor.html#ae6c9bca2395a33ecac78a46e9c331979',1,'MserFeature::LoadSettingsFromFileStorage()'],['../group___feature_extractor.html#aa13ad1fbc5869dcabb55611e5c206ebd',1,'OrbFeature::LoadSettingsFromFileStorage()'],['../group___feature_extractor.html#af19316d789598f612ee150deb2ee5137',1,'SiftFeature::LoadSettingsFromFileStorage()'],['../group___feature_extractor.html#a0a46cb80a6a4d45e324757b4ef679e81',1,'StarFeature::LoadSettingsFromFileStorage()'],['../group___feature_extractor.html#a3717dc5d5cffd77f4f31c5ac81cd391a',1,'SurfFeature::LoadSettingsFromFileStorage()'],['../group___object_recognition.html#a1cfbc787c7380f981407daf1afbbad12',1,'HuroAlgorithm::LoadSettingsFromFileStorage()']]],
+  ['localfeature',['LocalFeature',['../group___feature_extractor.html#abc8f5b5d4088fd28be45cfd6b3d86cd5',1,'LocalFeature']]],
+  ['localsettings',['LocalSettings',['../group___core.html#a70ef22059fb84a1a64120f3122db615e',1,'LocalSettings']]],
+  ['lock',['Lock',['../group___core.html#a1726d7244983f7be74fcfa9cfb63745f',1,'Mutex']]]
+];

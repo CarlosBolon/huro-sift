@@ -1,0 +1,515 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="class_lbp_feature" kind="class" prot="public">
+    <compoundname>LbpFeature</compoundname>
+    <basecompoundref refid="class_local_feature" prot="public" virt="non-virtual">LocalFeature</basecompoundref>
+    <includes refid="_lbp_feature_8h" local="no">LbpFeature.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_lbp_feature_1ab2bdc329e16e4126eccbbe4b8d4d44f5" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat LbpFeature::grayFrame_</definition>
+        <argsstring></argsstring>
+        <name>grayFrame_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" line="58" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="class_lbp_feature_1a773b1c3fd663f58b01f1ba33a897744f" compoundref="_lbp_feature_8cpp" startline="35" endline="42">ProcessInit</referencedby>
+        <referencedby refid="class_lbp_feature_1a96e42213e77e729c263236db12453bde" compoundref="_lbp_feature_8cpp" startline="188" endline="216">ProcessWithoutUniformPatterns</referencedby>
+        <referencedby refid="class_lbp_feature_1aa29955bd43f95dcac63aa7840fcd1925" compoundref="_lbp_feature_8cpp" startline="58" endline="186">ProcessWithUniformPatterns</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lbp_feature_1a6025f411377d4b6e56aa9eb5daff07e8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LbpFeature::useUniformPatterns_</definition>
+        <argsstring></argsstring>
+        <name>useUniformPatterns_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" line="60" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="class_lbp_feature_1a39ac99c8b8537ac9d104ae4368177071" compoundref="_lbp_feature_8cpp" startline="21" endline="33">LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_lbp_feature_1af664c189044d32f2cb71b334deb6f0c7" compoundref="_lbp_feature_8cpp" startline="44" endline="56">Process</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_lbp_feature_1a52b160f5fa16bc1ea0c489a744ed554f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LbpFeature::LbpFeature</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;type)</argsstring>
+        <name>LbpFeature</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    \param name Name of the current feature extraction procedure.
+</verbatim> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the current feature extraction procedure (global or local). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" line="22" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/LbpFeature.cpp" bodystart="11" bodyend="15"/>
+        <references refid="class_lbp_feature_1a39ac99c8b8537ac9d104ae4368177071" compoundref="_lbp_feature_8cpp" startline="21" endline="33">LoadSettingsFromFileStorage</references>
+      </memberdef>
+      <memberdef kind="function" id="class_lbp_feature_1a40826a6cc5bc5f1de7edf8b05092052b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LbpFeature::~LbpFeature</definition>
+        <argsstring>(void)</argsstring>
+        <name>~LbpFeature</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" line="25" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/LbpFeature.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_local_feature_1ab2ecc77360b2fa1400f29298a8e1b751" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const string &amp; LocalFeature::GetName</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetName</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Name getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Name of the current feature extraction procedure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" line="40" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/LocalFeature.cpp" bodystart="55" bodyend="58"/>
+        <references refid="class_local_feature_1a0e73ef0aed82c04f06b6eeb9a9b9be8b" compoundref="_local_feature_8h" startline="69">LocalFeature::name_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_local_feature_1a46f41fabf78e63d9e9c93cbaadf652a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LocalFeature::GetProcTime</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetProcTime</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Process time getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Processing time of the current feature extraction method. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" line="52" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/LocalFeature.cpp" bodystart="65" bodyend="68"/>
+        <references refid="class_local_feature_1a79d60ce90ab8e6ccd66ff8f7da2365c7" compoundref="_local_feature_8h" startline="73">LocalFeature::procTime_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_local_feature_1aba5fb3207f97ae73dc3cab7572baf85e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const string &amp; LocalFeature::GetType</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetType</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Type getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Type of the current feature extraction procedure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" line="46" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/LocalFeature.cpp" bodystart="60" bodyend="63"/>
+        <references refid="class_local_feature_1aaf3aef30088cd1be80e1770d0a9d945b" compoundref="_local_feature_8h" startline="70">LocalFeature::type_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_thread_1a8f33f7750321d5df9188033e7e3e300d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * Thread::Join</definition>
+        <argsstring>(void)</argsstring>
+        <name>Join</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="43" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="93" bodyend="100"/>
+        <references refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" compoundref="_exception_descriptor_8h" startline="56">ExceptionError</references>
+        <references refid="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" compoundref="_thread_8h" startline="68">Thread::result_</references>
+        <references refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" compoundref="_thread_8h" startline="64">Thread::threadID_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_lbp_feature_1a39ac99c8b8537ac9d104ae4368177071" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LbpFeature::LoadSettingsFromFileStorage</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoadSettingsFromFileStorage</name>
+        <reimplements refid="class_local_feature_1a9280742c803d38c984121a33cdd67723">LoadSettingsFromFileStorage</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Implemented virtual method for loading algorithm specific settings from the given storage. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>Feature::LoadSettingsFromFileStorage() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" line="31" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/LbpFeature.cpp" bodystart="21" bodyend="33"/>
+        <references refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" compoundref="_exception_descriptor_8h" startline="56">ExceptionError</references>
+        <references refid="_local_settings_8h_1a2229e3307a6b7ebe72c4459cad648ff4" compoundref="_local_settings_8h" startline="10">LocalSettingsPtr</references>
+        <references refid="class_local_feature_1a0e73ef0aed82c04f06b6eeb9a9b9be8b" compoundref="_local_feature_8h" startline="69">LocalFeature::name_</references>
+        <references refid="class_lbp_feature_1a6025f411377d4b6e56aa9eb5daff07e8" compoundref="_lbp_feature_8h" startline="60">useUniformPatterns_</references>
+        <referencedby refid="class_lbp_feature_1a52b160f5fa16bc1ea0c489a744ed554f" compoundref="_lbp_feature_8cpp" startline="11" endline="15">LbpFeature</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_local_feature_1aee5c4e09e373308e7f50bfaffd8e2267" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LocalFeature::SetFrame</definition>
+        <argsstring>(const cv::Mat &amp;frame)</argsstring>
+        <name>SetFrame</name>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>Connects a frame to the feature extractor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter for the current frame. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" line="34" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/LocalFeature.cpp" bodystart="18" bodyend="21"/>
+        <references refid="class_local_feature_1a585b0dc6e6184422c5563e80bff50ffa" compoundref="_local_feature_8h" startline="71">LocalFeature::frame_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Thread::Start</definition>
+        <argsstring>(void)</argsstring>
+        <name>Start</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Starts the thread. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="40" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="47" bodyend="90"/>
+        <references refid="class_thread_1a2b6b46b7eb56cffef7d0722649956c5d" compoundref="_thread_8h" startline="65">Thread::detached_</references>
+        <references refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" compoundref="_exception_descriptor_8h" startline="56">ExceptionError</references>
+        <references refid="class_thread_1a4e2c7c71f666a7c4404f8fc03a57f2d7" compoundref="_thread_8h" startline="67">Thread::runnable_</references>
+        <references refid="class_thread_1a9698abb1d7e2aed626b1963635455840" compoundref="_thread_8cpp" startline="36" endline="45">Thread::StartThread</references>
+        <references refid="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" compoundref="_thread_8cpp" startline="25" endline="34">Thread::StartThreadRunnable</references>
+        <references refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" compoundref="_thread_8h" startline="66">Thread::threadAttribute_</references>
+        <references refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" compoundref="_thread_8h" startline="64">Thread::threadID_</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_lbp_feature_1a152c1785ca51eb7e5878c0d3f9309697" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LbpFeature::DrawFeatures</definition>
+        <argsstring>(void)</argsstring>
+        <name>DrawFeatures</name>
+        <reimplements refid="class_local_feature_1a329c560d8f02a4ab390716319410deab">DrawFeatures</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Implemented virtual method for displaying the output. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_local_feature_1a329c560d8f02a4ab390716319410deab" kindref="member">LocalFeature::DrawFeatures()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" line="56" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/LbpFeature.cpp" bodystart="218" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lbp_feature_1af664c189044d32f2cb71b334deb6f0c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LbpFeature::Process</definition>
+        <argsstring>(void)</argsstring>
+        <name>Process</name>
+        <reimplements refid="class_local_feature_1a2f5b230fd63be9c1dcceb51361bc6ee1">Process</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Implemented virtual method for the algorithm. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_local_feature_1a2f5b230fd63be9c1dcceb51361bc6ee1" kindref="member">LocalFeature::Process()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" line="38" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/LbpFeature.cpp" bodystart="44" bodyend="56"/>
+        <references refid="class_local_feature_1a8197cec0d029bac380885167df9f65e5" compoundref="_local_feature_8h" startline="54">LocalFeature::features</references>
+        <references refid="class_local_feature_1a585b0dc6e6184422c5563e80bff50ffa" compoundref="_local_feature_8h" startline="71">LocalFeature::frame_</references>
+        <references refid="class_lbp_feature_1a96e42213e77e729c263236db12453bde" compoundref="_lbp_feature_8cpp" startline="188" endline="216">ProcessWithoutUniformPatterns</references>
+        <references refid="class_lbp_feature_1aa29955bd43f95dcac63aa7840fcd1925" compoundref="_lbp_feature_8cpp" startline="58" endline="186">ProcessWithUniformPatterns</references>
+        <references refid="class_lbp_feature_1a6025f411377d4b6e56aa9eb5daff07e8" compoundref="_lbp_feature_8h" startline="60">useUniformPatterns_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_lbp_feature_1a773b1c3fd663f58b01f1ba33a897744f" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LbpFeature::ProcessInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>ProcessInit</name>
+        <reimplements refid="class_local_feature_1a2b2cdc0b1be48785e967a87c268ee27e">ProcessInit</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initalizing the variables. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_local_feature_1a2b2cdc0b1be48785e967a87c268ee27e" kindref="member">LocalFeature::ProcessInit()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" line="44" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/LbpFeature.cpp" bodystart="35" bodyend="42"/>
+        <references refid="class_local_feature_1a585b0dc6e6184422c5563e80bff50ffa" compoundref="_local_feature_8h" startline="71">LocalFeature::frame_</references>
+        <references refid="class_lbp_feature_1ab2bdc329e16e4126eccbbe4b8d4d44f5" compoundref="_lbp_feature_8h" startline="58">grayFrame_</references>
+        <references refid="class_local_feature_1a1c7b8087feb05f02b09eb1b536d443e6" compoundref="_local_feature_8h" startline="72">LocalFeature::outputFrame_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_lbp_feature_1a96e42213e77e729c263236db12453bde" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LbpFeature::ProcessWithoutUniformPatterns</definition>
+        <argsstring>(void)</argsstring>
+        <name>ProcessWithoutUniformPatterns</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Generate feature vector without using uniform patterns. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" line="50" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/LbpFeature.cpp" bodystart="188" bodyend="216"/>
+        <references refid="class_local_feature_1a8197cec0d029bac380885167df9f65e5" compoundref="_local_feature_8h" startline="54">LocalFeature::features</references>
+        <references refid="class_local_feature_1a585b0dc6e6184422c5563e80bff50ffa" compoundref="_local_feature_8h" startline="71">LocalFeature::frame_</references>
+        <references refid="class_lbp_feature_1ab2bdc329e16e4126eccbbe4b8d4d44f5" compoundref="_lbp_feature_8h" startline="58">grayFrame_</references>
+        <references refid="class_local_feature_1a1c7b8087feb05f02b09eb1b536d443e6" compoundref="_local_feature_8h" startline="72">LocalFeature::outputFrame_</references>
+        <referencedby refid="class_lbp_feature_1af664c189044d32f2cb71b334deb6f0c7" compoundref="_lbp_feature_8cpp" startline="44" endline="56">Process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lbp_feature_1aa29955bd43f95dcac63aa7840fcd1925" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LbpFeature::ProcessWithUniformPatterns</definition>
+        <argsstring>(void)</argsstring>
+        <name>ProcessWithUniformPatterns</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Generate feature vector with using uniform patterns. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" line="47" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/LbpFeature.cpp" bodystart="58" bodyend="186"/>
+        <references refid="class_local_feature_1a8197cec0d029bac380885167df9f65e5" compoundref="_local_feature_8h" startline="54">LocalFeature::features</references>
+        <references refid="class_local_feature_1a585b0dc6e6184422c5563e80bff50ffa" compoundref="_local_feature_8h" startline="71">LocalFeature::frame_</references>
+        <references refid="class_lbp_feature_1ab2bdc329e16e4126eccbbe4b8d4d44f5" compoundref="_lbp_feature_8h" startline="58">grayFrame_</references>
+        <references refid="class_local_feature_1a1c7b8087feb05f02b09eb1b536d443e6" compoundref="_local_feature_8h" startline="72">LocalFeature::outputFrame_</references>
+        <referencedby refid="class_lbp_feature_1af664c189044d32f2cb71b334deb6f0c7" compoundref="_lbp_feature_8cpp" startline="44" endline="56">Process</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_local_feature_1a8197cec0d029bac380885167df9f65e5" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; LocalFeature::features</definition>
+        <argsstring></argsstring>
+        <name>features</name>
+        <briefdescription>
+<para>Stores local features. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" line="54" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_lbp_feature_1af664c189044d32f2cb71b334deb6f0c7" compoundref="_lbp_feature_8cpp" startline="44" endline="56">Process</referencedby>
+        <referencedby refid="class_lbp_feature_1a96e42213e77e729c263236db12453bde" compoundref="_lbp_feature_8cpp" startline="188" endline="216">ProcessWithoutUniformPatterns</referencedby>
+        <referencedby refid="class_lbp_feature_1aa29955bd43f95dcac63aa7840fcd1925" compoundref="_lbp_feature_8cpp" startline="58" endline="186">ProcessWithUniformPatterns</referencedby>
+        <referencedby refid="class_local_feature_1ab39886debe485d200a73b8c8d500544b" compoundref="_local_feature_8cpp" startline="41" endline="52">LocalFeature::Visualize</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_local_feature_1a585b0dc6e6184422c5563e80bff50ffa" prot="protected" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat LocalFeature::frame_</definition>
+        <argsstring></argsstring>
+        <name>frame_</name>
+        <briefdescription>
+<para>The current frame. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" line="71" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="class_lbp_feature_1af664c189044d32f2cb71b334deb6f0c7" compoundref="_lbp_feature_8cpp" startline="44" endline="56">Process</referencedby>
+        <referencedby refid="class_lbp_feature_1a773b1c3fd663f58b01f1ba33a897744f" compoundref="_lbp_feature_8cpp" startline="35" endline="42">ProcessInit</referencedby>
+        <referencedby refid="class_lbp_feature_1a96e42213e77e729c263236db12453bde" compoundref="_lbp_feature_8cpp" startline="188" endline="216">ProcessWithoutUniformPatterns</referencedby>
+        <referencedby refid="class_lbp_feature_1aa29955bd43f95dcac63aa7840fcd1925" compoundref="_lbp_feature_8cpp" startline="58" endline="186">ProcessWithUniformPatterns</referencedby>
+        <referencedby refid="class_local_feature_1ad415c0f9a207eb30cedfb750d62731cf" compoundref="_local_feature_8cpp" startline="23" endline="38">LocalFeature::Run</referencedby>
+        <referencedby refid="class_local_feature_1aee5c4e09e373308e7f50bfaffd8e2267" compoundref="_local_feature_8cpp" startline="18" endline="21">LocalFeature::SetFrame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_local_feature_1a0e73ef0aed82c04f06b6eeb9a9b9be8b" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string LocalFeature::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of the current feature extraction procedure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" line="69" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="class_local_feature_1ab2ecc77360b2fa1400f29298a8e1b751" compoundref="_local_feature_8cpp" startline="55" endline="58">LocalFeature::GetName</referencedby>
+        <referencedby refid="class_lbp_feature_1a39ac99c8b8537ac9d104ae4368177071" compoundref="_lbp_feature_8cpp" startline="21" endline="33">LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_local_feature_1ab39886debe485d200a73b8c8d500544b" compoundref="_local_feature_8cpp" startline="41" endline="52">LocalFeature::Visualize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_local_feature_1a1c7b8087feb05f02b09eb1b536d443e6" prot="protected" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat LocalFeature::outputFrame_</definition>
+        <argsstring></argsstring>
+        <name>outputFrame_</name>
+        <briefdescription>
+<para>The current frame. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" line="72" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="class_lbp_feature_1a773b1c3fd663f58b01f1ba33a897744f" compoundref="_lbp_feature_8cpp" startline="35" endline="42">ProcessInit</referencedby>
+        <referencedby refid="class_lbp_feature_1a96e42213e77e729c263236db12453bde" compoundref="_lbp_feature_8cpp" startline="188" endline="216">ProcessWithoutUniformPatterns</referencedby>
+        <referencedby refid="class_lbp_feature_1aa29955bd43f95dcac63aa7840fcd1925" compoundref="_lbp_feature_8cpp" startline="58" endline="186">ProcessWithUniformPatterns</referencedby>
+        <referencedby refid="class_local_feature_1ab39886debe485d200a73b8c8d500544b" compoundref="_local_feature_8cpp" startline="41" endline="52">LocalFeature::Visualize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_local_feature_1a79d60ce90ab8e6ccd66ff8f7da2365c7" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LocalFeature::procTime_</definition>
+        <argsstring></argsstring>
+        <name>procTime_</name>
+        <briefdescription>
+<para>Processing time of the current feature extraction method. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" line="73" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="class_local_feature_1a46f41fabf78e63d9e9c93cbaadf652a1" compoundref="_local_feature_8cpp" startline="65" endline="68">LocalFeature::GetProcTime</referencedby>
+        <referencedby refid="class_local_feature_1ad415c0f9a207eb30cedfb750d62731cf" compoundref="_local_feature_8cpp" startline="23" endline="38">LocalFeature::Run</referencedby>
+        <referencedby refid="class_local_feature_1ab39886debe485d200a73b8c8d500544b" compoundref="_local_feature_8cpp" startline="41" endline="52">LocalFeature::Visualize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_local_feature_1aaf3aef30088cd1be80e1770d0a9d945b" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string LocalFeature::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <briefdescription>
+<para>Type of the current feature extraction procedure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" line="70" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="class_local_feature_1aba5fb3207f97ae73dc3cab7572baf85e" compoundref="_local_feature_8cpp" startline="60" endline="63">LocalFeature::GetType</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class for extracting LBP features. </para>    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Local Binary Pattern (LBP) is a simple yet very efficient texture operator which labels the pixels of an image by thresholding the neighborhood of each pixel and considers the result as a binary number.
+</verbatim></para><para>See paper: T. Ojala, M. Pietikäinen, and D. Harwood (1994), &quot;Performance evaluation of texture measures with classification based on Kullback discrimination of distributions&quot;, Proceedings of the 12th IAPR International Conference on Pattern Recognition (ICPR 1994), vol. 1, pp. 582 - 585. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="111">
+        <label>LocalFeature</label>
+        <link refid="class_local_feature"/>
+        <childnode refid="112" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>LbpFeature</label>
+        <link refid="class_lbp_feature"/>
+        <childnode refid="111" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>Thread</label>
+        <link refid="class_thread"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="114">
+        <label>LocalFeature</label>
+        <link refid="class_local_feature"/>
+        <childnode refid="115" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>LbpFeature</label>
+        <link refid="class_lbp_feature"/>
+        <childnode refid="114" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>Thread</label>
+        <link refid="class_thread"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" line="15" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h" bodystart="14" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_lbp_feature_1a152c1785ca51eb7e5878c0d3f9309697" prot="private" virt="virtual"><scope>LbpFeature</scope><name>DrawFeatures</name></member>
+      <member refid="class_local_feature_1a8197cec0d029bac380885167df9f65e5" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>features</name></member>
+      <member refid="class_local_feature_1a585b0dc6e6184422c5563e80bff50ffa" prot="protected" virt="non-virtual"><scope>LbpFeature</scope><name>frame_</name></member>
+      <member refid="class_local_feature_1ab2ecc77360b2fa1400f29298a8e1b751" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>GetName</name></member>
+      <member refid="class_local_feature_1a46f41fabf78e63d9e9c93cbaadf652a1" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>GetProcTime</name></member>
+      <member refid="class_local_feature_1aba5fb3207f97ae73dc3cab7572baf85e" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>GetType</name></member>
+      <member refid="class_lbp_feature_1ab2bdc329e16e4126eccbbe4b8d4d44f5" prot="private" virt="non-virtual"><scope>LbpFeature</scope><name>grayFrame_</name></member>
+      <member refid="class_thread_1a8f33f7750321d5df9188033e7e3e300d" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>Join</name></member>
+      <member refid="class_lbp_feature_1a52b160f5fa16bc1ea0c489a744ed554f" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>LbpFeature</name></member>
+      <member refid="class_lbp_feature_1a39ac99c8b8537ac9d104ae4368177071" prot="public" virt="virtual"><scope>LbpFeature</scope><name>LoadSettingsFromFileStorage</name></member>
+      <member refid="class_local_feature_1abc8f5b5d4088fd28be45cfd6b3d86cd5" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>LocalFeature</name></member>
+      <member refid="class_local_feature_1a0e73ef0aed82c04f06b6eeb9a9b9be8b" prot="protected" virt="non-virtual"><scope>LbpFeature</scope><name>name_</name></member>
+      <member refid="class_local_feature_1a1c7b8087feb05f02b09eb1b536d443e6" prot="protected" virt="non-virtual"><scope>LbpFeature</scope><name>outputFrame_</name></member>
+      <member refid="class_lbp_feature_1af664c189044d32f2cb71b334deb6f0c7" prot="private" virt="virtual"><scope>LbpFeature</scope><name>Process</name></member>
+      <member refid="class_lbp_feature_1a773b1c3fd663f58b01f1ba33a897744f" prot="private" virt="virtual"><scope>LbpFeature</scope><name>ProcessInit</name></member>
+      <member refid="class_lbp_feature_1a96e42213e77e729c263236db12453bde" prot="private" virt="non-virtual"><scope>LbpFeature</scope><name>ProcessWithoutUniformPatterns</name></member>
+      <member refid="class_lbp_feature_1aa29955bd43f95dcac63aa7840fcd1925" prot="private" virt="non-virtual"><scope>LbpFeature</scope><name>ProcessWithUniformPatterns</name></member>
+      <member refid="class_local_feature_1a79d60ce90ab8e6ccd66ff8f7da2365c7" prot="protected" virt="non-virtual"><scope>LbpFeature</scope><name>procTime_</name></member>
+      <member refid="class_local_feature_1aee5c4e09e373308e7f50bfaffd8e2267" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>SetFrame</name></member>
+      <member refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>Start</name></member>
+      <member refid="class_thread_1a027b9eb38e4d59c076501b305b42f575" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>Thread</name></member>
+      <member refid="class_thread_1a403714feecd93ac10c101a47b7649204" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>Thread</name></member>
+      <member refid="class_local_feature_1aaf3aef30088cd1be80e1770d0a9d945b" prot="protected" virt="non-virtual"><scope>LbpFeature</scope><name>type_</name></member>
+      <member refid="class_lbp_feature_1a6025f411377d4b6e56aa9eb5daff07e8" prot="private" virt="non-virtual"><scope>LbpFeature</scope><name>useUniformPatterns_</name></member>
+      <member refid="class_lbp_feature_1a40826a6cc5bc5f1de7edf8b05092052b" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>~LbpFeature</name></member>
+      <member refid="class_local_feature_1a457aceba33c8ef0f0ccaf4db8c679545" prot="public" virt="non-virtual"><scope>LbpFeature</scope><name>~LocalFeature</name></member>
+      <member refid="class_thread_1af1e25588ebe47a2a6d79ef8c686a992b" prot="public" virt="virtual"><scope>LbpFeature</scope><name>~Thread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

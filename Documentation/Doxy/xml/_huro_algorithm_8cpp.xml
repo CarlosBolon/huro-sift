@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_huro_algorithm_8cpp" kind="file">
+    <compoundname>HuroAlgorithm.cpp</compoundname>
+    <includes refid="_huro_algorithm_8h" local="yes">HuroAlgorithm.h</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="_sift_feature_8h" local="yes">SiftFeature.h</includes>
+    <includes refid="_surf_feature_8h" local="yes">SurfFeature.h</includes>
+    <includes refid="_orb_feature_8h" local="yes">OrbFeature.h</includes>
+    <includes refid="_star_feature_8h" local="yes">StarFeature.h</includes>
+    <includes refid="_mser_feature_8h" local="yes">MserFeature.h</includes>
+    <includes refid="_fast_feature_8h" local="yes">FastFeature.h</includes>
+    <includes refid="_lbp_feature_8h" local="yes">LbpFeature.h</includes>
+    <includes refid="_image_frame_8h" local="yes">ImageFrame.h</includes>
+    <includes refid="_local_settings_8h" local="yes">LocalSettings.h</includes>
+    <includes refid="_exception_descriptor_8h" local="yes">ExceptionDescriptor.h</includes>
+    <incdepgraph>
+      <node id="785">
+        <label>Runnable.h</label>
+        <link refid="_runnable_8h"/>
+      </node>
+      <node id="789">
+        <label>MserFeature.h</label>
+        <link refid="_mser_feature_8h"/>
+        <childnode refid="780" relation="include">
+        </childnode>
+      </node>
+      <node id="776">
+        <label>HuroAlgorithm.h</label>
+        <link refid="_huro_algorithm_8h"/>
+        <childnode refid="777" relation="include">
+        </childnode>
+      </node>
+      <node id="792">
+        <label>LocalFeature.h</label>
+        <link refid="_local_feature_8h"/>
+        <childnode refid="781" relation="include">
+        </childnode>
+        <childnode refid="777" relation="include">
+        </childnode>
+        <childnode refid="782" relation="include">
+        </childnode>
+      </node>
+      <node id="788">
+        <label>StarFeature.h</label>
+        <link refid="_star_feature_8h"/>
+        <childnode refid="780" relation="include">
+        </childnode>
+      </node>
+      <node id="777">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="781">
+        <label>string</label>
+      </node>
+      <node id="780">
+        <label>GlobalFeature.h</label>
+        <link refid="_global_feature_8h"/>
+        <childnode refid="781" relation="include">
+        </childnode>
+        <childnode refid="777" relation="include">
+        </childnode>
+        <childnode refid="782" relation="include">
+        </childnode>
+      </node>
+      <node id="779">
+        <label>SiftFeature.h</label>
+        <link refid="_sift_feature_8h"/>
+        <childnode refid="780" relation="include">
+        </childnode>
+      </node>
+      <node id="796">
+        <label>exception</label>
+      </node>
+      <node id="793">
+        <label>ImageFrame.h</label>
+        <link refid="_image_frame_8h"/>
+        <childnode refid="777" relation="include">
+        </childnode>
+      </node>
+      <node id="784">
+        <label>pthread.h</label>
+      </node>
+      <node id="795">
+        <label>ExceptionDescriptor.h</label>
+        <link refid="_exception_descriptor_8h"/>
+        <childnode refid="796" relation="include">
+        </childnode>
+        <childnode refid="781" relation="include">
+        </childnode>
+      </node>
+      <node id="775">
+        <label>ObjectRecognition/src/HuroAlgorithm.cpp</label>
+        <link refid="HuroAlgorithm.cpp"/>
+        <childnode refid="776" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+        <childnode refid="779" relation="include">
+        </childnode>
+        <childnode refid="786" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="788" relation="include">
+        </childnode>
+        <childnode refid="789" relation="include">
+        </childnode>
+        <childnode refid="790" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="793" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+      </node>
+      <node id="782">
+        <label>Thread.h</label>
+        <link refid="_thread_8h"/>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="784" relation="include">
+        </childnode>
+        <childnode refid="785" relation="include">
+        </childnode>
+      </node>
+      <node id="778">
+        <label>iostream</label>
+      </node>
+      <node id="794">
+        <label>LocalSettings.h</label>
+        <link refid="_local_settings_8h"/>
+        <childnode refid="781" relation="include">
+        </childnode>
+      </node>
+      <node id="787">
+        <label>OrbFeature.h</label>
+        <link refid="_orb_feature_8h"/>
+        <childnode refid="780" relation="include">
+        </childnode>
+      </node>
+      <node id="786">
+        <label>SurfFeature.h</label>
+        <link refid="_surf_feature_8h"/>
+        <childnode refid="780" relation="include">
+        </childnode>
+      </node>
+      <node id="791">
+        <label>LbpFeature.h</label>
+        <link refid="_lbp_feature_8h"/>
+        <childnode refid="792" relation="include">
+        </childnode>
+      </node>
+      <node id="790">
+        <label>FastFeature.h</label>
+        <link refid="_fast_feature_8h"/>
+        <childnode refid="780" relation="include">
+        </childnode>
+      </node>
+      <node id="783">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_huro_algorithm_8h" kindref="compound">HuroAlgorithm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sift_feature_8h" kindref="compound">SiftFeature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_surf_feature_8h" kindref="compound">SurfFeature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_orb_feature_8h" kindref="compound">OrbFeature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_star_feature_8h" kindref="compound">StarFeature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mser_feature_8h" kindref="compound">MserFeature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_fast_feature_8h" kindref="compound">FastFeature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_lbp_feature_8h" kindref="compound">LbpFeature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_image_frame_8h" kindref="compound">ImageFrame.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_local_settings_8h" kindref="compound">LocalSettings.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_exception_descriptor_8h" kindref="compound">ExceptionDescriptor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">cv;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_huro_algorithm_1a5213ab22da2dba36f16262c1a84ec261" refkind="member"><highlight class="normal"><ref refid="class_huro_algorithm_1a5213ab22da2dba36f16262c1a84ec261" kindref="member" tooltip="Constructor.">HuroAlgorithm::HuroAlgorithm</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>mediaType_(</highlight><highlight class="stringliteral">&quot;image&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraId_(0),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>imageName_(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_huro_algorithm_1a1cfbc787c7380f981407daf1afbbad12" kindref="member" tooltip="Method for loading algorithm specific settings from the given storage.">LoadSettingsFromFileStorage</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_huro_algorithm_1a0c00c5a74d3415f926f599c2ea9cedce" refkind="member"><highlight class="normal"><ref refid="class_huro_algorithm_1a0c00c5a74d3415f926f599c2ea9cedce" kindref="member" tooltip="Destructor.">HuroAlgorithm::~HuroAlgorithm</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(GlobalFeaturePool::iterator<sp/>fpElem<sp/>=<sp/><ref refid="class_huro_algorithm_1a764b3c6f64d2cbcc7062359593c097d4" kindref="member" tooltip="Stores all global feature extractor.">globalFeaturePool_</ref>.begin();<sp/>fpElem<sp/>!=<sp/><ref refid="class_huro_algorithm_1a764b3c6f64d2cbcc7062359593c097d4" kindref="member" tooltip="Stores all global feature extractor.">globalFeaturePool_</ref>.end();<sp/>fpElem++)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fpElem-&gt;second;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(LocalFeaturePool::iterator<sp/>fpElem<sp/>=<sp/><ref refid="class_huro_algorithm_1a71f5e4605425060593f8ec4ce2381698" kindref="member" tooltip="Stores all local feature extractor.">localFeaturePool_</ref>.begin();<sp/>fpElem<sp/>!=<sp/><ref refid="class_huro_algorithm_1a71f5e4605425060593f8ec4ce2381698" kindref="member" tooltip="Stores all local feature extractor.">localFeaturePool_</ref>.end();<sp/>fpElem++)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fpElem-&gt;second;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_huro_algorithm_1ae03bda7ba79c469b7f36566fe354f93a" kindref="member" tooltip="For handling image frame getting.">imageFrame_</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_huro_algorithm_1a1cfbc787c7380f981407daf1afbbad12" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_huro_algorithm_1a1cfbc787c7380f981407daf1afbbad12" kindref="member" tooltip="Method for loading algorithm specific settings from the given storage.">HuroAlgorithm::LoadSettingsFromFileStorage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>FileStorage<sp/>fileStorage(<ref refid="_local_settings_8h_1a2229e3307a6b7ebe72c4459cad648ff4" kindref="member">LocalSettingsPtr</ref>-&gt;GetProcessXmlFileName(),<sp/>FileStorage::READ,<sp/></highlight><highlight class="stringliteral">&quot;UTF-8&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!fileStorage.isOpened())</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;Process<sp/>XML<sp/>does<sp/>not<sp/>exist<sp/>(&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="_local_settings_8h_1a2229e3307a6b7ebe72c4459cad648ff4" kindref="member">LocalSettingsPtr</ref>-&gt;GetProcessXmlFileName()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Loading<sp/>general<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>FileNode<sp/>node<sp/>=<sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;settings&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node[0][</highlight><highlight class="stringliteral">&quot;mediaType&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_huro_algorithm_1a433b1ef87e917a1cdedc519dcc494837" kindref="member" tooltip="Type of the incoming media.">mediaType_</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mediaType_.compare(</highlight><highlight class="stringliteral">&quot;camera&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node[0][</highlight><highlight class="stringliteral">&quot;cameraId&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_huro_algorithm_1ab1c035063117de9d0b865066d877e11a" kindref="member" tooltip="ID of the camera to be analyzed.">cameraId_</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_huro_algorithm_1ae03bda7ba79c469b7f36566fe354f93a" kindref="member" tooltip="For handling image frame getting.">imageFrame_</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_image_frame" kindref="compound" tooltip="Image frame wrapper class.">ImageFrame</ref>(cameraId_);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mediaType_.compare(</highlight><highlight class="stringliteral">&quot;image&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node[0][</highlight><highlight class="stringliteral">&quot;imageName&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_huro_algorithm_1a2a752aeadf9fd6552473b42c2c3e6851" kindref="member" tooltip="Name of the image to be analyzed.">imageName_</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_huro_algorithm_1ae03bda7ba79c469b7f36566fe354f93a" kindref="member" tooltip="For handling image frame getting.">imageFrame_</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_image_frame" kindref="compound" tooltip="Image frame wrapper class.">ImageFrame</ref>(imageName_);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;Wrong<sp/>media<sp/>type<sp/>in<sp/>(&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="_local_settings_8h_1a2229e3307a6b7ebe72c4459cad648ff4" kindref="member">LocalSettingsPtr</ref>-&gt;GetProcessXmlFileName()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Loading<sp/>feature<sp/>extractors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>node<sp/>=<sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;featureExtractors&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>node.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name,<sp/>type;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node[i][</highlight><highlight class="stringliteral">&quot;name&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/>name;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node[i][</highlight><highlight class="stringliteral">&quot;type&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/>type;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Global<sp/>feature<sp/>extractors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(name.compare(</highlight><highlight class="stringliteral">&quot;SIFT&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_huro_algorithm_1a764b3c6f64d2cbcc7062359593c097d4" kindref="member" tooltip="Stores all global feature extractor.">globalFeaturePool_</ref>[name]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_sift_feature" kindref="compound" tooltip="Class for extracting SIFT features.">SiftFeature</ref>(name,<sp/>type);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(name.compare(</highlight><highlight class="stringliteral">&quot;SURF&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_huro_algorithm_1a764b3c6f64d2cbcc7062359593c097d4" kindref="member" tooltip="Stores all global feature extractor.">globalFeaturePool_</ref>[name]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_surf_feature" kindref="compound" tooltip="Class for extracting SURF features.">SurfFeature</ref>(name,<sp/>type);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(name.compare(</highlight><highlight class="stringliteral">&quot;ORB&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_huro_algorithm_1a764b3c6f64d2cbcc7062359593c097d4" kindref="member" tooltip="Stores all global feature extractor.">globalFeaturePool_</ref>[name]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_orb_feature" kindref="compound" tooltip="Class for extracting ORB features.">OrbFeature</ref>(name,<sp/>type);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(name.compare(</highlight><highlight class="stringliteral">&quot;STAR&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_huro_algorithm_1a764b3c6f64d2cbcc7062359593c097d4" kindref="member" tooltip="Stores all global feature extractor.">globalFeaturePool_</ref>[name]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_star_feature" kindref="compound" tooltip="Class for extracting STAR features.">StarFeature</ref>(name,<sp/>type);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(name.compare(</highlight><highlight class="stringliteral">&quot;MSER&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_huro_algorithm_1a764b3c6f64d2cbcc7062359593c097d4" kindref="member" tooltip="Stores all global feature extractor.">globalFeaturePool_</ref>[name]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_mser_feature" kindref="compound" tooltip="Class for extracting MSER features.">MserFeature</ref>(name,<sp/>type);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(name.compare(</highlight><highlight class="stringliteral">&quot;FAST&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_huro_algorithm_1a764b3c6f64d2cbcc7062359593c097d4" kindref="member" tooltip="Stores all global feature extractor.">globalFeaturePool_</ref>[name]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_fast_feature" kindref="compound" tooltip="Class for extracting FAST features.">FastFeature</ref>(name,<sp/>type);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(name.compare(</highlight><highlight class="stringliteral">&quot;LBP&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_huro_algorithm_1a71f5e4605425060593f8ec4ce2381698" kindref="member" tooltip="Stores all local feature extractor.">localFeaturePool_</ref>[name]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_lbp_feature" kindref="compound" tooltip="Class for extracting LBP features.">LbpFeature</ref>(name,<sp/>type);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Local<sp/>feature<sp/>extractors<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>else<sp/>if(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1aecb80169feee9bc4525ec9634bc27b5b" kindref="member">ExceptionWarning</ref>(</highlight><highlight class="stringliteral">&quot;Unkonwn<sp/>feature<sp/>extractor<sp/>(&quot;</highlight><highlight class="normal"><sp/>+<sp/>name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_huro_algorithm_1ac2e91407459c4ebac0b33f7e7570022d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_huro_algorithm_1ac2e91407459c4ebac0b33f7e7570022d" kindref="member" tooltip="Main algorithm.">HuroAlgorithm::Process</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initializing<sp/>the<sp/>global<sp/>feature<sp/>extractors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>Mat<sp/>frame<sp/>=<sp/><ref refid="class_huro_algorithm_1ae03bda7ba79c469b7f36566fe354f93a" kindref="member" tooltip="For handling image frame getting.">imageFrame_</ref>-&gt;<ref refid="class_image_frame_1a886d65831c708b65ba5596aab1aca438" kindref="member" tooltip="Gets a frame from somewhere.">GetFrame</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(GlobalFeaturePool::iterator<sp/>fpElem<sp/>=<sp/><ref refid="class_huro_algorithm_1a764b3c6f64d2cbcc7062359593c097d4" kindref="member" tooltip="Stores all global feature extractor.">globalFeaturePool_</ref>.begin();<sp/>fpElem<sp/>!=<sp/><ref refid="class_huro_algorithm_1a764b3c6f64d2cbcc7062359593c097d4" kindref="member" tooltip="Stores all global feature extractor.">globalFeaturePool_</ref>.end();<sp/>fpElem++)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fpElem-&gt;second-&gt;SetFrame(frame);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fpElem-&gt;second-&gt;Start();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initializing<sp/>the<sp/>local<sp/>feature<sp/>extractors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(LocalFeaturePool::iterator<sp/>fpElem<sp/>=<sp/><ref refid="class_huro_algorithm_1a71f5e4605425060593f8ec4ce2381698" kindref="member" tooltip="Stores all local feature extractor.">localFeaturePool_</ref>.begin();<sp/>fpElem<sp/>!=<sp/><ref refid="class_huro_algorithm_1a71f5e4605425060593f8ec4ce2381698" kindref="member" tooltip="Stores all local feature extractor.">localFeaturePool_</ref>.end();<sp/>fpElem++)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fpElem-&gt;second-&gt;SetFrame(frame);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fpElem-&gt;second-&gt;Start();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Starting<sp/>global<sp/>feature<sp/>extractors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(GlobalFeaturePool::iterator<sp/>fpElem<sp/>=<sp/><ref refid="class_huro_algorithm_1a764b3c6f64d2cbcc7062359593c097d4" kindref="member" tooltip="Stores all global feature extractor.">globalFeaturePool_</ref>.begin();<sp/>fpElem<sp/>!=<sp/><ref refid="class_huro_algorithm_1a764b3c6f64d2cbcc7062359593c097d4" kindref="member" tooltip="Stores all global feature extractor.">globalFeaturePool_</ref>.end();<sp/>fpElem++)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>reinterpret_cast&lt;int&gt;(fpElem-&gt;second-&gt;Join());</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Starting<sp/>local<sp/>feature<sp/>extractors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(LocalFeaturePool::iterator<sp/>fpElem<sp/>=<sp/><ref refid="class_huro_algorithm_1a71f5e4605425060593f8ec4ce2381698" kindref="member" tooltip="Stores all local feature extractor.">localFeaturePool_</ref>.begin();<sp/>fpElem<sp/>!=<sp/><ref refid="class_huro_algorithm_1a71f5e4605425060593f8ec4ce2381698" kindref="member" tooltip="Stores all local feature extractor.">localFeaturePool_</ref>.end();<sp/>fpElem++)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>reinterpret_cast&lt;int&gt;(fpElem-&gt;second-&gt;Join());</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/ObjectRecognition/src/HuroAlgorithm.cpp"/>
+  </compounddef>
+</doxygen>

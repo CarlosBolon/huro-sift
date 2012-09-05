@@ -1,0 +1,6 @@
+<map id="LocalFeature::Run" name="LocalFeature::Run">
+<area shape="rect" id="node3" href="$group___feature_extractor.html#a329c560d8f02a4ab390716319410deab" title="Virtual method for drawing the extracted features." alt="" coords="182,5,367,32"/>
+<area shape="rect" id="node5" href="$group___feature_extractor.html#a2f5b230fd63be9c1dcceb51361bc6ee1" title="Virtual method for each feature extraction algorithm." alt="" coords="198,56,351,83"/>
+<area shape="rect" id="node7" href="$group___feature_extractor.html#a2b2cdc0b1be48785e967a87c268ee27e" title="Virtual method for initalizing the variables." alt="" coords="189,107,360,133"/>
+<area shape="rect" id="node9" href="$group___feature_extractor.html#ab39886debe485d200a73b8c8d500544b" title="Visualizing the output of feature extractor." alt="" coords="195,157,354,184"/>
+</map>

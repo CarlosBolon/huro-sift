@@ -1,0 +1,15 @@
+<map id="Core/include/ExceptionDescriptor.h" name="Core/include/ExceptionDescriptor.h">
+<area shape="rect" id="node3" href="$_exception_descriptor_8cpp.html" title="Core/src/ExceptionDescriptor.cpp" alt="" coords="5,88,221,115"/>
+<area shape="rect" id="node5" href="$_image_frame_8cpp.html" title="Core/src/ImageFrame.cpp" alt="" coords="246,88,417,115"/>
+<area shape="rect" id="node7" href="$_local_settings_8cpp.html" title="Core/src/LocalSettings.cpp" alt="" coords="443,88,621,115"/>
+<area shape="rect" id="node9" href="$_thread_8cpp.html" title="Core/src/Thread.cpp" alt="" coords="645,88,784,115"/>
+<area shape="rect" id="node11" href="$_fast_feature_8cpp.html" title="FeatureExtractor/src\l/FastFeature.cpp" alt="" coords="808,81,949,122"/>
+<area shape="rect" id="node13" href="$_lbp_feature_8cpp.html" title="FeatureExtractor/src\l/LbpFeature.cpp" alt="" coords="973,81,1115,122"/>
+<area shape="rect" id="node15" href="$_mser_feature_8cpp.html" title="FeatureExtractor/src\l/MserFeature.cpp" alt="" coords="1139,81,1280,122"/>
+<area shape="rect" id="node17" href="$_orb_feature_8cpp.html" title="FeatureExtractor/src\l/OrbFeature.cpp" alt="" coords="1304,81,1445,122"/>
+<area shape="rect" id="node19" href="$_sift_feature_8cpp.html" title="FeatureExtractor/src\l/SiftFeature.cpp" alt="" coords="1469,81,1611,122"/>
+<area shape="rect" id="node21" href="$_star_feature_8cpp.html" title="FeatureExtractor/src\l/StarFeature.cpp" alt="" coords="1635,81,1776,122"/>
+<area shape="rect" id="node23" href="$_surf_feature_8cpp.html" title="FeatureExtractor/src\l/SurfFeature.cpp" alt="" coords="1800,81,1941,122"/>
+<area shape="rect" id="node25" href="$_huro_algorithm_8cpp.html" title="ObjectRecognition/src\l/HuroAlgorithm.cpp" alt="" coords="1966,81,2116,122"/>
+<area shape="rect" id="node27" href="$_main_8cpp.html" title="ObjectRecognition/src\l/Main.cpp" alt="" coords="2141,81,2291,122"/>
+</map>

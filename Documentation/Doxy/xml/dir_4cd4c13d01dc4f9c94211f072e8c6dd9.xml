@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="dir_4cd4c13d01dc4f9c94211f072e8c6dd9" kind="dir">
+    <compoundname>Core/include</compoundname>
+    <innerfile refid="_exception_descriptor_8h">ExceptionDescriptor.h</innerfile>
+    <innerfile refid="_image_frame_8h">ImageFrame.h</innerfile>
+    <innerfile refid="_local_settings_8h">LocalSettings.h</innerfile>
+    <innerfile refid="_mutex_8h">Mutex.h</innerfile>
+    <innerfile refid="_runnable_8h">Runnable.h</innerfile>
+    <innerfile refid="_thread_8h">Thread.h</innerfile>
+    <innerfile refid="_visualizer_8h">Visualizer.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/"/>
+  </compounddef>
+</doxygen>

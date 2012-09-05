@@ -1,0 +1,11 @@
+<map id="Thread" name="Thread">
+<area shape="rect" id="node3" href="$group___feature_extractor.html#class_global_feature" title="Abstract class for global feature extraction." alt="" coords="721,321,935,604"/>
+<area shape="rect" id="node17" href="$group___feature_extractor.html#class_local_feature" title="Abstract class for local feature extraction." alt="" coords="1200,307,1413,619"/>
+<area shape="rect" id="node5" href="$group___feature_extractor.html#class_fast_feature" title="Class for extracting FAST features." alt="" coords="5,719,219,884"/>
+<area shape="rect" id="node7" href="$group___feature_extractor.html#class_mser_feature" title="Class for extracting MSER features." alt="" coords="243,667,457,935"/>
+<area shape="rect" id="node9" href="$group___feature_extractor.html#class_orb_feature" title="Class for extracting ORB features." alt="" coords="482,675,696,928"/>
+<area shape="rect" id="node11" href="$group___feature_extractor.html#class_sift_feature" title="Class for extracting SIFT features." alt="" coords="721,697,935,906"/>
+<area shape="rect" id="node13" href="$group___feature_extractor.html#class_star_feature" title="Class for extracting STAR features." alt="" coords="959,697,1173,906"/>
+<area shape="rect" id="node15" href="$group___feature_extractor.html#class_surf_feature" title="Class for extracting SURF features." alt="" coords="1198,697,1412,906"/>
+<area shape="rect" id="node19" href="$group___feature_extractor.html#class_lbp_feature" title="Class for extracting LBP features." alt="" coords="1437,704,1661,899"/>
+</map>

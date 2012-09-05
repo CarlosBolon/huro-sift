@@ -1,0 +1,506 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="class_global_feature" kind="class" prot="public">
+    <compoundname>GlobalFeature</compoundname>
+    <basecompoundref refid="class_thread" prot="public" virt="non-virtual">Thread</basecompoundref>
+    <derivedcompoundref refid="class_fast_feature" prot="public" virt="non-virtual">FastFeature</derivedcompoundref>
+    <derivedcompoundref refid="class_mser_feature" prot="public" virt="non-virtual">MserFeature</derivedcompoundref>
+    <derivedcompoundref refid="class_orb_feature" prot="public" virt="non-virtual">OrbFeature</derivedcompoundref>
+    <derivedcompoundref refid="class_sift_feature" prot="public" virt="non-virtual">SiftFeature</derivedcompoundref>
+    <derivedcompoundref refid="class_star_feature" prot="public" virt="non-virtual">StarFeature</derivedcompoundref>
+    <derivedcompoundref refid="class_surf_feature" prot="public" virt="non-virtual">SurfFeature</derivedcompoundref>
+    <includes refid="_global_feature_8h" local="no">GlobalFeature.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_global_feature_1a72cc606c0090a64718a7e92bca7520b9" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; cv::KeyPoint &gt;</type>
+        <definition>std::vector&lt;cv::KeyPoint&gt; GlobalFeature::keyPoints</definition>
+        <argsstring></argsstring>
+        <name>keyPoints</name>
+        <briefdescription>
+<para>Stores keypoints, i.e. a point feature found by one of many available keypoint detectors. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="54" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_mser_feature_1abed40317b412e0046df5772367d4f3dc" compoundref="_mser_feature_8cpp" startline="50" endline="53">MserFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_star_feature_1a6bb4f1e6808f0043707eb3c0bff1e33d" compoundref="_star_feature_8cpp" startline="45" endline="48">StarFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_sift_feature_1ae82e144ac3fed861dc0770cefaa828a6" compoundref="_sift_feature_8cpp" startline="45" endline="48">SiftFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_fast_feature_1a765f433c231d5f0d088beeaa77aa0e7a" compoundref="_fast_feature_8cpp" startline="44" endline="47">FastFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_orb_feature_1a907fdd9790d0295f129f1ecdc4382031" compoundref="_orb_feature_8cpp" startline="56" endline="59">OrbFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_surf_feature_1a2f036e794ebd63cd024dbf547765442f" compoundref="_surf_feature_8cpp" startline="49" endline="52">SurfFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_mser_feature_1ad96a1235b0c0df21e68c5a2742debacb" compoundref="_mser_feature_8cpp" startline="44" endline="48">MserFeature::Process</referencedby>
+        <referencedby refid="class_star_feature_1adb169936e9f60620b81894b48764a801" compoundref="_star_feature_8cpp" startline="40" endline="43">StarFeature::Process</referencedby>
+        <referencedby refid="class_orb_feature_1af814e3440b61e6bf13b44ef8886ad2d0" compoundref="_orb_feature_8cpp" startline="50" endline="54">OrbFeature::Process</referencedby>
+        <referencedby refid="class_sift_feature_1a73513198ca8ff4e56be059521cfb60f5" compoundref="_sift_feature_8cpp" startline="39" endline="43">SiftFeature::Process</referencedby>
+        <referencedby refid="class_surf_feature_1a965b300a64e776f48c1fe1564f4c4269" compoundref="_surf_feature_8cpp" startline="43" endline="47">SurfFeature::Process</referencedby>
+        <referencedby refid="class_fast_feature_1a4bbf87c97bd86bf44d4c021b053a7e66" compoundref="_fast_feature_8cpp" startline="39" endline="42">FastFeature::Process</referencedby>
+        <referencedby refid="class_global_feature_1aae5833316f46595edaf6dd635e391d4e" compoundref="_global_feature_8cpp" startline="39" endline="50">Visualize</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" prot="protected" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat GlobalFeature::frame_</definition>
+        <argsstring></argsstring>
+        <name>frame_</name>
+        <briefdescription>
+<para>The current frame. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="68" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_mser_feature_1abed40317b412e0046df5772367d4f3dc" compoundref="_mser_feature_8cpp" startline="50" endline="53">MserFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_star_feature_1a6bb4f1e6808f0043707eb3c0bff1e33d" compoundref="_star_feature_8cpp" startline="45" endline="48">StarFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_orb_feature_1a907fdd9790d0295f129f1ecdc4382031" compoundref="_orb_feature_8cpp" startline="56" endline="59">OrbFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_sift_feature_1ae82e144ac3fed861dc0770cefaa828a6" compoundref="_sift_feature_8cpp" startline="45" endline="48">SiftFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_fast_feature_1a765f433c231d5f0d088beeaa77aa0e7a" compoundref="_fast_feature_8cpp" startline="44" endline="47">FastFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_surf_feature_1a2f036e794ebd63cd024dbf547765442f" compoundref="_surf_feature_8cpp" startline="49" endline="52">SurfFeature::DrawFeatures</referencedby>
+        <referencedby refid="class_star_feature_1adb169936e9f60620b81894b48764a801" compoundref="_star_feature_8cpp" startline="40" endline="43">StarFeature::Process</referencedby>
+        <referencedby refid="class_mser_feature_1ad96a1235b0c0df21e68c5a2742debacb" compoundref="_mser_feature_8cpp" startline="44" endline="48">MserFeature::Process</referencedby>
+        <referencedby refid="class_fast_feature_1a4bbf87c97bd86bf44d4c021b053a7e66" compoundref="_fast_feature_8cpp" startline="39" endline="42">FastFeature::Process</referencedby>
+        <referencedby refid="class_orb_feature_1af814e3440b61e6bf13b44ef8886ad2d0" compoundref="_orb_feature_8cpp" startline="50" endline="54">OrbFeature::Process</referencedby>
+        <referencedby refid="class_surf_feature_1a965b300a64e776f48c1fe1564f4c4269" compoundref="_surf_feature_8cpp" startline="43" endline="47">SurfFeature::Process</referencedby>
+        <referencedby refid="class_sift_feature_1a73513198ca8ff4e56be059521cfb60f5" compoundref="_sift_feature_8cpp" startline="39" endline="43">SiftFeature::Process</referencedby>
+        <referencedby refid="class_global_feature_1a03df7e2408a60e20a62468652c17d615" compoundref="_global_feature_8cpp" startline="23" endline="36">Run</referencedby>
+        <referencedby refid="class_global_feature_1a3c58d995fb2440b28db3b21b54b94815" compoundref="_global_feature_8cpp" startline="18" endline="21">SetFrame</referencedby>
+        <referencedby refid="class_global_feature_1aae5833316f46595edaf6dd635e391d4e" compoundref="_global_feature_8cpp" startline="39" endline="50">Visualize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_global_feature_1abee52be830de272bd27685083bf28aae" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string GlobalFeature::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of the current feature extraction procedure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="66" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="class_global_feature_1a5f69ca2455d5eec4493dbf115d00d5c9" compoundref="_global_feature_8cpp" startline="53" endline="56">GetName</referencedby>
+        <referencedby refid="class_mser_feature_1ae6c9bca2395a33ecac78a46e9c331979" compoundref="_mser_feature_8cpp" startline="25" endline="42">MserFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_star_feature_1a0a46cb80a6a4d45e324757b4ef679e81" compoundref="_star_feature_8cpp" startline="25" endline="38">StarFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_sift_feature_1af19316d789598f612ee150deb2ee5137" compoundref="_sift_feature_8cpp" startline="24" endline="37">SiftFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_orb_feature_1aa13ad1fbc5869dcabb55611e5c206ebd" compoundref="_orb_feature_8cpp" startline="24" endline="48">OrbFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_surf_feature_1a3717dc5d5cffd77f4f31c5ac81cd391a" compoundref="_surf_feature_8cpp" startline="24" endline="41">SurfFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_fast_feature_1a341ffc5bd43e0ee09fda3fe6f825acba" compoundref="_fast_feature_8cpp" startline="24" endline="37">FastFeature::LoadSettingsFromFileStorage</referencedby>
+        <referencedby refid="class_global_feature_1aae5833316f46595edaf6dd635e391d4e" compoundref="_global_feature_8cpp" startline="39" endline="50">Visualize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_global_feature_1aa3306975b929f5503dac51829f9e04a0" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlobalFeature::procTime_</definition>
+        <argsstring></argsstring>
+        <name>procTime_</name>
+        <briefdescription>
+<para>Processing time of the current feature extraction method. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="69" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="class_global_feature_1ad07a3104192b50d911eee634a0be009d" compoundref="_global_feature_8cpp" startline="63" endline="66">GetProcTime</referencedby>
+        <referencedby refid="class_global_feature_1a03df7e2408a60e20a62468652c17d615" compoundref="_global_feature_8cpp" startline="23" endline="36">Run</referencedby>
+        <referencedby refid="class_global_feature_1aae5833316f46595edaf6dd635e391d4e" compoundref="_global_feature_8cpp" startline="39" endline="50">Visualize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_global_feature_1ad467857c4bc3d0fe65ba29e3b8f7c796" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string GlobalFeature::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <briefdescription>
+<para>Type of the current feature extraction procedure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="67" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_global_feature_1a6724c19006d495bd6a9c8c6029236ebc" compoundref="_global_feature_8cpp" startline="58" endline="61">GetType</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_global_feature_1a835e42ce3c2d6b39189a0f2bc24afc9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GlobalFeature::GlobalFeature</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;type)</argsstring>
+        <name>GlobalFeature</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    \param name Name of the current feature extraction procedure.
+</verbatim> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the current feature extraction procedure (global or local). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="25" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/GlobalFeature.cpp" bodystart="7" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_global_feature_1a355fe3fc573a603139538394c5404832" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GlobalFeature::~GlobalFeature</definition>
+        <argsstring>(void)</argsstring>
+        <name>~GlobalFeature</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="28" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/GlobalFeature.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_global_feature_1a5f69ca2455d5eec4493dbf115d00d5c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const string &amp; GlobalFeature::GetName</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetName</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Name getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Name of the current feature extraction procedure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="40" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/GlobalFeature.cpp" bodystart="53" bodyend="56"/>
+        <references refid="class_global_feature_1abee52be830de272bd27685083bf28aae" compoundref="_global_feature_8h" startline="66">name_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_global_feature_1ad07a3104192b50d911eee634a0be009d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double GlobalFeature::GetProcTime</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetProcTime</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Process time getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Processing time of the current feature extraction method. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="52" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/GlobalFeature.cpp" bodystart="63" bodyend="66"/>
+        <references refid="class_global_feature_1aa3306975b929f5503dac51829f9e04a0" compoundref="_global_feature_8h" startline="69">procTime_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_global_feature_1a6724c19006d495bd6a9c8c6029236ebc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const string &amp; GlobalFeature::GetType</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetType</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Type getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Type of the current feature extraction procedure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="46" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/GlobalFeature.cpp" bodystart="58" bodyend="61"/>
+        <references refid="class_global_feature_1ad467857c4bc3d0fe65ba29e3b8f7c796" compoundref="_global_feature_8h" startline="67">type_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_thread_1a8f33f7750321d5df9188033e7e3e300d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * Thread::Join</definition>
+        <argsstring>(void)</argsstring>
+        <name>Join</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="43" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="93" bodyend="100"/>
+        <references refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" compoundref="_exception_descriptor_8h" startline="56">ExceptionError</references>
+        <references refid="class_thread_1a56c923629f0131b37a2b8c1f74a1e2b0" compoundref="_thread_8h" startline="68">Thread::result_</references>
+        <references refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" compoundref="_thread_8h" startline="64">Thread::threadID_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_global_feature_1a3c58d995fb2440b28db3b21b54b94815" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GlobalFeature::SetFrame</definition>
+        <argsstring>(const cv::Mat &amp;frame)</argsstring>
+        <name>SetFrame</name>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>Connects a frame to the feature extractor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter for the current frame. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="34" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/GlobalFeature.cpp" bodystart="18" bodyend="21"/>
+        <references refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" compoundref="_global_feature_8h" startline="68">frame_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Thread::Start</definition>
+        <argsstring>(void)</argsstring>
+        <name>Start</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Starts the thread. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/Thread.h" line="40" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Thread.cpp" bodystart="47" bodyend="90"/>
+        <references refid="class_thread_1a2b6b46b7eb56cffef7d0722649956c5d" compoundref="_thread_8h" startline="65">Thread::detached_</references>
+        <references refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" compoundref="_exception_descriptor_8h" startline="56">ExceptionError</references>
+        <references refid="class_thread_1a4e2c7c71f666a7c4404f8fc03a57f2d7" compoundref="_thread_8h" startline="67">Thread::runnable_</references>
+        <references refid="class_thread_1a9698abb1d7e2aed626b1963635455840" compoundref="_thread_8cpp" startline="36" endline="45">Thread::StartThread</references>
+        <references refid="class_thread_1a215c9e3a0965e061e7d36aa5adfe4791" compoundref="_thread_8cpp" startline="25" endline="34">Thread::StartThreadRunnable</references>
+        <references refid="class_thread_1a2fbeb3f285f074698a3323bfdd7e5d2a" compoundref="_thread_8h" startline="66">Thread::threadAttribute_</references>
+        <references refid="class_thread_1a8a7056f4641e224b016506ec0fc1078b" compoundref="_thread_8h" startline="64">Thread::threadID_</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_global_feature_1acea1ee12c177894819ea7ae0f6294e5c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void GlobalFeature::DrawFeatures</definition>
+        <argsstring>(void)</argsstring>
+        <name>DrawFeatures</name>
+        <reimplementedby refid="class_star_feature_1a6bb4f1e6808f0043707eb3c0bff1e33d">DrawFeatures</reimplementedby>
+        <reimplementedby refid="class_mser_feature_1abed40317b412e0046df5772367d4f3dc">DrawFeatures</reimplementedby>
+        <reimplementedby refid="class_surf_feature_1a2f036e794ebd63cd024dbf547765442f">DrawFeatures</reimplementedby>
+        <reimplementedby refid="class_sift_feature_1ae82e144ac3fed861dc0770cefaa828a6">DrawFeatures</reimplementedby>
+        <reimplementedby refid="class_orb_feature_1a907fdd9790d0295f129f1ecdc4382031">DrawFeatures</reimplementedby>
+        <reimplementedby refid="class_fast_feature_1a765f433c231d5f0d088beeaa77aa0e7a">DrawFeatures</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Virtual method for drawing the extracted features. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="64"/>
+        <referencedby refid="class_global_feature_1a03df7e2408a60e20a62468652c17d615" compoundref="_global_feature_8cpp" startline="23" endline="36">Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_global_feature_1aa48133762d9f52a5c2ae5042f6ebbe71" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void GlobalFeature::LoadSettingsFromFileStorage</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoadSettingsFromFileStorage</name>
+        <reimplementedby refid="class_star_feature_1a0a46cb80a6a4d45e324757b4ef679e81">LoadSettingsFromFileStorage</reimplementedby>
+        <reimplementedby refid="class_mser_feature_1ae6c9bca2395a33ecac78a46e9c331979">LoadSettingsFromFileStorage</reimplementedby>
+        <reimplementedby refid="class_surf_feature_1a3717dc5d5cffd77f4f31c5ac81cd391a">LoadSettingsFromFileStorage</reimplementedby>
+        <reimplementedby refid="class_sift_feature_1af19316d789598f612ee150deb2ee5137">LoadSettingsFromFileStorage</reimplementedby>
+        <reimplementedby refid="class_orb_feature_1aa13ad1fbc5869dcabb55611e5c206ebd">LoadSettingsFromFileStorage</reimplementedby>
+        <reimplementedby refid="class_fast_feature_1a341ffc5bd43e0ee09fda3fe6f825acba">LoadSettingsFromFileStorage</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Virtual method for loading algorithm specific settings from the given storage. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_global_feature_1a9fdfc934c5a9da6962ec39c1b0cf32dc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void GlobalFeature::Process</definition>
+        <argsstring>(void)</argsstring>
+        <name>Process</name>
+        <reimplementedby refid="class_star_feature_1adb169936e9f60620b81894b48764a801">Process</reimplementedby>
+        <reimplementedby refid="class_mser_feature_1ad96a1235b0c0df21e68c5a2742debacb">Process</reimplementedby>
+        <reimplementedby refid="class_surf_feature_1a965b300a64e776f48c1fe1564f4c4269">Process</reimplementedby>
+        <reimplementedby refid="class_sift_feature_1a73513198ca8ff4e56be059521cfb60f5">Process</reimplementedby>
+        <reimplementedby refid="class_orb_feature_1af814e3440b61e6bf13b44ef8886ad2d0">Process</reimplementedby>
+        <reimplementedby refid="class_fast_feature_1a4bbf87c97bd86bf44d4c021b053a7e66">Process</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Virtual method for each feature extraction algorithm. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="61"/>
+        <referencedby refid="class_global_feature_1a03df7e2408a60e20a62468652c17d615" compoundref="_global_feature_8cpp" startline="23" endline="36">Run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_global_feature_1a03df7e2408a60e20a62468652c17d615" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * GlobalFeature::Run</definition>
+        <argsstring>(void)</argsstring>
+        <name>Run</name>
+        <reimplements refid="class_thread_1ae46cda1b57e998b239a8b9710b0712e2">Run</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Implemented virtual method for the algorithm. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_thread_1ae46cda1b57e998b239a8b9710b0712e2" kindref="member">Thread::Run()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="76" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/GlobalFeature.cpp" bodystart="23" bodyend="36"/>
+        <references refid="class_global_feature_1acea1ee12c177894819ea7ae0f6294e5c">DrawFeatures</references>
+        <references refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" compoundref="_global_feature_8h" startline="68">frame_</references>
+        <references refid="class_global_feature_1a9fdfc934c5a9da6962ec39c1b0cf32dc">Process</references>
+        <references refid="class_global_feature_1aa3306975b929f5503dac51829f9e04a0" compoundref="_global_feature_8h" startline="69">procTime_</references>
+        <references refid="class_global_feature_1aae5833316f46595edaf6dd635e391d4e" compoundref="_global_feature_8cpp" startline="39" endline="50">Visualize</references>
+      </memberdef>
+      <memberdef kind="function" id="class_global_feature_1aae5833316f46595edaf6dd635e391d4e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GlobalFeature::Visualize</definition>
+        <argsstring>(void)</argsstring>
+        <name>Visualize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Visualizing the output of feature extractor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyPointsCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of the detected keypoints. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="82" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/GlobalFeature.cpp" bodystart="39" bodyend="50"/>
+        <references refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" compoundref="_global_feature_8h" startline="68">frame_</references>
+        <references refid="class_global_feature_1a72cc606c0090a64718a7e92bca7520b9" compoundref="_global_feature_8h" startline="54">keyPoints</references>
+        <references refid="class_global_feature_1abee52be830de272bd27685083bf28aae" compoundref="_global_feature_8h" startline="66">name_</references>
+        <references refid="class_global_feature_1aa3306975b929f5503dac51829f9e04a0" compoundref="_global_feature_8h" startline="69">procTime_</references>
+        <references refid="_visualizer_8h_1a1ceb952bd02330e3ec62c186672d8a78" compoundref="_visualizer_8h" startline="8">VisualizerPtr</references>
+        <referencedby refid="class_global_feature_1a03df7e2408a60e20a62468652c17d615" compoundref="_global_feature_8cpp" startline="23" endline="36">Run</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract class for global feature extraction. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="101">
+        <label>StarFeature</label>
+        <link refid="class_star_feature"/>
+        <childnode refid="95" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>SurfFeature</label>
+        <link refid="class_surf_feature"/>
+        <childnode refid="95" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>SiftFeature</label>
+        <link refid="class_sift_feature"/>
+        <childnode refid="95" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>OrbFeature</label>
+        <link refid="class_orb_feature"/>
+        <childnode refid="95" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>FastFeature</label>
+        <link refid="class_fast_feature"/>
+        <childnode refid="95" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>GlobalFeature</label>
+        <link refid="class_global_feature"/>
+        <childnode refid="96" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>MserFeature</label>
+        <link refid="class_mser_feature"/>
+        <childnode refid="95" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>Thread</label>
+        <link refid="class_thread"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="103">
+        <label>GlobalFeature</label>
+        <link refid="class_global_feature"/>
+        <childnode refid="104" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>Thread</label>
+        <link refid="class_thread"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" line="18" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h" bodystart="17" bodyend="83"/>
+    <listofallmembers>
+      <member refid="class_global_feature_1acea1ee12c177894819ea7ae0f6294e5c" prot="protected" virt="virtual"><scope>GlobalFeature</scope><name>DrawFeatures</name></member>
+      <member refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" prot="protected" virt="non-virtual"><scope>GlobalFeature</scope><name>frame_</name></member>
+      <member refid="class_global_feature_1a5f69ca2455d5eec4493dbf115d00d5c9" prot="public" virt="non-virtual"><scope>GlobalFeature</scope><name>GetName</name></member>
+      <member refid="class_global_feature_1ad07a3104192b50d911eee634a0be009d" prot="public" virt="non-virtual"><scope>GlobalFeature</scope><name>GetProcTime</name></member>
+      <member refid="class_global_feature_1a6724c19006d495bd6a9c8c6029236ebc" prot="public" virt="non-virtual"><scope>GlobalFeature</scope><name>GetType</name></member>
+      <member refid="class_global_feature_1a835e42ce3c2d6b39189a0f2bc24afc9c" prot="public" virt="non-virtual"><scope>GlobalFeature</scope><name>GlobalFeature</name></member>
+      <member refid="class_thread_1a8f33f7750321d5df9188033e7e3e300d" prot="public" virt="non-virtual"><scope>GlobalFeature</scope><name>Join</name></member>
+      <member refid="class_global_feature_1a72cc606c0090a64718a7e92bca7520b9" prot="public" virt="non-virtual"><scope>GlobalFeature</scope><name>keyPoints</name></member>
+      <member refid="class_global_feature_1aa48133762d9f52a5c2ae5042f6ebbe71" prot="protected" virt="virtual"><scope>GlobalFeature</scope><name>LoadSettingsFromFileStorage</name></member>
+      <member refid="class_global_feature_1abee52be830de272bd27685083bf28aae" prot="protected" virt="non-virtual"><scope>GlobalFeature</scope><name>name_</name></member>
+      <member refid="class_global_feature_1a9fdfc934c5a9da6962ec39c1b0cf32dc" prot="protected" virt="virtual"><scope>GlobalFeature</scope><name>Process</name></member>
+      <member refid="class_global_feature_1aa3306975b929f5503dac51829f9e04a0" prot="protected" virt="non-virtual"><scope>GlobalFeature</scope><name>procTime_</name></member>
+      <member refid="class_global_feature_1a03df7e2408a60e20a62468652c17d615" prot="private" virt="virtual"><scope>GlobalFeature</scope><name>Run</name></member>
+      <member refid="class_global_feature_1a3c58d995fb2440b28db3b21b54b94815" prot="public" virt="non-virtual"><scope>GlobalFeature</scope><name>SetFrame</name></member>
+      <member refid="class_thread_1a2b42f82341afd2747ea093b6ac8b91cb" prot="public" virt="non-virtual"><scope>GlobalFeature</scope><name>Start</name></member>
+      <member refid="class_thread_1a027b9eb38e4d59c076501b305b42f575" prot="public" virt="non-virtual"><scope>GlobalFeature</scope><name>Thread</name></member>
+      <member refid="class_thread_1a403714feecd93ac10c101a47b7649204" prot="public" virt="non-virtual"><scope>GlobalFeature</scope><name>Thread</name></member>
+      <member refid="class_global_feature_1ad467857c4bc3d0fe65ba29e3b8f7c796" prot="protected" virt="non-virtual"><scope>GlobalFeature</scope><name>type_</name></member>
+      <member refid="class_global_feature_1aae5833316f46595edaf6dd635e391d4e" prot="private" virt="non-virtual"><scope>GlobalFeature</scope><name>Visualize</name></member>
+      <member refid="class_global_feature_1a355fe3fc573a603139538394c5404832" prot="public" virt="non-virtual"><scope>GlobalFeature</scope><name>~GlobalFeature</name></member>
+      <member refid="class_thread_1af1e25588ebe47a2a6d79ef8c686a992b" prot="public" virt="virtual"><scope>GlobalFeature</scope><name>~Thread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

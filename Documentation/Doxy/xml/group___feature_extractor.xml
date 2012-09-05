@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="group___feature_extractor" kind="group">
+    <compoundname>FeatureExtractor</compoundname>
+    <title>FeatureExtractor module.</title>
+    <innerclass refid="class_fast_feature" prot="public">FastFeature</innerclass>
+    <innerclass refid="class_global_feature" prot="public">GlobalFeature</innerclass>
+    <innerclass refid="class_lbp_feature" prot="public">LbpFeature</innerclass>
+    <innerclass refid="class_local_feature" prot="public">LocalFeature</innerclass>
+    <innerclass refid="class_mser_feature" prot="public">MserFeature</innerclass>
+    <innerclass refid="class_orb_feature" prot="public">OrbFeature</innerclass>
+    <innerclass refid="class_sift_feature" prot="public">SiftFeature</innerclass>
+    <innerclass refid="class_star_feature" prot="public">StarFeature</innerclass>
+    <innerclass refid="class_surf_feature" prot="public">SurfFeature</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

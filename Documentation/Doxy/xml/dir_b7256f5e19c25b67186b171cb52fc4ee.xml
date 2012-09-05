@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="dir_b7256f5e19c25b67186b171cb52fc4ee" kind="dir">
+    <compoundname>ObjectRecognition/src</compoundname>
+    <innerfile refid="_huro_algorithm_8cpp">HuroAlgorithm.cpp</innerfile>
+    <innerfile refid="_main_8cpp">Main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/ObjectRecognition/src/"/>
+  </compounddef>
+</doxygen>
