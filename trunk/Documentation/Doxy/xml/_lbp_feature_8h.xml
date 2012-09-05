@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_lbp_feature_8h" kind="file">
+    <compoundname>LbpFeature.h</compoundname>
+    <includes refid="_local_feature_8h" local="yes">LocalFeature.h</includes>
+    <includedby refid="_lbp_feature_8cpp" local="yes">FeatureExtractor/src/LbpFeature.cpp</includedby>
+    <includedby refid="_huro_algorithm_8cpp" local="yes">ObjectRecognition/src/HuroAlgorithm.cpp</includedby>
+    <incdepgraph>
+      <node id="581">
+        <label>Runnable.h</label>
+        <link refid="_runnable_8h"/>
+      </node>
+      <node id="575">
+        <label>LocalFeature.h</label>
+        <link refid="_local_feature_8h"/>
+        <childnode refid="576" relation="include">
+        </childnode>
+        <childnode refid="577" relation="include">
+        </childnode>
+        <childnode refid="578" relation="include">
+        </childnode>
+      </node>
+      <node id="577">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="576">
+        <label>string</label>
+      </node>
+      <node id="580">
+        <label>pthread.h</label>
+      </node>
+      <node id="578">
+        <label>Thread.h</label>
+        <link refid="_thread_8h"/>
+        <childnode refid="579" relation="include">
+        </childnode>
+        <childnode refid="580" relation="include">
+        </childnode>
+        <childnode refid="581" relation="include">
+        </childnode>
+      </node>
+      <node id="574">
+        <label>FeatureExtractor/include/LbpFeature.h</label>
+        <link refid="LbpFeature.h"/>
+        <childnode refid="575" relation="include">
+        </childnode>
+      </node>
+      <node id="579">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="584">
+        <label>ObjectRecognition/src/HuroAlgorithm.cpp</label>
+        <link refid="_huro_algorithm_8cpp"/>
+      </node>
+      <node id="582">
+        <label>FeatureExtractor/include/LbpFeature.h</label>
+        <link refid="LbpFeature.h"/>
+        <childnode refid="583" relation="include">
+        </childnode>
+        <childnode refid="584" relation="include">
+        </childnode>
+      </node>
+      <node id="583">
+        <label>FeatureExtractor/src/LbpFeature.cpp</label>
+        <link refid="_lbp_feature_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_lbp_feature" prot="public">LbpFeature</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_local_feature_8h" kindref="compound">LocalFeature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"></codeline>
+<codeline lineno="14" refid="class_lbp_feature" refkind="compound"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C++&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="keyword">__declspec(dllexport)</highlight><highlight class="normal"><sp/><ref refid="class_lbp_feature" kindref="compound" tooltip="Class for extracting LBP features.">LbpFeature</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_local_feature" kindref="compound" tooltip="Abstract class for local feature extraction.">LocalFeature</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_lbp_feature_1a52b160f5fa16bc1ea0c489a744ed554f" kindref="member" tooltip="Constructor.">LbpFeature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>type);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_lbp_feature_1a40826a6cc5bc5f1de7edf8b05092052b" kindref="member" tooltip="Destructor.">~LbpFeature</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lbp_feature_1a39ac99c8b8537ac9d104ae4368177071" kindref="member" tooltip="Implemented virtual method for loading algorithm specific settings from the given storage...">LoadSettingsFromFileStorage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lbp_feature_1af664c189044d32f2cb71b334deb6f0c7" kindref="member" tooltip="Implemented virtual method for the algorithm.">Process</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lbp_feature_1a773b1c3fd663f58b01f1ba33a897744f" kindref="member" tooltip="Initalizing the variables.">ProcessInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lbp_feature_1aa29955bd43f95dcac63aa7840fcd1925" kindref="member" tooltip="Generate feature vector with using uniform patterns.">ProcessWithUniformPatterns</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lbp_feature_1a96e42213e77e729c263236db12453bde" kindref="member" tooltip="Generate feature vector without using uniform patterns.">ProcessWithoutUniformPatterns</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lbp_feature_1a152c1785ca51eb7e5878c0d3f9309697" kindref="member" tooltip="Implemented virtual method for displaying the output.">DrawFeatures</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_lbp_feature_1ab2bdc329e16e4126eccbbe4b8d4d44f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>cv::Mat<sp/><ref refid="class_lbp_feature_1ab2bdc329e16e4126eccbbe4b8d4d44f5" kindref="member">grayFrame_</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_lbp_feature_1a6025f411377d4b6e56aa9eb5daff07e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_lbp_feature_1a6025f411377d4b6e56aa9eb5daff07e8" kindref="member">useUniformPatterns_</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LbpFeature.h"/>
+  </compounddef>
+</doxygen>

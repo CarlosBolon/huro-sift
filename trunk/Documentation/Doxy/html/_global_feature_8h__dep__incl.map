@@ -1,0 +1,16 @@
+<map id="FeatureExtractor/include/GlobalFeature.h" name="FeatureExtractor/include/GlobalFeature.h">
+<area shape="rect" id="node3" href="$_fast_feature_8h.html" title="FeatureExtractor/include\l/FastFeature.h" alt="" coords="25,97,188,138"/>
+<area shape="rect" id="node9" href="$_mser_feature_8h.html" title="FeatureExtractor/include\l/MserFeature.h" alt="" coords="213,97,376,138"/>
+<area shape="rect" id="node14" href="$_orb_feature_8h.html" title="FeatureExtractor/include\l/OrbFeature.h" alt="" coords="401,97,564,138"/>
+<area shape="rect" id="node19" href="$_sift_feature_8h.html" title="FeatureExtractor/include\l/SiftFeature.h" alt="" coords="589,97,752,138"/>
+<area shape="rect" id="node24" href="$_star_feature_8h.html" title="FeatureExtractor/include\l/StarFeature.h" alt="" coords="777,97,940,138"/>
+<area shape="rect" id="node29" href="$_surf_feature_8h.html" title="FeatureExtractor/include\l/SurfFeature.h" alt="" coords="965,97,1128,138"/>
+<area shape="rect" id="node34" href="$_global_feature_8cpp.html" title="FeatureExtractor/src\l/GlobalFeature.cpp" alt="" coords="1153,97,1295,138"/>
+<area shape="rect" id="node5" href="$_fast_feature_8cpp.html" title="FeatureExtractor/src\l/FastFeature.cpp" alt="" coords="5,187,147,229"/>
+<area shape="rect" id="node7" href="$_huro_algorithm_8cpp.html" title="ObjectRecognition/src\l/HuroAlgorithm.cpp" alt="" coords="502,187,652,229"/>
+<area shape="rect" id="node11" href="$_mser_feature_8cpp.html" title="FeatureExtractor/src\l/MserFeature.cpp" alt="" coords="171,187,312,229"/>
+<area shape="rect" id="node16" href="$_orb_feature_8cpp.html" title="FeatureExtractor/src\l/OrbFeature.cpp" alt="" coords="336,187,477,229"/>
+<area shape="rect" id="node21" href="$_sift_feature_8cpp.html" title="FeatureExtractor/src\l/SiftFeature.cpp" alt="" coords="677,187,819,229"/>
+<area shape="rect" id="node26" href="$_star_feature_8cpp.html" title="FeatureExtractor/src\l/StarFeature.cpp" alt="" coords="843,187,984,229"/>
+<area shape="rect" id="node31" href="$_surf_feature_8cpp.html" title="FeatureExtractor/src\l/SurfFeature.cpp" alt="" coords="1008,187,1149,229"/>
+</map>

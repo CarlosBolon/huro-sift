@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_local_feature_8h" kind="file">
+    <compoundname>LocalFeature.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="yes">opencv2/opencv.hpp</includes>
+    <includes refid="_thread_8h" local="yes">Thread.h</includes>
+    <includedby refid="_lbp_feature_8h" local="yes">FeatureExtractor/include/LbpFeature.h</includedby>
+    <includedby refid="_local_feature_8cpp" local="yes">FeatureExtractor/src/LocalFeature.cpp</includedby>
+    <incdepgraph>
+      <node id="591">
+        <label>Runnable.h</label>
+        <link refid="_runnable_8h"/>
+      </node>
+      <node id="585">
+        <label>FeatureExtractor/include/LocalFeature.h</label>
+        <link refid="LocalFeature.h"/>
+        <childnode refid="586" relation="include">
+        </childnode>
+        <childnode refid="587" relation="include">
+        </childnode>
+        <childnode refid="588" relation="include">
+        </childnode>
+      </node>
+      <node id="587">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="586">
+        <label>string</label>
+      </node>
+      <node id="590">
+        <label>pthread.h</label>
+      </node>
+      <node id="588">
+        <label>Thread.h</label>
+        <link refid="_thread_8h"/>
+        <childnode refid="589" relation="include">
+        </childnode>
+        <childnode refid="590" relation="include">
+        </childnode>
+        <childnode refid="591" relation="include">
+        </childnode>
+      </node>
+      <node id="589">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="592">
+        <label>FeatureExtractor/include/LocalFeature.h</label>
+        <link refid="LocalFeature.h"/>
+        <childnode refid="593" relation="include">
+        </childnode>
+        <childnode refid="596" relation="include">
+        </childnode>
+      </node>
+      <node id="596">
+        <label>FeatureExtractor/src/LocalFeature.cpp</label>
+        <link refid="_local_feature_8cpp"/>
+      </node>
+      <node id="595">
+        <label>ObjectRecognition/src/HuroAlgorithm.cpp</label>
+        <link refid="_huro_algorithm_8cpp"/>
+      </node>
+      <node id="593">
+        <label>FeatureExtractor/include/LbpFeature.h</label>
+        <link refid="_lbp_feature_8h"/>
+        <childnode refid="594" relation="include">
+        </childnode>
+        <childnode refid="595" relation="include">
+        </childnode>
+      </node>
+      <node id="594">
+        <label>FeatureExtractor/src/LbpFeature.cpp</label>
+        <link refid="_lbp_feature_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_local_feature" prot="public">LocalFeature</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;opencv2/opencv.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_thread_8h" kindref="compound">Thread.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"></codeline>
+<codeline lineno="17" refid="class_local_feature" refkind="compound"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C++&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="keyword">__declspec(dllexport)</highlight><highlight class="normal"><sp/><ref refid="class_local_feature" kindref="compound" tooltip="Abstract class for local feature extraction.">LocalFeature</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_thread" kindref="compound" tooltip="Abstract class for handling threads.">Thread</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_local_feature_1abc8f5b5d4088fd28be45cfd6b3d86cd5" kindref="member" tooltip="Constructor.">LocalFeature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>type);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_local_feature_1a457aceba33c8ef0f0ccaf4db8c679545" kindref="member" tooltip="Destructor.">~LocalFeature</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_local_feature_1aee5c4e09e373308e7f50bfaffd8e2267" kindref="member" tooltip="Connects a frame to the feature extractor.">SetFrame</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cv::Mat&amp;<sp/>frame);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="class_local_feature_1ab2ecc77360b2fa1400f29298a8e1b751" kindref="member" tooltip="Name getter.">GetName</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="class_local_feature_1aba5fb3207f97ae73dc3cab7572baf85e" kindref="member" tooltip="Type getter.">GetType</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_local_feature_1a46f41fabf78e63d9e9c93cbaadf652a1" kindref="member" tooltip="Process time getter.">GetProcTime</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_local_feature_1a8197cec0d029bac380885167df9f65e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_local_feature_1a8197cec0d029bac380885167df9f65e5" kindref="member" tooltip="Stores local features.">features</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_local_feature_1a9280742c803d38c984121a33cdd67723" kindref="member" tooltip="Virtual method for loading algorithm specific settings from the given storage.">LoadSettingsFromFileStorage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_local_feature_1a2f5b230fd63be9c1dcceb51361bc6ee1" kindref="member" tooltip="Virtual method for each feature extraction algorithm.">Process</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_local_feature_1a2b2cdc0b1be48785e967a87c268ee27e" kindref="member" tooltip="Virtual method for initalizing the variables.">ProcessInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_local_feature_1a329c560d8f02a4ab390716319410deab" kindref="member" tooltip="Virtual method for drawing the extracted features.">DrawFeatures</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="class_local_feature_1a0e73ef0aed82c04f06b6eeb9a9b9be8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_local_feature_1a0e73ef0aed82c04f06b6eeb9a9b9be8b" kindref="member" tooltip="Name of the current feature extraction procedure.">name_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="class_local_feature_1aaf3aef30088cd1be80e1770d0a9d945b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_local_feature_1aaf3aef30088cd1be80e1770d0a9d945b" kindref="member" tooltip="Type of the current feature extraction procedure.">type_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="class_local_feature_1a585b0dc6e6184422c5563e80bff50ffa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Mat<sp/><ref refid="class_local_feature_1a585b0dc6e6184422c5563e80bff50ffa" kindref="member" tooltip="The current frame.">frame_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="class_local_feature_1a1c7b8087feb05f02b09eb1b536d443e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>cv::Mat<sp/><ref refid="class_local_feature_1a1c7b8087feb05f02b09eb1b536d443e6" kindref="member" tooltip="The current frame.">outputFrame_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="class_local_feature_1a79d60ce90ab8e6ccd66ff8f7da2365c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_local_feature_1a79d60ce90ab8e6ccd66ff8f7da2365c7" kindref="member" tooltip="Processing time of the current feature extraction method.">procTime_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="class_local_feature_1ad415c0f9a207eb30cedfb750d62731cf" kindref="member" tooltip="Implemented virtual method for the algorithm.">Run</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_local_feature_1ab39886debe485d200a73b8c8d500544b" kindref="member" tooltip="Visualizing the output of feature extractor.">Visualize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/LocalFeature.h"/>
+  </compounddef>
+</doxygen>

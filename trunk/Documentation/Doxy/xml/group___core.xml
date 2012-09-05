@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="group___core" kind="group">
+    <compoundname>Core</compoundname>
+    <title>Core module.</title>
+    <innerclass refid="class_exception_descriptor" prot="public">ExceptionDescriptor</innerclass>
+    <innerclass refid="class_image_frame" prot="public">ImageFrame</innerclass>
+    <innerclass refid="class_local_settings" prot="public">LocalSettings</innerclass>
+    <innerclass refid="class_mutex" prot="public">Mutex</innerclass>
+    <innerclass refid="class_runnable" prot="public">Runnable</innerclass>
+    <innerclass refid="class_thread" prot="public">Thread</innerclass>
+    <innerclass refid="class_visualizer" prot="public">Visualizer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

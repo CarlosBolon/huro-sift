@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_mser_feature_8h" kind="file">
+    <compoundname>MserFeature.h</compoundname>
+    <includes refid="_global_feature_8h" local="yes">GlobalFeature.h</includes>
+    <includedby refid="_mser_feature_8cpp" local="yes">FeatureExtractor/src/MserFeature.cpp</includedby>
+    <includedby refid="_huro_algorithm_8cpp" local="yes">ObjectRecognition/src/HuroAlgorithm.cpp</includedby>
+    <incdepgraph>
+      <node id="604">
+        <label>Runnable.h</label>
+        <link refid="_runnable_8h"/>
+      </node>
+      <node id="597">
+        <label>FeatureExtractor/include/MserFeature.h</label>
+        <link refid="MserFeature.h"/>
+        <childnode refid="598" relation="include">
+        </childnode>
+      </node>
+      <node id="600">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="599">
+        <label>string</label>
+      </node>
+      <node id="598">
+        <label>GlobalFeature.h</label>
+        <link refid="_global_feature_8h"/>
+        <childnode refid="599" relation="include">
+        </childnode>
+        <childnode refid="600" relation="include">
+        </childnode>
+        <childnode refid="601" relation="include">
+        </childnode>
+      </node>
+      <node id="603">
+        <label>pthread.h</label>
+      </node>
+      <node id="601">
+        <label>Thread.h</label>
+        <link refid="_thread_8h"/>
+        <childnode refid="602" relation="include">
+        </childnode>
+        <childnode refid="603" relation="include">
+        </childnode>
+        <childnode refid="604" relation="include">
+        </childnode>
+      </node>
+      <node id="602">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="605">
+        <label>FeatureExtractor/include/MserFeature.h</label>
+        <link refid="MserFeature.h"/>
+        <childnode refid="606" relation="include">
+        </childnode>
+        <childnode refid="607" relation="include">
+        </childnode>
+      </node>
+      <node id="607">
+        <label>ObjectRecognition/src/HuroAlgorithm.cpp</label>
+        <link refid="_huro_algorithm_8cpp"/>
+      </node>
+      <node id="606">
+        <label>FeatureExtractor/src/MserFeature.cpp</label>
+        <link refid="_mser_feature_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_mser_feature" prot="public">MserFeature</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_global_feature_8h" kindref="compound">GlobalFeature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"></codeline>
+<codeline lineno="12" refid="class_mser_feature" refkind="compound"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C++&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="keyword">__declspec(dllexport)</highlight><highlight class="normal"><sp/><ref refid="class_mser_feature" kindref="compound" tooltip="Class for extracting MSER features.">MserFeature</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_global_feature" kindref="compound" tooltip="Abstract class for global feature extraction.">GlobalFeature</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mser_feature_1ae82ba666f45d0f4d88be995ae5b6209c" kindref="member" tooltip="Constructor.">MserFeature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>type);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mser_feature_1a4cf98957c8813b3ec26641ded124340d" kindref="member" tooltip="Destructor.">~MserFeature</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mser_feature_1ae6c9bca2395a33ecac78a46e9c331979" kindref="member" tooltip="Implemented virtual method for loading algorithm specific settings from the given storage...">LoadSettingsFromFileStorage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mser_feature_1ad96a1235b0c0df21e68c5a2742debacb" kindref="member" tooltip="Implemented virtual method for the algorithm.">Process</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mser_feature_1abed40317b412e0046df5772367d4f3dc" kindref="member" tooltip="Implemented virtual method for displaying the output.">DrawFeatures</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_mser_feature_1a4e7332139a72f3591cbc2e02e7f67748" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::MserFeatureDetector*<sp/><ref refid="class_mser_feature_1a4e7332139a72f3591cbc2e02e7f67748" kindref="member" tooltip="Wrapped OpenCV MSER object.">mserDetector_</ref>;<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_mser_feature_1a55dae2de52e614532d2243ca113fb3fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mser_feature_1a55dae2de52e614532d2243ca113fb3fb" kindref="member" tooltip="Delta in the code, it compares (size_{i} - size_{i - delta}) / size_{i - delta}.">delta_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="class_mser_feature_1a556156bf90c6cff20f7451134dc5c9f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mser_feature_1a556156bf90c6cff20f7451134dc5c9f3" kindref="member" tooltip="Prune the area which smaller than minArea.">minArea_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="class_mser_feature_1a74d77b8596474323f1c4581ddf1d7fa2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mser_feature_1a74d77b8596474323f1c4581ddf1d7fa2" kindref="member" tooltip="Prune the area which bigger than maxArea.">maxArea_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="class_mser_feature_1a9353f0657019b0177c8ce65c00d826f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mser_feature_1a9353f0657019b0177c8ce65c00d826f4" kindref="member" tooltip="Prune the area have simliar size to its children.">maxVariation_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="class_mser_feature_1a7f7fe51c62b96bcc83f51e73e0d59a94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mser_feature_1a7f7fe51c62b96bcc83f51e73e0d59a94" kindref="member" tooltip="Trace back to cut off mser with diversity &amp;lt; min_diversity.">minDiversity_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>next<sp/>few<sp/>params<sp/>for<sp/>MSER<sp/>of<sp/>color<sp/>image:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_mser_feature_1a135d54a9a46522e800ef26ecfb8f18be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mser_feature_1a135d54a9a46522e800ef26ecfb8f18be" kindref="member" tooltip="For color image, the evolution steps.">maxEvolution_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="class_mser_feature_1ade4ed6ec57dbfefd1a263fa29419e54d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mser_feature_1ade4ed6ec57dbfefd1a263fa29419e54d" kindref="member" tooltip="The area threshold to cause re-initialize.">areaThreshold_</ref>;<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_mser_feature_1a6bc22c26631b87ff8787244da9d1eca2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mser_feature_1a6bc22c26631b87ff8787244da9d1eca2" kindref="member" tooltip="Ignore too small margin.">minMargin_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="class_mser_feature_1a1850b5af2915831475ef9d776e8a72ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mser_feature_1a1850b5af2915831475ef9d776e8a72ea" kindref="member" tooltip="The aperture size for edge blur.">edgeBlurSize_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/MserFeature.h"/>
+  </compounddef>
+</doxygen>
