@@ -44,5 +44,5 @@ void SiftFeature::Process(void)
 
 void SiftFeature::DrawFeatures(void)
 {
-	drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT); 
+	drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT | DrawMatchesFlags::DRAW_RICH_KEYPOINTS); 
 }
