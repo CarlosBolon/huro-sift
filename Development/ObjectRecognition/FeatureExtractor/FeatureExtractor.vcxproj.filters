@@ -1,87 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{2cf4643c-a147-4f9c-a439-c6140f1ab85d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{8682ced4-333d-41eb-ae34-828c11bdd407}</UniqueIdentifier>
-    </Filter>
     <Filter Include="LocalFeatures">
       <UniqueIdentifier>{32143670-ec89-4672-9a1b-8760bd4a02cf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="LocalFeatures\Header Files">
-      <UniqueIdentifier>{c334b92e-1feb-4565-85ac-f85a8b695f9b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="LocalFeatures\Source Files">
-      <UniqueIdentifier>{c7ddc096-a154-498e-a37c-e24a439db506}</UniqueIdentifier>
     </Filter>
     <Filter Include="GlobalFeatures">
       <UniqueIdentifier>{7c69f93e-03d5-43f1-8c0b-536500ca8581}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GlobalFeatures\Header Files">
-      <UniqueIdentifier>{af17ea20-e672-4a5c-8b5a-2efbbf482a13}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GlobalFeatures\Source Files">
-      <UniqueIdentifier>{44c038d7-ad0f-451b-91a3-f322fb9bb985}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\SiftFeature.cpp">
-      <Filter>GlobalFeatures\Source Files</Filter>
+    <ClCompile Include="src\FastFeature.cpp">
+      <Filter>GlobalFeatures</Filter>
     </ClCompile>
     <ClCompile Include="src\SurfFeature.cpp">
-      <Filter>GlobalFeatures\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\OrbFeature.cpp">
-      <Filter>GlobalFeatures\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\StarFeature.cpp">
-      <Filter>GlobalFeatures\Source Files</Filter>
+      <Filter>GlobalFeatures</Filter>
     </ClCompile>
     <ClCompile Include="src\MserFeature.cpp">
-      <Filter>GlobalFeatures\Source Files</Filter>
+      <Filter>GlobalFeatures</Filter>
     </ClCompile>
-    <ClCompile Include="src\FastFeature.cpp">
-      <Filter>GlobalFeatures\Source Files</Filter>
+    <ClCompile Include="src\OrbFeature.cpp">
+      <Filter>GlobalFeatures</Filter>
     </ClCompile>
-    <ClCompile Include="src\GlobalFeature.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\SiftFeature.cpp">
+      <Filter>GlobalFeatures</Filter>
     </ClCompile>
-    <ClCompile Include="src\LocalFeature.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\StarFeature.cpp">
+      <Filter>GlobalFeatures</Filter>
     </ClCompile>
     <ClCompile Include="src\LbpFeature.cpp">
-      <Filter>LocalFeatures\Source Files</Filter>
+      <Filter>LocalFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GlobalFeature.cpp">
+      <Filter>GlobalFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LocalFeature.cpp">
+      <Filter>LocalFeatures</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\SiftFeature.h">
-      <Filter>GlobalFeatures\Header Files</Filter>
+    <ClInclude Include="include\FastFeature.h">
+      <Filter>GlobalFeatures</Filter>
     </ClInclude>
     <ClInclude Include="include\SurfFeature.h">
-      <Filter>GlobalFeatures\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\OrbFeature.h">
-      <Filter>GlobalFeatures\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\StarFeature.h">
-      <Filter>GlobalFeatures\Header Files</Filter>
+      <Filter>GlobalFeatures</Filter>
     </ClInclude>
     <ClInclude Include="include\MserFeature.h">
-      <Filter>GlobalFeatures\Header Files</Filter>
+      <Filter>GlobalFeatures</Filter>
     </ClInclude>
-    <ClInclude Include="include\FastFeature.h">
-      <Filter>GlobalFeatures\Header Files</Filter>
+    <ClInclude Include="include\OrbFeature.h">
+      <Filter>GlobalFeatures</Filter>
     </ClInclude>
-    <ClInclude Include="include\GlobalFeature.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\SiftFeature.h">
+      <Filter>GlobalFeatures</Filter>
     </ClInclude>
-    <ClInclude Include="include\LocalFeature.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\StarFeature.h">
+      <Filter>GlobalFeatures</Filter>
     </ClInclude>
     <ClInclude Include="include\LbpFeature.h">
-      <Filter>LocalFeatures\Header Files</Filter>
+      <Filter>LocalFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GlobalFeature.h">
+      <Filter>GlobalFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LocalFeature.h">
+      <Filter>LocalFeatures</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
