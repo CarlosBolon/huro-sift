@@ -7,90 +7,60 @@
     <Filter Include="Module">
       <UniqueIdentifier>{38e4660a-f94a-4f09-85f7-5801f9ed8b1a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ImageFrame\Header Files">
-      <UniqueIdentifier>{af465640-cc4d-4cb4-b5d2-e88b2b6fd74f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ImageFrame\Source Files">
-      <UniqueIdentifier>{c987f821-8370-4f70-80f6-6ffdbac759b1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Module\Header Files">
-      <UniqueIdentifier>{a365b1e9-e666-4172-ba5a-68062682c604}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Module\Source Files">
-      <UniqueIdentifier>{90906f4f-e299-41e9-b207-225b6f919555}</UniqueIdentifier>
-    </Filter>
     <Filter Include="LocalSettings">
       <UniqueIdentifier>{6fd6a24e-2fbc-4666-9b84-c048f5dd6b99}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="LocalSettings\Header Files">
-      <UniqueIdentifier>{d0ef9a3e-ee3c-4894-bd4d-20737acec1f6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="LocalSettings\Source Files">
-      <UniqueIdentifier>{9705aedd-94fc-4082-93fa-a455bea9b220}</UniqueIdentifier>
     </Filter>
     <Filter Include="ExceptionDescriptor">
       <UniqueIdentifier>{824604ca-eaf3-45c1-bddd-4ede2bccd5a7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ExceptionDescriptor\Header Files">
-      <UniqueIdentifier>{3e85fe93-9a89-49f2-8f38-18b35e742b69}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ExceptionDescriptor\Source Files">
-      <UniqueIdentifier>{c05eaacf-3535-41a4-90d3-837445321131}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Visualizer">
       <UniqueIdentifier>{30cca684-3a31-431e-9d99-3c350f899fe4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Visualizer\Header Files">
-      <UniqueIdentifier>{764d108a-8371-4bc0-bb26-045ec10cfcf2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Visualizer\Source Files">
-      <UniqueIdentifier>{96565bb5-71cf-4205-b363-ba8d7ea0ce10}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\LocalSettings.h">
-      <Filter>LocalSettings\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Thread.h">
-      <Filter>Module\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Runnable.h">
-      <Filter>Module\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\ExceptionDescriptor.h">
-      <Filter>ExceptionDescriptor\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Mutex.h">
-      <Filter>Module\Header Files</Filter>
+      <Filter>ExceptionDescriptor</Filter>
     </ClInclude>
     <ClInclude Include="include\ImageFrame.h">
-      <Filter>ImageFrame\Header Files</Filter>
+      <Filter>ImageFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LocalSettings.h">
+      <Filter>LocalSettings</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Mutex.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Thread.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Runnable.h">
+      <Filter>Module</Filter>
     </ClInclude>
     <ClInclude Include="include\Visualizer.h">
-      <Filter>Visualizer\Header Files</Filter>
+      <Filter>Visualizer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\LocalSettings.cpp">
-      <Filter>LocalSettings\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Thread.cpp">
-      <Filter>Module\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Runnable.cpp">
-      <Filter>Module\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\ExceptionDescriptor.cpp">
-      <Filter>ExceptionDescriptor\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Mutex.cpp">
-      <Filter>Module\Source Files</Filter>
+      <Filter>ExceptionDescriptor</Filter>
     </ClCompile>
     <ClCompile Include="src\ImageFrame.cpp">
-      <Filter>ImageFrame\Source Files</Filter>
+      <Filter>ImageFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LocalSettings.cpp">
+      <Filter>LocalSettings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mutex.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Thread.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Runnable.cpp">
+      <Filter>Module</Filter>
     </ClCompile>
     <ClCompile Include="src\Visualizer.cpp">
-      <Filter>Visualizer\Source Files</Filter>
+      <Filter>Visualizer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
