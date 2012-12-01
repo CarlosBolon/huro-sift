@@ -62,6 +62,7 @@ public:
     double GetProcTime(void);
 
     std::vector<cv::KeyPoint> keyPoints;	//!< Stores keypoints, i.e. a point feature found by one of many available keypoint detectors.
+	cv::Mat descriptors;
 
 protected:
     //! Virtual method for loading algorithm specific settings from the given storage.

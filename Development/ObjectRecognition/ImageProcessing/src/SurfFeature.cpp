@@ -49,6 +49,12 @@ void SurfFeature::Process(void)
 {
     // Detect the keypoints
     surfDetector_->detect(frame_, keyPoints);
+
+	if(!keyPoints.empty())
+	{
+		SurfDescriptorExtractor extractor;
+		extractor.compute(frame_, keyPoints, descriptors);
+	}
 }
 
 
