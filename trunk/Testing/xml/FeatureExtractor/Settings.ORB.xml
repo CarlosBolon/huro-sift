@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<opencv_storage>
+	<nFeatures>10</nFeatures>
+	<scaleFactor>1.2</scaleFactor>
+	<nlevels>8</nlevels>
+	<edgeThreshold>31</edgeThreshold>
+	<firstLevel>0</firstLevel>
+	<wtaK>2</wtaK>
+	<!-- kBytes=32, HARRIS_SCORE=0, FAST_SCORE=1 -->
+	<scoreType>"HARRIS_SCORE"</scoreType>
+	<patchSize>31</patchSize>
+</opencv_storage>

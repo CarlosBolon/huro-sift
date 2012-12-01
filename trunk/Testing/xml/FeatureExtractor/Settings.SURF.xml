@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<opencv_storage>
+	<hessianThreshold>400.0</hessianThreshold>
+	<octaves>3</octaves>
+	<octaveLayers>4</octaveLayers>
+	<extended>"true"</extended>
+	<upright>"false"</upright>
+</opencv_storage>

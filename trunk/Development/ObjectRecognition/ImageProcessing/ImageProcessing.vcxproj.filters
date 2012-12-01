@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\FastFeature.cpp">
+      <Filter>LocalFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LocalFeature.cpp">
+      <Filter>LocalFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MserFeature.cpp">
+      <Filter>LocalFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OrbFeature.cpp">
+      <Filter>LocalFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SiftFeature.cpp">
+      <Filter>LocalFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StarFeature.cpp">
+      <Filter>LocalFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SurfFeature.cpp">
+      <Filter>LocalFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GlobalFeature.cpp">
+      <Filter>GlobalFeatures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LbpFeature.cpp">
+      <Filter>GlobalFeatures</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ObjectRecognition\GlobalFeature.h">
+      <Filter>GlobalFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ObjectRecognition\LbpFeature.h">
+      <Filter>GlobalFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ObjectRecognition\FastFeature.h">
+      <Filter>LocalFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ObjectRecognition\SurfFeature.h">
+      <Filter>LocalFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ObjectRecognition\LocalFeature.h">
+      <Filter>LocalFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ObjectRecognition\MserFeature.h">
+      <Filter>LocalFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ObjectRecognition\OrbFeature.h">
+      <Filter>LocalFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ObjectRecognition\SiftFeature.h">
+      <Filter>LocalFeatures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ObjectRecognition\StarFeature.h">
+      <Filter>LocalFeatures</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="GlobalFeatures">
+      <UniqueIdentifier>{a5d30407-3312-4cd2-ad85-852951c415d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LocalFeatures">
+      <UniqueIdentifier>{94f8dc7f-d742-4793-ada9-bb1468169318}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
