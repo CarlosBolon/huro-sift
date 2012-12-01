@@ -1,5 +1,6 @@
 #include "ObjectRecognition\Algorithm.h"
 #include "ObjectRecognition\LocalSettings.h"
+#include "ObjectRecognition\Tokenizer.h"
 #include "ObjectRecognition\Visualizer.h"
 
 #include "ObjectRecognition\SiftFeature.h"
@@ -22,7 +23,8 @@ struct Algorithm::Detail
 {
 	Algorithm::WorkMode workMode_;
 	int cameraId_;				//!< ID of the camera to be analyzed.
-	string fileName_;
+	string mediaFileName_;
+	string descriptorsFileName_;
 	int frameNo_;
 	double maxWidth_;
 };
@@ -74,11 +76,11 @@ void Algorithm::LoadSettingsFromFileStorage(void)
 
 	if(detail_->workMode_ == WORK_MODE_TRAIN && node[0]["media"].isString())
 	{
-		node[0]["media"] >> detail_->fileName_;
-		if(detail_->fileName_.compare(detail_->fileName_.size() - 4, 4, ".txt") == 0)
+		node[0]["media"] >> detail_->mediaFileName_;
+		if(detail_->mediaFileName_.compare(detail_->mediaFileName_.size() - 4, 4, ".txt") == 0)
 		{
-			if(ReadStringList(LocalSettingsPtr->GetInputDirectory() + detail_->fileName_) == false)
-				CV_Error(1, "Wrong image list format in " + detail_->fileName_ + "!");
+			if(ReadStringList(LocalSettingsPtr->GetInputDirectory() + detail_->mediaFileName_) == false)
+				CV_Error(1, "Wrong image list format in " + detail_->mediaFileName_ + "!");
 		}
 		else
 		{
@@ -94,8 +96,8 @@ void Algorithm::LoadSettingsFromFileStorage(void)
 		}
 		else if(node[0]["media"].isString())
 		{
-			node[0]["media"] >> detail_->fileName_;
-			videoCapture_.open(LocalSettingsPtr->GetInputDirectory() + detail_->fileName_);
+			node[0]["media"] >> detail_->mediaFileName_;
+			videoCapture_.open(LocalSettingsPtr->GetInputDirectory() + detail_->mediaFileName_);
 		}
 
 		if(!videoCapture_.isOpened())
@@ -105,7 +107,16 @@ void Algorithm::LoadSettingsFromFileStorage(void)
 	{
 		CV_Error(1, "Wrong configuration is given between work mode and media type!");
 	}
-    
+
+	if(node[0]["descriptors"].isString())
+	{
+		node[0]["descriptors"] >> detail_->descriptorsFileName_;
+	}
+	else
+	{
+		CV_Error(1, "Wrong descriptors filename!");
+	}
+
     node[0]["maxWidth"] >> detail_->maxWidth_;
 
     // Loading feature extractors
@@ -164,7 +175,7 @@ bool Algorithm::GrabFrame(Mat& frame)
 		if(detail_->frameNo_ < 0 || detail_->frameNo_ >= int(imageList_.size()))
 			return false;
 
-		frame = imread(imageList_[detail_->frameNo_++], 1);
+		frame = imread(imageList_[detail_->frameNo_], 1);
 	}
 	else
 	{
@@ -178,9 +189,10 @@ bool Algorithm::GrabFrame(Mat& frame)
 void Algorithm::Process(void)
 {
 	CV_Assert(videoCapture_.isOpened() || !imageList_.empty());
-	cout << "HeadMovementAlgorithm: Press ESC to exit." << endl;
 
+	cout << "HeadMovementAlgorithm: Press ESC to exit." << endl;
 	Mat frame;
+
 	while(true)
 	{
 #ifdef DEBUG_MODE
@@ -192,13 +204,10 @@ void Algorithm::Process(void)
 		resize(frame, frame, Size(), detail_->maxWidth_ / frame.cols, detail_->maxWidth_ / frame.cols);
 
         StartFeatureExtractors(frame);
+
         VisualizeProcesses();
 
-        for(LocalFeaturePool::iterator elem = localFeaturePool_.begin(); elem != localFeaturePool_.end(); elem++)
-        {
-            const vector<KeyPoint>& keyPoints = elem->second->keyPoints;
-            // TODO: leíró kinyerés és kimentés
-        }
+		SaveData();
 		
 		// press ESC to exit
 		if(waitKey(5) >= 0) 
@@ -210,9 +219,50 @@ void Algorithm::Process(void)
         double fps = 1000.0 / ms;
         printf("Processing time: %6.2lf ms - %6.2lf fps.\n", ms, fps);
 #endif
+
+		detail_->frameNo_++;
 	}
 }
 
+
+void Algorithm::SaveData(void)
+{
+	CV_Assert(!detail_->descriptorsFileName_.empty());
+
+	vector<string> pathParts;
+	ObjectRecognition::Tokenizer t(imageList_[detail_->frameNo_], "\\.");
+	while(t.NextToken())
+		pathParts.push_back(t.GetToken());
+
+	string fileName;
+	if(pathParts.size() > 3)
+		fileName = pathParts[pathParts.size() - 3] + "_" + pathParts[pathParts.size() - 2] + "_descriptors.xml";
+
+	if(fileName.empty())
+		CV_Error(1, "Wrong descriptor filename (" + imageList_[detail_->frameNo_] + ")!");
+
+	FileStorage fs(LocalSettingsPtr->GetDescriptorsDirectory() + fileName, FileStorage::WRITE);
+	if(!fs.isOpened())
+	{
+		CV_Error(1, "XML does not exist (" + LocalSettingsPtr->GetDescriptorsDirectory() + fileName + ")!");
+	}
+
+	fs << "database" << "[";
+	fs << "{:" << "path" << imageList_[detail_->frameNo_];
+
+	for(LocalFeaturePool::iterator elem = localFeaturePool_.begin(); elem != localFeaturePool_.end(); elem++)
+	{
+		const vector<KeyPoint>& keyPoints = elem->second->keyPoints;
+		const Mat& descriptors = elem->second->descriptors;
+
+		//fs << elem->first + "_KeyPoints" << keyPoints;
+		fs << elem->first + "_Descriptors" << descriptors;
+	}
+
+	fs << "}";
+	fs << "]";
+	fs.release();
+}
 
 void Algorithm::StartFeatureExtractors(const Mat& frame)
 {

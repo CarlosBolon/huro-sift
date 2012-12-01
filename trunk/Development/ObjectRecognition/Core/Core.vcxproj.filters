@@ -10,6 +10,9 @@
     <Filter Include="Visualizer">
       <UniqueIdentifier>{30cca684-3a31-431e-9d99-3c350f899fe4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="General">
+      <UniqueIdentifier>{5ad0ed43-00d9-42bc-90ee-a4b47715c94c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ObjectRecognition\LocalSettings.h">
@@ -27,6 +30,9 @@
     <ClInclude Include="include\ObjectRecognition\Visualizer.h">
       <Filter>Visualizer</Filter>
     </ClInclude>
+    <ClInclude Include="include\ObjectRecognition\Tokenizer.h">
+      <Filter>General</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\LocalSettings.cpp">
@@ -43,6 +49,9 @@
     </ClCompile>
     <ClCompile Include="src\Visualizer.cpp">
       <Filter>Visualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tokenizer.cpp">
+      <Filter>General</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

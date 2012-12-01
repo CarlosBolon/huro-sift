@@ -57,6 +57,9 @@ void OrbFeature::Process(void)
 {
     // Detect the keypoints
     orbDetector_->detect(frame_, keyPoints);
+
+	if(!keyPoints.empty())
+		orbDetector_->compute(frame_, keyPoints, descriptors);
 }
 
 

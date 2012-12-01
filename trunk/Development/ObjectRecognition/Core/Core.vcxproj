@@ -84,6 +84,7 @@
     <ClInclude Include="include\ObjectRecognition\Runnable.h" />
     <ClInclude Include="include\ObjectRecognition\Thread.h" />
     <ClInclude Include="include\ObjectRecognition\Mutex.h" />
+    <ClInclude Include="include\ObjectRecognition\Tokenizer.h" />
     <ClInclude Include="include\ObjectRecognition\Visualizer.h" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +92,7 @@
     <ClCompile Include="src\Runnable.cpp" />
     <ClCompile Include="src\LocalSettings.cpp" />
     <ClCompile Include="src\Mutex.cpp" />
+    <ClCompile Include="src\Tokenizer.cpp" />
     <ClCompile Include="src\Visualizer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

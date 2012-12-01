@@ -46,6 +46,8 @@ private:
 
     void VisualizeProcesses(void);
 
+	void SaveData(void);
+
 	ThreadPool			threadPool_;
     GlobalFeaturePool   globalFeaturePool_;	    //!< Stores all global feature extractor.   
     LocalFeaturePool    localFeaturePool_;      //!< Stores all local feature extractor.

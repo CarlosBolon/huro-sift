@@ -45,6 +45,12 @@ void SiftFeature::Process(void)
 {
     // Detect the keypoints
     siftDetector_->detect(frame_, keyPoints);
+
+	if(!keyPoints.empty())
+	{
+		SiftDescriptorExtractor extractor;
+		extractor.compute(frame_, keyPoints, descriptors);
+	}
 }
 
 

@@ -29,6 +29,7 @@ void LocalFeature::SetFrame(const Mat& frame)
         cvtColor(frame_, frame_, CV_GRAY2BGR);
 
     keyPoints.clear();
+	descriptors = Mat();
 }
 
 

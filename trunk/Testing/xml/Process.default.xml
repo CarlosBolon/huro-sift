@@ -6,6 +6,7 @@
 			<workMode>"train"</workMode>
 			<!--media>0</media-->
 			<media>"file_list.txt"</media>
+			<descriptors>"descriptors.xml"</descriptors>
 			<maxWidth>640.0</maxWidth>
 		</_>
 	</settings>
@@ -19,10 +20,10 @@
 			<name>"ORB"</name>
 			<type>"local"</type>
 		</_>
-		<_>
+		<!--_>
 			<name>"MSER"</name>
 			<type>"local"</type>
-		</_>
+		</_-->
 		<_>
 			<name>"SURF"</name>
 			<type>"local"</type>

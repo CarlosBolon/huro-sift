@@ -33,6 +33,12 @@ public:
 	*/
 	std::string GetInputDirectory(void) const;
 
+	//! Descriptors directory getter.
+	/*!
+		\return Descriptors directory.
+	*/
+	std::string GetDescriptorsDirectory(void) const;
+
 	//! Data directory getter.
 	/*!
 		\return Data directory root.
@@ -60,6 +66,7 @@ private:
 
 	std::string	dataDirectory_;				//!< Data directory root
 	std::string	inputDirectory_;			//!< Input directory
+	std::string	descriptorsDirectory_;		//!< Descriptors directory
 	std::string	databaseDirectory_;			//!< Database directory.
     std::string	featureExtractorDirectory_;	//!< Settings directory root.
 	std::string	processXmlFileName_;		//!< The configuration file.
