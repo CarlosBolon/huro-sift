@@ -1,0 +1,5 @@
+Püspöki palota, Nagyvárad/Bishop's Palace, Nagyvárad/Palatul Baroc din Oradea
+palota/palace/palatul
+http://hu.wikipedia.org/wiki/P%C3%BCsp%C3%B6ki_palota_(Nagyv%C3%A1rad)
+http://upload.wikimedia.org/wikipedia/commons/4/41/Palatul_Baroc_din_Oradea.jpg
+N 47.067637 E 21.930886

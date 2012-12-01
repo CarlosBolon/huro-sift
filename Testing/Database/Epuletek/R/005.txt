@@ -1,0 +1,5 @@
+Szatmárnémeti tûzoltó torony/Firefighter's Tower of Szatmárnémeti/Turnul Pompierilor din Satu Mare
+torony/tower/tornul
+http://hu.wikipedia.org/wiki/T%C5%B1ztorony_(Szatm%C3%A1rn%C3%A9meti)
+http://upload.wikimedia.org/wikipedia/commons/8/86/Szatm%C3%A1rn%C3%A9meti%2C_T%C3%BCzolt%C3%B3-torony.JPG
+N 47.794238 E 22.875874

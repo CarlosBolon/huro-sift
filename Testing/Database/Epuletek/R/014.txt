@@ -1,0 +1,5 @@
+Nagyváradi vár/Fortress of Nagyvárad/Cetatea Oradea
+vár/fortress/castel
+http://ro.wikipedia.org/wiki/Cetatea_Oradea
+http://helyitema.hu/pictures/article_images/33507.jpg
+N 47.05149 E 21.94287

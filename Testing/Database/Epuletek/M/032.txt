@@ -1,0 +1,5 @@
+Dömötör-torony, Szeged/Dömötör-tower, Szeged
+torony/tower
+http://hu.wikipedia.org/wiki/D%C3%B6m%C3%B6t%C3%B6r-torony
+http://upload.wikimedia.org/wikipedia/commons/8/80/Szeged-domotor.jpg
+N 46.248878071341 E 20.148597780426
