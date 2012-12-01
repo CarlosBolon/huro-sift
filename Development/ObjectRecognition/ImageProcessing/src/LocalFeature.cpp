@@ -7,6 +7,7 @@ using namespace cv;
 namespace ObjectRecognition
 {
 
+
 LocalFeature::LocalFeature(const string& name, const string& type)
 :	name_(name),
     type_(type),
@@ -15,9 +16,11 @@ LocalFeature::LocalFeature(const string& name, const string& type)
 {
 }
 
+
 LocalFeature::~LocalFeature(void)
 {
 }
+
 
 void LocalFeature::SetFrame(const Mat& frame)
 {
@@ -27,6 +30,7 @@ void LocalFeature::SetFrame(const Mat& frame)
 
     keyPoints.clear();
 }
+
 
 void* LocalFeature::Run(void)
 {
@@ -82,14 +86,17 @@ const string& LocalFeature::GetName(void)
     return name_;
 }
 
+
 const string& LocalFeature::GetType(void)
 {
     return type_;
 }
 
+
 double LocalFeature::GetProcTime(void)
 {
     return procTime_;
 }
+
 
 }

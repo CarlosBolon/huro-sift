@@ -9,6 +9,7 @@ using namespace cv;
 namespace ObjectRecognition
 {
 
+
 SiftFeature::SiftFeature(const string& name, const string& type)
 :	LocalFeature(name, type)
 {
@@ -17,10 +18,12 @@ SiftFeature::SiftFeature(const string& name, const string& type)
     siftDetector_ = new SiftFeatureDetector(nfeatures_, nOctaveLayers_, contrastThreshold_, edgeThreshold_, sigma_);
 }
 
+
 SiftFeature::~SiftFeature(void)
 {
     delete siftDetector_;
 }
+
 
 void SiftFeature::LoadSettingsFromFileStorage(void)
 {
@@ -37,15 +40,18 @@ void SiftFeature::LoadSettingsFromFileStorage(void)
 	fileStorage["sigma"] >> sigma_;
 }
 
+
 void SiftFeature::Process(void)
 {
     // Detect the keypoints
     siftDetector_->detect(frame_, keyPoints);
 }
 
+
 void SiftFeature::DrawFeatures(void)
 {
 	drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT /*| DrawMatchesFlags::DRAW_RICH_KEYPOINTS*/); 
 }
+
 
 }

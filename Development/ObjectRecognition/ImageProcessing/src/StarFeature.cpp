@@ -9,6 +9,7 @@ using namespace cv;
 namespace ObjectRecognition
 {
 
+
 StarFeature::StarFeature(const string& name, const string& type)
 :	LocalFeature(name, type)
 {
@@ -18,10 +19,12 @@ StarFeature::StarFeature(const string& name, const string& type)
         lineThresholdProjected_, lineThresholdBinarized_, suppressNonmaxSize_);
 }
 
+
 StarFeature::~StarFeature(void)
 {
     delete starDetector_;
 }
+
 
 void StarFeature::LoadSettingsFromFileStorage(void)
 {
@@ -38,14 +41,17 @@ void StarFeature::LoadSettingsFromFileStorage(void)
 	fileStorage["suppressNonmaxSize"] >> suppressNonmaxSize_;
 }
 
+
 void StarFeature::Process(void)
 {
     starDetector_->detect(frame_, keyPoints);
 }
 
+
 void StarFeature::DrawFeatures(void)
 {
     drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT /*| DrawMatchesFlags::DRAW_RICH_KEYPOINTS*/); 
 }
+
 
 }

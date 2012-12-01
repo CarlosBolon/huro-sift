@@ -5,6 +5,7 @@ using namespace std;
 namespace ObjectRecognition
 {
 
+
 Thread::Thread(auto_ptr<Runnable> r, bool isDetached) 
 :	runnable_(r), 
 	detached_(isDetached) 
@@ -13,15 +14,18 @@ Thread::Thread(auto_ptr<Runnable> r, bool isDetached)
 		CV_Error(1, "Runnable is NULL!");
 }
 
+
 Thread::Thread(bool isDetached) 
 :	runnable_(NULL), 
 	detached_(isDetached) 
 {
 }
 
-Thread::~Thread() 
+
+Thread::~Thread(void) 
 {
 }
+
 
 void* Thread::StartThreadRunnable(void* pVoid) 
 {
@@ -34,6 +38,7 @@ void* Thread::StartThreadRunnable(void* pVoid)
 	return runnableThread->result_;
 }
 
+
 void* Thread::StartThread(void* pVoid) 
 {
 	// thread start function when no Runnable is involved
@@ -45,7 +50,8 @@ void* Thread::StartThread(void* pVoid)
 	return aThread->result_;
 }
 
-void Thread::Start() 
+
+void Thread::Start(void) 
 {
 	// initialize attribute object
 	if(pthread_attr_init(&threadAttribute_))
@@ -91,7 +97,7 @@ void Thread::Start()
 }
 
 
-void* Thread::Join() 
+void* Thread::Join(void) 
 {
 	// result was already saved by thread start function
 	if(pthread_join(threadID_, NULL))
@@ -100,9 +106,11 @@ void* Thread::Join()
 	return result_;
 }
 
-void Thread::SetCompleted() 
+
+void Thread::SetCompleted(void) 
 {
 	// completion handled by pthread_join()
 }
+
 
 }

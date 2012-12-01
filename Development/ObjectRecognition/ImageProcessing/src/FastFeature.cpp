@@ -9,6 +9,7 @@ using namespace cv;
 namespace ObjectRecognition
 {
 
+
 FastFeature::FastFeature(const string& name, const string& type)
 :	LocalFeature(name, type)
 {
@@ -17,10 +18,12 @@ FastFeature::FastFeature(const string& name, const string& type)
     fastDetector_ = new FastFeatureDetector(threshold_, nonmaxSuppression_);
 }
 
+
 FastFeature::~FastFeature(void)
 {
     delete fastDetector_;
 }
+
 
 void FastFeature::LoadSettingsFromFileStorage(void)
 {
@@ -37,14 +40,17 @@ void FastFeature::LoadSettingsFromFileStorage(void)
     nonmaxSuppression_ = (fsNonmaxSuppression.compare("true") == 0 ? true : false);
 }
 
+
 void FastFeature::Process(void)
 {
     fastDetector_->detect(frame_, keyPoints);
 }
 
+
 void FastFeature::DrawFeatures(void)
 {
     drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT /*| DrawMatchesFlags::DRAW_RICH_KEYPOINTS*/); 
 }
+
 
 }

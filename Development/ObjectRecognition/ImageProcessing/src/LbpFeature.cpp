@@ -9,15 +9,18 @@ using namespace cv;
 namespace ObjectRecognition
 {
 
+
 LbpFeature::LbpFeature(const string& name, const string& type)
 :	GlobalFeature(name, type)
 {
     LoadSettingsFromFileStorage();
 }
 
+
 LbpFeature::~LbpFeature(void)
 {
 }
+
 
 void LbpFeature::LoadSettingsFromFileStorage(void)
 {
@@ -33,6 +36,7 @@ void LbpFeature::LoadSettingsFromFileStorage(void)
     useUniformPatterns_ = (fsUseUniformPatterns.compare("true") == 0 ? true : false);
 }
 
+
 void LbpFeature::ProcessInit(void)
 {
     grayFrame_ = Mat(frame_.rows, frame_.cols, CV_8UC1);
@@ -41,6 +45,7 @@ void LbpFeature::ProcessInit(void)
     cvtColor(frame_, grayFrame_, CV_BGR2GRAY, 0);
 	equalizeHist(grayFrame_, grayFrame_);
 }
+
 
 void LbpFeature::Process(void)
 {
@@ -55,6 +60,7 @@ void LbpFeature::Process(void)
         ProcessWithoutUniformPatterns();
     }
 }
+
 
 void LbpFeature::ProcessWithUniformPatterns(void)
 {
@@ -186,6 +192,7 @@ void LbpFeature::ProcessWithUniformPatterns(void)
     }    
 }
 
+
 void LbpFeature::ProcessWithoutUniformPatterns(void)
 {
     for(int i = 1; i < frame_.rows-1; i++)
@@ -216,8 +223,10 @@ void LbpFeature::ProcessWithoutUniformPatterns(void)
     }
 }
 
+
 void LbpFeature::DrawFeatures(void)
 {
 }
+
 
 }

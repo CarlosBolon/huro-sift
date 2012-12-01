@@ -9,6 +9,7 @@ using namespace cv;
 namespace ObjectRecognition
 {
 
+
 OrbFeature::OrbFeature(const string& name, const string& type)
 :	LocalFeature(name, type)
 {
@@ -18,10 +19,12 @@ OrbFeature::OrbFeature(const string& name, const string& type)
         firstLevel_, wtaK_, scoreType_, patchSize_);
 }
 
+
 OrbFeature::~OrbFeature(void)
 {
     delete orbDetector_;
 }
+
 
 void OrbFeature::LoadSettingsFromFileStorage(void)
 {
@@ -49,15 +52,18 @@ void OrbFeature::LoadSettingsFromFileStorage(void)
 		scoreType_ = ORB::FAST_SCORE;
 }
 
+
 void OrbFeature::Process(void)
 {
     // Detect the keypoints
     orbDetector_->detect(frame_, keyPoints);
 }
 
+
 void OrbFeature::DrawFeatures(void)
 {
     drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT /*| DrawMatchesFlags::DRAW_RICH_KEYPOINTS*/); 
 }
+
 
 }

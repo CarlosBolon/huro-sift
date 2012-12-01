@@ -9,6 +9,7 @@ using namespace cv;
 namespace ObjectRecognition
 {
 
+
 MserFeature::MserFeature(const string& name, const string& type)
 :	LocalFeature(name, type)
 {
@@ -18,10 +19,12 @@ MserFeature::MserFeature(const string& name, const string& type)
         maxEvolution_, areaThreshold_, minMargin_, edgeBlurSize_);
 }
 
+
 MserFeature::~MserFeature(void)
 {
     delete mserDetector_;
 }
+
 
 void MserFeature::LoadSettingsFromFileStorage(void)
 {
@@ -42,17 +45,18 @@ void MserFeature::LoadSettingsFromFileStorage(void)
 	fileStorage["edgeBlurSize"] >> edgeBlurSize_;
 }
 
+
 void MserFeature::Process(void)
 {
     // Detect the keypoints
     mserDetector_->detect(frame_, keyPoints);
-
-	// http://code.google.com/p/opencv-feature-tracker/source/browse/MSER.cxx?r=e4bfa468b10c17de22785a464d8636da83b1e35a&spec=svn9427a685b9331180e64adfe1b92916b3b571a96c
 }
+
 
 void MserFeature::DrawFeatures(void)
 {
     drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT /*| DrawMatchesFlags::DRAW_RICH_KEYPOINTS*/); 
 }
+
 
 }

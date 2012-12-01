@@ -17,19 +17,35 @@ using namespace cv;
 namespace ObjectRecognition
 {
 
-Algorithm::Algorithm(void)
-:   cameraId_(0),
-	fileName_(""),
-    resolution_(Size(640, 480))
+
+struct Algorithm::Detail 
 {
+	Algorithm::WorkMode workMode_;
+	int cameraId_;				//!< ID of the camera to be analyzed.
+	string fileName_;
+	int frameNo_;
+	double maxWidth_;
+};
+
+
+Algorithm::Algorithm(void)
+:	detail_(new Detail)
+{
+	detail_->workMode_ = WORK_MODE_TRAIN;
+	detail_->cameraId_ = 0;
+	detail_->frameNo_ = 0;
+    detail_->maxWidth_ = 640.0;
+
 	LoadSettingsFromFileStorage();
 }
+
 
 Algorithm::~Algorithm(void)
 {
 	for(ThreadPool::iterator elem = threadPool_.begin(); elem != threadPool_.end(); elem++)
 		delete elem->second;
 }
+
 
 void Algorithm::LoadSettingsFromFileStorage(void)
 {
@@ -38,23 +54,59 @@ void Algorithm::LoadSettingsFromFileStorage(void)
         CV_Error(1, "Process XML does not exist (" + LocalSettingsPtr->GetProcessXmlFileName() + ")!");
 
     FileNode node = fileStorage["settings"];
-	if(node[0]["media"].isInt())
+
+	if(node[0]["workMode"].isString())
 	{
-		node[0]["media"] >> cameraId_;
-		videoCapture_.open(cameraId_);
+		string workModeStr;
+		node[0]["workMode"] >> workModeStr;
+
+		if(workModeStr == "train")
+			detail_->workMode_ = WORK_MODE_TRAIN;
+		else if(workModeStr == "test")
+			detail_->workMode_ = WORK_MODE_TEST;
+		else
+			CV_Error(1, "Wrong identifier in process xml <workMode> tag (just \"train\" or \"test\" allowed)!");
 	}
-	else if(node[0]["media"].isString())
+	else
 	{
-		node[0]["media"] >> fileName_;
-		videoCapture_.open(/*LocalSettingsPtr->GetInputDirectory() +*/ fileName_);
+		CV_Error(1, "Wrong identifier type in process xml <workMode> tag (it must be string)!");
 	}
 
-	if(!videoCapture_.isOpened())
-		CV_Error(1, "VideoCapture is not opened!");
+	if(detail_->workMode_ == WORK_MODE_TRAIN && node[0]["media"].isString())
+	{
+		node[0]["media"] >> detail_->fileName_;
+		if(detail_->fileName_.compare(detail_->fileName_.size() - 4, 4, ".txt") == 0)
+		{
+			if(ReadStringList(LocalSettingsPtr->GetInputDirectory() + detail_->fileName_) == false)
+				CV_Error(1, "Wrong image list format in " + detail_->fileName_ + "!");
+		}
+		else
+		{
+			CV_Error(1, "File list (txt) must be given before training phase!");
+		}
+	}
+	else if(detail_->workMode_ == WORK_MODE_TEST)
+	{
+		if(node[0]["media"].isInt())
+		{
+			node[0]["media"] >> detail_->cameraId_;
+			videoCapture_.open(detail_->cameraId_);
+		}
+		else if(node[0]["media"].isString())
+		{
+			node[0]["media"] >> detail_->fileName_;
+			videoCapture_.open(LocalSettingsPtr->GetInputDirectory() + detail_->fileName_);
+		}
+
+		if(!videoCapture_.isOpened())
+			CV_Error(1, "VideoCapture is not opened!");
+	}
+	else
+	{
+		CV_Error(1, "Wrong configuration is given between work mode and media type!");
+	}
     
-    node[0]["width"] >> resolution_.width;
-    node[0]["height"] >> resolution_.height;
-
+    node[0]["maxWidth"] >> detail_->maxWidth_;
 
     // Loading feature extractors
     node = fileStorage["featureExtractors"];
@@ -85,39 +137,68 @@ void Algorithm::LoadSettingsFromFileStorage(void)
     // Loading feature extractors
 }
 
+
+bool Algorithm::ReadStringList(const string& filename)
+{
+	imageList_.resize(0);
+
+	FileStorage fs(filename, FileStorage::READ);
+	if(!fs.isOpened())
+		return false;
+
+	FileNode n = fs.getFirstTopLevelNode();
+	if(n.type() != FileNode::SEQ)
+		return false;
+
+	for(FileNodeIterator it = n.begin(); it != n.end(); ++it)
+		imageList_.push_back(string(*it));
+
+	return true;
+}
+
+
+bool Algorithm::GrabFrame(Mat& frame)
+{
+	if(detail_->workMode_ == WORK_MODE_TRAIN)
+	{
+		if(detail_->frameNo_ < 0 || detail_->frameNo_ >= int(imageList_.size()))
+			return false;
+
+		frame = imread(imageList_[detail_->frameNo_++], 1);
+	}
+	else
+	{
+		videoCapture_ >> frame;
+	}
+
+	return !frame.empty();
+}
+
+
 void Algorithm::Process(void)
 {
+	CV_Assert(videoCapture_.isOpened() || !imageList_.empty());
 	cout << "HeadMovementAlgorithm: Press ESC to exit." << endl;
 
+	Mat frame;
 	while(true)
 	{
 #ifdef DEBUG_MODE
         double t = (double)cvGetTickCount();
 #endif
-		// get a new frame from camera
-		videoCapture_ >> frame_;
-
-		if(frame_.empty())
+		if(GrabFrame(frame) == false)
 			break;
 
-        resize(frame_, frame_, resolution_);
+		resize(frame, frame, Size(), detail_->maxWidth_ / frame.cols, detail_->maxWidth_ / frame.cols);
 
-        StartFeatureExtractors();
+        StartFeatureExtractors(frame);
         VisualizeProcesses();
 
-        keyPoints_.clear();
         for(LocalFeaturePool::iterator elem = localFeaturePool_.begin(); elem != localFeaturePool_.end(); elem++)
         {
             const vector<KeyPoint>& keyPoints = elem->second->keyPoints;
-            for(size_t i = 0; i < keyPoints.size(); i++)
-                keyPoints_.push_back(keyPoints[i]);
+            // TODO: leíró kinyerés és kimentés
         }
-
-        if(!keyPoints_.empty())
-        {
-            // TODO
-        }
-
 		
 		// press ESC to exit
 		if(waitKey(5) >= 0) 
@@ -132,7 +213,8 @@ void Algorithm::Process(void)
 	}
 }
 
-void Algorithm::StartFeatureExtractors(void)
+
+void Algorithm::StartFeatureExtractors(const Mat& frame)
 {
 
     for(ThreadPool::iterator elem = threadPool_.begin(); elem != threadPool_.end(); elem++)
@@ -142,17 +224,18 @@ void Algorithm::StartFeatureExtractors(void)
 
         if(globalFeature)
         {
-            globalFeature->SetFrame(frame_);
+            globalFeature->SetFrame(frame);
             globalFeature->Start();
         }
 
         if(localFeature)
         {
-            localFeature->SetFrame(frame_);
+            localFeature->SetFrame(frame);
             localFeature->Start();
         }
     }
 }
+
 
 void Algorithm::VisualizeProcesses(void)
 {
@@ -174,5 +257,6 @@ void Algorithm::VisualizeProcesses(void)
         }
     }
 }
+
 
 }
