@@ -2,10 +2,11 @@
 <opencv_storage>
 	<settings>
 		<_>
-			<!--media>"test.01.wmv"</media-->
-			<media>0</media>
-			<width>320</width>
-			<height>240</height>
+			<!--workMode>"test"</workMode-->
+			<workMode>"train"</workMode>
+			<!--media>0</media-->
+			<media>"file_list.txt"</media>
+			<maxWidth>640.0</maxWidth>
 		</_>
 	</settings>
 			
@@ -26,7 +27,7 @@
 			<name>"SURF"</name>
 			<type>"local"</type>
 		</_>
-		<_>
+		<!--_>
 			<name>"STAR"</name>
 			<type>"local"</type>
 		</_>
@@ -37,6 +38,6 @@
 		<_>
 			<name>"LBP"</name>
 			<type>"global"</type>
-		</_>
+		</_-->
 	</featureExtractors>
 </opencv_storage>

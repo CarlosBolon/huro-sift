@@ -7,6 +7,7 @@ using namespace cv;
 namespace ObjectRecognition
 {
 
+
 GlobalFeature::GlobalFeature(const string& name, const string& type)
 :	name_(name),
     type_(type),
@@ -14,9 +15,11 @@ GlobalFeature::GlobalFeature(const string& name, const string& type)
 {
 }
 
+
 GlobalFeature::~GlobalFeature(void)
 {
 }
+
 
 void GlobalFeature::SetFrame(const Mat& frame)
 {
@@ -27,6 +30,7 @@ void GlobalFeature::SetFrame(const Mat& frame)
 
     features.clear();
 }
+
 
 void* GlobalFeature::Run(void)
 {
@@ -64,14 +68,17 @@ const string& GlobalFeature::GetName(void)
     return name_;
 }
 
+
 const string& GlobalFeature::GetType(void)
 {
     return type_;
 }
 
+
 double GlobalFeature::GetProcTime(void)
 {
     return procTime_;
 }
+
 
 }

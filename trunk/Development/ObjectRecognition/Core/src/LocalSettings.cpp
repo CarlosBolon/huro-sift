@@ -9,6 +9,7 @@ using namespace cv;
 namespace ObjectRecognition
 {
 
+
 LocalSettings::LocalSettings(void)
 {
 	string localSettings("../LocalSettings.txt");
@@ -19,6 +20,7 @@ LocalSettings::LocalSettings(void)
 
 	getline(fileStream, dataDirectory_);
 
+	inputDirectory_ = dataDirectory_ + "Input/";
 	databaseDirectory_ = dataDirectory_ + "Database/";
 	processXmlFileName_ = dataDirectory_ + "xml/Process.default.xml";
     featureExtractorDirectory_  = dataDirectory_ + "xml/FeatureExtractor/";
@@ -26,9 +28,11 @@ LocalSettings::LocalSettings(void)
 	fileStream.close();
 }
 
+
 LocalSettings::~LocalSettings(void)
 {
 }
+
 
 LocalSettings* LocalSettings::GetInstance(void)
 {
@@ -36,19 +40,29 @@ LocalSettings* LocalSettings::GetInstance(void)
 	return localSettings;
 }
 
+
+string LocalSettings::GetInputDirectory(void) const
+{
+	return inputDirectory_;
+}
+
+
 string LocalSettings::GetDataBaseDirectory(void) const
 {
 	return databaseDirectory_;
 }
+
 
 string LocalSettings::GetFeatureExtractorDirectory(void) const
 {
 	return featureExtractorDirectory_;
 }
 
+
 string LocalSettings::GetProcessXmlFileName(void) const
 {
     return processXmlFileName_;
 }
+
 
 }

@@ -27,6 +27,12 @@ public:
 	*/
 	static LocalSettings* GetInstance(void);
 
+	//! Input directory getter.
+	/*!
+		\return Input directory.
+	*/
+	std::string GetInputDirectory(void) const;
+
 	//! Data directory getter.
 	/*!
 		\return Data directory root.
@@ -53,6 +59,7 @@ private:
 	~LocalSettings(void);
 
 	std::string	dataDirectory_;				//!< Data directory root
+	std::string	inputDirectory_;			//!< Input directory
 	std::string	databaseDirectory_;			//!< Database directory.
     std::string	featureExtractorDirectory_;	//!< Settings directory root.
 	std::string	processXmlFileName_;		//!< The configuration file.

@@ -9,6 +9,7 @@ using namespace cv;
 namespace ObjectRecognition
 {
 
+
 SurfFeature::SurfFeature(const string& name, const string& type)
 :	LocalFeature(name, type)
 {
@@ -17,10 +18,12 @@ SurfFeature::SurfFeature(const string& name, const string& type)
     surfDetector_ = new SurfFeatureDetector(hessianThreshold_, octaves_, octaveLayers_, extended_, upright_);
 }
 
+
 SurfFeature::~SurfFeature(void)
 {
     delete surfDetector_;
 }
+
 
 void SurfFeature::LoadSettingsFromFileStorage(void)
 {
@@ -41,15 +44,18 @@ void SurfFeature::LoadSettingsFromFileStorage(void)
 	upright_ = (fsUpright.compare("true") == 0 ? true : false);
 }
 
+
 void SurfFeature::Process(void)
 {
     // Detect the keypoints
     surfDetector_->detect(frame_, keyPoints);
 }
 
+
 void SurfFeature::DrawFeatures(void)
 {
 	drawKeypoints(frame_, keyPoints, frame_, Scalar::all(-1), DrawMatchesFlags::DEFAULT /*| DrawMatchesFlags::DRAW_RICH_KEYPOINTS*/); 
 }
+
 
 }
