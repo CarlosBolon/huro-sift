@@ -1,0 +1,4 @@
+Név/Angol név
+Információ URL magyarul
+Információ URL angolul
+forrás URL

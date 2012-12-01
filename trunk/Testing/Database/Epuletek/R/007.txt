@@ -1,0 +1,5 @@
+Az erdõdi vár (Károlyi-kastély) tornya/Tower of Castle Károlyi/Cetatea Ardud (Castelul Karolyi)
+vár/castle/castel
+http://hu.wikipedia.org/wiki/Erd%C5%91d
+http://upload.wikimedia.org/wikipedia/commons/1/1d/Ardud.jpg
+N 47.653894 E 22.888295

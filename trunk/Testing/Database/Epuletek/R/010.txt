@@ -1,0 +1,5 @@
+Károlyi-kastély, Nagykároly/Castle Károlyi, Nagykároly/Carei, Castelul Károlyi
+kastély/castle/castel
+http://hu.wikipedia.org/wiki/K%C3%A1rolyi-kast%C3%A9ly_(Nagyk%C3%A1roly)
+http://upload.wikimedia.org/wikipedia/commons/8/8c/Karolyi_castle_front_tq.jpg * http://upload.wikimedia.org/wikipedia/commons/5/5c/Karolui_castle_back_tq.jpg
+N 47.680661 E 22.467982
