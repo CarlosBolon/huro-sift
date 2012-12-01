@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<opencv_storage>
+	<nfeatures>0</nfeatures>
+    <nOctaveLayers>3</nOctaveLayers>
+    <contrastThreshold>0.04</contrastThreshold>
+    <edgeThreshold>10.0</edgeThreshold>
+    <sigma>1.6</sigma>
+</opencv_storage>

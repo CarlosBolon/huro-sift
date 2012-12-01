@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<opencv_storage>
+	<threshold>10</threshold>
+	<nonmaxSuppression>"true"</nonmaxSuppression>
+</opencv_storage>
