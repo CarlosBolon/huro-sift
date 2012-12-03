@@ -2,9 +2,7 @@
 <opencv_storage>
 	<settings>
 		<_>
-			<!--workMode>"test"</workMode-->
 			<workMode>"train"</workMode>
-			<!--media>0</media-->
 			<media>"file_list.txt"</media>
 			<descriptors>"descriptors.xml"</descriptors>
 			<maxWidth>640.0</maxWidth>

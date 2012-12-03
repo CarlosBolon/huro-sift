@@ -1,6 +1,7 @@
 #include <iostream>
 #include "opencv2/opencv.hpp"
 
+#include "ObjectRecognition\LocalSettings.h"
 #include "ObjectRecognition\Algorithm.h"
 
 using namespace std;
@@ -9,6 +10,9 @@ using namespace ObjectRecognition;
 
 int main(int argc, char *argv[])
 {
+	if(argc >= 2)
+		LocalSettingsPtr->SetProcessXmlFileName(argv[1]);
+	
 	int result = 0;
 	ObjectRecognition::Algorithm algorithm;
 
