@@ -57,6 +57,8 @@ public:
 	*/
 	std::string GetProcessXmlFileName(void) const;
 
+	void SetProcessXmlFileName(const std::string& processXmlFileName);
+
 private:
 	//! Constructor.
 	LocalSettings(void);

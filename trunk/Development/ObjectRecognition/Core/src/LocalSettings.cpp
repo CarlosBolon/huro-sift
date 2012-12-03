@@ -72,4 +72,10 @@ string LocalSettings::GetProcessXmlFileName(void) const
 }
 
 
+void LocalSettings::SetProcessXmlFileName(const std::string& processXmlFileName)
+{
+	processXmlFileName_ = dataDirectory_ + "xml/" + processXmlFileName;
+}
+
+
 }

@@ -87,21 +87,9 @@ void Algorithm::LoadSettingsFromFileStorage(void)
 			CV_Error(1, "File list (txt) must be given before training phase!");
 		}
 	}
-	else if(detail_->workMode_ == WORK_MODE_TEST)
+	else if(detail_->workMode_ == WORK_MODE_TEST && node[0]["media"].isString())
 	{
-		if(node[0]["media"].isInt())
-		{
-			node[0]["media"] >> detail_->cameraId_;
-			videoCapture_.open(detail_->cameraId_);
-		}
-		else if(node[0]["media"].isString())
-		{
-			node[0]["media"] >> detail_->mediaFileName_;
-			videoCapture_.open(LocalSettingsPtr->GetInputDirectory() + detail_->mediaFileName_);
-		}
-
-		if(!videoCapture_.isOpened())
-			CV_Error(1, "VideoCapture is not opened!");
+		node[0]["media"] >> detail_->mediaFileName_;
 	}
 	else
 	{
@@ -177,9 +165,13 @@ bool Algorithm::GrabFrame(Mat& frame)
 
 		frame = imread(imageList_[detail_->frameNo_], 1);
 	}
+	else if(detail_->frameNo_ == 0)
+	{
+		frame = imread(LocalSettingsPtr->GetInputDirectory() + detail_->mediaFileName_, 1);
+	}
 	else
 	{
-		videoCapture_ >> frame;
+		frame = Mat();
 	}
 
 	return !frame.empty();
@@ -188,7 +180,7 @@ bool Algorithm::GrabFrame(Mat& frame)
 
 void Algorithm::Process(void)
 {
-	CV_Assert(videoCapture_.isOpened() || !imageList_.empty());
+	CV_Assert(!detail_->mediaFileName_.empty() || !imageList_.empty());
 
 	cout << "HeadMovementAlgorithm: Press ESC to exit." << endl;
 	Mat frame;
@@ -207,7 +199,10 @@ void Algorithm::Process(void)
 
         VisualizeProcesses();
 
-		SaveData();
+		if(detail_->workMode_ == WORK_MODE_TRAIN)
+			SaveData();
+		else
+			MatchToDatabase();
 		
 		// press ESC to exit
 		if(waitKey(5) >= 0) 
@@ -306,6 +301,11 @@ void Algorithm::VisualizeProcesses(void)
             globalFeature->Visualize();
         }
     }
+}
+
+void Algorithm::MatchToDatabase(void)
+{
+	//CV_Error(1, "The method or operation is not implemented.");
 }
 
 

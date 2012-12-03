@@ -48,11 +48,12 @@ private:
 
 	void SaveData(void);
 
+	void MatchToDatabase(void);
+
 	ThreadPool			threadPool_;
     GlobalFeaturePool   globalFeaturePool_;	    //!< Stores all global feature extractor.   
     LocalFeaturePool    localFeaturePool_;      //!< Stores all local feature extractor.
 
-	cv::VideoCapture videoCapture_;
 	std::vector<std::string> imageList_;
 
 	struct Detail;
