@@ -175,7 +175,7 @@ void Algorithm::Process(void)
 		if(GrabFrame(frame) == false)
 			break;
 
-		resize(frame, frame, Size(), detail_->maxWidth / frame.cols, detail_->maxWidth / frame.cols);
+        resize(frame, frame, Size(), detail_->maxWidth / frame.cols, detail_->maxWidth / frame.cols);
 
         StartFeatureExtractors(frame);
 
@@ -186,9 +186,11 @@ void Algorithm::Process(void)
 		else
 			MatchToDatabase(frame);
 		
+        detail_->frameNo++;
+
 		// press ESC to exit
-		if(waitKey(5) >= 0) 
-			break;
+		//if(waitKey(5) >= 0) 
+		//	break;
 
 #ifdef DEBUG_MODE
         tm.stop();
@@ -196,8 +198,6 @@ void Algorithm::Process(void)
         double fps = 1000.0 / ms;
         printf("Processing time: %6.2lf ms - %6.2lf fps.\n", ms, fps);
 #endif
-
-		detail_->frameNo++;
 	}
 }
 
@@ -284,28 +284,28 @@ void Algorithm::MatchToDatabase(const Mat& frame)
 
     const vector<DMatch>& matches = matcher.GetMatches();
 
-    DMatch minMatch;
-
     if(matches.size() > 1)
     {
-        minMatch = matches[0];
-
+        map<int, int> avgMatches;
         for(int i = 0; i < int(matches.size()); i++)
+            avgMatches[matches[i].imgIdx]++;
+
+        int maxInd = -1;
+        int maxVal = -1;
+        for(map<int, int>::iterator it = avgMatches.begin(); it != avgMatches.end(); it++)
         {
-            if(matches[i] < minMatch)
-                minMatch = matches[i];
+            if(it->second > maxVal)
+            {
+                maxInd = it->first;
+                maxVal = it->second;
+            }
         }
 
-        if(minMatch.imgIdx >= 0 && minMatch.imgIdx < int(imageList_.size()))
+        if(maxInd >= 0 && maxInd < int(imageList_.size()))
         {
-            const vector<KeyPoint>& queryKeypoints = localFeaturePool_[detail_->descriptorType]->keyPoints;
-            Mat trainImage = imread(imageList_[minMatch.imgIdx], 1);
-            Mat drawImg;
+            cout << "Best match: " << imageList_[maxInd] << endl;
 
-            cout << "Best match: " << imageList_[minMatch.imgIdx];
-            cout << ", distance: " << minMatch.distance << endl;
-
-            FileToken ft(imageList_[minMatch.imgIdx]);
+            FileToken ft(imageList_[maxInd]);
             string fullName = ft.GetPath() + ft.GetName() + "_descriptors.xml.gz";
 
             FileStorage fs(fullName, FileStorage::READ, "UTF-8");
@@ -319,22 +319,42 @@ void Algorithm::MatchToDatabase(const Mat& frame)
             {
                 vector<KeyPoint> trainKeypoints;
                 read(node[0][key], trainKeypoints);
-                //node[0][key] >> trainKeypoints;
+
                 if(!trainKeypoints.empty())
                 {
-                    drawMatches(frame, queryKeypoints, trainImage, trainKeypoints,
-                            matches, drawImg, Scalar(255, 0, 0), Scalar(0, 255, 255) );
+                    const vector<KeyPoint>& queryKeypoints = localFeaturePool_[detail_->descriptorType]->keyPoints;
+                    Mat trainImage = imread(imageList_[maxInd], 1);
+                    Mat drawImg;
+                    vector<char> mask;
+
+                    resize(trainImage, trainImage, Size(), detail_->maxWidth / trainImage.cols, detail_->maxWidth / trainImage.cols);
+
+                    MaskMatchesByTrainImgIdx(matches, maxInd, mask);
+                    drawMatches(
+                        frame, queryKeypoints, 
+                        trainImage, trainKeypoints,
+                        matches, drawImg, 
+                        Scalar(255, 0, 0), Scalar(0, 255, 255), mask 
+                    );
+
+                    VisualizerPtr->ShowImage("Matches", drawImg, true);
                 }
-            }
-            else
-            {
-                CV_Error(1, detail_->descriptorType + " descriptor does not exist (" + fullName + ")!");
             }
 
             fs.release();
         }
     }
+}
 
+void Algorithm::MaskMatchesByTrainImgIdx( const vector<DMatch>& matches, int trainImgIdx, vector<char>& mask )
+{
+    mask.resize( matches.size() );
+    fill( mask.begin(), mask.end(), 0 );
+    for( size_t i = 0; i < matches.size(); i++ )
+    {
+        if( matches[i].imgIdx == trainImgIdx )
+            mask[i] = 1;
+    }
 }
 
 
