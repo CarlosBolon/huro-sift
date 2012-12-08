@@ -33,6 +33,9 @@
     <ClInclude Include="include\ObjectRecognition\Tokenizer.h">
       <Filter>General</Filter>
     </ClInclude>
+    <ClInclude Include="include\ObjectRecognition\FileToken.h">
+      <Filter>General</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\LocalSettings.cpp">
@@ -51,6 +54,9 @@
       <Filter>Visualizer</Filter>
     </ClCompile>
     <ClCompile Include="src\Tokenizer.cpp">
+      <Filter>General</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileToken.cpp">
       <Filter>General</Filter>
     </ClCompile>
   </ItemGroup>

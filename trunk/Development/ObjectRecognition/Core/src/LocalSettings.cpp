@@ -21,7 +21,6 @@ LocalSettings::LocalSettings(void)
 	getline(fileStream, dataDirectory_);
 
 	inputDirectory_ = dataDirectory_ + "Input/";
-	descriptorsDirectory_ = dataDirectory_ + "Descriptors/";
 	databaseDirectory_ = dataDirectory_ + "Database/";
 	processXmlFileName_ = dataDirectory_ + "xml/Process.default.xml";
     featureExtractorDirectory_  = dataDirectory_ + "xml/FeatureExtractor/";
@@ -45,12 +44,6 @@ LocalSettings* LocalSettings::GetInstance(void)
 string LocalSettings::GetInputDirectory(void) const
 {
 	return inputDirectory_;
-}
-
-
-string LocalSettings::GetDescriptorsDirectory(void) const
-{
-	return descriptorsDirectory_;
 }
 
 
