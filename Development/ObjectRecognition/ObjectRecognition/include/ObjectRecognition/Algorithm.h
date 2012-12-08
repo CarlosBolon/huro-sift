@@ -48,7 +48,9 @@ private:
 
 	void SaveData(void);
 
-	void MatchToDatabase(void);
+	void MatchToDatabase(const cv::Mat& frame);
+
+    void MaskMatchesByTrainImgIdx( const std::vector<cv::DMatch>& matches, int trainImgIdx, std::vector<char>& mask );
 
 	ThreadPool			threadPool_;
     GlobalFeaturePool   globalFeaturePool_;	    //!< Stores all global feature extractor.   
