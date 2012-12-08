@@ -3,7 +3,7 @@
 	<settings>
 		<_>
 			<workMode>"test"</workMode>
-			<media>"test.01.jpg"</media>
+			<media>"unideb.jpg"</media>
 			<descriptorType>"SURF"</descriptorType>
 			<matcherType>"FlannBased"</matcherType>
 			<database>"file_list.txt"</database>
