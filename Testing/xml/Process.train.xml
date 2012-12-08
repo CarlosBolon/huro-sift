@@ -4,13 +4,14 @@
 		<_>
 			<workMode>"train"</workMode>
 			<media>"file_list.txt"</media>
-			<descriptors>"descriptors.xml"</descriptors>
-			<maxWidth>640.0</maxWidth>
+			<matcherType>"SURF"</matcherType>
+			<database>"file_list.txt"</database>
+			<maxWidth>320.0</maxWidth>
 		</_>
 	</settings>
 			
 	<featureExtractors>
-		<_>
+		<!--_>
 			<name>"SIFT"</name>
 			<type>"local"</type>
 		</_>
@@ -18,7 +19,7 @@
 			<name>"ORB"</name>
 			<type>"local"</type>
 		</_>
-		<!--_>
+		<_>
 			<name>"MSER"</name>
 			<type>"local"</type>
 		</_-->

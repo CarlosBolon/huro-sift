@@ -80,6 +80,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\ObjectRecognition\FileToken.h" />
     <ClInclude Include="include\ObjectRecognition\LocalSettings.h" />
     <ClInclude Include="include\ObjectRecognition\Runnable.h" />
     <ClInclude Include="include\ObjectRecognition\Thread.h" />
@@ -88,6 +89,7 @@
     <ClInclude Include="include\ObjectRecognition\Visualizer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\FileToken.cpp" />
     <ClCompile Include="src\Thread.cpp" />
     <ClCompile Include="src\Runnable.cpp" />
     <ClCompile Include="src\LocalSettings.cpp" />

@@ -1,6 +1,6 @@
 #include "ObjectRecognition\Algorithm.h"
 #include "ObjectRecognition\LocalSettings.h"
-#include "ObjectRecognition\Tokenizer.h"
+#include "ObjectRecognition\FileToken.h"
 #include "ObjectRecognition\Visualizer.h"
 
 #include "ObjectRecognition\SiftFeature.h"
@@ -24,7 +24,8 @@ struct Algorithm::Detail
 	Algorithm::WorkMode workMode_;
 	int cameraId_;				//!< ID of the camera to be analyzed.
 	string mediaFileName_;
-	string descriptorsFileName_;
+	string databaseFileName_;
+    string matcherType_;
 	int frameNo_;
 	double maxWidth_;
 };
@@ -74,36 +75,35 @@ void Algorithm::LoadSettingsFromFileStorage(void)
 		CV_Error(1, "Wrong identifier type in process xml <workMode> tag (it must be string)!");
 	}
 
-	if(detail_->workMode_ == WORK_MODE_TRAIN && node[0]["media"].isString())
-	{
-		node[0]["media"] >> detail_->mediaFileName_;
-		if(detail_->mediaFileName_.compare(detail_->mediaFileName_.size() - 4, 4, ".txt") == 0)
-		{
-			if(ReadStringList(LocalSettingsPtr->GetInputDirectory() + detail_->mediaFileName_) == false)
-				CV_Error(1, "Wrong image list format in " + detail_->mediaFileName_ + "!");
-		}
-		else
-		{
-			CV_Error(1, "File list (txt) must be given before training phase!");
-		}
-	}
-	else if(detail_->workMode_ == WORK_MODE_TEST && node[0]["media"].isString())
-	{
-		node[0]["media"] >> detail_->mediaFileName_;
-	}
-	else
-	{
-		CV_Error(1, "Wrong configuration is given between work mode and media type!");
-	}
+    if(node[0]["media"].isString())
+    {
+        node[0]["media"] >> detail_->mediaFileName_;
+    }
+    else
+    {
+        CV_Error(1, "Wrong media type was given in process xml (" + LocalSettingsPtr->GetProcessXmlFileName() + ")!");
+    }
 
-	if(node[0]["descriptors"].isString())
-	{
-		node[0]["descriptors"] >> detail_->descriptorsFileName_;
-	}
-	else
-	{
-		CV_Error(1, "Wrong descriptors filename!");
-	}
+    if(node[0]["matcherType"].isString())
+    {
+        node[0]["matcherType"] >> detail_->matcherType_;
+    }
+    else
+    {
+        CV_Error(1, "Wrong matcher type was given in process xml (" + LocalSettingsPtr->GetProcessXmlFileName() + ")!");
+    }
+
+    if(node[0]["database"].isString())
+    {
+        node[0]["database"] >> detail_->databaseFileName_;
+
+        if(ReadStringList(LocalSettingsPtr->GetInputDirectory() + detail_->databaseFileName_) == false)
+            CV_Error(1, "Wrong image list format in " + detail_->databaseFileName_ + "!");
+    }
+    else
+    {
+        CV_Error(1, "Wrong database type was given in process xml (" + LocalSettingsPtr->GetProcessXmlFileName() + ")!");
+    }
 
     node[0]["maxWidth"] >> detail_->maxWidth_;
 
@@ -222,25 +222,14 @@ void Algorithm::Process(void)
 
 void Algorithm::SaveData(void)
 {
-	CV_Assert(!detail_->descriptorsFileName_.empty());
+	CV_Assert(!detail_->databaseFileName_.empty());
 
-	vector<string> pathParts;
-	ObjectRecognition::Tokenizer t(imageList_[detail_->frameNo_], "\\.");
-	while(t.NextToken())
-		pathParts.push_back(t.GetToken());
+    FileToken ft(imageList_[detail_->frameNo_]);
+    string fullName = ft.GetPath() + ft.GetName() + "_descriptors.xml.gz";
 
-	string fileName;
-	if(pathParts.size() > 3)
-		fileName = pathParts[pathParts.size() - 3] + "_" + pathParts[pathParts.size() - 2] + "_descriptors.xml";
-
-	if(fileName.empty())
-		CV_Error(1, "Wrong descriptor filename (" + imageList_[detail_->frameNo_] + ")!");
-
-	FileStorage fs(LocalSettingsPtr->GetDescriptorsDirectory() + fileName, FileStorage::WRITE);
+	FileStorage fs(fullName, FileStorage::WRITE, "UTF-8");
 	if(!fs.isOpened())
-	{
-		CV_Error(1, "XML does not exist (" + LocalSettingsPtr->GetDescriptorsDirectory() + fileName + ")!");
-	}
+		CV_Error(1, "XML does not exist (" + fullName + ")!");
 
 	fs << "database" << "[";
 	fs << "{:" << "path" << imageList_[detail_->frameNo_];
@@ -305,7 +294,37 @@ void Algorithm::VisualizeProcesses(void)
 
 void Algorithm::MatchToDatabase(void)
 {
-	//CV_Error(1, "The method or operation is not implemented.");
+    CV_Assert(!detail_->databaseFileName_.empty());
+
+	vector<Mat> trainDescriptors;
+
+    for(int i = 0; i < int(imageList_.size()); i++)
+    {
+        FileToken ft(imageList_[i]);
+        string fullName = ft.GetPath() + ft.GetName() + "_descriptors.xml.gz";
+        
+        FileStorage fs(fullName, FileStorage::READ, "UTF-8");
+        if(!fs.isOpened())
+            CV_Error(1, "Descriptor XML does not exist (" + fullName + ")!");
+
+        FileNode node = fs["database"];
+        Mat descriptor;
+        string key = detail_->matcherType_ + "_Descriptors";
+
+        cout << "Loading " + detail_->matcherType_ + " descriptor for: " << fullName << endl;
+
+        if(!node[0][key].isNone())
+            node[0][key] >> descriptor;
+        else
+            CV_Error(1, detail_->matcherType_ + " descriptor does not exist (" + fullName + ")!");
+
+        if(!descriptor.empty())
+            trainDescriptors.push_back(descriptor);
+
+        fs.release();
+    }
+
+
 }
 
 

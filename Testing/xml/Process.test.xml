@@ -4,7 +4,8 @@
 		<_>
 			<workMode>"test"</workMode>
 			<media>"unideb.jpg"</media>
-			<descriptors>"descriptors.xml"</descriptors>
+			<matcherType>"SURF"</matcherType>
+			<database>"file_list.txt"</database>
 			<maxWidth>640.0</maxWidth>
 		</_>
 	</settings>
