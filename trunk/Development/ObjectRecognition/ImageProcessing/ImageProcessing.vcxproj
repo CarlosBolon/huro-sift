@@ -82,6 +82,7 @@
     <ClInclude Include="include\ObjectRecognition\GlobalFeature.h" />
     <ClInclude Include="include\ObjectRecognition\LbpFeature.h" />
     <ClInclude Include="include\ObjectRecognition\LocalFeature.h" />
+    <ClInclude Include="include\ObjectRecognition\Matcher.h" />
     <ClInclude Include="include\ObjectRecognition\MserFeature.h" />
     <ClInclude Include="include\ObjectRecognition\OrbFeature.h" />
     <ClInclude Include="include\ObjectRecognition\SiftFeature.h" />
@@ -93,6 +94,7 @@
     <ClCompile Include="src\GlobalFeature.cpp" />
     <ClCompile Include="src\LbpFeature.cpp" />
     <ClCompile Include="src\LocalFeature.cpp" />
+    <ClCompile Include="src\Matcher.cpp" />
     <ClCompile Include="src\MserFeature.cpp" />
     <ClCompile Include="src\OrbFeature.cpp" />
     <ClCompile Include="src\SiftFeature.cpp" />

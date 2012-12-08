@@ -3,8 +3,9 @@
 	<settings>
 		<_>
 			<workMode>"test"</workMode>
-			<media>"unideb.jpg"</media>
-			<matcherType>"SURF"</matcherType>
+			<media>"test.01.jpg"</media>
+			<descriptorType>"SURF"</descriptorType>
+			<matcherType>"FlannBased"</matcherType>
 			<database>"file_list.txt"</database>
 			<maxWidth>640.0</maxWidth>
 		</_>

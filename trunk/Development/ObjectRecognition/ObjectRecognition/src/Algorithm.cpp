@@ -1,5 +1,6 @@
 #include "ObjectRecognition\Algorithm.h"
 #include "ObjectRecognition\LocalSettings.h"
+#include "ObjectRecognition\Matcher.h"
 #include "ObjectRecognition\FileToken.h"
 #include "ObjectRecognition\Visualizer.h"
 
@@ -21,23 +22,23 @@ namespace ObjectRecognition
 
 struct Algorithm::Detail 
 {
-	Algorithm::WorkMode workMode_;
-	int cameraId_;				//!< ID of the camera to be analyzed.
-	string mediaFileName_;
-	string databaseFileName_;
-    string matcherType_;
-	int frameNo_;
-	double maxWidth_;
+	Algorithm::WorkMode workMode;
+	string mediaFileName;
+	string databaseFileName;
+    string descriptorType;
+    string matcherType;
+	int frameNo;
+	double maxWidth;
 };
 
 
 Algorithm::Algorithm(void)
 :	detail_(new Detail)
 {
-	detail_->workMode_ = WORK_MODE_TRAIN;
-	detail_->cameraId_ = 0;
-	detail_->frameNo_ = 0;
-    detail_->maxWidth_ = 640.0;
+	detail_->workMode = WORK_MODE_TRAIN;
+	detail_->frameNo = 0;
+    detail_->maxWidth = 640.0;
+    detail_->descriptorType = "SURF";
 
 	LoadSettingsFromFileStorage();
 }
@@ -64,48 +65,28 @@ void Algorithm::LoadSettingsFromFileStorage(void)
 		node[0]["workMode"] >> workModeStr;
 
 		if(workModeStr == "train")
-			detail_->workMode_ = WORK_MODE_TRAIN;
+			detail_->workMode = WORK_MODE_TRAIN;
 		else if(workModeStr == "test")
-			detail_->workMode_ = WORK_MODE_TEST;
-		else
-			CV_Error(1, "Wrong identifier in process xml <workMode> tag (just \"train\" or \"test\" allowed)!");
-	}
-	else
-	{
-		CV_Error(1, "Wrong identifier type in process xml <workMode> tag (it must be string)!");
+			detail_->workMode = WORK_MODE_TEST;
 	}
 
     if(node[0]["media"].isString())
-    {
-        node[0]["media"] >> detail_->mediaFileName_;
-    }
-    else
-    {
-        CV_Error(1, "Wrong media type was given in process xml (" + LocalSettingsPtr->GetProcessXmlFileName() + ")!");
-    }
+        node[0]["media"] >> detail_->mediaFileName;
+
+    if(node[0]["descriptorType"].isString())
+        node[0]["descriptorType"] >> detail_->descriptorType;
 
     if(node[0]["matcherType"].isString())
-    {
-        node[0]["matcherType"] >> detail_->matcherType_;
-    }
-    else
-    {
-        CV_Error(1, "Wrong matcher type was given in process xml (" + LocalSettingsPtr->GetProcessXmlFileName() + ")!");
-    }
+        node[0]["matcherType"] >> detail_->matcherType;
 
     if(node[0]["database"].isString())
     {
-        node[0]["database"] >> detail_->databaseFileName_;
-
-        if(ReadStringList(LocalSettingsPtr->GetInputDirectory() + detail_->databaseFileName_) == false)
-            CV_Error(1, "Wrong image list format in " + detail_->databaseFileName_ + "!");
-    }
-    else
-    {
-        CV_Error(1, "Wrong database type was given in process xml (" + LocalSettingsPtr->GetProcessXmlFileName() + ")!");
+        node[0]["database"] >> detail_->databaseFileName;
+        if(ReadStringList(LocalSettingsPtr->GetInputDirectory() + detail_->databaseFileName) == false)
+            CV_Error(1, "Wrong image list format in " + detail_->databaseFileName + "!");
     }
 
-    node[0]["maxWidth"] >> detail_->maxWidth_;
+    node[0]["maxWidth"] >> detail_->maxWidth;
 
     // Loading feature extractors
     node = fileStorage["featureExtractors"];
@@ -158,16 +139,16 @@ bool Algorithm::ReadStringList(const string& filename)
 
 bool Algorithm::GrabFrame(Mat& frame)
 {
-	if(detail_->workMode_ == WORK_MODE_TRAIN)
+	if(detail_->workMode == WORK_MODE_TRAIN)
 	{
-		if(detail_->frameNo_ < 0 || detail_->frameNo_ >= int(imageList_.size()))
+		if(detail_->frameNo < 0 || detail_->frameNo >= int(imageList_.size()))
 			return false;
 
-		frame = imread(imageList_[detail_->frameNo_], 1);
+		frame = imread(imageList_[detail_->frameNo], 1);
 	}
-	else if(detail_->frameNo_ == 0)
+	else if(detail_->frameNo == 0)
 	{
-		frame = imread(LocalSettingsPtr->GetInputDirectory() + detail_->mediaFileName_, 1);
+		frame = imread(LocalSettingsPtr->GetInputDirectory() + detail_->mediaFileName, 1);
 	}
 	else
 	{
@@ -180,7 +161,7 @@ bool Algorithm::GrabFrame(Mat& frame)
 
 void Algorithm::Process(void)
 {
-	CV_Assert(!detail_->mediaFileName_.empty() || !imageList_.empty());
+	CV_Assert(!detail_->mediaFileName.empty() || !imageList_.empty());
 
 	cout << "HeadMovementAlgorithm: Press ESC to exit." << endl;
 	Mat frame;
@@ -188,64 +169,65 @@ void Algorithm::Process(void)
 	while(true)
 	{
 #ifdef DEBUG_MODE
-        double t = (double)cvGetTickCount();
+        TickMeter tm;
+        tm.start();
 #endif
 		if(GrabFrame(frame) == false)
 			break;
 
-		resize(frame, frame, Size(), detail_->maxWidth_ / frame.cols, detail_->maxWidth_ / frame.cols);
+		resize(frame, frame, Size(), detail_->maxWidth / frame.cols, detail_->maxWidth / frame.cols);
 
         StartFeatureExtractors(frame);
 
         VisualizeProcesses();
 
-		if(detail_->workMode_ == WORK_MODE_TRAIN)
+		if(detail_->workMode == WORK_MODE_TRAIN)
 			SaveData();
 		else
-			MatchToDatabase();
+			MatchToDatabase(frame);
 		
 		// press ESC to exit
 		if(waitKey(5) >= 0) 
 			break;
 
 #ifdef DEBUG_MODE
-        t = (double)cvGetTickCount() - t;
-        double ms = t / ((double)cvGetTickFrequency() * 1000.0);
+        tm.stop();
+        double ms = tm.getTimeMilli();
         double fps = 1000.0 / ms;
         printf("Processing time: %6.2lf ms - %6.2lf fps.\n", ms, fps);
 #endif
 
-		detail_->frameNo_++;
+		detail_->frameNo++;
 	}
 }
 
 
 void Algorithm::SaveData(void)
 {
-	CV_Assert(!detail_->databaseFileName_.empty());
+	CV_Assert(!detail_->databaseFileName.empty());
 
-    FileToken ft(imageList_[detail_->frameNo_]);
-    string fullName = ft.GetPath() + ft.GetName() + "_descriptors.xml.gz";
+    FileToken ft(imageList_[detail_->frameNo]);
+    string descName = ft.GetPath() + ft.GetName() + "_descriptors.xml.gz";
+	FileStorage fsDesc(descName, FileStorage::WRITE, "UTF-8");
 
-	FileStorage fs(fullName, FileStorage::WRITE, "UTF-8");
-	if(!fs.isOpened())
-		CV_Error(1, "XML does not exist (" + fullName + ")!");
+	if(!fsDesc.isOpened())
+		CV_Error(1, "XML does not exist (" + descName + ")!");
 
-	fs << "database" << "[";
-	fs << "{:" << "path" << imageList_[detail_->frameNo_];
+	fsDesc << "database" << "[";
+	fsDesc << "{:" << "path" << imageList_[detail_->frameNo];
 
 	for(LocalFeaturePool::iterator elem = localFeaturePool_.begin(); elem != localFeaturePool_.end(); elem++)
 	{
 		const vector<KeyPoint>& keyPoints = elem->second->keyPoints;
 		const Mat& descriptors = elem->second->descriptors;
 
-		//fs << elem->first + "_KeyPoints" << keyPoints;
-		fs << elem->first + "_Descriptors" << descriptors;
+		fsDesc << elem->first + "_KeyPoints" << keyPoints;
+		fsDesc << elem->first + "_Descriptors" << descriptors;
 	}
 
-	fs << "}";
-	fs << "]";
-	fs.release();
+	fsDesc << "}";
+	fsDesc << "]";
+	fsDesc.release();
 }
 
 void Algorithm::StartFeatureExtractors(const Mat& frame)
@@ -292,38 +274,66 @@ void Algorithm::VisualizeProcesses(void)
     }
 }
 
-void Algorithm::MatchToDatabase(void)
+void Algorithm::MatchToDatabase(const Mat& frame)
 {
-    CV_Assert(!detail_->databaseFileName_.empty());
+    CV_Assert(!detail_->databaseFileName.empty());
 
-	vector<Mat> trainDescriptors;
+	Matcher matcher(detail_->descriptorType, detail_->matcherType);
+    const Mat& queryDescriptors = localFeaturePool_[detail_->descriptorType]->descriptors;
+    matcher.Process(imageList_, queryDescriptors);
 
-    for(int i = 0; i < int(imageList_.size()); i++)
+    const vector<DMatch>& matches = matcher.GetMatches();
+
+    DMatch minMatch;
+
+    if(matches.size() > 1)
     {
-        FileToken ft(imageList_[i]);
-        string fullName = ft.GetPath() + ft.GetName() + "_descriptors.xml.gz";
-        
-        FileStorage fs(fullName, FileStorage::READ, "UTF-8");
-        if(!fs.isOpened())
-            CV_Error(1, "Descriptor XML does not exist (" + fullName + ")!");
+        minMatch = matches[0];
 
-        FileNode node = fs["database"];
-        Mat descriptor;
-        string key = detail_->matcherType_ + "_Descriptors";
+        for(int i = 0; i < int(matches.size()); i++)
+        {
+            if(matches[i] < minMatch)
+                minMatch = matches[i];
+        }
 
-        cout << "Loading " + detail_->matcherType_ + " descriptor for: " << fullName << endl;
+        if(minMatch.imgIdx >= 0 && minMatch.imgIdx < int(imageList_.size()))
+        {
+            const vector<KeyPoint>& queryKeypoints = localFeaturePool_[detail_->descriptorType]->keyPoints;
+            Mat trainImage = imread(imageList_[minMatch.imgIdx], 1);
+            Mat drawImg;
 
-        if(!node[0][key].isNone())
-            node[0][key] >> descriptor;
-        else
-            CV_Error(1, detail_->matcherType_ + " descriptor does not exist (" + fullName + ")!");
+            cout << "Best match: " << imageList_[minMatch.imgIdx];
+            cout << ", distance: " << minMatch.distance << endl;
 
-        if(!descriptor.empty())
-            trainDescriptors.push_back(descriptor);
+            FileToken ft(imageList_[minMatch.imgIdx]);
+            string fullName = ft.GetPath() + ft.GetName() + "_descriptors.xml.gz";
 
-        fs.release();
+            FileStorage fs(fullName, FileStorage::READ, "UTF-8");
+            if(!fs.isOpened())
+                CV_Error(1, "Descriptor XML does not exist (" + fullName + ")!");
+
+            FileNode node = fs["database"];
+            string key = detail_->descriptorType + "_KeyPoints";
+
+            if(!node[0][key].isNone())
+            {
+                vector<KeyPoint> trainKeypoints;
+                read(node[0][key], trainKeypoints);
+                //node[0][key] >> trainKeypoints;
+                if(!trainKeypoints.empty())
+                {
+                    drawMatches(frame, queryKeypoints, trainImage, trainKeypoints,
+                            matches, drawImg, Scalar(255, 0, 0), Scalar(0, 255, 255) );
+                }
+            }
+            else
+            {
+                CV_Error(1, detail_->descriptorType + " descriptor does not exist (" + fullName + ")!");
+            }
+
+            fs.release();
+        }
     }
-
 
 }
 

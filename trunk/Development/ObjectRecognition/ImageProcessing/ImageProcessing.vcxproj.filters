@@ -28,6 +28,9 @@
     <ClCompile Include="src\LbpFeature.cpp">
       <Filter>GlobalFeatures</Filter>
     </ClCompile>
+    <ClCompile Include="src\Matcher.cpp">
+      <Filter>Matcher</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ObjectRecognition\GlobalFeature.h">
@@ -57,6 +60,9 @@
     <ClInclude Include="include\ObjectRecognition\StarFeature.h">
       <Filter>LocalFeatures</Filter>
     </ClInclude>
+    <ClInclude Include="include\ObjectRecognition\Matcher.h">
+      <Filter>Matcher</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GlobalFeatures">
@@ -64,6 +70,9 @@
     </Filter>
     <Filter Include="LocalFeatures">
       <UniqueIdentifier>{94f8dc7f-d742-4793-ada9-bb1468169318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Matcher">
+      <UniqueIdentifier>{47fcc59d-198b-4094-a5a3-fa83702e6d03}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
