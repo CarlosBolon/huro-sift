@@ -7,8 +7,6 @@
 namespace ObjectRecognition
 {
 
-#define DEBUG_MODE 1
-
 class GlobalFeature;
 class LocalFeature;
 class Thread;
