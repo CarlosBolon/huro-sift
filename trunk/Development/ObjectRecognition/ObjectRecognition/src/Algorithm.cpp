@@ -139,23 +139,27 @@ bool Algorithm::ReadStringList(const string& filename)
 
 bool Algorithm::GrabFrame(Mat& frame)
 {
-	if(detail_->workMode == WORK_MODE_TRAIN)
+	if(detail_->workMode == WORK_MODE_TRAIN || detail_->frameNo == 0)
 	{
-		if(detail_->frameNo < 0 || detail_->frameNo >= int(imageList_.size()))
-			return false;
+		if(detail_->workMode == WORK_MODE_TRAIN)
+		{
+			if(detail_->frameNo < 0 || detail_->frameNo >= int(imageList_.size()))
+				return false;
 
-		frame = imread(imageList_[detail_->frameNo], 1);
-	}
-	else if(detail_->frameNo == 0)
-	{
-		frame = imread(LocalSettingsPtr->GetInputDirectory() + detail_->mediaFileName, 1);
-	}
-	else
-	{
-		frame = Mat();
+			frame = imread(imageList_[detail_->frameNo], 1);
+		}
+		else if(detail_->frameNo == 0)
+		{
+			frame = imread(LocalSettingsPtr->GetInputDirectory() + detail_->mediaFileName, 1);
+		}
+		
+		resize(frame, frame, Size(), detail_->maxWidth / frame.cols, detail_->maxWidth / frame.cols);
+		detail_->frameNo++;
+
+		return !frame.empty();
 	}
 
-	return !frame.empty();
+	return false;
 }
 
 
@@ -168,36 +172,35 @@ void Algorithm::Process(void)
 
 	while(true)
 	{
-#ifdef DEBUG_MODE
-        TickMeter tm;
-        tm.start();
-#endif
-		if(GrabFrame(frame) == false)
-			break;
+		if(GrabFrame(frame) == true)
+		{
+			TickMeter tickMeter;
+			tickMeter.start();
 
-        resize(frame, frame, Size(), detail_->maxWidth / frame.cols, detail_->maxWidth / frame.cols);
+			StartFeatureExtractors(frame);
+			VisualizeProcesses();
 
-        StartFeatureExtractors(frame);
+			if(detail_->workMode == WORK_MODE_TRAIN)
+			{
+				SaveData();
+			}
+			else
+			{
+				MatchToDatabase(frame);
+			}
 
-        VisualizeProcesses();
-
-		if(detail_->workMode == WORK_MODE_TRAIN)
-			SaveData();
-		else
-			MatchToDatabase(frame);
-		
-        detail_->frameNo++;
+			tickMeter.stop();
+			double ms = tickMeter.getTimeMilli();
+			double fps = 1000.0 / ms;
+			printf("Processing time: %6.2lf ms - %6.2lf fps.\n", ms, fps);
+		}
 
 		// press ESC to exit
-		//if(waitKey(5) >= 0) 
-		//	break;
-
-#ifdef DEBUG_MODE
-        tm.stop();
-        double ms = tm.getTimeMilli();
-        double fps = 1000.0 / ms;
-        printf("Processing time: %6.2lf ms - %6.2lf fps.\n", ms, fps);
-#endif
+		if((char)waitKey(10) == 27) 
+		{
+			destroyAllWindows();
+			break;
+		}
 	}
 }
 
@@ -337,7 +340,7 @@ void Algorithm::MatchToDatabase(const Mat& frame)
                         Scalar(255, 0, 0), Scalar(0, 255, 255), mask 
                     );
 
-                    VisualizerPtr->ShowImage("Matches", drawImg, true);
+                    VisualizerPtr->ShowImage("Matches", drawImg);
                 }
             }
 
