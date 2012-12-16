@@ -154,7 +154,6 @@ bool Algorithm::GrabFrame(Mat& frame)
 		}
 		
 		resize(frame, frame, Size(), detail_->maxWidth / frame.cols, detail_->maxWidth / frame.cols);
-		detail_->frameNo++;
 
 		return !frame.empty();
 	}
@@ -193,6 +192,8 @@ void Algorithm::Process(void)
 			double ms = tickMeter.getTimeMilli();
 			double fps = 1000.0 / ms;
 			printf("Processing time: %6.2lf ms - %6.2lf fps.\n", ms, fps);
+
+			detail_->frameNo++;
 		}
 
 		// press ESC to exit
@@ -289,13 +290,20 @@ void Algorithm::MatchToDatabase(const Mat& frame)
 
     if(matches.size() > 1)
     {
-        map<int, int> avgMatches;
+        map<int, int> avgCount;
+		map<int, double> avgDst;
         for(int i = 0; i < int(matches.size()); i++)
-            avgMatches[matches[i].imgIdx]++;
+		{
+            avgCount[matches[i].imgIdx]++;
+			avgDst[matches[i].imgIdx] += matches[i].distance;
+		}
+
+		for(map<int, double>::iterator it = avgDst.begin(); it != avgDst.end(); it++)
+			it->second = it->second / double(avgCount[it->first]);
 
         int maxInd = -1;
         int maxVal = -1;
-        for(map<int, int>::iterator it = avgMatches.begin(); it != avgMatches.end(); it++)
+        for(map<int, int>::iterator it = avgCount.begin(); it != avgCount.end(); it++)
         {
             if(it->second > maxVal)
             {
@@ -330,7 +338,7 @@ void Algorithm::MatchToDatabase(const Mat& frame)
                     Mat drawImg;
                     vector<char> mask;
 
-                    resize(trainImage, trainImage, Size(), detail_->maxWidth / trainImage.cols, detail_->maxWidth / trainImage.cols);
+					resize(trainImage, trainImage, Size(), detail_->maxWidth / trainImage.cols, detail_->maxWidth / trainImage.cols);
 
                     MaskMatchesByTrainImgIdx(matches, maxInd, mask);
                     drawMatches(

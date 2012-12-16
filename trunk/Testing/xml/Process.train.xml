@@ -4,7 +4,8 @@
 		<_>
 			<workMode>"train"</workMode>
 			<media>"file_list.txt"</media>
-			<matcherType>"SURF"</matcherType>
+			<descriptorType>"SURF"</descriptorType>
+			<matcherType>"FlannBased"</matcherType>
 			<database>"file_list.txt"</database>
 			<maxWidth>320.0</maxWidth>
 		</_>
