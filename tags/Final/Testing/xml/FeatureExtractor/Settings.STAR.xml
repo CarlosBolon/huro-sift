@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<opencv_storage>
+	<maxSize>45</maxSize>
+	<responseThreshold>30</responseThreshold>
+	<lineThresholdProjected>10</lineThresholdProjected>
+	<lineThresholdBinarized>8</lineThresholdBinarized>
+	<suppressNonmaxSize>5</suppressNonmaxSize>
+</opencv_storage>

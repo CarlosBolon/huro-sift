@@ -1,0 +1,22 @@
+<map id="Core/include/Thread.h" name="Core/include/Thread.h">
+<area shape="rect" id="node3" href="$_thread_8cpp.html" title="Core/src/Thread.cpp" alt="" coords="477,88,616,115"/>
+<area shape="rect" id="node5" href="$_global_feature_8h.html" title="FeatureExtractor/include\l/GlobalFeature.h" alt="" coords="641,81,804,122"/>
+<area shape="rect" id="node40" href="$_local_feature_8h.html" title="FeatureExtractor/include\l/LocalFeature.h" alt="" coords="1289,81,1452,122"/>
+<area shape="rect" id="node7" href="$_fast_feature_8h.html" title="FeatureExtractor/include\l/FastFeature.h" alt="" coords="171,171,335,213"/>
+<area shape="rect" id="node13" href="$_mser_feature_8h.html" title="FeatureExtractor/include\l/MserFeature.h" alt="" coords="359,171,523,213"/>
+<area shape="rect" id="node18" href="$_orb_feature_8h.html" title="FeatureExtractor/include\l/OrbFeature.h" alt="" coords="547,171,711,213"/>
+<area shape="rect" id="node23" href="$_sift_feature_8h.html" title="FeatureExtractor/include\l/SiftFeature.h" alt="" coords="735,171,899,213"/>
+<area shape="rect" id="node28" href="$_star_feature_8h.html" title="FeatureExtractor/include\l/StarFeature.h" alt="" coords="923,171,1087,213"/>
+<area shape="rect" id="node33" href="$_surf_feature_8h.html" title="FeatureExtractor/include\l/SurfFeature.h" alt="" coords="1111,171,1275,213"/>
+<area shape="rect" id="node38" href="$_global_feature_8cpp.html" title="FeatureExtractor/src\l/GlobalFeature.cpp" alt="" coords="5,171,147,213"/>
+<area shape="rect" id="node9" href="$_fast_feature_8cpp.html" title="FeatureExtractor/src\l/FastFeature.cpp" alt="" coords="183,262,324,303"/>
+<area shape="rect" id="node11" href="$_huro_algorithm_8cpp.html" title="ObjectRecognition/src\l/HuroAlgorithm.cpp" alt="" coords="690,262,840,303"/>
+<area shape="rect" id="node15" href="$_mser_feature_8cpp.html" title="FeatureExtractor/src\l/MserFeature.cpp" alt="" coords="359,262,500,303"/>
+<area shape="rect" id="node20" href="$_orb_feature_8cpp.html" title="FeatureExtractor/src\l/OrbFeature.cpp" alt="" coords="524,262,665,303"/>
+<area shape="rect" id="node25" href="$_sift_feature_8cpp.html" title="FeatureExtractor/src\l/SiftFeature.cpp" alt="" coords="865,262,1007,303"/>
+<area shape="rect" id="node30" href="$_star_feature_8cpp.html" title="FeatureExtractor/src\l/StarFeature.cpp" alt="" coords="1031,262,1172,303"/>
+<area shape="rect" id="node35" href="$_surf_feature_8cpp.html" title="FeatureExtractor/src\l/SurfFeature.cpp" alt="" coords="1196,262,1337,303"/>
+<area shape="rect" id="node42" href="$_lbp_feature_8h.html" title="FeatureExtractor/include\l/LbpFeature.h" alt="" coords="1466,171,1629,213"/>
+<area shape="rect" id="node47" href="$_local_feature_8cpp.html" title="FeatureExtractor/src\l/LocalFeature.cpp" alt="" coords="1300,171,1441,213"/>
+<area shape="rect" id="node44" href="$_lbp_feature_8cpp.html" title="FeatureExtractor/src\l/LbpFeature.cpp" alt="" coords="1477,262,1619,303"/>
+</map>

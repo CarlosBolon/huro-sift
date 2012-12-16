@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="class_image_frame" kind="class" prot="public">
+    <compoundname>ImageFrame</compoundname>
+    <includes refid="_image_frame_8h" local="no">ImageFrame.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_image_frame_1a1f8ba0c6c7f724a41f5f5fef19bfe035" prot="private" static="no" mutable="no">
+        <type>cv::VideoCapture</type>
+        <definition>cv::VideoCapture ImageFrame::cap_</definition>
+        <argsstring></argsstring>
+        <name>cap_</name>
+        <briefdescription>
+<para>Temporary capture for getting frame. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/ImageFrame.h" line="37" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/ImageFrame.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_image_frame_1a6aaede1e96c67711280696df991b4508" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat ImageFrame::frame_</definition>
+        <argsstring></argsstring>
+        <name>frame_</name>
+        <briefdescription>
+<para>Loaded or captured image. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/ImageFrame.h" line="38" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/ImageFrame.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_image_frame_1a117419148b5bcc26cc145d3f2f186bad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ImageFrame::ImageFrame</definition>
+        <argsstring>(int cameraId)</argsstring>
+        <name>ImageFrame</name>
+        <param>
+          <type>int</type>
+          <declname>cameraId</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cameraId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the camera. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/ImageFrame.h" line="19" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/ImageFrame.cpp" bodystart="8" bodyend="14"/>
+        <references refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" compoundref="_exception_descriptor_8h" startline="56">ExceptionError</references>
+      </memberdef>
+      <memberdef kind="function" id="class_image_frame_1a59c1d9b9e30400514172b549b5f087d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ImageFrame::ImageFrame</definition>
+        <argsstring>(const std::string &amp;imageName)</argsstring>
+        <name>ImageFrame</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>imageName</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>imageName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the image, which from the features will be extracted. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/ImageFrame.h" line="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_image_frame_1a2f365f54366e61d0fffe41a2e24ba570" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ImageFrame::~ImageFrame</definition>
+        <argsstring>(void)</argsstring>
+        <name>~ImageFrame</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/ImageFrame.h" line="28" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/ImageFrame.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_image_frame_1a886d65831c708b65ba5596aab1aca438" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const cv::Mat &amp;</type>
+        <definition>const Mat &amp; ImageFrame::GetFrame</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetFrame</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Gets a frame from somewhere. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>frame Output argument for the frame. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/ImageFrame.h" line="34" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/ImageFrame.cpp" bodystart="29" bodyend="37"/>
+        <references refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" compoundref="_exception_descriptor_8h" startline="56">ExceptionError</references>
+        <referencedby refid="class_huro_algorithm_1ac2e91407459c4ebac0b33f7e7570022d" compoundref="_huro_algorithm_8cpp" startline="95" endline="119">HuroAlgorithm::Process</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Image frame wrapper class. </para>    </briefdescription>
+    <detaileddescription>
+<para>Gets image frames as cv::Mat objects. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="109">
+        <label>ImageFrame</label>
+        <link refid="class_image_frame"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/ImageFrame.h" line="13" bodyfile="D:/Code/huro-sift/Development/ObjectRecognition/Core/include/ImageFrame.h" bodystart="12" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_image_frame_1a1f8ba0c6c7f724a41f5f5fef19bfe035" prot="private" virt="non-virtual"><scope>ImageFrame</scope><name>cap_</name></member>
+      <member refid="class_image_frame_1a6aaede1e96c67711280696df991b4508" prot="private" virt="non-virtual"><scope>ImageFrame</scope><name>frame_</name></member>
+      <member refid="class_image_frame_1a886d65831c708b65ba5596aab1aca438" prot="public" virt="non-virtual"><scope>ImageFrame</scope><name>GetFrame</name></member>
+      <member refid="class_image_frame_1a117419148b5bcc26cc145d3f2f186bad" prot="public" virt="non-virtual"><scope>ImageFrame</scope><name>ImageFrame</name></member>
+      <member refid="class_image_frame_1a59c1d9b9e30400514172b549b5f087d9" prot="public" virt="non-virtual"><scope>ImageFrame</scope><name>ImageFrame</name></member>
+      <member refid="class_image_frame_1a2f365f54366e61d0fffe41a2e24ba570" prot="public" virt="non-virtual"><scope>ImageFrame</scope><name>~ImageFrame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

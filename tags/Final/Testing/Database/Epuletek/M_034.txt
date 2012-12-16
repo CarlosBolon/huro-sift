@@ -1,0 +1,5 @@
+Fogadalmi Templom, Szeged/Votive Church of Szeged
+templom/temple
+http://hu.wikipedia.org/wiki/Fogadalmi_templom_(Szeged)
+http://upload.wikimedia.org/wikipedia/hu/a/a7/Szeged-dom1.jpg
+N 46.248402 E 20.148864

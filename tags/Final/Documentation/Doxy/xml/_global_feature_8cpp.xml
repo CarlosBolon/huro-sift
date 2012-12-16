@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_global_feature_8cpp" kind="file">
+    <compoundname>GlobalFeature.cpp</compoundname>
+    <includes refid="_global_feature_8h" local="yes">GlobalFeature.h</includes>
+    <includes refid="_visualizer_8h" local="yes">Visualizer.h</includes>
+    <incdepgraph>
+      <node id="673">
+        <label>Runnable.h</label>
+        <link refid="_runnable_8h"/>
+      </node>
+      <node id="674">
+        <label>Visualizer.h</label>
+        <link refid="_visualizer_8h"/>
+        <childnode refid="668" relation="include">
+        </childnode>
+        <childnode refid="669" relation="include">
+        </childnode>
+      </node>
+      <node id="669">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="668">
+        <label>string</label>
+      </node>
+      <node id="667">
+        <label>GlobalFeature.h</label>
+        <link refid="_global_feature_8h"/>
+        <childnode refid="668" relation="include">
+        </childnode>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="670" relation="include">
+        </childnode>
+      </node>
+      <node id="672">
+        <label>pthread.h</label>
+      </node>
+      <node id="666">
+        <label>FeatureExtractor/src/GlobalFeature.cpp</label>
+        <link refid="GlobalFeature.cpp"/>
+        <childnode refid="667" relation="include">
+        </childnode>
+        <childnode refid="674" relation="include">
+        </childnode>
+      </node>
+      <node id="670">
+        <label>Thread.h</label>
+        <link refid="_thread_8h"/>
+        <childnode refid="671" relation="include">
+        </childnode>
+        <childnode refid="672" relation="include">
+        </childnode>
+        <childnode refid="673" relation="include">
+        </childnode>
+      </node>
+      <node id="671">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_global_feature_8h" kindref="compound">GlobalFeature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_visualizer_8h" kindref="compound">Visualizer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">cv;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_global_feature_1a835e42ce3c2d6b39189a0f2bc24afc9c" refkind="member"><highlight class="normal"><ref refid="class_global_feature_1a835e42ce3c2d6b39189a0f2bc24afc9c" kindref="member" tooltip="Constructor.">GlobalFeature::GlobalFeature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>type)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>name_(name),</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>type_(type),</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>procTime_(0.0)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_global_feature_1a355fe3fc573a603139538394c5404832" refkind="member"><highlight class="normal"><ref refid="class_global_feature_1a355fe3fc573a603139538394c5404832" kindref="member" tooltip="Destructor.">GlobalFeature::~GlobalFeature</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_global_feature_1a3c58d995fb2440b28db3b21b54b94815" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1a3c58d995fb2440b28db3b21b54b94815" kindref="member" tooltip="Connects a frame to the feature extractor.">GlobalFeature::SetFrame</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mat&amp;<sp/>frame)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" kindref="member" tooltip="The current frame.">frame_</ref><sp/>=<sp/>frame.clone();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_global_feature_1a03df7e2408a60e20a62468652c17d615" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="class_global_feature_1a03df7e2408a60e20a62468652c17d615" kindref="member" tooltip="Implemented virtual method for the algorithm.">GlobalFeature::Run</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" kindref="member" tooltip="The current frame.">frame_</ref>.empty())</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_global_feature_1aa3306975b929f5503dac51829f9e04a0" kindref="member" tooltip="Processing time of the current feature extraction method.">procTime_</ref><sp/>=<sp/>(double)cvGetTickCount();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_global_feature_1a9fdfc934c5a9da6962ec39c1b0cf32dc" kindref="member" tooltip="Virtual method for each feature extraction algorithm.">Process</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_global_feature_1aa3306975b929f5503dac51829f9e04a0" kindref="member" tooltip="Processing time of the current feature extraction method.">procTime_</ref><sp/>=<sp/>(double)cvGetTickCount()<sp/>-<sp/><ref refid="class_global_feature_1aa3306975b929f5503dac51829f9e04a0" kindref="member" tooltip="Processing time of the current feature extraction method.">procTime_</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_global_feature_1acea1ee12c177894819ea7ae0f6294e5c" kindref="member" tooltip="Virtual method for drawing the extracted features.">DrawFeatures</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_global_feature_1aae5833316f46595edaf6dd635e391d4e" kindref="member" tooltip="Visualizing the output of feature extractor.">Visualize</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(0);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_global_feature_1aae5833316f46595edaf6dd635e391d4e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1aae5833316f46595edaf6dd635e391d4e" kindref="member" tooltip="Visualizing the output of feature extractor.">GlobalFeature::Visualize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[500];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf_s(buffer,<sp/>500,<sp/></highlight><highlight class="stringliteral">&quot;Processing<sp/>time<sp/>of<sp/>%s:<sp/>%.2lf<sp/>ms.&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_global_feature_1abee52be830de272bd27685083bf28aae" kindref="member" tooltip="Name of the current feature extraction procedure.">name_</ref>.c_str(),<sp/><ref refid="class_global_feature_1aa3306975b929f5503dac51829f9e04a0" kindref="member" tooltip="Processing time of the current feature extraction method.">procTime_</ref><sp/>/<sp/>(cvGetTickFrequency()<sp/>*<sp/>1000.0));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_visualizer_8h_1a1ceb952bd02330e3ec62c186672d8a78" kindref="member">VisualizerPtr</ref>-&gt;PutText(<ref refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" kindref="member" tooltip="The current frame.">frame_</ref>,<sp/>buffer,<sp/>Point(10,<sp/>20));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf_s(buffer,<sp/>500,<sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>detected<sp/>keypoints:<sp/>%d.&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_global_feature_1a72cc606c0090a64718a7e92bca7520b9" kindref="member" tooltip="Stores keypoints, i.e. a point feature found by one of many available keypoint detectors.">keyPoints</ref>.size());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_visualizer_8h_1a1ceb952bd02330e3ec62c186672d8a78" kindref="member">VisualizerPtr</ref>-&gt;PutText(<ref refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" kindref="member" tooltip="The current frame.">frame_</ref>,<sp/>buffer,<sp/>Point(10,<sp/>40));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_visualizer_8h_1a1ceb952bd02330e3ec62c186672d8a78" kindref="member">VisualizerPtr</ref>-&gt;ShowImage(<ref refid="class_global_feature_1abee52be830de272bd27685083bf28aae" kindref="member" tooltip="Name of the current feature extraction procedure.">name_</ref>,<sp/><ref refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" kindref="member" tooltip="The current frame.">frame_</ref>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_global_feature_1a5f69ca2455d5eec4493dbf115d00d5c9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/><ref refid="class_global_feature_1a5f69ca2455d5eec4493dbf115d00d5c9" kindref="member" tooltip="Name getter.">GlobalFeature::GetName</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1abee52be830de272bd27685083bf28aae" kindref="member" tooltip="Name of the current feature extraction procedure.">name_</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_global_feature_1a6724c19006d495bd6a9c8c6029236ebc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/><ref refid="class_global_feature_1a6724c19006d495bd6a9c8c6029236ebc" kindref="member" tooltip="Type getter.">GlobalFeature::GetType</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1ad467857c4bc3d0fe65ba29e3b8f7c796" kindref="member" tooltip="Type of the current feature extraction procedure.">type_</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_global_feature_1ad07a3104192b50d911eee634a0be009d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1ad07a3104192b50d911eee634a0be009d" kindref="member" tooltip="Process time getter.">GlobalFeature::GetProcTime</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1aa3306975b929f5503dac51829f9e04a0" kindref="member" tooltip="Processing time of the current feature extraction method.">procTime_</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/GlobalFeature.cpp"/>
+  </compounddef>
+</doxygen>

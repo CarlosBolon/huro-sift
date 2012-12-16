@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_global_feature_8h" kind="file">
+    <compoundname>GlobalFeature.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="yes">opencv2/opencv.hpp</includes>
+    <includes refid="_thread_8h" local="yes">Thread.h</includes>
+    <includedby refid="_fast_feature_8h" local="yes">FeatureExtractor/include/FastFeature.h</includedby>
+    <includedby refid="_mser_feature_8h" local="yes">FeatureExtractor/include/MserFeature.h</includedby>
+    <includedby refid="_orb_feature_8h" local="yes">FeatureExtractor/include/OrbFeature.h</includedby>
+    <includedby refid="_sift_feature_8h" local="yes">FeatureExtractor/include/SiftFeature.h</includedby>
+    <includedby refid="_star_feature_8h" local="yes">FeatureExtractor/include/StarFeature.h</includedby>
+    <includedby refid="_surf_feature_8h" local="yes">FeatureExtractor/include/SurfFeature.h</includedby>
+    <includedby refid="_global_feature_8cpp" local="yes">FeatureExtractor/src/GlobalFeature.cpp</includedby>
+    <incdepgraph>
+      <node id="558">
+        <label>Runnable.h</label>
+        <link refid="_runnable_8h"/>
+      </node>
+      <node id="554">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="553">
+        <label>string</label>
+      </node>
+      <node id="552">
+        <label>FeatureExtractor/include/GlobalFeature.h</label>
+        <link refid="GlobalFeature.h"/>
+        <childnode refid="553" relation="include">
+        </childnode>
+        <childnode refid="554" relation="include">
+        </childnode>
+        <childnode refid="555" relation="include">
+        </childnode>
+      </node>
+      <node id="557">
+        <label>pthread.h</label>
+      </node>
+      <node id="555">
+        <label>Thread.h</label>
+        <link refid="_thread_8h"/>
+        <childnode refid="556" relation="include">
+        </childnode>
+        <childnode refid="557" relation="include">
+        </childnode>
+        <childnode refid="558" relation="include">
+        </childnode>
+      </node>
+      <node id="556">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="563">
+        <label>FeatureExtractor/include/MserFeature.h</label>
+        <link refid="_mser_feature_8h"/>
+        <childnode refid="564" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="568">
+        <label>FeatureExtractor/src/SiftFeature.cpp</label>
+        <link refid="_sift_feature_8cpp"/>
+      </node>
+      <node id="572">
+        <label>FeatureExtractor/src/SurfFeature.cpp</label>
+        <link refid="_surf_feature_8cpp"/>
+      </node>
+      <node id="569">
+        <label>FeatureExtractor/include/StarFeature.h</label>
+        <link refid="_star_feature_8h"/>
+        <childnode refid="570" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="559">
+        <label>FeatureExtractor/include/GlobalFeature.h</label>
+        <link refid="GlobalFeature.h"/>
+        <childnode refid="560" relation="include">
+        </childnode>
+        <childnode refid="563" relation="include">
+        </childnode>
+        <childnode refid="565" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="569" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
+        </childnode>
+        <childnode refid="573" relation="include">
+        </childnode>
+      </node>
+      <node id="567">
+        <label>FeatureExtractor/include/SiftFeature.h</label>
+        <link refid="_sift_feature_8h"/>
+        <childnode refid="568" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="573">
+        <label>FeatureExtractor/src/GlobalFeature.cpp</label>
+        <link refid="_global_feature_8cpp"/>
+      </node>
+      <node id="562">
+        <label>ObjectRecognition/src/HuroAlgorithm.cpp</label>
+        <link refid="_huro_algorithm_8cpp"/>
+      </node>
+      <node id="561">
+        <label>FeatureExtractor/src/FastFeature.cpp</label>
+        <link refid="_fast_feature_8cpp"/>
+      </node>
+      <node id="565">
+        <label>FeatureExtractor/include/OrbFeature.h</label>
+        <link refid="_orb_feature_8h"/>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="571">
+        <label>FeatureExtractor/include/SurfFeature.h</label>
+        <link refid="_surf_feature_8h"/>
+        <childnode refid="572" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="570">
+        <label>FeatureExtractor/src/StarFeature.cpp</label>
+        <link refid="_star_feature_8cpp"/>
+      </node>
+      <node id="560">
+        <label>FeatureExtractor/include/FastFeature.h</label>
+        <link refid="_fast_feature_8h"/>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="564">
+        <label>FeatureExtractor/src/MserFeature.cpp</label>
+        <link refid="_mser_feature_8cpp"/>
+      </node>
+      <node id="566">
+        <label>FeatureExtractor/src/OrbFeature.cpp</label>
+        <link refid="_orb_feature_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_global_feature" prot="public">GlobalFeature</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;opencv2/opencv.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_thread_8h" kindref="compound">Thread.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"></codeline>
+<codeline lineno="17" refid="class_global_feature" refkind="compound"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C++&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="keyword">__declspec(dllexport)</highlight><highlight class="normal"><sp/><ref refid="class_global_feature" kindref="compound" tooltip="Abstract class for global feature extraction.">GlobalFeature</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_thread" kindref="compound" tooltip="Abstract class for handling threads.">Thread</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_global_feature_1a835e42ce3c2d6b39189a0f2bc24afc9c" kindref="member" tooltip="Constructor.">GlobalFeature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>type);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_global_feature_1a355fe3fc573a603139538394c5404832" kindref="member" tooltip="Destructor.">~GlobalFeature</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1a3c58d995fb2440b28db3b21b54b94815" kindref="member" tooltip="Connects a frame to the feature extractor.">SetFrame</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cv::Mat&amp;<sp/>frame);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="class_global_feature_1a5f69ca2455d5eec4493dbf115d00d5c9" kindref="member" tooltip="Name getter.">GetName</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="class_global_feature_1a6724c19006d495bd6a9c8c6029236ebc" kindref="member" tooltip="Type getter.">GetType</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1ad07a3104192b50d911eee634a0be009d" kindref="member" tooltip="Process time getter.">GetProcTime</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_global_feature_1a72cc606c0090a64718a7e92bca7520b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;cv::KeyPoint&gt;<sp/><ref refid="class_global_feature_1a72cc606c0090a64718a7e92bca7520b9" kindref="member" tooltip="Stores keypoints, i.e. a point feature found by one of many available keypoint detectors.">keyPoints</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1aa48133762d9f52a5c2ae5042f6ebbe71" kindref="member" tooltip="Virtual method for loading algorithm specific settings from the given storage.">LoadSettingsFromFileStorage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1a9fdfc934c5a9da6962ec39c1b0cf32dc" kindref="member" tooltip="Virtual method for each feature extraction algorithm.">Process</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1acea1ee12c177894819ea7ae0f6294e5c" kindref="member" tooltip="Virtual method for drawing the extracted features.">DrawFeatures</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_global_feature_1abee52be830de272bd27685083bf28aae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_global_feature_1abee52be830de272bd27685083bf28aae" kindref="member" tooltip="Name of the current feature extraction procedure.">name_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="class_global_feature_1ad467857c4bc3d0fe65ba29e3b8f7c796" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_global_feature_1ad467857c4bc3d0fe65ba29e3b8f7c796" kindref="member" tooltip="Type of the current feature extraction procedure.">type_</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Mat<sp/><ref refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" kindref="member" tooltip="The current frame.">frame_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="class_global_feature_1aa3306975b929f5503dac51829f9e04a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1aa3306975b929f5503dac51829f9e04a0" kindref="member" tooltip="Processing time of the current feature extraction method.">procTime_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="class_global_feature_1a03df7e2408a60e20a62468652c17d615" kindref="member" tooltip="Implemented virtual method for the algorithm.">Run</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_global_feature_1aae5833316f46595edaf6dd635e391d4e" kindref="member" tooltip="Visualizing the output of feature extractor.">Visualize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/include/GlobalFeature.h"/>
+  </compounddef>
+</doxygen>

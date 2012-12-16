@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_runnable_8cpp" kind="file">
+    <compoundname>Runnable.cpp</compoundname>
+    <includes refid="_runnable_8h" local="yes">Runnable.h</includes>
+    <incdepgraph>
+      <node id="525">
+        <label>Runnable.h</label>
+        <link refid="_runnable_8h"/>
+      </node>
+      <node id="524">
+        <label>Core/src/Runnable.cpp</label>
+        <link refid="Runnable.cpp"/>
+        <childnode refid="525" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_runnable_8h" kindref="compound">Runnable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Pure<sp/>virtual<sp/>destructor:<sp/>function<sp/>body<sp/>required</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_runnable_1a12fa87f2064fa19c66c23c6dcd7387f6" refkind="member"><highlight class="normal"><ref refid="class_runnable_1a12fa87f2064fa19c66c23c6dcd7387f6" kindref="member" tooltip="Destructor.">Runnable::~Runnable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/Core/src/Runnable.cpp"/>
+  </compounddef>
+</doxygen>

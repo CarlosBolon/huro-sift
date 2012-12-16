@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_surf_feature_8cpp" kind="file">
+    <compoundname>SurfFeature.cpp</compoundname>
+    <includes refid="_surf_feature_8h" local="yes">SurfFeature.h</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="_local_settings_8h" local="yes">LocalSettings.h</includes>
+    <includes refid="_exception_descriptor_8h" local="yes">ExceptionDescriptor.h</includes>
+    <incdepgraph>
+      <node id="764">
+        <label>Runnable.h</label>
+        <link refid="_runnable_8h"/>
+      </node>
+      <node id="756">
+        <label>FeatureExtractor/src/SurfFeature.cpp</label>
+        <link refid="SurfFeature.cpp"/>
+        <childnode refid="757" relation="include">
+        </childnode>
+        <childnode refid="765" relation="include">
+        </childnode>
+        <childnode refid="766" relation="include">
+        </childnode>
+        <childnode refid="767" relation="include">
+        </childnode>
+      </node>
+      <node id="760">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="759">
+        <label>string</label>
+      </node>
+      <node id="758">
+        <label>GlobalFeature.h</label>
+        <link refid="_global_feature_8h"/>
+        <childnode refid="759" relation="include">
+        </childnode>
+        <childnode refid="760" relation="include">
+        </childnode>
+        <childnode refid="761" relation="include">
+        </childnode>
+      </node>
+      <node id="768">
+        <label>exception</label>
+      </node>
+      <node id="763">
+        <label>pthread.h</label>
+      </node>
+      <node id="767">
+        <label>ExceptionDescriptor.h</label>
+        <link refid="_exception_descriptor_8h"/>
+        <childnode refid="768" relation="include">
+        </childnode>
+        <childnode refid="759" relation="include">
+        </childnode>
+      </node>
+      <node id="761">
+        <label>Thread.h</label>
+        <link refid="_thread_8h"/>
+        <childnode refid="762" relation="include">
+        </childnode>
+        <childnode refid="763" relation="include">
+        </childnode>
+        <childnode refid="764" relation="include">
+        </childnode>
+      </node>
+      <node id="765">
+        <label>iostream</label>
+      </node>
+      <node id="766">
+        <label>LocalSettings.h</label>
+        <link refid="_local_settings_8h"/>
+        <childnode refid="759" relation="include">
+        </childnode>
+      </node>
+      <node id="757">
+        <label>SurfFeature.h</label>
+        <link refid="_surf_feature_8h"/>
+        <childnode refid="758" relation="include">
+        </childnode>
+      </node>
+      <node id="762">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_surf_feature_8h" kindref="compound">SurfFeature.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_local_settings_8h" kindref="compound">LocalSettings.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_exception_descriptor_8h" kindref="compound">ExceptionDescriptor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">cv;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_surf_feature_1a9a359bdd5b3bbc6ac0d318e150a8feef" refkind="member"><highlight class="normal"><ref refid="class_surf_feature_1a9a359bdd5b3bbc6ac0d318e150a8feef" kindref="member" tooltip="Constructor.">SurfFeature::SurfFeature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>type)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_global_feature" kindref="compound" tooltip="Abstract class for global feature extraction.">GlobalFeature</ref>(name,<sp/>type)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_surf_feature_1a3717dc5d5cffd77f4f31c5ac81cd391a" kindref="member" tooltip="Implemented virtual method for loading algorithm specific settings from the given storage...">LoadSettingsFromFileStorage</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_surf_feature_1a191dd9737bd6dc754e43912bb3aad219" kindref="member" tooltip="Wrapped OpenCV SURF object.">surfDetector_</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SurfFeatureDetector(<ref refid="class_surf_feature_1a32db9f77d27527ff7c25824d954e30bc" kindref="member" tooltip="Threshold for the keypoint detector. Only features, whose hessian is larger than hessianThreshold are...">hessianThreshold_</ref>,<sp/><ref refid="class_surf_feature_1a87f1c0c6c1c749b0736633da668c977b" kindref="member" tooltip="The number of a gaussian pyramid octaves that the detector uses. It is set to 4 by default...">octaves_</ref>,<sp/><ref refid="class_surf_feature_1a1693fb1e68f90350c607c1e228743130" kindref="member" tooltip="The number of images within each octave of a gaussian pyramid. It is set to 2 by default.">octaveLayers_</ref>,<sp/><ref refid="class_surf_feature_1a89c68527db49e286206062375b09c7bd" kindref="member" tooltip="False means that the basic descriptors (64 elements each) shall be computed. True means that the exte...">extended_</ref>,<sp/><ref refid="class_surf_feature_1a4900461472b4f6707ce0db3bde65bda2" kindref="member" tooltip="False means that detector computes orientation of each feature. True means that the orientation is no...">upright_</ref>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_surf_feature_1a9dac0fead0f72630852c04aa0af5213f" refkind="member"><highlight class="normal"><ref refid="class_surf_feature_1a9dac0fead0f72630852c04aa0af5213f" kindref="member" tooltip="Destructor.">SurfFeature::~SurfFeature</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_surf_feature_1a191dd9737bd6dc754e43912bb3aad219" kindref="member" tooltip="Wrapped OpenCV SURF object.">surfDetector_</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_surf_feature_1a3717dc5d5cffd77f4f31c5ac81cd391a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_surf_feature_1a3717dc5d5cffd77f4f31c5ac81cd391a" kindref="member" tooltip="Implemented virtual method for loading algorithm specific settings from the given storage...">SurfFeature::LoadSettingsFromFileStorage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fileName<sp/>=<sp/><ref refid="_local_settings_8h_1a2229e3307a6b7ebe72c4459cad648ff4" kindref="member">LocalSettingsPtr</ref>-&gt;GetSettingsDirectory()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;Settings.&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_global_feature_1abee52be830de272bd27685083bf28aae" kindref="member" tooltip="Name of the current feature extraction procedure.">name_</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.xml&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FileStorage<sp/>fileStorage(fileName,<sp/>FileStorage::READ,<sp/></highlight><highlight class="stringliteral">&quot;UTF-8&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!fileStorage.isOpened())</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="_exception_descriptor_8h_1a0190803a2d1c92c40c81ad31caad1fee" kindref="member">ExceptionError</ref>(</highlight><highlight class="stringliteral">&quot;Setting<sp/>XML<sp/>does<sp/>not<sp/>exist<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_global_feature_1abee52be830de272bd27685083bf28aae" kindref="member" tooltip="Name of the current feature extraction procedure.">name_</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fsExtended,<sp/>fsUpright;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;hessianThreshold&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_surf_feature_1a32db9f77d27527ff7c25824d954e30bc" kindref="member" tooltip="Threshold for the keypoint detector. Only features, whose hessian is larger than hessianThreshold are...">hessianThreshold_</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;octaves&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_surf_feature_1a87f1c0c6c1c749b0736633da668c977b" kindref="member" tooltip="The number of a gaussian pyramid octaves that the detector uses. It is set to 4 by default...">octaves_</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;octaveLayers&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/><ref refid="class_surf_feature_1a1693fb1e68f90350c607c1e228743130" kindref="member" tooltip="The number of images within each octave of a gaussian pyramid. It is set to 2 by default.">octaveLayers_</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;extended&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/>fsExtended;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileStorage[</highlight><highlight class="stringliteral">&quot;upright&quot;</highlight><highlight class="normal">]<sp/>&gt;&gt;<sp/>fsUpright;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_surf_feature_1a89c68527db49e286206062375b09c7bd" kindref="member" tooltip="False means that the basic descriptors (64 elements each) shall be computed. True means that the exte...">extended_</ref>=<sp/>(fsExtended.compare(</highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>?<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_surf_feature_1a4900461472b4f6707ce0db3bde65bda2" kindref="member" tooltip="False means that detector computes orientation of each feature. True means that the orientation is no...">upright_</ref><sp/>=<sp/>(fsUpright.compare(</highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0<sp/>?<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_surf_feature_1a965b300a64e776f48c1fe1564f4c4269" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_surf_feature_1a965b300a64e776f48c1fe1564f4c4269" kindref="member" tooltip="Implemented virtual method for the algorithm.">SurfFeature::Process</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Detect<sp/>the<sp/>keypoints</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_surf_feature_1a191dd9737bd6dc754e43912bb3aad219" kindref="member" tooltip="Wrapped OpenCV SURF object.">surfDetector_</ref>-&gt;detect(<ref refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" kindref="member" tooltip="The current frame.">frame_</ref>,<sp/><ref refid="class_global_feature_1a72cc606c0090a64718a7e92bca7520b9" kindref="member" tooltip="Stores keypoints, i.e. a point feature found by one of many available keypoint detectors.">keyPoints</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_surf_feature_1a2f036e794ebd63cd024dbf547765442f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_surf_feature_1a2f036e794ebd63cd024dbf547765442f" kindref="member" tooltip="Implemented virtual method for displaying the output.">SurfFeature::DrawFeatures</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>drawKeypoints(<ref refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" kindref="member" tooltip="The current frame.">frame_</ref>,<sp/><ref refid="class_global_feature_1a72cc606c0090a64718a7e92bca7520b9" kindref="member" tooltip="Stores keypoints, i.e. a point feature found by one of many available keypoint detectors.">keyPoints</ref>,<sp/><ref refid="class_global_feature_1aae4295da2c3999edcb99b46d70ee7166" kindref="member" tooltip="The current frame.">frame_</ref>,<sp/>Scalar::all(-1),<sp/>DrawMatchesFlags::DEFAULT<sp/></highlight><highlight class="comment">/*|<sp/>DrawMatchesFlags::DRAW_RICH_KEYPOINTS*/</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/huro-sift/Development/ObjectRecognition/FeatureExtractor/src/SurfFeature.cpp"/>
+  </compounddef>
+</doxygen>

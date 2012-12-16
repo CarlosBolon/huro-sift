@@ -1,0 +1,6 @@
+Név/angol név/román név
+Alosztály (pl színház stb.)/alosztály angolul (ex. theatre etc.)/Alosztály románul (ex. teatru etc.)
+Wikipédia szócikk vagy url * Angol wikipédia szócikk vagy url * Román wikipédia szócikk vagy url
+forrás url * Második forrás url
+gps koord. tizedesjegy
+kulcsszavak
