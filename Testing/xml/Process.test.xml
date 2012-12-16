@@ -3,8 +3,18 @@
 	<settings>
 		<_>
 			<workMode>"test"</workMode>
-			<media>"test.01.jpg"</media>
+			<media>"test.03.jpg"</media>
+			<!--
+				SIFT
+				SURF
+				ORB
+			-->
 			<descriptorType>"SURF"</descriptorType>
+			<!-- 
+				BruteForce (it uses L2 )
+				BruteForce-L1
+				FlannBased
+			-->
 			<matcherType>"FlannBased"</matcherType>
 			<database>"file_list.txt"</database>
 			<maxWidth>320.0</maxWidth>
