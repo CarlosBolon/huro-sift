@@ -286,7 +286,7 @@ void Algorithm::MatchToDatabase(const Mat& frame)
     const Mat& queryDescriptors = localFeaturePool_[detail_->descriptorType]->descriptors;
     matcher.Process(imageList_, queryDescriptors);
 
-    const vector<DMatch>& matches = matcher.GetMatches();
+    const vector<DMatch>& matches = matcher.GetGoodMatches();
 
     if(matches.size() > 1)
     {
@@ -299,24 +299,28 @@ void Algorithm::MatchToDatabase(const Mat& frame)
 		}
 
 		for(map<int, double>::iterator it = avgDst.begin(); it != avgDst.end(); it++)
-			it->second = it->second / double(avgCount[it->first]);
+			if(avgCount[it->first] != 0)
+				it->second /= double(avgCount[it->first]);
 
-        int maxInd = -1;
-        int maxVal = -1;
-        for(map<int, int>::iterator it = avgCount.begin(); it != avgCount.end(); it++)
+        int minInd = -1;
+        double minDst = DBL_MAX;
+        for(map<int, double>::iterator it = avgDst.begin(); it != avgDst.end(); it++)
         {
-            if(it->second > maxVal)
-            {
-                maxInd = it->first;
-                maxVal = it->second;
-            }
+			if(avgCount[it->first] != 0)
+			{
+				if(it->second < minDst)
+				{
+					minInd = it->first;
+					minDst = it->second;
+				}
+			}
         }
 
-        if(maxInd >= 0 && maxInd < int(imageList_.size()))
+        if(minInd >= 0 && minInd < int(imageList_.size()))
         {
-            cout << "Best match: " << imageList_[maxInd] << endl;
+            cout << "Best match: " << imageList_[minInd] << endl;
 
-            FileToken ft(imageList_[maxInd]);
+            FileToken ft(imageList_[minInd]);
             string fullName = ft.GetPath() + ft.GetName() + "_descriptors.xml.gz";
 
             FileStorage fs(fullName, FileStorage::READ, "UTF-8");
@@ -334,13 +338,13 @@ void Algorithm::MatchToDatabase(const Mat& frame)
                 if(!trainKeypoints.empty())
                 {
                     const vector<KeyPoint>& queryKeypoints = localFeaturePool_[detail_->descriptorType]->keyPoints;
-                    Mat trainImage = imread(imageList_[maxInd], 1);
+                    Mat trainImage = imread(imageList_[minInd], 1);
                     Mat drawImg;
                     vector<char> mask;
 
 					resize(trainImage, trainImage, Size(), detail_->maxWidth / trainImage.cols, detail_->maxWidth / trainImage.cols);
 
-                    MaskMatchesByTrainImgIdx(matches, maxInd, mask);
+                    MaskMatchesByTrainImgIdx(matches, minInd, mask);
                     drawMatches(
                         frame, queryKeypoints, 
                         trainImage, trainKeypoints,

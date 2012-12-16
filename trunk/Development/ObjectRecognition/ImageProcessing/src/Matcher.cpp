@@ -52,6 +52,31 @@ void Matcher::Process(const vector<string>& imageList, const Mat& queryDescripto
         cout << "Number of matches: " << matches_.size() << endl;
         cout << "Build time: " << buildTime << " ms; Match time: " << matchTime << " ms" << endl;
         cout << ">" << endl;
+
+		double max_dist = 0.0, min_dist = 100.0;
+
+		//-- Quick calculation of max and min distances between keypoints
+		for(int i = 0; i < int(matches_.size()); i++)
+		{ 
+			double dist = matches_[i].distance;
+		
+			if(dist < min_dist) 
+				min_dist = dist;
+		
+			if(dist > max_dist) 
+				max_dist = dist;
+		}
+
+		printf("-- Max dist : %f \n", max_dist );
+		printf("-- Min dist : %f \n", min_dist );
+
+		//-- Use only "good" matches (i.e. whose distance is less than 2*min_dist )
+		//-- PS.- radiusMatch can also be used here.
+		for(int i = 0; i < int(matches_.size()); i++)
+		{ 
+			if( matches_[i].distance < 2.0 * min_dist )
+				goodMatches_.push_back(matches_[i]);
+		}
     }
 }
 
@@ -96,6 +121,11 @@ void Matcher::FillTrainDescriptors(const std::vector<std::string>& imageList)
 const vector<DMatch>& Matcher::GetMatches(void) const
 {
     return matches_;
+}
+
+const vector<DMatch>& Matcher::GetGoodMatches(void) const
+{
+	return goodMatches_;
 }
 
 }

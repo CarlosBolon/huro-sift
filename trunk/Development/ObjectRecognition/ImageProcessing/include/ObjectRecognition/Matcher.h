@@ -18,6 +18,7 @@ public:
     void Process(const std::vector<std::string>& imageList, const cv::Mat& queryDescriptors);
 
     const std::vector<cv::DMatch>& GetMatches(void) const;
+	const std::vector<cv::DMatch>& GetGoodMatches(void) const;
 
 private:
     void FillTrainDescriptors(const std::vector<std::string>& imageList);
@@ -27,6 +28,7 @@ private:
     cv::Ptr<cv::DescriptorMatcher> descriptorMatcher_;
     std::vector<cv::Mat> trainDescriptors_;
     std::vector<cv::DMatch> matches_;
+	std::vector<cv::DMatch> goodMatches_;
 };
 
 }
